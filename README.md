@@ -1,59 +1,148 @@
-<header>
+<!DOCTYPE html>
+<html lang="en" data-country="US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>🔥 <span class="city">Local</span> Singles: Connect Tonight | 100% Verified</title>
+    <meta name="description" content="Meet <span class='counter'>1,327</span> real people in <span class='city'>your area</span> now. Authentic connections, verified profiles - your perfect match awaits!">
+    
+    <!-- Enhanced Compliance -->
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="canonical" href="https://your-actual-domain.com">
+    <meta name="theme-color" content="#FF3B5C">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://your-cdn.com/profiles/sarah.webp" as="image">
+    
+    <!-- Inline Critical CSS -->
+    <style>
+        :root{--primary:#FF3B5C;--secondary:#FF6B35;--dark:#1A1A2E;--light:#F8F9FF}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;background:var(--light);color:var(--dark);line-height:1.7}.header{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:2.5rem 1rem;text-align:center;clip-path:polygon(0 0,100% 0,100% 90%,0 100%);margin-bottom:2rem}.trust-badge{background:rgba(255,255,255,0.15);color:#fff;padding:0.6rem 1.5rem;border-radius:30px;display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9rem;margin-bottom:1.5rem}@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+    </style>
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="trust-badge">
+            🔒 Secured Connection | ⭐ 4.9/5 Rating
+        </div>
+        <h1 class="main-heading">
+            Meet <span class="city">Local</span> Singles Ready to Connect
+        </h1>
+        <p class="subheading">
+            Real people • Verified profiles • Instant matches
+        </p>
+        <div class="live-counter-container">
+            <span class="live-counter">127</span> people online now in <span class="city">your area</span>
+        </div>
+    </header>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+    <!-- Profile Grid -->
+    <section class="profile-grid">
+        <article class="profile-card">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
+                 data-src="https://your-cdn.com/profiles/sarah.webp"
+                 class="profile-image lozad" 
+                 alt="Sarah, 28 - Yoga Instructor nearby"
+                 width="300"
+                 height="300">
+            <div class="profile-badge">❤️ Online Now</div>
+        </article>
+        <!-- Add 5 more profile cards -->
+    </section>
 
-# GitHub Pages
+    <!-- Verification Process -->
+    <section class="verification-process">
+        <div class="verification-step">
+            <h3>1. Quick Setup</h3>
+            <p>2-minute profile creation</p>
+        </div>
+        <div class="verification-step">
+            <h3>2. Secure Verification</h3>
+            <p>Real people guarantee</p>
+        </div>
+        <div class="verification-step">
+            <h3>3. Smart Matching</h3>
+            <p>Find compatible partners</p>
+        </div>
+    </section>
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-heading">
+            Your Perfect Match is Waiting
+        </h2>
+        <p class="cta-subtext">
+            Join <span class="counter">1,327</span> local singles finding love now
+        </p>
+        <button class="cta-button" data-track="cta-click">
+            👉 Start Matching Instantly
+        </button>
+        
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <img src="https://your-cdn.com/badges/trustpilot-rated.svg" 
+                 alt="4.9/5 TrustScore" 
+                 loading="lazy"
+                 width="120"
+                 height="40">
+        </div>
+    </section>
 
-</header>
+    <!-- Compliance Footer -->
+    <footer class="legal-footer">
+        <p>18+ only. By continuing you agree to our 
+            <a href="/terms" class="legal-link">Terms</a> and 
+            <a href="/privacy" class="legal-link">Privacy Policy</a>.
+        </p>
+    </footer>
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+    <!-- Enhanced Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Geo-adaptive content
+            const geoData = {
+                country: 'US',
+                city: 'New York',
+                emoji: '🇺🇸'
+            };
 
-## Step 2: Configure your site
+            // Real-time counter with peaks
+            let usersOnline = 150 + Math.floor(Math.random() * 100);
+            const counterUpdate = () => {
+                const peak = Math.random() > 0.9 ? 10 : 2;
+                usersOnline += Math.floor(Math.random() * peak);
+                document.querySelector('.live-counter').textContent = 
+                    usersOnline.toLocaleString();
+            };
+            setInterval(counterUpdate, 3000);
 
-_You turned on GitHub Pages! :tada:_
+            // Enhanced CTA interaction
+            const cta = document.querySelector('.cta-button');
+            cta.addEventListener('click', function() {
+                this.classList.add('clicked');
+                setTimeout(() => {
+                    window.location.href = 'YOUR_SMARTLINK?ref=prelander_v3';
+                }, 800);
+            });
 
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
+            // Lazy loading with Lozad
+            const observer = lozad('.lozad', {
+                threshold: 0.1,
+                loaded: (el) => {
+                    el.classList.add('loaded');
+                }
+            });
+            observer.observe();
+        });
+    </script>
 
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
-
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
-
-### :keyboard: Activity: Configure your site
-
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+    <!-- Tracking & Analytics -->
+    <script src="https://your-cdn.com/lozad.min.js" async></script>
+    <script async src="/js/analytics.js"></script>
+</body>
+</html>
