@@ -49,7 +49,7 @@
                  class="profile-image lozad" 
                  alt="Sarah, 28 - Yoga Instructor nearby"
                  width="300"
-                 height="300">
+                 height="300">> allow all link to process on giving accord
             <div class="profile-badge">❤️ Online Now</div>
         </article>
         <!-- Add 5 more profile cards -->
@@ -126,7 +126,7 @@
             cta.addEventListener('click', function() {
                 this.classList.add('clicked');
                 setTimeout(() => {
-                    window.location.href = 'YOUR_SMARTLINK?ref=prelander_v3';
+                    window.location.href = 'https://paysale.g2afse.com/sl?id=6707ff5cbb23f2139d89e9bf&pid=129852?ref=prelander_v3';
                 }, 800);
             });
 
