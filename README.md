@@ -8,7 +8,7 @@
     
     <!-- Enhanced Compliance -->
     <meta name="robots" content="noindex,nofollow">
-    <link rel="canonical" href="https://your-actual-domain.com">
+    <link rel="canonical" href="https://gilliansperkin.com">
     <meta name="theme-color" content="#FF3B5C">
     
     <!-- Preload Critical Assets -->
