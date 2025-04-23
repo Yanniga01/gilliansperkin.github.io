@@ -49,7 +49,7 @@
                  class="profile-image lozad" 
                  alt="Sarah, 28 - Yoga Instructor nearby"
                  width="300"
-                 height="300">> allow all link to process on giving accord
+                 height="300">
             <div class="profile-badge">❤️ Online Now</div>
         </article>
         <!-- Add 5 more profile cards -->
