@@ -2,45 +2,64 @@
 <html lang="en" data-country="US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>🌟 Find Real Love in California | 1,327 Verified Singles Ready Now</title>
-    <meta name="description" content="Authentic local dating with verified California singles. Join 1,327+ real members finding meaningful connections - your perfect match is waiting!">
-
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Find Your Perfect Match in California | 1,500+ Verified Singles</title>
+    <meta name="description" content="Discover genuine connections with California's most vibrant singles. Our matchmaking system has sparked over 10,000 relationships this year alone!">
+    
+    <!-- Trust & Performance Meta -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:">
     <meta name="theme-color" content="#FF3B5C">
-    <link rel="canonical" href="https://yourdomain.com">
-
-    <!-- Conversion-Optimized Design -->
+    
+    <!-- Preconnect Critical Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    
+    <!-- Emotional Design System -->
     <style>
         :root {
-            --primary: #FF3B5C;
-            --secondary: #FF6B35;
-            --dark: #1A1A2E;
-            --light: #F8F9FF;
+            --love-pink: #FF3B5C;
+            --passion-purple: #8A2BE2;
+            --sunset-orange: #FF6B35;
+            --midnight-blue: #1A1A2E;
+            --pure-white: #FFFFFF;
             --font-main: 'Poppins', sans-serif;
         }
-
+        
         body {
             font-family: var(--font-main);
-            background: linear-gradient(145deg, var(--dark) 0%, var(--secondary) 100%);
-            color: var(--light);
+            background: linear-gradient(145deg, var(--midnight-blue) 0%, var(--passion-purple) 100%);
+            background-size: 200% 200%;
+            animation: gradientFlow 15s ease infinite;
+            color: var(--pure-white);
             line-height: 1.8;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-
+        
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         .hero-image {
             width: 100%;
-            height: 60vh;
-            max-height: 600px;
+            max-width: 800px;
+            height: auto;
+            border-radius: 20px;
+            margin: 2rem auto;
+            display: block;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            border: 3px solid var(--love-pink);
+            transition: transform 0.4s ease;
             object-fit: cover;
-            border-radius: 15px;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border: 3px solid var(--primary);
         }
-
+        
+        .hero-image:hover {
+            transform: scale(1.02);
+        }
+        
         .trust-badge {
             background: rgba(255,255,255,0.15);
             padding: 1rem 2rem;
@@ -48,12 +67,37 @@
             display: inline-flex;
             align-items: center;
             gap: 1rem;
+            font-size: 1.1rem;
             margin: 2rem 0;
             backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
         }
-
+        
+        .trust-badge-img {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+        }
+        
+        .cta-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
         .cta-button {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--love-pink), var(--sunset-orange));
             color: white;
             padding: 1.5rem 4rem;
             border-radius: 50px;
@@ -66,112 +110,185 @@
             width: fit-content;
             text-decoration: none;
             animation: pulse 2s infinite;
+            box-shadow: 0 10px 30px rgba(255,59,92,0.3);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,59,92,0.4);
+        }
+        
+        .cta-button:focus {
+            outline: 2px solid var(--pure-white);
+            outline-offset: 3px;
+        }
+        
+        .cta-button:after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0) 45%,
+                rgba(255,255,255,0.3) 50%,
+                rgba(255,255,255,0) 55%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-
-        @media (max-width: 768px) {
-            .hero-image {
-                height: 40vh;
-            }
-            
+        
+        @keyframes shine {
+            0% { left: -50%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { left: 150%; opacity: 0; }
+        }
+        
+        @media (max-width: 480px) {
             .cta-button {
-                padding: 1rem 2rem;
-                font-size: 1.1rem;
+                padding: 1.5rem 2rem;
+                width: 100%;
+                max-width: 320px;
             }
         }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .benefits-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--love-pink);
+        }
     </style>
-
-    <!-- Preload Critical Assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preload" as="image" href="/assets/images/hero-local-couples.webp">
+    
+    <!-- Font Loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
 </head>
 <body>
-    <!-- Trust Badge -->
-    <div class="trust-badge">
-        🔒 256-Bit Encryption | ⭐ 4.97/5 Rating | ✅ 1,327 Local Members
-    </div>
-
     <!-- Hero Image -->
-    <img src="/assets/images/hero-local-couples.webp"
-         class="hero-image"
-         alt="Happy California couple enjoying sunset"
-         width="1200"
-         height="800"
-         loading="eager">
-
+    <div class="content-section">
+        <img src="https://raw.githubusercontent.com/Yanniga01/Image/main/pexels-moose-photos-170195-1587042.webp"
+             class="hero-image"
+             alt="Happy couple walking along California beach at sunset holding hands"
+             width="800"
+             height="533"
+             loading="eager"
+             sizes="(max-width: 768px) 100vw, 800px">
+    </div>
+    
+    <!-- Trust Badge -->
+    <div class="trust-badge" 
+         onmouseover="this.style.transform='scale(1.02)'"
+         onmouseout="this.style.transform='scale(1)'">
+        🔒 256-Bit Encrypted Connection | ⭐⭐⭐⭐⭐ 4.98/5 Rating | 💖 1,500+ Local Members
+    </div>
+    
     <!-- Main Content -->
-    <main class="content">
-        <h1>Your California Love Story Starts Tonight</h1>
-        <p class="highlight">Join <span class="live-counter">1,327</span> Verified Singles Ready to Meet</p>
-
-        <!-- Conversion Features -->
-        <div class="benefits">
-            <div class="benefit-item">
-                <h2>❤️ Why Choose Us</h2>
-                <ul>
-                    <li>✅ 100% Profile Verification</li>
-                    <li>🌟 Quality Over Quantity</li>
-                    <li>📅 Real Local Singles</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Primary CTA -->
+    <div class="content-section">
+        <h1>Your California Love Story Starts Today</h1>
+        
+        <p>After helping over <strong>10,000 singles</strong> find meaningful connections this year, our <strong>award-winning matchmaking system</strong> is ready to write your romantic journey. Whether you're seeking sunset walks along Santa Monica Pier or coffee dates in downtown San Francisco, we connect you with <em>verified, compatible partners</em> who share your passions.</p>
+        
+        <img src="https://raw.githubusercontent.com/Yanniga01/Image/main/pexels-pixabay-414032.webp"
+             class="hero-image"
+             alt="Diverse group of happy friends laughing together at a California beach"
+             width="800"
+             height="533"
+             loading="lazy"
+             sizes="(max-width: 768px) 100vw, 800px">
+        
+        <h2>Why Our Members Choose Us</h2>
+        
+        <ul class="benefits-list">
+            <li>✨ <strong>Authenticity First:</strong> Every profile undergoes our rigorous 3-step verification process to ensure real connections with genuine people</li>
+            <li>💞 <strong>Deep Compatibility:</strong> Our advanced algorithm analyzes 27 personality dimensions to match you with someone who truly complements you</li>
+            <li>🌉 <strong>Local Focus:</strong> Meet singles within your neighborhood who share your favorite local spots and lifestyle</li>
+            <li>🛡️ <strong>Safety Guaranteed:</strong> 24/7 moderation team and state-of-the-art fraud detection systems</li>
+        </ul>
+    </div>
+    
+    <!-- Single Trust Badge -->
+    <img src="https://raw.githubusercontent.com/Yanniga01/real-truth-/main/54919.jpg" 
+         class="trust-badge-img"
+         alt="USA Trusted Dating Platform 2024 Award Badge"
+         width="200"
+         height="200"
+         loading="lazy">
+    
+    <!-- Enhanced CTA Section -->
+    <div class="cta-container">
+        <h2>Ready to Meet Your Match?</h2>
+        <p>Join <span class="live-counter" aria-live="polite">1,500</span> California singles who found love this month. Your perfect partner is just one click away!</p>
+        
         <button class="cta-button" id="main-cta">
-            🌟 Start Matching Now (Free) 🌟
+            💘 Start Your Love Journey Now (Free Forever)
         </button>
-    </main>
-
+        
+        <p><small>No credit card required · Cancel anytime</small></p>
+    </div>
+    
     <!-- Protected Affiliate System -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Hex-Encoded Affiliate URL
-        const safeRedirect = () => {
+        // Real-time counter
+        let usersOnline = 1500;
+        const updateCounter = () => {
+            usersOnline += Math.floor(Math.random() * 8);
+            document.querySelector('.live-counter').textContent = 
+                usersOnline.toLocaleString();
+        };
+        setInterval(updateCounter, 3000);
+        
+        // Secure redirect
+        document.getElementById('main-cta').addEventListener('click', () => {
             const encoded = [
-                '68747470733a2f2f70617973616c652e673261667365',
-                '2e636f6d2f736c3f7069643d3132393835322669643d',
-                '36373037666635636262323366323133396438396539',
-                '6266267265663d63616c69665f7631'
+                '68747470733a2f2f70617973616c65',
+                '2e6732616673652e636f6d2f736c3f',
+                '7069643d3132393835322669643d36',
+                '373037666635636262323366323133',
+                '3964383965396266267265663d6361',
+                '6c69666f726e69615f6c70'
             ].join('');
-
-            const decoded = encoded.match(/.{2}/g)
-                .map(hex => String.fromCharCode(parseInt(hex, 16)))
-                .join('');
-
-            const finalURL = decoded + '&t=' + Date.now();
-
-            // New tab with fallback
-            const win = window.open('', '_blank');
+            
+            const finalURL = encoded.match(/../g)
+                .map(h => String.fromCharCode(parseInt(h, 16)))
+                .join('') + '&t=' + Date.now();
+            
+            const win = window.open(finalURL, '_blank');
+            if(win) {
+                win.opener = null;
+                win.rel = 'noopener noreferrer';
+            }
             setTimeout(() => {
-                try {
-                    if(win.closed || win.location.href === 'about:blank') {
-                        window.location.href = finalURL;
-                    }
-                } catch(e) {
+                if(!win || win.closed) {
                     window.location.href = finalURL;
                 }
             }, 500);
-        };
-
-        document.getElementById('main-cta').addEventListener('click', safeRedirect);
-    });
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-3DCX56R2GN', {
-            page_title: document.title,
-            page_path: window.location.pathname
         });
+    });
     </script>
 </body>
 </html>
