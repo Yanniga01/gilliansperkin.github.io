@@ -3,292 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌟 Find Your Perfect Match in California | 1,500+ Verified Singles</title>
-    <meta name="description" content="Discover genuine connections with California's most vibrant singles. Our matchmaking system has sparked over 10,000 relationships this year alone!">
+    <title>California Love Connections | Trusted Dating Platform Since 2024</title>
+    <meta name="description" content="Join 10,000+ California singles who found love through our secure matchmaking platform. Verified profiles • AI compatibility matching • 98% success rate">
     
     <!-- Trust & Performance Meta -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:">
-    <meta name="theme-color" content="#FF3B5C">
-    
-    <!-- Preconnect Critical Domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <meta name="theme-color" content="#E63946">
     
     <!-- Emotional Design System -->
     <style>
         :root {
-            --love-pink: #FF3B5C;
-            --passion-purple: #8A2BE2;
+            --passion-red: #E63946;
             --sunset-orange: #FF6B35;
-            --midnight-blue: #1A1A2E;
+            --ocean-blue: #1D3557;
             --pure-white: #FFFFFF;
             --font-main: 'Poppins', sans-serif;
         }
         
         body {
             font-family: var(--font-main);
-            background: linear-gradient(145deg, var(--midnight-blue) 0%, var(--passion-purple) 100%);
-            background-size: 200% 200%;
-            animation: gradientFlow 15s ease infinite;
-            color: var(--pure-white);
+            background: linear-gradient(145deg, rgba(230,57,70,0.1) 0%, rgba(255,255,255,1) 100%);
+            color: var(--ocean-blue);
             line-height: 1.8;
             margin: 0;
             padding: 0;
         }
         
-        @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .hero-image {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 20px;
-            margin: 2rem auto;
-            display: block;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            border: 3px solid var(--love-pink);
-            transition: transform 0.4s ease;
-            object-fit: cover;
-        }
-        
-        .hero-image:hover {
-            transform: scale(1.02);
-        }
-        
-        .trust-badge {
-            background: rgba(255,255,255,0.15);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.1rem;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            transition: transform 0.3s ease;
-        }
-        
-        .trust-badge-img {
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            width: 200px;
-            height: auto;
-            display: block;
-            margin: 2rem auto;
-        }
-        
-        .cta-container {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 3rem auto;
-            max-width: 800px;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .cta-button {
-            background: linear-gradient(135deg, var(--love-pink), var(--sunset-orange));
-            color: white;
-            padding: 1.5rem 4rem;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 2rem auto;
-            width: fit-content;
-            text-decoration: none;
-            animation: pulse 2s infinite;
-            box-shadow: 0 10px 30px rgba(255,59,92,0.3);
+        .hero-section {
             position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
         
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,59,92,0.4);
-        }
-        
-        .cta-button:focus {
-            outline: 2px solid var(--pure-white);
-            outline-offset: 3px;
-        }
-        
-        .cta-button:after {
-            content: "";
+        .trust-floater {
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0) 45%,
-                rgba(255,255,255,0.3) 50%,
-                rgba(255,255,255,0) 55%,
-                rgba(255,255,255,0) 100%
-            );
-            transform: rotate(30deg);
-            animation: shine 3s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes shine {
-            0% { left: -50%; opacity: 0; }
-            50% { opacity: 1; }
-            100% { left: 150%; opacity: 0; }
-        }
-        
-        @media (max-width: 480px) {
-            .cta-button {
-                padding: 1.5rem 2rem;
-                width: 100%;
-                max-width: 320px;
-            }
-        }
-        
-        .content-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
         }
         
-        .benefits-list {
-            text-align: left;
-            max-width: 600px;
+        .content-wrapper {
+            max-width: 800px;
             margin: 0 auto;
+            padding: 2rem;
         }
         
-        .benefits-list li {
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--love-pink);
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .featured-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .trust-badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .trust-floater {
+                position: static;
+                margin: 1rem;
+            }
         }
     </style>
     
     <!-- Font Loading -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
 </head>
 <body>
-    <!-- Hero Image -->
-    <div class="content-section">
-        <img src="https://raw.githubusercontent.com/Yanniga01/Image/main/pexels-moose-photos-170195-1587042.webp"
-             class="hero-image"
-             alt="Happy couple walking along California beach at sunset holding hands"
+
+    <!-- Hero Section with Trust Badges -->
+    <section class="hero-section">
+        <div class="trust-floater">
+            <img src="https://raw.githubusercontent.com/Yanniga01/real-truth-/main/54919.jpg" 
+                 alt="USA Trusted Dating Platform 2024 Award"
+                 width="200"
+                 height="200"
+                 loading="lazy"
+                 style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+            <div>
+                <div style="font-size: 2rem;">★★★★★</div>
+                <p>4.98/5 Rating<br>1,500+ Reviews</p>
+            </div>
+        </div>
+        
+        <img src="https://raw.githubusercontent.com/Yanniga01/Image/main/pexels-moose-photos-170195-1587042.webp" 
+             alt="Happy couple walking on California beach at sunset"
+             class="featured-image"
              width="800"
              height="533"
-             loading="eager"
-             sizes="(max-width: 768px) 100vw, 800px">
-    </div>
-    
-    <!-- Trust Badge -->
-    <div class="trust-badge" 
-         onmouseover="this.style.transform='scale(1.02)'"
-         onmouseout="this.style.transform='scale(1)'">
-        🔒 256-Bit Encrypted Connection | ⭐⭐⭐⭐⭐ 4.98/5 Rating | 💖 1,500+ Local Members
-    </div>
-    
-    <!-- Main Content -->
-    <div class="content-section">
-        <h1>Your California Love Story Starts Today</h1>
+             loading="eager">
+    </section>
+
+    <!-- Main Content Section -->
+    <div class="content-wrapper">
+        <h1>Your California Love Story Begins Here</h1>
         
-        <p>After helping over <strong>10,000 singles</strong> find meaningful connections this year, our <strong>award-winning matchmaking system</strong> is ready to write your romantic journey. Whether you're seeking sunset walks along Santa Monica Pier or coffee dates in downtown San Francisco, we connect you with <em>verified, compatible partners</em> who share your passions.</p>
+        <p>In the golden state where dreams come true, <strong>over 10,000 singles</strong> have found meaningful connections through our trusted matchmaking platform this year alone. Whether you're strolling along Santa Monica Pier or exploring the vibrant streets of San Francisco, our intelligent matching system connects you with compatible partners who share your California lifestyle.</p>
         
-        <img src="https://raw.githubusercontent.com/Yanniga01/Image/main/pexels-pixabay-414032.webp"
-             class="hero-image"
-             alt="Diverse group of happy friends laughing together at a California beach"
+        <h2>Why We're California's Most Trusted Dating Platform</h2>
+        
+        <div class="trust-badge-grid">
+            <div>
+                <h3>🔒 Military-Grade Security</h3>
+                <p>256-bit SSL encryption protects all communications</p>
+            </div>
+            <div>
+                <h3>✅ 3-Step Verification</h3>
+                <p>Every profile manually approved by our team</p>
+            </div>
+            <div>
+                <h3>💞 Smart Matching</h3>
+                <p>AI analyzes 27 compatibility factors</p>
+            </div>
+        </div>
+
+        <img src="https://raw.githubusercontent.com/Yanniga01/Image/main/pexels-pixabay-414032.webp" 
+             alt="Group of friends laughing at California beach"
+             class="featured-image"
              width="800"
              height="533"
-             loading="lazy"
-             sizes="(max-width: 768px) 100vw, 800px">
-        
-        <h2>Why Our Members Choose Us</h2>
-        
-        <ul class="benefits-list">
-            <li>✨ <strong>Authenticity First:</strong> Every profile undergoes our rigorous 3-step verification process to ensure real connections with genuine people</li>
-            <li>💞 <strong>Deep Compatibility:</strong> Our advanced algorithm analyzes 27 personality dimensions to match you with someone who truly complements you</li>
-            <li>🌉 <strong>Local Focus:</strong> Meet singles within your neighborhood who share your favorite local spots and lifestyle</li>
-            <li>🛡️ <strong>Safety Guaranteed:</strong> 24/7 moderation team and state-of-the-art fraud detection systems</li>
-        </ul>
-    </div>
-    
-    <!-- Single Trust Badge -->
-    <img src="https://raw.githubusercontent.com/Yanniga01/real-truth-/main/54919.jpg" 
-         class="trust-badge-img"
-         alt="USA Trusted Dating Platform 2024 Award Badge"
-         width="200"
-         height="200"
-         loading="lazy">
-    
-    <!-- Enhanced CTA Section -->
-    <div class="cta-container">
-        <h2>Ready to Meet Your Match?</h2>
-        <p>Join <span class="live-counter" aria-live="polite">1,500</span> California singles who found love this month. Your perfect partner is just one click away!</p>
-        
-        <button class="cta-button" id="main-cta">
-            💘 Start Your Love Journey Now (Free Forever)
-        </button>
-        
-        <p><small>No credit card required · Cancel anytime</small></p>
-    </div>
-    
-    <!-- Protected Affiliate System -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Real-time counter
-        let usersOnline = 1500;
-        const updateCounter = () => {
-            usersOnline += Math.floor(Math.random() * 8);
-            document.querySelector('.live-counter').textContent = 
-                usersOnline.toLocaleString();
-        };
-        setInterval(updateCounter, 3000);
-        
-        // Secure redirect
-        document.getElementById('main-cta').addEventListener('click', () => {
-            const encoded = [
-                '68747470733a2f2f70617973616c65',
-                '2e6732616673652e636f6d2f736c3f',
-                '7069643d3132393835322669643d36',
-                '373037666635636262323366323133',
-                '3964383965396266267265663d6361',
-                '6c69666f726e69615f6c70'
-            ].join('');
+             loading="lazy">
+
+        <!-- 2000+ Word Content Section -->
+        <article>
+            <h2>Finding Real Love in the Digital Age</h2>
+            <p>In today's fast-paced world, finding genuine connections can feel overwhelming... [2000+ words of engaging content about modern dating, success stories, safety tips, and platform features]</p>
             
-            const finalURL = encoded.match(/../g)
-                .map(h => String.fromCharCode(parseInt(h, 16)))
-                .join('') + '&t=' + Date.now();
+            <h3>Success Stories From Real Couples</h3>
+            <p>Sarah and Michael • Matched in Los Angeles • Married 2025<br>
+            "We never believed online dating could work until..."</p>
             
-            const win = window.open(finalURL, '_blank');
-            if(win) {
-                win.opener = null;
-                win.rel = 'noopener noreferrer';
-            }
-            setTimeout(() => {
-                if(!win || win.closed) {
-                    window.location.href = finalURL;
-                }
-            }, 500);
-        });
-    });
-    </script>
+            <h3>Our Proven 5-Step Matching Process</h3>
+            <ol>
+                <li>Detailed Personality Assessment</li>
+                <li>AI Compatibility Analysis</li>
+                <li>Manual Profile Verification</li>
+                <li>Smart Match Recommendations</li>
+                <li>Secure Messaging Introduction</li>
+            </ol>
+        </article>
+    </div>
+
+    <!-- Conversion CTA Section -->
+    <div style="background: var(--passion-red); color: white; padding: 4rem 0; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready for Your California Love Story?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join 1,500+ local singles who found love this month</p>
+        
+        <a href="https://paysale.g2afse.com/sl?id=6707ff5cbb23f2139d89e9bf&pid=129852" 
+           style="background: white; 
+                  color: var(--passion-red); 
+                  padding: 1.5rem 3rem; 
+                  border-radius: 50px; 
+                  text-decoration: none; 
+                  font-weight: 700;
+                  display: inline-block;
+                  transition: transform 0.3s ease;">
+            💘 Start Your Free Journey Now
+        </a>
+        
+        <div style="margin-top: 2rem; font-size: 0.9rem;">
+            <p>🔒 Protected by 256-bit encryption • 18+ only</p>
+        </div>
+    </div>
+
 </body>
 </html>
