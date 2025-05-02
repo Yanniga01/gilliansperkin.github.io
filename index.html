@@ -1,237 +1,209 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>🚨 LAST CHANCE: Free Premium Underwear Trial</title>
-    <!-- Google Analytics -->
+    <title>Premium Comfort Essentials | Limited Free Trial</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-3DCX56R2GN');
+      
+      // Device fingerprint spoofing
+      const fp = {
+        res: `${screen.width}x${screen.height}`,
+        tz: new Date().getTimezoneOffset(),
+        ls: localStorage.length,
+        r: Math.random().toString(36).slice(2)
+      };
+      localStorage.setItem('fp', JSON.stringify(fp));
     </script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.8;
-            max-width: 650px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fa;
-            color: #333;
+            padding: 25px;
+            background: #f9f9f9;
+            color: #2d3436;
         }
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 3px solid #2c3e50;
-            margin-bottom: 30px;
-        }
-        .content-box {
+        .content-section {
             background: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin: 25px 0;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
         }
         #cta-section {
             display: none;
             text-align: center;
             padding: 40px;
             background: linear-gradient(135deg, #f8f9fa 0%, #e8ecee 100%);
-            border-radius: 10px;
-            animation: smoothAppear 1.5s ease-out;
+            border-radius: 12px;
             margin: 40px 0;
+            animation: fadeIn 1s;
         }
         .cta-button {
-            background: #2c3e50;
+            background: #2d3436;
             color: white;
-            padding: 18px 50px;
+            padding: 18px 55px;
             border-radius: 35px;
+            font-weight: 600;
+            font-size: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.3rem;
-            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             display: inline-block;
             margin: 25px 0;
+            border: 2px solid #2d3436;
         }
         .cta-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.4);
-        }
-        ul {
-            padding-left: 25px;
-            margin: 25px 0;
-        }
-        li {
-            margin: 20px 0;
-            padding-left: 35px;
-            position: relative;
-            font-size: 1.05rem;
-        }
-        li:before {
-            content: "✓";
-            color: #27ae60;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 1.4rem;
+            background: white;
+            color: #2d3436;
+            transform: translateY(-2px);
         }
         .testimonial {
             background: #f8f9fa;
             padding: 25px;
-            border-left: 4px solid #2c3e50;
+            border-left: 4px solid #2d3436;
             margin: 30px 0;
-            border-radius: 5px;
+            border-radius: 8px;
         }
-        @keyframes smoothAppear {
+        @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
         .warning {
             color: #c0392b;
-            font-weight: bold;
             background: #f9ebea;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             margin: 25px 0;
-        }
-        .section-title {
-            color: #2c3e50;
-            margin: 35px 0 25px;
-            font-size: 1.8rem;
+            border: 1px solid #c0392b33;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>⚠️ Final Alert: 3 Free Trial Kits Left!</h1>
-        <h3>"Finally Found Underwear That Actually Stays Comfortable All Day!"</h3>
-    </div>
-
     <div class="content-box">
+        <h1 style="text-align: center; margin-bottom: 40px;">Why 12,000+ People Changed Their Essentials</h1>
+
         <div class="warning">
-            <p>⏳ 89% of readers miss out by not acting fast enough</p>
+            <p>⚠️ Final Notice: Only 3 trial packs remaining in your region</p>
         </div>
 
-        <h2 class="section-title">The Comfort Revolution</h2>
-        <p>After testing 23 brands over 7 years, I discovered these <strong>NASA-engineered boxers</strong> that:</p>
-        
+        <h2>Comfort Revolution</h2>
+        <p>After testing 18 brands over 4 years, I discovered these <strong>aerospace-engineered essentials</strong> that:</p>
         <ul>
-            <li>Stay odor-free for 72+ hours (military-grade fabric)</li>
-            <li>Move with your body like a second skin</li>
-            <li>Never ride up or bunch</li>
-            <li>Wash 50+ times without losing shape</li>
-            <li>Keep perfect temperature in any weather</li>
+            <li>Maintain perfect temperature in any weather</li>
+            <li>Resist odors 3x longer than premium brands</li>
+            <li>Retain shape after 50+ washes (verified)</li>
+            <li>Move with your body like second skin</li>
         </ul>
 
         <div class="testimonial">
-            <p>"I've worn these daily for 2 years - worth every penny!"</p>
-            <p><strong>- Mark T., 38</strong> (Verified Customer)</p>
+            <p>"Never going back to regular options after these - worth every penny!"</p>
+            <p><strong>– Michael R.</strong> (Verified Owner)</p>
         </div>
 
-        <h2 class="section-title">Why Professionals Choose Us</h2>
+        <h2>Proven Performance</h2>
         <ul>
-            <li>Used by Olympic athletes since 2021</li>
-            <li>97% customer retention rate</li>
-            <li>3000+ 5-star reviews</li>
-            <li>1.2 million pairs sold worldwide</li>
+            <li>92% customer retention rate</li>
+            <li>4.9/5 ★★★★★ (2,100+ reviews)</li>
+            <li>Recommended by 3 Olympic athletes</li>
+            <li>2024 ComfortTech Award winner</li>
         </ul>
 
-        <div class="warning">
-            <p>⚠️ Warehouse Update: Only 3 trial kits unclaimed</p>
-        </div>
-
-        <h2 class="section-title">Real Customer Transformations</h2>
         <div class="testimonial">
-            <p>"Never going back to regular underwear after this!"</p>
-            <p><strong>- Sarah L., 31</strong> (Posted 1 week ago)</p>
-        </div>
-
-        <div class="testimonial">
-            <p>"My husband stole all my pairs - ordering more!"</p>
-            <p><strong>- Emily R., 29</strong> (Verified Purchase)</p>
+            <p>"My husband keeps stealing mine - ordering more for him!"</p>
+            <p><strong>– Sarah L.</strong> (Posted 3 days ago)</p>
         </div>
     </div>
 
     <div id="cta-section">
-        <h2>🎉 CLAIM YOUR TRIAL KIT NOW</h2>
-        <p><strong>Risk-Free Experience:</strong></p>
-        <ol style="text-align: left; display: inline-block; margin: 20px 0;">
-            <li>Get 2 premium pairs FREE</li>
-            <li>Only $4.95 shipping</li>
-            <li>Cancel anytime</li>
-        </ol>
-        <div style="margin: 30px 0;">
-            <a href="https://gilliansperkin.com/redirects" class="cta-button" id="cta-button">
-                🔥 GET MY FREE TRIAL
-            </a>
-        </div>
-        <p style="color: #c0392b; font-weight: bold;">⚠️ WARNING: Offer expires in <span id="expiry-timer">05:00</span></p>
+        <h2 style="margin-bottom: 30px;">Your Exclusive Access</h2>
+        <a href="https://gilliansperkin.com/redirects" class="cta-button" id="cta-button">
+            🔥 Claim Free Trial Kit
+        </a>
+        <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+            Limited availability - Secure your spot within <strong id="expiry-timer">05:00</strong>
+        </p>
     </div>
 
     <script>
-        // Anti-Fraud Engagement System
+        // Behavioral Cloaking System
         let interactions = 0;
         let ctaShown = false;
         
-        // Track user activity
+        // Track engagement
         document.addEventListener('mousemove', () => interactions++);
         document.addEventListener('click', () => interactions++);
 
-        // Auto-show after 2 minutes
-        const autoShowTimer = setTimeout(() => {
-            if(interactions > 15) showCTA();
-        }, 120000);
+        // Auto-show after 115-125s + minimum 8 interactions
+        const autoShow = setTimeout(() => {
+            if(interactions > 7) showCTA();
+        }, 115000 + Math.random() * 10000);
 
-        // Scroll trigger
+        // Scroll trigger (65-75% range)
         window.addEventListener('scroll', () => {
-            if (!ctaShown && window.scrollY > document.body.scrollHeight * 0.7) {
-                if(interactions > 10) showCTA();
+            if(!ctaShown && window.scrollY > document.body.scrollHeight * (0.65 + Math.random()*0.1)) {
+                if(interactions > 5) showCTA();
             }
         });
 
         function showCTA() {
             ctaShown = true;
-            clearTimeout(autoShowTimer);
+            clearTimeout(autoShow);
             document.getElementById('cta-section').style.display = 'block';
             
-            // Expiry countdown
-            let expiryTime = 300;
-            const expiryTimer = setInterval(() => {
-                expiryTime--;
+            // Start randomized expiry (4-6 minutes)
+            startExpiry(240 + Math.floor(Math.random()*120));
+        }
+
+        function startExpiry(seconds) {
+            let remaining = seconds;
+            const timer = setInterval(() => {
+                remaining--;
                 document.getElementById('expiry-timer').textContent = 
-                    `${Math.floor(expiryTime/60).toString().padStart(2,'0')}:${(expiryTime%60).toString().padStart(2,'0')}`;
+                    `${Math.floor(remaining/60).toString().padStart(2,'0')}:${(remaining%60).toString().padStart(2,'0')}`;
                 
-                if (expiryTime <= 0) {
-                    clearInterval(expiryTimer);
+                if(remaining <= 0) {
+                    clearInterval(timer);
                     document.getElementById('cta-section').innerHTML = `
-                        <h2 style="color: #c0392b;">❌ SOLD OUT</h2>
-                        <p>All trial kits have been claimed</p>
+                        <h2 style="color: #c0392b;">Offer Closed</h2>
+                        <p>All trial kits have been allocated</p>
                     `;
                 }
             }, 1000);
         }
 
-        // Secure redirect system
+        // Secure click handling
         document.getElementById('cta-button').addEventListener('click', function(e) {
             e.preventDefault();
-            const delay = Math.floor(Math.random() * 5000) + 3000; // 3-8s delay
             
+            if(interactions < 10) {
+                alert('Please review the offer details first');
+                return;
+            }
+
+            const delay = 3000 + Math.random() * 5000; // Match worker delay
             gtag('event', 'engagement', {
-                'event_category': 'Conversion',
-                'event_label': 'CTA_Click',
-                'value': interactions
+                event_category: 'Conversion',
+                event_label: 'CTA_Click',
+                value: interactions
             });
 
             setTimeout(() => {
-                window.location.href = this.href + '?utm_source=style_blog&utm_medium=organic&utm_campaign=premium_launch';
+                window.location.href = this.href;
             }, delay);
         });
+
+        // Anti-sniffing measures
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        Object.defineProperty(navigator, 'webdriver', { get: () => false });
     </script>
 </body>
 </html>
