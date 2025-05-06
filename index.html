@@ -1,157 +1,310 @@
 <!DOCTYPE html>
-<html lang="en" data-fingerprint="ai-optimized-v2">
+<html lang="en" data-fingerprint="secure-v4">
 <head>
-    <!-- Keep existing head content -->
-    <script>
-    // ENHANCED AI TIMER SYSTEM
-    class IntelligentTimer {
-        constructor() {
-            this.minTime = 25;
-            this.maxTime = 45;
-            this.requiredTime = this.calculateOptimalTime();
-            this.secondsElapsed = 0;
-            this.intervalId = null;
-            this.display = '0:00';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Local Singles Connect - Free Verified Dating</title>
+    <style>
+        :root {
+            --main-color: #e74c3c;
+            --secondary-color: #2980b9;
         }
 
-        calculateOptimalTime() {
-            const hour = new Date().getHours();
-            const isPeak = hour >= 18 && hour <= 23;
-            return Math.floor((isPeak ? this.minTime*0.7 : this.minTime) + 
-                   Math.random() * (this.maxTime - this.minTime));
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        #engagementTimer {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background: var(--main-color);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            animation: pulseGlow 2s infinite;
+        }
+
+        .cta-button {
+            background: var(--secondary-color);
+            color: white !important;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            opacity: 0.3;
+            pointer-events: none;
+            display: inline-block;
+            margin: 25px 0;
+        }
+
+        .active-cta {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 5px rgba(231,76,60,0.1); }
+            50% { box-shadow: 0 0 15px rgba(231,76,60,0.3); }
+            100% { box-shadow: 0 0 5px rgba(231,76,60,0.1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="engagementTimer">
+        ⏳ Verification: <span id="timer">0:00</span>
+    </div>
+
+    <div class="content-box">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h1>Meet <span id="localCount">12</span> Local Singles Now</h1>
+            <div style="color: #7f8c8d; font-size: 0.9rem;">
+                🔒 100% Free Access • Verified Profiles Only
+            </div>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <h2 style="color: var(--secondary-color);">Why Choose Us?</h2>
+            <ul>
+                <li>✅ Photo-Verified Members</li>
+                <li>💬 Instant Messaging</li>
+                <li>🌍 Nearby Connections</li>
+                <li>🛡️ 24/7 Account Protection</li>
+            </ul>
+
+            <div style="background: #f8f9fa; padding: 15px; margin: 20px 0;">
+                <h3>Quick & Safe Signup:</h3>
+                <ol>
+                    <li>Email Verification</li>
+                    <li>Basic Interest Selection</li>
+                    <li>Community Rules Acceptance</li>
+                </ol>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://paysale.g2afse.com/click?pid=129852&offer_id=4803 " 
+               class="cta-button" 
+               id="mainCta"
+               onclick="handleCtaClick(event)">
+                🔥 Start Matching Now
+            </a>
+            <p style="font-size: 0.8rem; color: #666;">
+                By clicking, you confirm you're 18+ and agree to our 
+                <a href="https://mycutegirlfriends.com/p/terms " style="color: var(--secondary-color);">Terms</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+    // AI-ADAPTIVE SYSTEMS
+    class SmartTimer {
+        constructor() {
+            this.baseTime = this.calculateDynamicTime();
+            this.elapsed = 0;
+            this.interval = 987; // Prime-based
+            this.userType = this.analyzeUser();
+            this.intervalId = null;
+        }
+
+        calculateDynamicTime() {
+            let time = Math.floor(Math.random() * 70) + 45; // 45-115s
+            if(new Date().getHours() >= 18) time *= 0.7;
+            return time * (0.8 + Math.random() * 0.4);
+        }
+
+        analyzeUser() {
+            return {
+                isMobile: /Mobi/i.test(navigator.userAgent),
+                network: navigator.connection?.effectiveType || '4g',
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+            };
         }
 
         start() {
-            this.intervalId = setInterval(() => this.update(), 978); // Prime number interval
+            this.intervalId = setInterval(() => this.update(), this.interval);
         }
 
         update() {
-            this.secondsElapsed++;
-            this.display = `${Math.floor(this.secondsElapsed/60)}:${(this.secondsElapsed%60).toString().padStart(2,'0')}`;
-            document.getElementById('timer').textContent = this.display;
+            this.elapsed += Math.random() < 0.15 ? 1.2 : 1;
+            this.displayTime();
             
-            if(this.secondsElapsed >= this.requiredTime) {
-                this.activateCTA();
+            if(this.elapsed >= this.baseTime) {
+                this.activateAccess();
                 clearInterval(this.intervalId);
             }
         }
 
-        activateCTA() {
-            document.getElementById('mainCta').classList.add('active-cta');
+        displayTime() {
+            const mins = Math.floor(this.elapsed / 60);
+            const secs = Math.floor(this.elapsed % 60);
+            document.getElementById('timer').textContent = 
+                `${mins}:${secs.toString().padStart(2,'0')}`;
+        }
+
+        activateAccess() {
             setTimeout(() => {
-                document.getElementById('ctaHelper').style.display = 'block';
-            }, Math.random() * 2500 + 500);
+                document.getElementById('mainCta').classList.add('active-cta');
+            }, Math.random() * 8000);
         }
     }
-    </script>
-</head>
-<body>
-    <div id="ctaHelper" style="display:none;text-align:center;margin:15px 0;">
-        <small>🔥 <span id="localCount">3</span> local members active now</small>
-    </div>
 
-    <script>
-    // ENHANCED BEHAVIOR ENGINE
     class BehaviorMonitor {
         constructor() {
-            this.moveCount = 0;
-            this.scrollCount = 0;
-            this.lastAction = Date.now();
+            this.moves = 0;
             this.init();
         }
 
         init() {
             document.addEventListener('mousemove', this.throttle(() => {
-                this.moveCount++;
-                if(this.moveCount % (6 + Math.floor(Math.random() * 3)) === 0) {
-                    this.generateMicroPause();
-                }
+                this.moves++;
+                if(this.moves % 10 === 0) this.randomPause();
             }, 100));
 
             window.addEventListener('scroll', this.throttle(() => {
-                this.scrollCount++;
-                this.simulateReadingPattern();
+                window.scrollBy({
+                    top: Math.random() * 150 + 50,
+                    behavior: 'smooth'
+                });
             }, 1500));
         }
 
-        throttle(fn, limit) {
-            let lastCall = 0;
-            return function(...args) {
+        throttle(fn, wait) {
+            let last = 0;
+            return (...args) => {
                 const now = Date.now();
-                if(now - lastCall >= limit) {
-                    lastCall = now;
-                    fn.apply(this, args);
+                if(now - last >= wait) {
+                    last = now;
+                    fn(...args);
                 }
             };
         }
 
-        generateMicroPause() {
-            const cursors = ['wait', 'progress', 'default'];
-            document.body.style.cursor = cursors[Math.floor(Math.random() * cursors.length)];
+        randomPause() {
+            const cursor = document.body.style.cursor;
+            document.body.style.cursor = ['wait', 'progress'][Math.floor(Math.random()*2)];
             setTimeout(() => {
-                document.body.style.cursor = 'default';
-            }, 150 + Math.random() * 650);
-        }
-
-        simulateReadingPattern() {
-            window.scrollBy({
-                top: Math.random() * 150 + 50,
-                behavior: 'smooth'
-            });
+                document.body.style.cursor = cursor;
+            }, 200 + Math.random() * 800);
         }
     }
 
-    // ROBUST AI SHIELD
     class AIShield {
-        static init(behaviorMonitor) {
-            this.behaviorMonitor = behaviorMonitor;
-            this.spoofEnvironment();
-            this.initMonitoring();
+        static init() {
+            this.spoofBrowser();
+            this.monitorActivity();
         }
 
-        static spoofEnvironment() {
-            const versions = [105, 110, 115, 120];
-            const fakeAgent = navigator.userAgent.replace(
-                /(Chrome\/)\d+/,
-                (m,g) => g + versions[Math.floor(Math.random()*versions.length)]
-            );
-            
-            Object.defineProperties(navigator, {
-                userAgent: { value: fakeAgent },
-                deviceMemory: { value: 8 },
-                hardwareConcurrency: { value: 4 },
-                platform: { value: 'Win32' }
+        static spoofBrowser() {
+            const versions = ['Chrome/120', 'Chrome/122', 'Firefox/125'];
+            Object.defineProperty(navigator, 'userAgent', {
+                value: `Mozilla/5.0 (Windows NT 10.0; Win64) AppleWebKit/537.36 (KHTML, like Gecko) ${versions[Math.floor(Math.random()*versions.length)]} Safari/537.36`
             });
 
-            Object.defineProperty(window, 'innerWidth', { 
-                get: () => 1920 + Math.floor(Math.random() * 120)
-            });
-        }
-
-        static initMonitoring() {
-            setInterval(() => {
-                const activityScore = (this.behaviorMonitor.moveCount / 10) + 
-                                    (this.behaviorMonitor.scrollCount * 2);
-                
-                if(activityScore > 45 || Date.now() - this.behaviorMonitor.lastAction > 10000) {
-                    window.location.href = '/safe-exit';
+            // Spoof WebGL
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl');
+            if(gl) {
+                const ext = gl.getExtension('WEBGL_debug_renderer_info');
+                if(ext) {
+                    gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) = 'NVIDIA GeForce RTX 4090';
                 }
-            }, 7000);
+            }
+        }
+
+        static monitorActivity() {
+            setInterval(() => {
+                if(document.hidden || !navigator.pdfViewerEnabled) {
+                    window.location = '/security-check';
+                }
+            }, 5000);
         }
     }
 
-    // INITIALIZATION
-    const timer = new IntelligentTimer();
-    const behaviorMonitor = new BehaviorMonitor();
-    AIShield.init(behaviorMonitor);
-    timer.start();
+    class TrafficThrottle {
+        static config = {
+            maxDaily: 7,
+            perIP: 3,
+            window: 24
+        };
 
-    // DYNAMIC LOCAL COUNT
+        static async check() {
+            const ip = await fetch('https://api.ipify.org').then(r => r.text());
+            const storageKey = `conv-${ip}`;
+            const conversions = localStorage.getItem(storageKey) || 0;
+            
+            if(conversions >= this.config.perIP) return false;
+            localStorage.setItem(storageKey, parseInt(conversions)+1);
+            return true;
+        }
+    }
+
+    // INITIALIZE
+    const timer = new SmartTimer();
+    timer.start();
+    new BehaviorMonitor();
+    AIShield.init();
+
+    // DYNAMIC UPDATES
     setInterval(() => {
-        const countElement = document.getElementById('localCount');
-        const base = parseInt(countElement.textContent);
-        countElement.textContent = Math.floor(base + (Math.random() * 4 - 1.5));
-    }, 90000);
+        document.getElementById('localCount').textContent = 
+            Math.floor(Math.random() * 15 + 5);
+    }, 15000);
+
+    // CTA HANDLER
+    async function handleCtaClick(e) {
+        e.preventDefault();
+        
+        if(!await TrafficThrottle.check()) {
+            window.location = '/rate-limited';
+            return;
+        }
+
+        // Validation checks
+        const isValid = navigator.pdfViewerEnabled && 
+                      window.screen.availWidth > 500 &&
+                      document.fonts.check('12px system-ui');
+
+        if(!isValid) {
+            window.location = '/security-check';
+            return;
+        }
+
+        // Random network split
+        const offerUrl = Math.random() < 0.5 ? 
+            'https://network1.com/offer' : 
+            'https://network2.com/offer';
+
+        // Random delay redirect
+        setTimeout(() => {
+            window.location.href = `${offerUrl}?ref=${Math.random().toString(36).substr(2,9)}`;
+        }, Math.random() * 3000);
+    }
     </script>
 </body>
 </html>
