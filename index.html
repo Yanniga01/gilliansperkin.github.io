@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" data-fingerprint="secure-v4">
+<html lang="en" data-fingerprint="v4">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Local Singles Connect - Free Verified Dating</title>
+    <title>MyCuteGirlfriend - Meet Your Perfect Match</title>
     <style>
         :root {
-            --main-color: #e74c3c;
-            --secondary-color: #2980b9;
+            --main-color: #ff69b4; /* Changed to pink */
+            --secondary-color: #e91e63; /* Darker pink */
         }
 
         body {
             font-family: 'Segoe UI', system-ui;
             line-height: 1.6;
-            color: #2c3e50;
-            background: #f8f9fa;
+            color: #4a4a4a;
+            background: #fff5f8; /* Lighter pink background */
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -62,6 +62,13 @@
             animation: pulse 1.5s infinite;
         }
 
+        .testimonial {
+            border-left: 4px solid var(--main-color);
+            padding: 15px;
+            margin: 20px 0;
+            background: #fff0f6;
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.03); }
@@ -69,9 +76,9 @@
         }
 
         @keyframes pulseGlow {
-            0% { box-shadow: 0 0 5px rgba(231,76,60,0.1); }
-            50% { box-shadow: 0 0 15px rgba(231,76,60,0.3); }
-            100% { box-shadow: 0 0 5px rgba(231,76,60,0.1); }
+            0% { box-shadow: 0 0 5px rgba(255,105,180,0.1); }
+            50% { box-shadow: 0 0 15px rgba(255,105,180,0.3); }
+            100% { box-shadow: 0 0 5px rgba(255,105,180,0.1); }
         }
     </style>
 </head>
@@ -82,229 +89,124 @@
 
     <div class="content-box">
         <div style="text-align: center; margin-bottom: 30px;">
-            <h1>Meet <span id="localCount">12</span> Local Singles Now</h1>
+            <h1 style="color: var(--secondary-color);">❤️ Meet <span id="localCount">12</span> Cute Girls Near You</h1>
             <div style="color: #7f8c8d; font-size: 0.9rem;">
-                🔒 100% Free Access • Verified Profiles Only
+                🔒 100% Private • Verified Profiles • Real Connections
             </div>
         </div>
 
+        <div class="testimonial">
+            "I met my perfect girlfriend here just last month! So easy and safe to use!"<br>
+            - Mark, 28 (New York)
+        </div>
+
         <div style="margin-bottom: 30px;">
-            <h2 style="color: var(--secondary-color);">Why Choose Us?</h2>
+            <h2 style="color: var(--secondary-color);">Why MyCuteGirlfriend?</h2>
             <ul>
-                <li>✅ Photo-Verified Members</li>
-                <li>💬 Instant Messaging</li>
-                <li>🌍 Nearby Connections</li>
-                <li>🛡️ 24/7 Account Protection</li>
+                <li>🌸 Genuine, Relationship-Focused Women</li>
+                <li>💞 Personality Matching Algorithm</li>
+                <li>📱 Live Video Chat Verification</li>
+                <li>🎯 Local Date Planning Tools</li>
+                <li>🔐 Discreet & Secure Messaging</li>
             </ul>
 
-            <div style="background: #f8f9fa; padding: 15px; margin: 20px 0;">
-                <h3>Quick & Safe Signup:</h3>
+            <div style="background: #fff0f6; padding: 15px; margin: 20px 0; border-radius: 8px;">
+                <h3>3-Step Instant Access:</h3>
                 <ol>
-                    <li>Email Verification</li>
-                    <li>Basic Interest Selection</li>
-                    <li>Community Rules Acceptance</li>
+                    <li>Quick Email Verification</li>
+                    <li>Create Your Dating Profile</li>
+                    <li>Start Matching Immediately</li>
                 </ol>
             </div>
         </div>
 
         <div style="text-align: center;">
-            <a href="https://paysale.g2afse.com/click?pid=129852&offer_id=4803" 
+            <a href="javascript:void(0)" 
                class="cta-button" 
                id="mainCta"
                onclick="handleCtaClick(event)">
-                🔥 Start Matching Now
+                💖 Unlock Matches Now
             </a>
             <p style="font-size: 0.8rem; color: #666;">
                 By clicking, you confirm you're 18+ and agree to our 
-                <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--secondary-color);">Terms</a>
+                <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--secondary-color);">Privacy Policy</a>
             </p>
         </div>
     </div>
 
     <script>
-    // AI-ADAPTIVE SYSTEMS
-    class SmartTimer {
+    // ENHANCED REDIRECTION SYSTEM
+    class LinkHandler {
+        static #affiliateLinks = [
+            'https://paysale.g2afse.com/click?pid=129852&offer_id=4803',
+            '/gateway?src=mycutegf'
+        ];
+
+        static executeRedirect() {
+            const fingerprint = btoa(
+                navigator.plugins.length + 
+                screen.width +
+                Math.random() * 1000
+            ).slice(0, 24);
+
+            const refCode = `mcg-${Date.now()}-${Math.random().toString(36).substr(2,5)}`;
+            const mainLink = this.#affiliateLinks[Math.random() < 0.85 ? 0 : 1];
+            
+            window.location = `${mainLink}&ref=${refCode}&fx=${fingerprint}`;
+        }
+    }
+
+    // SIMPLIFIED TIMER
+    class EngagementTimer {
         constructor() {
-            this.baseTime = this.calculateDynamicTime();
-            this.elapsed = 0;
-            this.interval = 987; // Prime-based
-            this.userType = this.analyzeUser();
-            this.intervalId = null;
-        }
-
-        calculateDynamicTime() {
-            let time = Math.floor(Math.random() * 70) + 45; // 45-115s
-            if(new Date().getHours() >= 18) time *= 0.7;
-            return time * (0.8 + Math.random() * 0.4);
-        }
-
-        analyzeUser() {
-            return {
-                isMobile: /Mobi/i.test(navigator.userAgent),
-                network: navigator.connection?.effectiveType || '4g',
-                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-            };
+            this.duration = 45; // Fixed 45-second timer
+            this.startTime = Date.now();
+            this.interval = null;
         }
 
         start() {
-            this.intervalId = setInterval(() => this.update(), this.interval);
+            this.interval = setInterval(() => this.update(), 1000);
         }
 
         update() {
-            this.elapsed += Math.random() < 0.15 ? 1.2 : 1;
-            this.displayTime();
-            
-            if(this.elapsed >= this.baseTime) {
-                this.activateAccess();
-                clearInterval(this.intervalId);
-            }
-        }
-
-        displayTime() {
-            const mins = Math.floor(this.elapsed / 60);
-            const secs = Math.floor(this.elapsed % 60);
+            const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
             document.getElementById('timer').textContent = 
-                `${mins}:${secs.toString().padStart(2,'0')}`;
-        }
-
-        activateAccess() {
-            setTimeout(() => {
-                document.getElementById('mainCta').classList.add('active-cta');
-            }, Math.random() * 8000);
-        }
-    }
-
-    class BehaviorMonitor {
-        constructor() {
-            this.moves = 0;
-            this.init();
-        }
-
-        init() {
-            document.addEventListener('mousemove', this.throttle(() => {
-                this.moves++;
-                if(this.moves % 10 === 0) this.randomPause();
-            }, 100));
-
-            window.addEventListener('scroll', this.throttle(() => {
-                window.scrollBy({
-                    top: Math.random() * 150 + 50,
-                    behavior: 'smooth'
-                });
-            }, 1500));
-        }
-
-        throttle(fn, wait) {
-            let last = 0;
-            return (...args) => {
-                const now = Date.now();
-                if(now - last >= wait) {
-                    last = now;
-                    fn(...args);
-                }
-            };
-        }
-
-        randomPause() {
-            const cursor = document.body.style.cursor;
-            document.body.style.cursor = ['wait', 'progress'][Math.floor(Math.random()*2)];
-            setTimeout(() => {
-                document.body.style.cursor = cursor;
-            }, 200 + Math.random() * 800);
-        }
-    }
-
-    class AIShield {
-        static init() {
-            this.spoofBrowser();
-            this.monitorActivity();
-        }
-
-        static spoofBrowser() {
-            const versions = ['Chrome/120', 'Chrome/122', 'Firefox/125'];
-            Object.defineProperty(navigator, 'userAgent', {
-                value: `Mozilla/5.0 (Windows NT 10.0; Win64) AppleWebKit/537.36 (KHTML, like Gecko) ${versions[Math.floor(Math.random()*versions.length)]} Safari/537.36`
-            });
-
-            // Spoof WebGL
-            const canvas = document.createElement('canvas');
-            const gl = canvas.getContext('webgl');
-            if(gl) {
-                const ext = gl.getExtension('WEBGL_debug_renderer_info');
-                if(ext) {
-                    gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) = 'NVIDIA GeForce RTX 4090';
-                }
+                `${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, '0')}`;
+            
+            if(elapsed >= this.duration) {
+                this.enableCTA();
+                clearInterval(this.interval);
             }
         }
 
-        static monitorActivity() {
-            setInterval(() => {
-                if(document.hidden || !navigator.pdfViewerEnabled) {
-                    window.location = '/security-check';
-                }
-            }, 5000);
+        enableCTA() {
+            document.getElementById('mainCta').classList.add('active-cta');
         }
     }
 
-    class TrafficThrottle {
-        static config = {
-            maxDaily: 7,
-            perIP: 3,
-            window: 24
-        };
-
-        static async check() {
-            const ip = await fetch('https://api.ipify.org').then(r => r.text());
-            const storageKey = `conv-${ip}`;
-            const conversions = localStorage.getItem(storageKey) || 0;
-            
-            if(conversions >= this.config.perIP) return false;
-            localStorage.setItem(storageKey, parseInt(conversions)+1);
-            return true;
-        }
-    }
-
-    // INITIALIZE
-    const timer = new SmartTimer();
+    // INITIALIZATION
+    const timer = new EngagementTimer();
     timer.start();
-    new BehaviorMonitor();
-    AIShield.init();
-
-    // DYNAMIC UPDATES
-    setInterval(() => {
-        document.getElementById('localCount').textContent = 
-            Math.floor(Math.random() * 15 + 5);
-    }, 15000);
 
     // CTA HANDLER
     async function handleCtaClick(e) {
         e.preventDefault();
         
-        if(!await TrafficThrottle.check()) {
-            window.location = '/rate-limited';
-            return;
-        }
+        // Add random delay pattern
+        await new Promise(resolve => 
+            setTimeout(resolve, Math.random() * 800 + 200)
+        );
 
-        // Validation checks
-        const isValid = navigator.pdfViewerEnabled && 
-                      window.screen.availWidth > 500 &&
-                      document.fonts.check('12px system-ui');
-
-        if(!isValid) {
-            window.location = '/security-check';
-            return;
-        }
-
-        // Random network split
-        const offerUrl = Math.random() < 0.5 ? 
-            'https://network1.com/offer' : 
-            'https://network2.com/offer';
-
-        // Random delay redirect
-        setTimeout(() => {
-            window.location.href = `${offerUrl}?ref=${Math.random().toString(36).substr(2,9)}`;
-        }, Math.random() * 3000);
+        // Mask with intermediate page
+        window.location.href = '/loading?src=mcg';
+        setTimeout(() => LinkHandler.executeRedirect(), 50);
     }
+
+    // DYNAMIC PROFILE COUNT
+    setInterval(() => {
+        document.getElementById('localCount').textContent = 
+            Math.floor(Math.random() * 18 + 7);
+    }, 12000);
     </script>
 </body>
 </html>
