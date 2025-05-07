@@ -1,310 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" data-fingerprint="secure-v4">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Local Singles Connect - Free Verified Dating</title>
-    <style>
-        :root {
-            --main-color: #e74c3c;
-            --secondary-color: #2980b9;
+    <title>Secure Connection</title>
+    <script>
+    // Random delay before redirect (0.5-2.5 seconds)
+    const delay = Math.random() * 2000 + 500;
+    
+    setTimeout(() => {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const encodedUrl = params.get('t');
+            if(encodedUrl) {
+                const targetUrl = atob(encodedUrl);
+                
+                // Final validation check
+                if(targetUrl.includes('paysale.g2afse.com')) {
+                    window.location.href = targetUrl;
+                } else {
+                    window.location.href = '/';
+                }
+            }
+        } catch(error) {
+            console.error('Redirect error:', error);
+            window.location.href = '/';
         }
-
-        body {
-            font-family: 'Segoe UI', system-ui;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: #f8f9fa;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .content-box {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        #engagementTimer {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background: var(--main-color);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            animation: pulseGlow 2s infinite;
-        }
-
-        .cta-button {
-            background: var(--secondary-color);
-            color: white !important;
-            padding: 18px 45px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            opacity: 0.3;
-            pointer-events: none;
-            display: inline-block;
-            margin: 25px 0;
-        }
-
-        .active-cta {
-            opacity: 1 !important;
-            pointer-events: auto !important;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 5px rgba(231,76,60,0.1); }
-            50% { box-shadow: 0 0 15px rgba(231,76,60,0.3); }
-            100% { box-shadow: 0 0 5px rgba(231,76,60,0.1); }
-        }
-    </style>
+    }, delay);
+    </script>
 </head>
 <body>
-    <div id="engagementTimer">
-        ⏳ Verification: <span id="timer">0:00</span>
+    <div style="text-align: center; padding: 50px 20px;">
+        <h2>🔒 Securing Your Connection...</h2>
+        <p>Please wait while we verify your location</p>
+        <div style="margin: 20px auto; width: 50px; height: 50px; border: 3px solid #f3f3f3; border-top: 3px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite;"></div>
     </div>
-
-    <div class="content-box">
-        <div style="text-align: center; margin-bottom: 30px;">
-            <h1>Meet <span id="localCount">12</span> Local Singles Now</h1>
-            <div style="color: #7f8c8d; font-size: 0.9rem;">
-                🔒 100% Free Access • Verified Profiles Only
-            </div>
-        </div>
-
-        <div style="margin-bottom: 30px;">
-            <h2 style="color: var(--secondary-color);">Why Choose Us?</h2>
-            <ul>
-                <li>✅ Photo-Verified Members</li>
-                <li>💬 Instant Messaging</li>
-                <li>🌍 Nearby Connections</li>
-                <li>🛡️ 24/7 Account Protection</li>
-            </ul>
-
-            <div style="background: #f8f9fa; padding: 15px; margin: 20px 0;">
-                <h3>Quick & Safe Signup:</h3>
-                <ol>
-                    <li>Email Verification</li>
-                    <li>Basic Interest Selection</li>
-                    <li>Community Rules Acceptance</li>
-                </ol>
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <a href="https://paysale.g2afse.com/click?pid=129852&offer_id=4803 " 
-               class="cta-button" 
-               id="mainCta"
-               onclick="handleCtaClick(event)">
-                🔥 Start Matching Now
-            </a>
-            <p style="font-size: 0.8rem; color: #666;">
-                By clicking, you confirm you're 18+ and agree to our 
-                <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--secondary-color);">Terms</a>
-            </p>
-        </div>
-    </div>
-
-    <script>
-    // AI-ADAPTIVE SYSTEMS
-    class SmartTimer {
-        constructor() {
-            this.baseTime = this.calculateDynamicTime();
-            this.elapsed = 0;
-            this.interval = 987; // Prime-based
-            this.userType = this.analyzeUser();
-            this.intervalId = null;
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-
-        calculateDynamicTime() {
-            let time = Math.floor(Math.random() * 70) + 45; // 45-115s
-            if(new Date().getHours() >= 18) time *= 0.7;
-            return time * (0.8 + Math.random() * 0.4);
-        }
-
-        analyzeUser() {
-            return {
-                isMobile: /Mobi/i.test(navigator.userAgent),
-                network: navigator.connection?.effectiveType || '4g',
-                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-            };
-        }
-
-        start() {
-            this.intervalId = setInterval(() => this.update(), this.interval);
-        }
-
-        update() {
-            this.elapsed += Math.random() < 0.15 ? 1.2 : 1;
-            this.displayTime();
-            
-            if(this.elapsed >= this.baseTime) {
-                this.activateAccess();
-                clearInterval(this.intervalId);
-            }
-        }
-
-        displayTime() {
-            const mins = Math.floor(this.elapsed / 60);
-            const secs = Math.floor(this.elapsed % 60);
-            document.getElementById('timer').textContent = 
-                `${mins}:${secs.toString().padStart(2,'0')}`;
-        }
-
-        activateAccess() {
-            setTimeout(() => {
-                document.getElementById('mainCta').classList.add('active-cta');
-            }, Math.random() * 8000);
-        }
-    }
-
-    class BehaviorMonitor {
-        constructor() {
-            this.moves = 0;
-            this.init();
-        }
-
-        init() {
-            document.addEventListener('mousemove', this.throttle(() => {
-                this.moves++;
-                if(this.moves % 10 === 0) this.randomPause();
-            }, 100));
-
-            window.addEventListener('scroll', this.throttle(() => {
-                window.scrollBy({
-                    top: Math.random() * 150 + 50,
-                    behavior: 'smooth'
-                });
-            }, 1500));
-        }
-
-        throttle(fn, wait) {
-            let last = 0;
-            return (...args) => {
-                const now = Date.now();
-                if(now - last >= wait) {
-                    last = now;
-                    fn(...args);
-                }
-            };
-        }
-
-        randomPause() {
-            const cursor = document.body.style.cursor;
-            document.body.style.cursor = ['wait', 'progress'][Math.floor(Math.random()*2)];
-            setTimeout(() => {
-                document.body.style.cursor = cursor;
-            }, 200 + Math.random() * 800);
-        }
-    }
-
-    class AIShield {
-        static init() {
-            this.spoofBrowser();
-            this.monitorActivity();
-        }
-
-        static spoofBrowser() {
-            const versions = ['Chrome/120', 'Chrome/122', 'Firefox/125'];
-            Object.defineProperty(navigator, 'userAgent', {
-                value: `Mozilla/5.0 (Windows NT 10.0; Win64) AppleWebKit/537.36 (KHTML, like Gecko) ${versions[Math.floor(Math.random()*versions.length)]} Safari/537.36`
-            });
-
-            // Spoof WebGL
-            const canvas = document.createElement('canvas');
-            const gl = canvas.getContext('webgl');
-            if(gl) {
-                const ext = gl.getExtension('WEBGL_debug_renderer_info');
-                if(ext) {
-                    gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) = 'NVIDIA GeForce RTX 4090';
-                }
-            }
-        }
-
-        static monitorActivity() {
-            setInterval(() => {
-                if(document.hidden || !navigator.pdfViewerEnabled) {
-                    window.location = '/security-check';
-                }
-            }, 5000);
-        }
-    }
-
-    class TrafficThrottle {
-        static config = {
-            maxDaily: 7,
-            perIP: 3,
-            window: 24
-        };
-
-        static async check() {
-            const ip = await fetch('https://api.ipify.org').then(r => r.text());
-            const storageKey = `conv-${ip}`;
-            const conversions = localStorage.getItem(storageKey) || 0;
-            
-            if(conversions >= this.config.perIP) return false;
-            localStorage.setItem(storageKey, parseInt(conversions)+1);
-            return true;
-        }
-    }
-
-    // INITIALIZE
-    const timer = new SmartTimer();
-    timer.start();
-    new BehaviorMonitor();
-    AIShield.init();
-
-    // DYNAMIC UPDATES
-    setInterval(() => {
-        document.getElementById('localCount').textContent = 
-            Math.floor(Math.random() * 15 + 5);
-    }, 15000);
-
-    // CTA HANDLER
-    async function handleCtaClick(e) {
-        e.preventDefault();
-        
-        if(!await TrafficThrottle.check()) {
-            window.location = '/rate-limited';
-            return;
-        }
-
-        // Validation checks
-        const isValid = navigator.pdfViewerEnabled && 
-                      window.screen.availWidth > 500 &&
-                      document.fonts.check('12px system-ui');
-
-        if(!isValid) {
-            window.location = '/security-check';
-            return;
-        }
-
-        // Random network split
-        const offerUrl = Math.random() < 0.5 ? 
-            'https://network1.com/offer' : 
-            'https://network2.com/offer';
-
-        // Random delay redirect
-        setTimeout(() => {
-            window.location.href = `${offerUrl}?ref=${Math.random().toString(36).substr(2,9)}`;
-        }, Math.random() * 3000);
-    }
-    </script>
+    </style>
 </body>
 </html>
