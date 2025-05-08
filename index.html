@@ -4,69 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>MyCuteGirlfriend - Meet Your Perfect Match</title>
+    <title>MyCuteGirlfriend - Meet Local Singles</title>
     <style>
         :root {
-            --main-color: #ff69b4; /* Changed to pink */
-            --secondary-color: #e91e63; /* Darker pink */
+            --main-color: #ff69b4;
+            --secondary-color: #e91e63;
+            --timer-start: #ff69b4;
+            --timer-end: #4CAF50;
         }
 
         body {
             font-family: 'Segoe UI', system-ui;
             line-height: 1.6;
             color: #4a4a4a;
-            background: #fff5f8; /* Lighter pink background */
-            max-width: 800px;
-            margin: 0 auto;
+            background: linear-gradient(135deg, #fff5f8 0%, #ffeef7 100%);
+            min-height: 100vh;
+            margin: 0;
             padding: 20px;
         }
 
         .content-box {
-            background: #ffffff;
-            border-radius: 12px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
             padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
         }
 
         #engagementTimer {
             position: fixed;
-            top: 15px;
-            right: 15px;
-            background: var(--main-color);
+            top: 20px;
+            right: 20px;
+            background: var(--timer-start);
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
+            padding: 14px 24px;
+            border-radius: 12px;
             font-size: 1.1rem;
-            animation: pulseGlow 2s infinite;
+            box-shadow: 0 4px 15px rgba(255,105,180,0.2);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 1000;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            margin: 0 0 15px 0;
+            font-size: 2.2rem;
+        }
+
+        .verification-steps {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff0f6;
+            border-radius: 8px;
+        }
+
+        .verification-steps h3 {
+            color: var(--secondary-color);
+            margin: 15px 0;
         }
 
         .cta-button {
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #d81b60 100%);
             color: white !important;
             padding: 18px 45px;
             border-radius: 30px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s;
-            opacity: 0.3;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
             pointer-events: none;
             display: inline-block;
             margin: 25px 0;
+            box-shadow: 0 4px 20px rgba(232,30,99,0.3);
         }
 
         .active-cta {
             opacity: 1 !important;
             pointer-events: auto !important;
-            animation: pulse 1.5s infinite;
-        }
-
-        .testimonial {
-            border-left: 4px solid var(--main-color);
-            padding: 15px;
-            margin: 20px 0;
-            background: #fff0f6;
+            transform: translateY(0) scale(1);
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
@@ -74,49 +93,32 @@
             50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
-
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 5px rgba(255,105,180,0.1); }
-            50% { box-shadow: 0 0 15px rgba(255,105,180,0.3); }
-            100% { box-shadow: 0 0 5px rgba(255,105,180,0.1); }
-        }
     </style>
 </head>
 <body>
     <div id="engagementTimer">
-        ⏳ Verification: <span id="timer">0:00</span>
+        🔒 Verification: <span id="timer"></span>
     </div>
 
     <div class="content-box">
         <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: var(--secondary-color);">❤️ Meet <span id="localCount">12</span> Cute Girls Near You</h1>
-            <div style="color: #7f8c8d; font-size: 0.9rem;">
-                🔒 100% Private • Verified Profiles • Real Connections
+            <h1>❤️ Meet <span id="localCount">15</span> Local Singles</h1>
+            <p style="color: #7f8c8d;">🔒 100% Verified Profiles • Secure Matching</p>
+        </div>
+
+        <div class="verification-steps">
+            <h2>Verification Process</h2>
+            <div class="step">
+                <h3>🔐 Step 1: Identity Check</h3>
+                <p>We're verifying your device and location security</p>
             </div>
-        </div>
-
-        <div class="testimonial">
-            "I met my perfect girlfriend here just last month! So easy and safe to use!"<br>
-            - Mark, 28 (New York)
-        </div>
-
-        <div style="margin-bottom: 30px;">
-            <h2 style="color: var(--secondary-color);">Why MyCuteGirlfriend?</h2>
-            <ul>
-                <li>🌸 Genuine, Relationship-Focused Women</li>
-                <li>💞 Personality Matching Algorithm</li>
-                <li>📱 Live Video Chat Verification</li>
-                <li>🎯 Local Date Planning Tools</li>
-                <li>🔐 Discreet & Secure Messaging</li>
-            </ul>
-
-            <div style="background: #fff0f6; padding: 15px; margin: 20px 0; border-radius: 8px;">
-                <h3>3-Step Instant Access:</h3>
-                <ol>
-                    <li>Quick Email Verification</li>
-                    <li>Create Your Dating Profile</li>
-                    <li>Start Matching Immediately</li>
-                </ol>
+            <div class="step">
+                <h3>🤝 Step 2: Match Selection</h3>
+                <p>Finding compatible singles in your area</p>
+            </div>
+            <div class="step">
+                <h3>🎉 Step 3: Access Granted</h3>
+                <p>Connect with your matches instantly</p>
             </div>
         </div>
 
@@ -125,88 +127,95 @@
                class="cta-button" 
                id="mainCta"
                onclick="handleCtaClick(event)">
-                💖 Unlock Matches Now
+                🔥 View Your Matches Now
             </a>
             <p style="font-size: 0.8rem; color: #666;">
-                By clicking, you confirm you're 18+ and agree to our 
-                <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--secondary-color);">Privacy Policy</a>
+                By clicking, you agree to our 
+                <a href="#" style="color: var(--secondary-color);">Terms of Service</a>
             </p>
         </div>
     </div>
 
     <script>
-    // ENHANCED REDIRECTION SYSTEM
-    class LinkHandler {
-        static #affiliateLinks = [
-            'https://paysale.g2afse.com/click?pid=129852&offer_id=4803',
-            '/gateway?src=mycutegf'
-        ];
-
-        static executeRedirect() {
-            const fingerprint = btoa(
-                navigator.plugins.length + 
-                screen.width +
-                Math.random() * 1000
-            ).slice(0, 24);
-
-            const refCode = `mcg-${Date.now()}-${Math.random().toString(36).substr(2,5)}`;
-            const mainLink = this.#affiliateLinks[Math.random() < 0.85 ? 0 : 1];
-            
-            window.location = `${mainLink}&ref=${refCode}&fx=${fingerprint}`;
-        }
-    }
-
-    // SIMPLIFIED TIMER
+    // RANDOMIZED TIMER SYSTEM
     class EngagementTimer {
         constructor() {
-            this.duration = 45; // Fixed 45-second timer
-            this.startTime = Date.now();
+            this.baseTime = Math.floor(Math.random() * 45) + 35; // 35-80 seconds
+            this.remaining = this.baseTime;
             this.interval = null;
+            this.isCompleted = false;
         }
 
         start() {
+            this.updateDisplay();
             this.interval = setInterval(() => this.update(), 1000);
         }
 
         update() {
-            const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
-            document.getElementById('timer').textContent = 
-                `${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, '0')}`;
+            if(this.isCompleted) return;
             
-            if(elapsed >= this.duration) {
-                this.enableCTA();
+            this.remaining--;
+            this.updateDisplay();
+
+            if(this.remaining <= 0) {
+                this.handleCompletion();
                 clearInterval(this.interval);
             }
         }
 
+        formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        updateDisplay() {
+            const timerElement = document.getElementById('timer');
+            if(timerElement) {
+                timerElement.textContent = this.formatTime(this.remaining);
+                
+                if(this.remaining <= 10) {
+                    timerElement.parentElement.style.background = '#e91e63';
+                }
+            }
+        }
+
+        handleCompletion() {
+            this.isCompleted = true;
+            const timerElement = document.getElementById('timer');
+            if(timerElement) {
+                timerElement.textContent = "Verified!";
+                timerElement.parentElement.style.background = '#4CAF50';
+            }
+            this.enableCTA();
+        }
+
         enableCTA() {
-            document.getElementById('mainCta').classList.add('active-cta');
+            const ctaButton = document.getElementById('mainCta');
+            if(ctaButton) {
+                ctaButton.classList.add('active-cta');
+                ctaButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }
     }
 
-    // INITIALIZATION
+    // Initialize timer
     const timer = new EngagementTimer();
     timer.start();
 
-    // CTA HANDLER
+    // Dynamic profile count
+    let profileCount = 15;
+    setInterval(() => {
+        profileCount += Math.floor(Math.random() * 3) - 1;
+        document.getElementById('localCount').textContent = Math.max(10, profileCount);
+    }, 12000);
+
+    // CTA handler
     async function handleCtaClick(e) {
         e.preventDefault();
-        
-        // Add random delay pattern
-        await new Promise(resolve => 
-            setTimeout(resolve, Math.random() * 800 + 200)
-        );
-
-        // Mask with intermediate page
-        window.location.href = '/loading?src=mcg';
-        setTimeout(() => LinkHandler.executeRedirect(), 50);
+        await new Promise(r => setTimeout(r, 300 + Math.random() * 700));
+        window.location.href = 'https://paysale.g2afse.com/sl?id=6707ff5cbb23f2139d89e9bf&pid=129852';
     }
-
-    // DYNAMIC PROFILE COUNT
-    setInterval(() => {
-        document.getElementById('localCount').textContent = 
-            Math.floor(Math.random() * 18 + 7);
-    }, 12000);
     </script>
 </body>
 </html>
