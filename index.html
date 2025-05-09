@@ -6,6 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>SecureVPN Pro - Military-Grade Encryption Protection</title>
     <style>
+        /* Your original CSS preserved */
         :root {
             --primary: #1a73e8;
             --secondary: #0d47a1;
@@ -89,6 +90,7 @@
     </style>
 </head>
 <body>
+    <!-- Your original HTML structure preserved -->
     <div class="security-alert">
         <h2>⚠️ Security Alert: Unprotected Connection Detected</h2>
         <p>Your current IP <span id="user-ip">[Loading...]</span> is exposed to 3 potential threats:</p>
@@ -102,7 +104,7 @@
     <div class="vpn-card">
         <h1>Secure Your Connection in 60 Seconds</h1>
         <div class="countdown">
-            🔒 Special Offer Expires In: <span id="timer">02:00</span>
+            🔒 Another special Offer will become available in: <span id="timer">02:00</span>
         </div>
 
         <div class="features-grid">
@@ -131,107 +133,71 @@
     </div>
 
     <script>
-    // AI-Powered Security Verification
-    class SecurityCheck {
-        constructor() {
-            this.validHuman = false;
-            this.initChecks();
-        }
-
-        initChecks() {
-            // Browser Validation
-            const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
-            const hasCookies = navigator.cookieEnabled;
-            const hasJS = true; // Assumed with JS execution
-            
-            // Hardware Checks
-            const validDevice = navigator.hardwareConcurrency > 2 && 
-                              navigator.deviceMemory >= 4 &&
-                              screen.width > 768;
-
-            this.validHuman = !isBot && hasCookies && hasJS && validDevice;
-        }
-    }
-
-    // Randomized Engagement Timer
+    // PROPERLY WORKING TIMER SYSTEM
     class VerificationTimer {
         constructor() {
-            this.duration = Math.floor(Math.random() * 60) + 90; // 90-150 seconds
-            this.remaining = this.duration;
+            this.duration = 120; // Fixed 2-minute timer
+            this.startTime = Date.now();
             this.interval = null;
         }
 
         start() {
-            this.updateDisplay();
-            this.interval = setInterval(() => this.update(), 1000);
+            this.updateTimer();
+            this.interval = setInterval(() => this.updateTimer(), 1000);
         }
 
-        update() {
-            this.remaining--;
-            this.updateDisplay();
+        updateTimer() {
+            const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
+            const remaining = this.duration - elapsed;
             
-            if(this.remaining <= 0) {
-                clearInterval(this.interval);
-                this.activateAccess();
-            }
-        }
-
-        updateDisplay() {
-            const mins = Math.floor(this.remaining / 60);
-            const secs = this.remaining % 60;
+            const mins = Math.floor(remaining / 60);
+            const secs = remaining % 60;
             document.getElementById('timer').textContent = 
                 `${mins}:${secs.toString().padStart(2, '0')}`;
-        }
 
-        activateAccess() {
-            document.getElementById('mainCta').classList.add('active-cta');
+            if(remaining <= 0) {
+                clearInterval(this.interval);
+                document.getElementById('mainCta').classList.add('active-cta');
+            }
         }
     }
 
-    // Dynamic Content Generation
-    function generateDynamicElements() {
-        // Fake IP Generation
-        document.getElementById('user-ip').textContent = 
-            `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
-
-        // Active Users Counter
-        setInterval(() => {
-            const users = document.getElementById('active-users');
-            const current = parseInt(users.textContent.replace(/,/g, ''));
-            users.textContent = (current + Math.floor(Math.random() * 7)).toLocaleString();
-        }, 4500);
-    }
-
-    // Secure Redirect Handler
+    // WORKING REDIRECT HANDLER
     async function handleSecureRedirect(e) {
         e.preventDefault();
-        const security = new SecurityCheck();
-
-        if(!security.validHuman) {
-            window.location.href = '/security-check';
-            return;
-        }
-
-        // Natural Delay Pattern
-        await new Promise(r => setTimeout(r, 800 + Math.random() * 1200));
-
-        // Multi-Step Redirect
-        window.location.href = '/secure-redirect';
-        setTimeout(() => {
-            window.location.href = 'https://ryzvxm.com/af?o=297dcd19f321832386d734697114e856:7d09df1e59f1100b3a452ea91c3bf5eb';
-        }, 50);
+        
+        // Add natural delay
+        await new Promise(r => setTimeout(r, 500 + Math.random() * 1000));
+        
+        // Direct affiliate link with tracking parameters
+        const affiliateUrl = new URL('https://ryzvxm.com/af');
+        affiliateUrl.searchParams.set('o', '297dcd19f321832386d734697114e856:7d09df1e59f1100b3a452ea91c3bf5eb');
+        affiliateUrl.searchParams.set('ref', `vpn_${Date.now()}`);
+        affiliateUrl.searchParams.set('_', Math.random().toString(36).substr(2, 8));
+        
+        window.location.href = affiliateUrl.toString();
     }
 
-    // Initialize
+    // INITIALIZE SYSTEMS
     const timer = new VerificationTimer();
     timer.start();
-    generateDynamicElements();
 
-    // Compliance Features
+    // Dynamic IP Generation
+    document.getElementById('user-ip').textContent = 
+        `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
+
+    // Active users counter
+    let userCount = 2143;
+    setInterval(() => {
+        userCount += Math.floor(Math.random() * 5);
+        document.getElementById('active-users').textContent = userCount.toLocaleString();
+    }, 3000);
+
+    // Compliance footer
     document.body.innerHTML += `
         <div style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #666;">
             <p>*This is an affiliate link. We earn commission at no extra cost to you. 
-            <a href="https://yanniga.blogspot.com/p/privacy-policy.html " style="color: var(--primary);">Privacy Policy</a></p>
+            <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--primary);">Privacy Policy</a></p>
         </div>
     `;
     </script>
