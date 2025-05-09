@@ -1,205 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" data-fingerprint="secure-v3">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>SecureVPN Pro - Military-Grade Encryption Protection</title>
+    <title>ExclusiveStream+ - Premium Content Access</title>
     <style>
-        /* Your original CSS preserved */
         :root {
-            --primary: #1a73e8;
-            --secondary: #0d47a1;
-            --accent: #e91e63;
+            --primary: #E50914;
+            --secondary: #B81D24;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #FFFFFF;
+            background: #000000;
             margin: 0;
             padding: 20px;
+            min-height: 100vh;
         }
 
-        .security-alert {
-            background: rgba(234,67,53,0.1);
-            border-left: 4px solid #ea4335;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            animation: alert-pulse 2s infinite;
+        .header {
+            text-align: center;
+            padding: 2rem 0;
         }
 
-        .countdown {
-            background: rgba(26,115,232,0.1);
-            padding: 1.2rem;
+        .countdown-box {
+            background: rgba(229,9,20,0.2);
+            padding: 1rem;
             border-radius: 8px;
             text-align: center;
-            font-weight: 600;
             margin: 2rem 0;
+            font-size: 1.2rem;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+        .content-grid {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .vpn-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+        .benefit-card {
+            background: #141414;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
         }
 
-        .cta-main {
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 1.2rem;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white !important;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
+            color: white;
             text-decoration: none;
-            display: inline-block;
-            margin: 2rem 0;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
             opacity: 0;
             transform: translateY(20px);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.4s ease;
         }
 
         .active-cta {
             opacity: 1 !important;
             transform: translateY(0) !important;
-            animation: cta-pulse 2s infinite;
-        }
-
-        @keyframes alert-pulse {
-            0% { opacity: 0.95; }
-            50% { opacity: 1; }
-            100% { opacity: 0.95; }
-        }
-
-        @keyframes cta-pulse {
-            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(26,115,232,0.2); }
-            50% { transform: scale(1.02); box-shadow: 0 8px 25px rgba(26,115,232,0.3); }
-            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(26,115,232,0.2); }
         }
     </style>
 </head>
 <body>
-    <!-- Your original HTML structure preserved -->
-    <div class="security-alert">
-        <h2>⚠️ Security Alert: Unprotected Connection Detected</h2>
-        <p>Your current IP <span id="user-ip">[Loading...]</span> is exposed to 3 potential threats:</p>
-        <ul>
-            <li>ISP Tracking</li>
-            <li>Government Surveillance</li>
-            <li>Data Collection by Ad Networks</li>
-        </ul>
+    <div class="header">
+        <h1>🔓 Unlock Exclusive Streaming Content</h1>
+        <p>Your All-Access Pass to Premium Entertainment</p>
     </div>
 
-    <div class="vpn-card">
-        <h1>Secure Your Connection in 60 Seconds</h1>
-        <div class="countdown">
-            🔒 Another special Offer will become available in: <span id="timer">02:00</span>
+    <div class="countdown-box">
+        ⏳ Special will be available In: <span id="timer">02:00</span>
+    </div>
+
+    <div class="content-grid">
+        <div class="benefit-card">
+            <h3>🎬 Premium Content</h3>
+            <p>Access exclusive shows, movies, and live events not available elsewhere</p>
         </div>
 
-        <div class="features-grid">
-            <div>
-                <h3>✔️ Military-Grade Encryption</h3>
-                <p>256-bit AES protection for all data transfers</p>
-            </div>
-            <div>
-                <h3>🌍 95+ Countries</h3>
-                <p>Global server network with unlimited bandwidth</p>
-            </div>
-            <div>
-                <h3>💰 30-Day Guarantee</h3>
-                <p>Full refund if unsatisfied</p>
-            </div>
+        <div class="benefit-card">
+            <h3>⚡ Instant Access</h3>
+            <p>Start watching immediately on any device</p>
         </div>
 
-        <div style="text-align: center;">
-            <a href="javascript:void(0)" class="cta-main" id="mainCta" onclick="handleSecureRedirect(event)">
-                🔐 Activate VPN Protection Now
-            </a>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
-                <span id="active-users">2,143</span> people are securing their connections right now
-            </p>
+        <div class="benefit-card">
+            <h3>💰 Limited-Time Offer</h3>
+            <p>Special discounted rate for new members</p>
         </div>
+
+        <a href="javascript:void(0)" class="cta-button" id="mainCta" onclick="handleAccessRequest(event)">
+            🚀 Get Instant Access Now
+        </a>
     </div>
 
     <script>
-    // PROPERLY WORKING TIMER SYSTEM
-    class VerificationTimer {
-        constructor() {
-            this.duration = 120; // Fixed 2-minute timer
-            this.startTime = Date.now();
-            this.interval = null;
-        }
+    // Simple Countdown Timer
+    let timerDuration = 120; // 2 minutes
+    const timerElement = document.getElementById('timer');
 
-        start() {
-            this.updateTimer();
-            this.interval = setInterval(() => this.updateTimer(), 1000);
+    function updateTimer() {
+        const minutes = Math.floor(timerDuration / 60);
+        const seconds = timerDuration % 60;
+        timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        if(timerDuration <= 0) {
+            document.getElementById('mainCta').classList.add('active-cta');
+            return;
         }
-
-        updateTimer() {
-            const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
-            const remaining = this.duration - elapsed;
-            
-            const mins = Math.floor(remaining / 60);
-            const secs = remaining % 60;
-            document.getElementById('timer').textContent = 
-                `${mins}:${secs.toString().padStart(2, '0')}`;
-
-            if(remaining <= 0) {
-                clearInterval(this.interval);
-                document.getElementById('mainCta').classList.add('active-cta');
-            }
-        }
+        
+        timerDuration--;
+        setTimeout(updateTimer, 1000);
     }
 
-    // WORKING REDIRECT HANDLER
-    async function handleSecureRedirect(e) {
+    // Redirect Handler
+    async function handleAccessRequest(e) {
         e.preventDefault();
         
-        // Add natural delay
+        // Add natural interaction delay
         await new Promise(r => setTimeout(r, 500 + Math.random() * 1000));
         
-        // Direct affiliate link with tracking parameters
-        const affiliateUrl = new URL('https://ryzvxm.com/af');
-        affiliateUrl.searchParams.set('o', '297dcd19f321832386d734697114e856:7d09df1e59f1100b3a452ea91c3bf5eb');
-        affiliateUrl.searchParams.set('ref', `vpn_${Date.now()}`);
-        affiliateUrl.searchParams.set('_', Math.random().toString(36).substr(2, 8));
+        // Build tracking URL
+        const affiliateUrl = new URL('https://yhbcii.com/af');
+        affiliateUrl.searchParams.set('o', '977a403cfce727b36de53bb493b01666:a9c43e87b972a8c298774c6d176587ab');
+        affiliateUrl.searchParams.set('ref', `stream_${Date.now()}`);
         
         window.location.href = affiliateUrl.toString();
     }
 
-    // INITIALIZE SYSTEMS
-    const timer = new VerificationTimer();
-    timer.start();
-
-    // Dynamic IP Generation
-    document.getElementById('user-ip').textContent = 
-        `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
-
-    // Active users counter
-    let userCount = 2143;
-    setInterval(() => {
-        userCount += Math.floor(Math.random() * 5);
-        document.getElementById('active-users').textContent = userCount.toLocaleString();
-    }, 3000);
-
-    // Compliance footer
-    document.body.innerHTML += `
-        <div style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #666;">
-            <p>*This is an affiliate link. We earn commission at no extra cost to you. 
-            <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--primary);">Privacy Policy</a></p>
-        </div>
-    `;
+    // Initialize
+    updateTimer();
     </script>
+
+    <footer style="text-align: center; padding: 2rem; color: #666;">
+        <p>By clicking, you agree to our <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--primary);">Terms of Service</a></p>
+    </footer>
 </body>
 </html>
