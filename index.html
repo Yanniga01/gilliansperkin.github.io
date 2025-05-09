@@ -1,149 +1,164 @@
 <!DOCTYPE html>
-<html lang="en" data-fingerprint="v4">
+<html lang="en" data-fingerprint="secure-v3">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>MyCuteGirlfriend - Meet Local Singles</title>
+    <title>SecureVPN Pro - Military-Grade Encryption Protection</title>
     <style>
         :root {
-            --main-color: #ff69b4;
-            --secondary-color: #e91e63;
-            --timer-start: #ff69b4;
-            --timer-end: #4CAF50;
+            --primary: #1a73e8;
+            --secondary: #0d47a1;
+            --accent: #e91e63;
         }
 
         body {
             font-family: 'Segoe UI', system-ui;
             line-height: 1.6;
-            color: #4a4a4a;
-            background: linear-gradient(135deg, #fff5f8 0%, #ffeef7 100%);
+            color: #2d3748;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             min-height: 100vh;
             margin: 0;
             padding: 20px;
         }
 
-        .content-box {
-            background: rgba(255,255,255,0.95);
-            border-radius: 16px;
-            padding: 30px;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        #engagementTimer {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--timer-start);
-            color: white;
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255,105,180,0.2);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            z-index: 1000;
-        }
-
-        h1 {
-            color: var(--secondary-color);
-            margin: 0 0 15px 0;
-            font-size: 2.2rem;
-        }
-
-        .verification-steps {
-            margin: 30px 0;
-            padding: 20px;
-            background: #fff0f6;
+        .security-alert {
+            background: rgba(234,67,53,0.1);
+            border-left: 4px solid #ea4335;
+            padding: 1.5rem;
             border-radius: 8px;
+            margin: 2rem 0;
+            animation: alert-pulse 2s infinite;
         }
 
-        .verification-steps h3 {
-            color: var(--secondary-color);
-            margin: 15px 0;
+        .countdown {
+            background: rgba(26,115,232,0.1);
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            margin: 2rem 0;
         }
 
-        .cta-button {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #d81b60 100%);
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .vpn-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .cta-main {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white !important;
-            padding: 18px 45px;
-            border-radius: 30px;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            opacity: 0;
-            transform: translateY(20px) scale(0.95);
-            pointer-events: none;
             display: inline-block;
-            margin: 25px 0;
-            box-shadow: 0 4px 20px rgba(232,30,99,0.3);
+            margin: 2rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .active-cta {
             opacity: 1 !important;
-            pointer-events: auto !important;
-            transform: translateY(0) scale(1);
-            animation: pulse 2s infinite;
+            transform: translateY(0) !important;
+            animation: cta-pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
+        @keyframes alert-pulse {
+            0% { opacity: 0.95; }
+            50% { opacity: 1; }
+            100% { opacity: 0.95; }
+        }
+
+        @keyframes cta-pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(26,115,232,0.2); }
+            50% { transform: scale(1.02); box-shadow: 0 8px 25px rgba(26,115,232,0.3); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(26,115,232,0.2); }
         }
     </style>
 </head>
 <body>
-    <div id="engagementTimer">
-        🔒 Verification: <span id="timer"></span>
+    <div class="security-alert">
+        <h2>⚠️ Security Alert: Unprotected Connection Detected</h2>
+        <p>Your current IP <span id="user-ip">[Loading...]</span> is exposed to 3 potential threats:</p>
+        <ul>
+            <li>ISP Tracking</li>
+            <li>Government Surveillance</li>
+            <li>Data Collection by Ad Networks</li>
+        </ul>
     </div>
 
-    <div class="content-box">
-        <div style="text-align: center; margin-bottom: 30px;">
-            <h1>❤️ Meet <span id="localCount">15</span> Local Singles</h1>
-            <p style="color: #7f8c8d;">🔒 100% Verified Profiles • Secure Matching</p>
+    <div class="vpn-card">
+        <h1>Secure Your Connection in 60 Seconds</h1>
+        <div class="countdown">
+            🔒 Special Offer Expires In: <span id="timer">02:00</span>
         </div>
 
-        <div class="verification-steps">
-            <h2>Verification Process</h2>
-            <div class="step">
-                <h3>🔐 Step 1: Identity Check</h3>
-                <p>We're verifying your device and location security</p>
+        <div class="features-grid">
+            <div>
+                <h3>✔️ Military-Grade Encryption</h3>
+                <p>256-bit AES protection for all data transfers</p>
             </div>
-            <div class="step">
-                <h3>🤝 Step 2: Match Selection</h3>
-                <p>Finding compatible singles in your area</p>
+            <div>
+                <h3>🌍 95+ Countries</h3>
+                <p>Global server network with unlimited bandwidth</p>
             </div>
-            <div class="step">
-                <h3>🎉 Step 3: Access Granted</h3>
-                <p>Connect with your matches instantly</p>
+            <div>
+                <h3>💰 30-Day Guarantee</h3>
+                <p>Full refund if unsatisfied</p>
             </div>
         </div>
 
         <div style="text-align: center;">
-            <a href="javascript:void(0)" 
-               class="cta-button" 
-               id="mainCta"
-               onclick="handleCtaClick(event)">
-                🔥 View Your Matches Now
+            <a href="javascript:void(0)" class="cta-main" id="mainCta" onclick="handleSecureRedirect(event)">
+                🔐 Activate VPN Protection Now
             </a>
-            <p style="font-size: 0.8rem; color: #666;">
-                By clicking, you agree to our 
-                <a href="#" style="color: var(--secondary-color);">Terms of Service</a>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
+                <span id="active-users">2,143</span> people are securing their connections right now
             </p>
         </div>
     </div>
 
     <script>
-    // RANDOMIZED TIMER SYSTEM
-    class EngagementTimer {
+    // AI-Powered Security Verification
+    class SecurityCheck {
         constructor() {
-            this.baseTime = Math.floor(Math.random() * 45) + 35; // 35-80 seconds
-            this.remaining = this.baseTime;
+            this.validHuman = false;
+            this.initChecks();
+        }
+
+        initChecks() {
+            // Browser Validation
+            const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+            const hasCookies = navigator.cookieEnabled;
+            const hasJS = true; // Assumed with JS execution
+            
+            // Hardware Checks
+            const validDevice = navigator.hardwareConcurrency > 2 && 
+                              navigator.deviceMemory >= 4 &&
+                              screen.width > 768;
+
+            this.validHuman = !isBot && hasCookies && hasJS && validDevice;
+        }
+    }
+
+    // Randomized Engagement Timer
+    class VerificationTimer {
+        constructor() {
+            this.duration = Math.floor(Math.random() * 60) + 90; // 90-150 seconds
+            this.remaining = this.duration;
             this.interval = null;
-            this.isCompleted = false;
         }
 
         start() {
@@ -152,70 +167,73 @@
         }
 
         update() {
-            if(this.isCompleted) return;
-            
             this.remaining--;
             this.updateDisplay();
-
+            
             if(this.remaining <= 0) {
-                this.handleCompletion();
                 clearInterval(this.interval);
+                this.activateAccess();
             }
-        }
-
-        formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
-            const secs = seconds % 60;
-            return `${mins}:${secs.toString().padStart(2, '0')}`;
         }
 
         updateDisplay() {
-            const timerElement = document.getElementById('timer');
-            if(timerElement) {
-                timerElement.textContent = this.formatTime(this.remaining);
-                
-                if(this.remaining <= 10) {
-                    timerElement.parentElement.style.background = '#e91e63';
-                }
-            }
+            const mins = Math.floor(this.remaining / 60);
+            const secs = this.remaining % 60;
+            document.getElementById('timer').textContent = 
+                `${mins}:${secs.toString().padStart(2, '0')}`;
         }
 
-        handleCompletion() {
-            this.isCompleted = true;
-            const timerElement = document.getElementById('timer');
-            if(timerElement) {
-                timerElement.textContent = "Verified!";
-                timerElement.parentElement.style.background = '#4CAF50';
-            }
-            this.enableCTA();
-        }
-
-        enableCTA() {
-            const ctaButton = document.getElementById('mainCta');
-            if(ctaButton) {
-                ctaButton.classList.add('active-cta');
-                ctaButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+        activateAccess() {
+            document.getElementById('mainCta').classList.add('active-cta');
         }
     }
 
-    // Initialize timer
-    const timer = new EngagementTimer();
-    timer.start();
+    // Dynamic Content Generation
+    function generateDynamicElements() {
+        // Fake IP Generation
+        document.getElementById('user-ip').textContent = 
+            `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
 
-    // Dynamic profile count
-    let profileCount = 15;
-    setInterval(() => {
-        profileCount += Math.floor(Math.random() * 3) - 1;
-        document.getElementById('localCount').textContent = Math.max(10, profileCount);
-    }, 12000);
+        // Active Users Counter
+        setInterval(() => {
+            const users = document.getElementById('active-users');
+            const current = parseInt(users.textContent.replace(/,/g, ''));
+            users.textContent = (current + Math.floor(Math.random() * 7)).toLocaleString();
+        }, 4500);
+    }
 
-    // CTA handler
-    async function handleCtaClick(e) {
+    // Secure Redirect Handler
+    async function handleSecureRedirect(e) {
         e.preventDefault();
-        await new Promise(r => setTimeout(r, 300 + Math.random() * 700));
-        window.location.href = 'https://paysale.g2afse.com/sl?id=6707ff5cbb23f2139d89e9bf&pid=129852';
+        const security = new SecurityCheck();
+
+        if(!security.validHuman) {
+            window.location.href = '/security-check';
+            return;
+        }
+
+        // Natural Delay Pattern
+        await new Promise(r => setTimeout(r, 800 + Math.random() * 1200));
+
+        // Multi-Step Redirect
+        window.location.href = '/secure-redirect';
+        setTimeout(() => {
+            window.location.href = 'https://ryzvxm.com/af?o=297dcd19f321832386d734697114e856:7d09df1e59f1100b3a452ea91c3bf5eb';
+        }, 50);
     }
+
+    // Initialize
+    const timer = new VerificationTimer();
+    timer.start();
+    generateDynamicElements();
+
+    // Compliance Features
+    document.body.innerHTML += `
+        <div style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #666;">
+            <p>*This is an affiliate link. We earn commission at no extra cost to you. 
+            <a href="https://yanniga.blogspot.com/p/privacy-policy.html " style="color: var(--primary);">Privacy Policy</a></p>
+        </div>
+    `;
     </script>
 </body>
 </html>
