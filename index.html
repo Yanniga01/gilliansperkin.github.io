@@ -3,143 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExclusiveStream+ - Premium Content Access</title>
+    <title>Global Rewards Hub | Claim Offers Worldwide</title>
     <style>
-        :root {
-            --primary: #E50914;
-            --secondary: #B81D24;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.5;
-            color: #FFFFFF;
-            background: #000000;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
             margin: 0;
             padding: 20px;
-            min-height: 100vh;
-        }
-
-        .header {
             text-align: center;
-            padding: 2rem 0;
         }
-
-        .countdown-box {
-            background: rgba(229,9,20,0.2);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 2rem 0;
-            font-size: 1.2rem;
-        }
-
-        .content-grid {
-            max-width: 800px;
+        .container {
+            max-width: 600px;
             margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        .benefit-card {
-            background: #141414;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
         }
-
+        p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
         .cta-button {
-            display: block;
-            width: 100%;
-            max-width: 400px;
-            margin: 2rem auto;
-            padding: 1.2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: inline-block;
+            background: #3498db;
             color: white;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 5px;
+            margin: 20px 0;
             font-weight: bold;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.4s ease;
         }
-
-        .active-cta {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+        .offer-list {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .offer-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        /* Translator Styling */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .goog-te-banner-frame {
+            display: none !important; /* Hide Google's banner */
         }
     </style>
+    
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,fr,de,pt,ru,ar,hi,zh-CN,ja,ko',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>🔓 Unlock Exclusive Streaming Content</h1>
-        <p>Your All-Access Pass to Premium Entertainment</p>
-    </div>
-
-    <div class="countdown-box">
-        ⏳ Special will be available In: <span id="timer">02:00</span>
-    </div>
-
-    <div class="content-grid">
-        <div class="benefit-card">
-            <h3>🎬 Premium Content</h3>
-            <p>Access exclusive shows, movies, and live events not available elsewhere</p>
+    <div id="google_translate_element"></div>
+    <div class="container">
+        <h1>🌍 Instant Worldwide Rewards!</h1>
+        <p>Choose an offer below to claim your free gift, discount, or cash bonus. Available in your language!</p>
+        
+        <div class="offer-list">
+            <div class="offer-item">
+                <strong>🎁 Free Gift Cards</strong>
+                <p>Complete quick tasks to earn rewards from Amazon, Visa, or local stores.</p>
+            </div>
+            <div class="offer-item">
+                <strong>💰 Global Cash Offers</strong>
+                <p>Sign up for services and get paid via PayPal, bank transfer, or crypto.</p>
+            </div>
+            <div class="offer-item">
+                <strong>📱 App & Game Rewards</strong>
+                <p>Download apps or play games to earn points redeemable worldwide.</p>
+            </div>
         </div>
 
-        <div class="benefit-card">
-            <h3>⚡ Instant Access</h3>
-            <p>Start watching immediately on any device</p>
-        </div>
-
-        <div class="benefit-card">
-            <h3>💰 Limited-Time Offer</h3>
-            <p>Special discounted rate for new members</p>
-        </div>
-
-        <a href="javascript:void(0)" class="cta-button" id="mainCta" onclick="handleAccessRequest(event)">
-            🚀 Get Instant Access Now
-        </a>
+        <a href="https://singingfiles.com/1807180" class="cta-button">View Offers in Your Language →</a>
+        
+        <p style="font-size: 12px; color: #95a5a6;">
+            <em>Offers vary by region. 18+ only. No purchase necessary. Terms apply.</em>
+        </p>
     </div>
-
-    <script>
-    // Simple Countdown Timer
-    let timerDuration = 120; // 2 minutes
-    const timerElement = document.getElementById('timer');
-
-    function updateTimer() {
-        const minutes = Math.floor(timerDuration / 60);
-        const seconds = timerDuration % 60;
-        timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-        
-        if(timerDuration <= 0) {
-            document.getElementById('mainCta').classList.add('active-cta');
-            return;
-        }
-        
-        timerDuration--;
-        setTimeout(updateTimer, 1000);
-    }
-
-    // Redirect Handler
-    async function handleAccessRequest(e) {
-        e.preventDefault();
-        
-        // Add natural interaction delay
-        await new Promise(r => setTimeout(r, 500 + Math.random() * 1000));
-        
-        // Build tracking URL
-        const affiliateUrl = new URL('https://yhbcii.com/af');
-        affiliateUrl.searchParams.set('o', '977a403cfce727b36de53bb493b01666:a9c43e87b972a8c298774c6d176587ab');
-        affiliateUrl.searchParams.set('ref', `stream_${Date.now()}`);
-        
-        window.location.href = affiliateUrl.toString();
-    }
-
-    // Initialize
-    updateTimer();
-    </script>
-
-    <footer style="text-align: center; padding: 2rem; color: #666;">
-        <p>By clicking, you agree to our <a href="https://yanniga.blogspot.com/p/privacy-policy.html" style="color: var(--primary);">Terms of Service</a></p>
-    </footer>
 </body>
 </html>
