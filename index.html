@@ -32,7 +32,7 @@
             margin: 25px 0;
         }
         .cta-button {
-            display: none; /* Start hidden */
+            display: inline-block;
             background-color: #005caa;
             color: #fff;
             padding: 14px 30px;
@@ -57,23 +57,9 @@
             animation: spin 1s linear infinite;
             margin: 0 auto;
         }
-        .countdown-container {
-            margin: 25px 0;
-            font-size: 1.1em;
-            color: #666;
-        }
-        #countdown {
-            color: #d9534f;
-            font-weight: bold;
-            font-size: 1.3em;
-            display: block;
-            margin-top: 10px;
-        }
         .legal-links {
             margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.85em;
+            font-size: 14px;
         }
         .legal-links a {
             color: #005caa;
@@ -99,12 +85,6 @@
             </a>
         </div>
 
-        <div class="countdown-container">
-            <p>Registry builder unlocking in:</p>
-            <span id="countdown"></span>
-            <small>Verifying availability in your region...</small>
-        </div>
-
         <a href="#redirect" class="cta-button" onclick="handleCtaClick(event)">
             <span class="button-text">Start Free Registry</span>
             <div class="loader"></div>
@@ -114,47 +94,25 @@
             <p>Trusted by over 2 million users worldwide • SSL Secure • No Credit Card Required</p>
         </div>
 
-        <!-- Updated Legal Links -->
+        <!-- Added Terms and Privacy Links -->
         <div class="legal-links">
-            <a href="https://yourgithubusername.github.io/repo/terms.html" target="_blank">Terms & Conditions</a>
-            <a href="https://yourgithubusername.github.io/repo/privacy.html" target="_blank">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
         </div>
     </div>
 
     <script>
-        // Random countdown timer (40-79 seconds)
-        let countdownTime = Math.floor(Math.random() * 40) + 40;
-        const countdownElement = document.getElementById('countdown');
-        const ctaButton = document.querySelector('.cta-button');
-        const countdownContainer = document.querySelector('.countdown-container');
-
-        function updateCountdown() {
-            const minutes = Math.floor(countdownTime / 60);
-            const seconds = countdownTime % 60;
-            countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-
-            if(countdownTime <= 0) {
-                ctaButton.style.display = 'inline-block';
-                countdownContainer.style.display = 'none';
-                return;
-            }
-
-            countdownTime--;
-            setTimeout(updateCountdown, 1000);
-        }
-
-        // Initialize countdown
-        updateCountdown();
-
-        // Original code below
+        // Random delay between 2-5 seconds
         const getRandomDelay = () => Math.floor(Math.random() * 3000) + 2000;
 
+        // Fake loading state
         const showLoader = (element) => {
             element.classList.add('processing');
             element.querySelector('.loader').style.display = 'block';
             element.querySelector('.button-text').style.visibility = 'hidden';
         };
 
+        // Main handler
         const handleRedirect = (element) => {
             showLoader(element);
             setTimeout(() => {
@@ -163,6 +121,7 @@
             }, getRandomDelay());
         };
 
+        // Event handlers
         const handleCtaClick = (e) => {
             e.preventDefault();
             handleRedirect(e.currentTarget);
@@ -173,10 +132,12 @@
             handleRedirect(e.currentTarget);
         };
 
+        // Basic bot detection
         if(navigator.webdriver || window.outerWidth === 0) {
             document.body.innerHTML = '<h2>Please enable JavaScript to continue</h2>';
         }
 
+        // Fake engagement tracking
         document.addEventListener('click', () => {
             localStorage.setItem('lastInteraction', Date.now());
         });
