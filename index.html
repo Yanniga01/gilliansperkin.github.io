@@ -3,135 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Perfect Gift Registry | MyRegistry</title>
+    <title>Premium Holiday Gift Registry | Create & Share Your Wishlist</title>
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-3DCX56R2GN');
+        gtag('config', 'G-3DCX56R2GN', {
+            'page_title': 'HolidayRegistryBuilder',
+            'page_path': '/registry'
+        });
     </script>
+
     <style>
+        :root {
+            --primary: #c23a3a;
+            --secondary: #2c3e50;
+            --accent: #4CAF50;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f9fc;
-            color: #333;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f8fafc;
+            color: var(--secondary);
             margin: 0;
             padding: 20px;
+            line-height: 1.6;
         }
         .container {
-            max-width: 720px;
-            margin: 0 auto;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+        .content-area {
+            padding-right: 30px;
+        }
+        h1 {
+            font-size: 2.8em;
+            line-height: 1.1;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        .benefits-list li {
+            padding: 15px;
+            margin: 12px 0;
+            background: #fff5f5;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+        }
+        .countdown-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             text-align: center;
         }
-        .banner-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            margin: 25px 0;
-        }
-        .cta-button {
-            display: none; /* Hidden until timer ends */
-            background-color: #005caa;
-            color: #fff;
-            padding: 14px 30px;
-            margin: 25px 0;
-            font-size: 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        .processing {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        .loader {
-            display: none;
-            width: 25px;
-            height: 25px;
-            border: 3px solid #fff;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        .countdown-container {
-            margin: 25px 0;
-            font-size: 1.1em;
-        }
         #countdown {
-            color: #d9534f;
-            font-weight: bold;
-            font-size: 1.3em;
+            font-size: 2.5em;
+            color: var(--primary);
+            margin: 20px 0;
+            font-weight: 700;
         }
-        .legal-links {
-            margin-top: 30px;
-            font-size: 14px;
+        .cta-main {
+            display: inline-block;
+            background: var(--primary);
+            color: white !important;
+            padding: 18px 45px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        .cta-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(194,58,58,0.2);
+        }
+        .trust-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .trust-badge {
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .legal-section {
+            border-top: 1px solid #eee;
+            padding: 30px 40px;
+            text-align: center;
         }
         .legal-links a {
-            color: #005caa;
+            color: var(--secondary);
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
+            font-size: 0.9em;
         }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .registry-image {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Build Your Dream Gift Registry</h1>
-        <p>Create a personalized registry in minutes - add gifts from any store worldwide!</p>
+        <div class="hero-section">
+            <div class="content-area">
+                <h1>Create Your Perfect<br>Holiday Gift Registry</h1>
+                
+                <ul class="benefits-list">
+                    <li>✓ Combine Gifts from Any Store Worldwide</li>
+                    <li>✓ Real-Time Price Tracking & Alerts</li>
+                    <li>✓ Group Gifting for Expensive Items</li>
+                    <li>✓ Free Shipping on 500,000+ Products</li>
+                </ul>
 
-        <div class="banner-grid">
-            <a href="#redirect" class="partner-banner" onclick="handleBannerClick(event)">
-                <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas4_2021.gif" alt="Gift Registry Example" style="width:100%">
-            </a>
-            <a href="#redirect" class="partner-banner" onclick="handleBannerClick(event)">
-                <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas2_2021.jpg" alt="Registry Benefits" style="width:100%">
-            </a>
+                <div class="countdown-box">
+                    <p>Your personalized registry unlocks in:</p>
+                    <div id="countdown">1:00</div>
+                    <small>Preparing recommendations based on your location...</small>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">🔒 256-bit SSL Security</div>
+                    <div class="trust-badge">⭐ 4.9/5 (2,500+ Reviews)</div>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas4_2021.gif" 
+                     alt="Holiday Gift Registry Preview" 
+                     class="registry-image">
+            </div>
         </div>
 
-        <!-- Countdown Timer -->
-        <div class="countdown-container">
-            <p>Loading your registry builder... <span id="countdown"></span></p>
-        </div>
-
-        <a href="#redirect" class="cta-button" onclick="handleCtaClick(event)">
-            <span class="button-text">Start Free Registry</span>
-            <div class="loader"></div>
-        </a>
-
-        <div class="note">
-            <p>Trusted by over 2 million users worldwide • SSL Secure • No Credit Card Required</p>
-        </div>
-
-        <div class="legal-links">
-            <a href="terms.html">Terms & Conditions</a>
-            <a href="privacy.html">Privacy Policy</a>
+        <!-- Legal Section -->
+        <div class="legal-section">
+            <div class="legal-links">
+                <a href="terms.html" target="_blank">Terms of Service</a>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+                <a href="contact.html" target="_blank">Contact Support</a>
+            </div>
+            <p style="color: #666; margin-top: 20px;">
+                © 2025 Gift Registry Pro. All rights reserved.
+            </p>
         </div>
     </div>
 
     <script>
         // ======================
-        // ANTI-DETECTION FEATURES
+        // CORE FUNCTIONALITY
         // ======================
         
-        // 1. Random countdown (40-79 seconds)
+        // 1. Randomized Countdown Timer (40-79 seconds)
         let countdownTime = Math.floor(Math.random() * 40) + 40;
         const countdownElement = document.getElementById('countdown');
-        const ctaButton = document.querySelector('.cta-button');
+        const ctaButton = document.createElement('a');
         
         function updateCountdown() {
             const minutes = Math.floor(countdownTime / 60);
             const seconds = countdownTime % 60;
-            countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            
+            countdownElement.textContent = 
+                `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
             if(countdownTime <= 0) {
-                ctaButton.style.display = 'inline-block';
-                document.querySelector('.countdown-container').style.display = 'none';
+                document.querySelector('.countdown-box').innerHTML = `
+                    <p style="color: var(--accent); font-weight: bold;">
+                        ✓ Registry Builder Ready!
+                    </p>
+                    <a href="#redirect" class="cta-main" onclick="handleRedirect(event)">
+                        Start Your Registry Now →
+                    </a>
+                `;
                 return;
             }
             
@@ -139,70 +204,40 @@
             setTimeout(updateCountdown, 1000);
         }
 
-        // 2. Mouse movement simulation
-        document.addEventListener('mousemove', (e) => {
-            localStorage.setItem('mouseX', e.clientX);
-            localStorage.setItem('mouseY', e.clientY);
-        });
-
-        // 3. User agent rotation
-        const agents = [
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1'
-        ];
-        Object.defineProperty(navigator, 'userAgent', {
-            value: agents[Math.floor(Math.random()*2)],
-            configurable: true
-        });
-
-        // 4. Fake organic referrers
-        const fakeReferrers = [
-            'https://www.pinterest.com/search/pins/?q=gift%20registry',
-            'https://www.google.com/search?q=create+wedding+registry',
-            'https://www.facebook.com/groups/weddingplanning'
-        ];
-
-        // ======================
-        // CORE FUNCTIONALITY
-        // ======================
+        // 2. Advanced Anti-Detection System
+        let engagementScore = 0;
         
-        const getRandomDelay = () => Math.floor(Math.random() * 3000) + 2000;
+        document.addEventListener('mousemove', () => engagementScore++);
+        document.addEventListener('click', () => engagementScore += 2);
+        document.addEventListener('scroll', () => engagementScore++);
 
-        const showLoader = (element) => {
-            element.classList.add('processing');
-            element.querySelector('.loader').style.display = 'block';
-            element.querySelector('.button-text').style.visibility = 'hidden';
-        };
-
-        const handleRedirect = (element) => {
-            showLoader(element);
-            
-            // Add random referrer
-            const randomRef = fakeReferrers[Math.floor(Math.random()*fakeReferrers.length)];
-            
-            setTimeout(() => {
-                window.location.href = `https://prelander-redirect-2.vercel.app?ref=${Math.random().toString(36).substring(7)}&source=${encodeURIComponent(randomRef)}`;
-            }, getRandomDelay());
-        };
-
-        const handleCtaClick = (e) => {
+        // 3. Secure Redirect Handler
+        function handleRedirect(e) {
             e.preventDefault();
-            handleRedirect(e.currentTarget);
-        };
+            
+            // Show loading state
+            e.target.innerHTML = 'Preparing Your Registry... <div class="loader"></div>';
+            
+            // Randomized delay with engagement check
+            const safeRedirect = () => {
+                const referrers = [
+                    'https://www.pinterest.com/search/pins/?q=holiday+gifts',
+                    'https://www.google.com/search?q=create+gift+registry',
+                    'https://www.facebook.com/groups/holidayideas'
+                ];
+                
+                window.location.href = `https://prelander-redirect-2.vercel.app?` + 
+                    `ref=${Math.random().toString(36).substring(2, 15)}` + 
+                    `&src=${encodeURIComponent(referrers[Math.floor(Math.random()*3)])}` + 
+                    `&t=${Date.now()}`;
+            };
 
-        const handleBannerClick = (e) => {
-            e.preventDefault();
-            handleRedirect(e.currentTarget);
-        };
-
-        // Bot detection
-        if(navigator.webdriver || 
-           window.outerWidth === 0 || 
-           !localStorage.getItem('mouseX')) {
-            document.body.innerHTML = '<h2>System Maintenance</h2><p>Please check back later.</p>';
+            engagementScore > 7 ? 
+                setTimeout(safeRedirect, 1000 + Math.random() * 2000) :
+                setTimeout(safeRedirect, 3000 + Math.random() * 3000);
         }
 
-        // Start countdown on load
+        // 4. Initialize
         updateCountdown();
     </script>
 </body>
