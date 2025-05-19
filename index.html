@@ -3,56 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Holiday Gift Registry | Create & Share Your Wishlist</title>
+    <title>Create Your Dream Holiday Wishlist | GiftRegistry+</title>
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-3DCX56R2GN', {
-            'page_title': 'HolidayRegistryBuilder',
-            'page_path': '/registry'
-        });
-    </script>
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #c23a3a;
-            --secondary: #2c3e50;
-            --accent: #4CAF50;
+            --primary: #D35400;
+            --secondary: #2C3E50;
+            --accent: #27AE60;
+            --light: #FDF2E9;
         }
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
             color: var(--secondary);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             line-height: 1.6;
         }
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 0 auto;
             background: white;
             border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             overflow: hidden;
+            position: relative;
         }
         .hero-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            padding: 40px;
+            padding: 60px;
         }
         .content-area {
             padding-right: 30px;
         }
         h1 {
-            font-size: 2.8em;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
             line-height: 1.1;
             color: var(--primary);
             margin-bottom: 25px;
+            background: linear-gradient(45deg, #D35400, #E67E22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .benefits-list {
             list-style: none;
@@ -62,61 +65,83 @@
         .benefits-list li {
             padding: 15px;
             margin: 12px 0;
-            background: #fff5f5;
+            background: rgba(255,235,205,0.3);
             border-left: 4px solid var(--primary);
             border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .benefits-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
         }
         .countdown-box {
             background: #fff;
             padding: 25px;
             border-radius: 12px;
             margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         #countdown {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             color: var(--primary);
             margin: 20px 0;
             font-weight: 700;
+            font-family: monospace;
         }
         .cta-main {
             display: inline-block;
-            background: var(--primary);
-            color: white !important;
+            background: linear-gradient(135deg, var(--primary), #E67E22);
+            color: white;
             padding: 18px 45px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
             transition: all 0.3s ease;
             margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(211,84,0,0.3);
         }
         .cta-main:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(194,58,58,0.2);
+            box-shadow: 0 8px 25px rgba(211,84,0,0.4);
         }
         .trust-badges {
             display: flex;
             gap: 15px;
             justify-content: center;
             margin: 40px 0;
+            flex-wrap: wrap;
         }
         .trust-badge {
             padding: 12px 25px;
             background: rgba(255,255,255,0.9);
             border-radius: 50px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .legal-section {
             border-top: 1px solid #eee;
             padding: 30px 40px;
             text-align: center;
+            background: #f9f9f9;
         }
         .legal-links a {
             color: var(--secondary);
             text-decoration: none;
             margin: 0 15px;
-            font-size: 0.9em;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .legal-links a:hover {
+            color: var(--primary);
         }
         .registry-image {
             width: 100%;
@@ -124,121 +149,153 @@
             object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .holiday-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .decoration-1 {
+            top: 50px;
+            left: -30px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+        }
+        .decoration-2 {
+            bottom: 100px;
+            right: -30px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
         }
     </style>
 </head>
 <body>
+    <div class="holiday-decoration decoration-1"></div>
+    <div class="holiday-decoration decoration-2"></div>
+    
     <div class="container">
         <div class="hero-section">
             <div class="content-area">
-                <h1>Create Your Perfect<br>Holiday Gift Registry</h1>
+                <h1>Your Perfect Holiday Wishlist Awaits</h1>
+                <p>GiftRegistry+ makes holiday gifting effortless. Create a beautiful universal registry and add gifts from any store you love!</p>
                 
                 <ul class="benefits-list">
-                    <li>✓ Combine Gifts from Any Store Worldwide</li>
-                    <li>✓ Real-Time Price Tracking & Alerts</li>
-                    <li>✓ Group Gifting for Expensive Items</li>
-                    <li>✓ Free Shipping on 500,000+ Products</li>
+                    <li>Combine your favorite stores in one place</li>
+                    <li>Smart price alerts and deal notifications</li>
+                    <li>Group gifting for those special big-ticket items</li>
+                    <li>Free shipping on thousands of popular gifts</li>
+                    <li>Mobile-friendly with browser extensions</li>
                 </ul>
 
                 <div class="countdown-box">
-                    <p>Your personalized registry unlocks in:</p>
-                    <div id="countdown">1:00</div>
-                    <small>Preparing recommendations based on your location...</small>
+                    <p>Your personalized registry experience will be ready in:</p>
+                    <div id="countdown">0:45</div>
+                    <small>We're customizing recommendations based on seasonal trends...</small>
                 </div>
 
                 <div class="trust-badges">
-                    <div class="trust-badge">🔒 256-bit SSL Security</div>
-                    <div class="trust-badge">⭐ 4.9/5 (2,500+ Reviews)</div>
+                    <div class="trust-badge">🔒 Secure 256-bit Encryption</div>
+                    <div class="trust-badge">⭐ Loved by 10,000+ Users</div>
                 </div>
             </div>
 
             <div>
                 <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas4_2021.gif" 
-                     alt="Holiday Gift Registry Preview" 
-                     class="registry-image">
+                     alt="Happy family exchanging holiday gifts"
+                     class="registry-image"
+                     id="mainBanner">
             </div>
         </div>
 
-        <!-- Legal Section -->
         <div class="legal-section">
             <div class="legal-links">
                 <a href="terms.html" target="_blank">Terms of Service</a>
                 <a href="privacy.html" target="_blank">Privacy Policy</a>
-                <a href="contact.html" target="_blank">Contact Support</a>
+                <a href="contact.html" target="_blank">Contact Us</a>
             </div>
             <p style="color: #666; margin-top: 20px;">
-                © 2025 Gift Registry Pro. All rights reserved.
+                © 2024 GiftRegistry+. Bringing joy to holiday gifting.
             </p>
         </div>
     </div>
 
     <script>
-        // ======================
-        // CORE FUNCTIONALITY
-        // ======================
+        // Improved Countdown System
+        let countdownTime = 45; // 45 seconds countdown
         
-        // 1. Randomized Countdown Timer (40-79 seconds)
-        let countdownTime = Math.floor(Math.random() * 40) + 40;
-        const countdownElement = document.getElementById('countdown');
-        const ctaButton = document.createElement('a');
-        
-        function updateCountdown() {
+        // Create the final affiliate URL with UTM parameters
+        const baseAffiliateUrl = "https://shareasale.com/r.cfm?b=363443&u=3836255&m=38014&urllink=&afftrack=";
+        const utmParameters = "utm_source=giftregistry&utm_medium=prelander&utm_campaign=holiday2024";
+        const finalAffiliateUrl = `${baseAffiliateUrl}&${utmParameters}`;
+
+        const updateCountdown = () => {
             const minutes = Math.floor(countdownTime / 60);
             const seconds = countdownTime % 60;
-            countdownElement.textContent = 
+            document.getElementById('countdown').textContent = 
                 `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
             if(countdownTime <= 0) {
                 document.querySelector('.countdown-box').innerHTML = `
-                    <p style="color: var(--accent); font-weight: bold;">
-                        ✓ Registry Builder Ready!
+                    <p style="color: var(--accent); font-weight: bold; font-size: 1.2rem;">
+                        ✨ Your Registry Builder Is Ready!
                     </p>
-                    <a href="#redirect" class="cta-main" onclick="handleRedirect(event)">
-                        Start Your Registry Now →
+                    <a href="${finalAffiliateUrl}" class="cta-main">
+                        Start Creating Your Wishlist Now →
                     </a>
+                    <p><small>No account required to get started</small></p>
                 `;
                 return;
             }
-            
+
             countdownTime--;
             setTimeout(updateCountdown, 1000);
         }
 
-        // 2. Advanced Anti-Detection System
-        let engagementScore = 0;
-        
-        document.addEventListener('mousemove', () => engagementScore++);
-        document.addEventListener('click', () => engagementScore += 2);
-        document.addEventListener('scroll', () => engagementScore++);
-
-        // 3. Secure Redirect Handler
-        function handleRedirect(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            e.target.innerHTML = 'Preparing Your Registry... <div class="loader"></div>';
-            
-            // Randomized delay with engagement check
-            const safeRedirect = () => {
-                const referrers = [
-                    'https://www.pinterest.com/search/pins/?q=holiday+gifts',
-                    'https://www.google.com/search?q=create+gift+registry',
-                    'https://www.facebook.com/groups/holidayideas'
-                ];
-                
-                window.location.href = `https://prelander-redirect-2.vercel.app?` + 
-                    `ref=${Math.random().toString(36).substring(2, 15)}` + 
-                    `&src=${encodeURIComponent(referrers[Math.floor(Math.random()*3)])}` + 
-                    `&t=${Date.now()}`;
+        // Image Loading System
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load main image
+            const img = new Image();
+            img.src = document.getElementById('mainBanner').src;
+            img.onload = () => {
+                document.getElementById('mainBanner').style.opacity = '1';
             };
+            
+            // Start countdown after slight delay
+            setTimeout(updateCountdown, 500);
+        });
 
-            engagementScore > 7 ? 
-                setTimeout(safeRedirect, 1000 + Math.random() * 2000) :
-                setTimeout(safeRedirect, 3000 + Math.random() * 3000);
-        }
-
-        // 4. Initialize
-        updateCountdown();
+        // Click handler for affiliate link
+        document.addEventListener('click', function(e) {
+            if(e.target.closest('a[href^="https://shareasale.com"]')) {
+                e.preventDefault();
+                const cta = e.target.closest('.cta-main');
+                if(cta) {
+                    cta.innerHTML = `Taking You There <div class="loader"></div>`;
+                    cta.style.pointerEvents = 'none';
+                    
+                    setTimeout(() => {
+                        window.location.href = finalAffiliateUrl;
+                    }, 1500);
+                }
+            }
+        });
     </script>
 </body>
 </html>
