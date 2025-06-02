@@ -1,375 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Dream Holiday Wishlist | GiftRegistry+</title>
-    
-    <!-- AI-Optimized Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    
-    <!-- AI-Enhanced Font Loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <!-- AI-Optimized CSS -->
-    <style>
-        :root {
-            --primary: #D35400;
-            --secondary: #2C3E50;
-            --accent: #27AE60;
-            --light: #FDF2E9;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-        }
-        body {
-            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
-            background: var(--light);
-            color: var(--secondary);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            overflow: hidden;
-            position: relative;
-            transition: var(--transition);
-        }
-        .hero-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            padding: 60px;
-        }
-        .content-area {
-            padding-right: 30px;
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.2rem, 5vw, 3rem);
-            line-height: 1.1;
-            margin-bottom: 25px;
-            background: linear-gradient(45deg, #D35400, #E67E22);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInUp 0.8s ease-out;
-        }
-        .benefits-list {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
-        }
-        .benefits-list li {
-            padding: 15px;
-            margin: 12px 0;
-            background: rgba(255,235,205,0.3);
-            border-left: 4px solid var(--primary);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-        }
-        .benefits-list li:hover {
-            transform: translateX(5px);
-            background: rgba(255,235,205,0.5);
-        }
-        .countdown-box {
-            background: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
-            animation: fadeIn 0.8s ease-out 0.3s both;
-        }
-        #countdown {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin: 20px 0;
-            font-weight: 700;
-            font-family: 'Courier New', monospace;
-        }
-        .cta-main {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), #E67E22);
-            color: white;
-            padding: 18px 45px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: var(--transition);
-            margin: 20px 0;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(211,84,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        .cta-main:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(211,84,0,0.4);
-        }
-        .trust-badges {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        .trust-badge {
-            padding: 12px 25px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 50px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-        .legal-section {
-            border-top: 1px solid #eee;
-            padding: 30px 40px;
-            text-align: center;
-            background: #f9f9f9;
-        }
-        .legal-links a {
-            color: var(--secondary);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .legal-links a:hover {
-            color: var(--primary);
-        }
-        .registry-image {
-            width: 100%;
-            height: 500px;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            opacity: 0;
-            transition: opacity 0.8s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            animation: fadeIn 1s ease-out 0.5s forwards;
-        }
-        .loader {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-        .holiday-decoration {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            opacity: 0.1;
-            z-index: -1;
-            filter: blur(20px);
-        }
-        .decoration-1 {
-            top: 50px;
-            left: -30px;
-            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-            animation: float 6s ease-in-out infinite;
-        }
-        .decoration-2 {
-            bottom: 100px;
-            right: -30px;
-            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-            animation: float 8s ease-in-out infinite 1s;
-        }
-
-        /* AI-Enhanced Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        /* AI-Optimized Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero-section {
-                grid-template-columns: 1fr;
-                padding: 30px;
-                gap: 20px;
-            }
-            .content-area {
-                padding-right: 0;
-            }
-            .registry-image {
-                height: 350px;
-                order: -1;
-            }
-            .trust-badges {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Your Wishlist - Powered by MyRegistry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .wrapper {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 26px;
+      color: #1e88e5;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .cta {
+      display: inline-block;
+      background-color: #1e88e5;
+      color: white;
+      padding: 15px 30px;
+      margin-top: 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .cta:hover {
+      background-color: #0d47a1;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #777;
+      padding: 0 20px;
+    }
+    footer a {
+      color: #777;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="holiday-decoration decoration-1"></div>
-    <div class="holiday-decoration decoration-2"></div>
-    
-    <div class="container">
-        <div class="hero-section">
-            <div class="content-area">
-                <h1>Your Perfect Holiday Wishlist Awaits</h1>
-                <p>GiftRegistry+ makes holiday gifting effortless. Create a beautiful universal registry and add gifts from any store you love!</p>
-                
-                <ul class="benefits-list">
-                    <li>Combine your favorite stores in one place</li>
-                    <li>Smart price alerts and deal notifications</li>
-                    <li>Group gifting for those special big-ticket items</li>
-                    <li>Free shipping on thousands of popular gifts</li>
-                    <li>Mobile-friendly with browser extensions</li>
-                </ul>
+  <div class="wrapper">
+    <img src="https://shareasale-analytics.s3.amazonaws.com/merchant/107113/creative/867454/20220823013622_file_62fbf9163c33f.jpg" alt="MyRegistry Banner" />
 
-                <div class="countdown-box">
-                    <p>Your personalized registry experience will be ready in:</p>
-                    <div id="countdown">1:20</div>
-                    <small>We're customizing recommendations based on seasonal trends...</small>
-                </div>
+    <h1>Create Your Universal Wishlist</h1>
 
-                <div class="trust-badges">
-                    <div class="trust-badge">🔒 Secure 256-bit Encryption</div>
-                    <div class="trust-badge">⭐ Loved by 10,000+ Users</div>
-                </div>
-            </div>
+    <p>
+      With MyRegistry, you can create one simple and convenient gift registry that works with any store — online or in person.
+    </p>
 
-            <div>
-                <img src="https://static.shareasale.com/image/38014/mr_affiliate_xmas4_2021.gif" 
-                     alt="Happy family exchanging holiday gifts"
-                     class="registry-image"
-                     id="mainBanner">
-            </div>
-        </div>
+    <p>
+      Whether it's for a wedding, baby shower, birthday, graduation, or any occasion — MyRegistry makes it easy to collect everything you love in one place.
+    </p>
 
-        <div class="legal-section">
-            <div class="legal-links">
-                <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>
-                <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-                <a href="contact.html" target="_blank" rel="noopener">Contact Us</a>
-            </div>
-            <p style="color: #666; margin-top: 20px;">
-                © 2024 GiftRegistry+. Bringing joy to holiday gifting.
-            </p>
-        </div>
-    </div>
+    <a class="cta" href="https://www.shareasale.com/r.cfm?b=1536252&u=3369832&m=107113&urllink=&afftrack=" target="_blank" rel="noopener noreferrer">
+      🎁 Start Your Free Registry Now
+    </a>
 
-    <script>
-        // AI-Optimized Countdown System (Random 40-79 seconds)
-        let countdownTime = Math.floor(Math.random() * 40) + 40; // 40-79 seconds
-        
-        // AI-Enhanced Affiliate Link with UTM Parameters
-        const baseAffiliateUrl = "https://shareasale.com/r.cfm?b=363443&u=3836255&m=38014&urllink=&afftrack=";
-        const utmParams = new URLSearchParams({
-            utm_source: 'giftregistry',
-            utm_medium: 'prelander',
-            utm_campaign: 'holiday2024',
-            utm_content: 'countdown_button',
-            utm_term: 'premium_registry'
-        });
-        const finalAffiliateUrl = `${baseAffiliateUrl}&${utmParams.toString()}`;
-
-        // AI-Improved Countdown Function
-        const updateCountdown = () => {
-            const minutes = Math.floor(countdownTime / 60);
-            const seconds = countdownTime % 60;
-            document.getElementById('countdown').textContent = 
-                `${minutes}:${seconds.toString().padStart(2, '0')}`;
-
-            if(countdownTime <= 0) {
-                document.querySelector('.countdown-box').innerHTML = `
-                    <p style="color: var(--accent); font-weight: bold; font-size: 1.2rem;">
-                        ✨ Your Registry Builder Is Ready!
-                    </p>
-                    <a href="${finalAffiliateUrl}" class="cta-main" id="affiliate-cta">
-                        Start Creating Your Wishlist Now →
-                    </a>
-                    <p><small>No account required to get started</small></p>
-                `;
-                return;
-            }
-
-            countdownTime--;
-            setTimeout(updateCountdown, 1000);
-        }
-
-        // AI-Optimized Image Loading
-        document.addEventListener('DOMContentLoaded', () => {
-            // Progressive image load with error handling
-            const img = new Image();
-            img.src = document.getElementById('mainBanner').src;
-            img.onload = () => {
-                document.getElementById('mainBanner').style.opacity = '1';
-            };
-            img.onerror = () => {
-                document.getElementById('mainBanner').src = 'https://via.placeholder.com/800x500/fdf2e9/2c3e50?text=Gift+Registry+Preview';
-                document.getElementById('mainBanner').style.opacity = '1';
-            };
-            
-            // Start countdown with random delay (better UX)
-            setTimeout(updateCountdown, Math.floor(Math.random() * 1000) + 500);
-        });
-
-        // AI-Enhanced Click Tracking with Event Delegation
-        document.addEventListener('click', (e) => {
-            if(e.target.closest('#affiliate-cta') || e.target.closest('a[href^="https://shareasale.com"]')) {
-                e.preventDefault();
-                const cta = e.target.closest('.cta-main');
-                if(cta) {
-                    // AI-Improved Loading State
-                    cta.innerHTML = `Securing Connection <div class="loader"></div>`;
-                    cta.style.pointerEvents = 'none';
-                    
-                    // AI-Optimized Redirect Timing (based on engagement)
-                    const delay = Math.max(1000, Math.min(3000, performance.now() / 10));
-                    
-                    setTimeout(() => {
-                        window.location.href = finalAffiliateUrl;
-                    }, delay);
-                }
-            }
-        });
-
-        // AI-Powered Viewport Validation
-        function checkViewport() {
-            if(window.innerWidth < 300 || window.outerWidth === 0) {
-                document.body.innerHTML = `
-                    <div style="padding: 20px; text-align: center;">
-                        <h2>Please rotate your device or use a larger screen</h2>
-                        <p>For the best experience, please use a device with a wider screen.</p>
-                    </div>`;
-            }
-        }
-        window.addEventListener('resize', checkViewport);
-        checkViewport();
-    </script>
+    <footer>
+      <p>
+        This site is independently operated. We may earn a commission at no extra cost to you when you click our affiliate links and make a purchase or sign up.
+      </p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Use</a> | 
+        <a href="contact.html">Contact</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
