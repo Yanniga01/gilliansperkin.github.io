@@ -1,52 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SmartGuideHubs – Smart Guides That Save You Time</title>
-  <meta name="description" content="Independent guides helping users discover useful tools, services, and platforms.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 
-<body>
-  <header>
-    <h1>SmartGuideHubs</h1>
-    <p>Simple, honest guides to help you choose better online services.</p>
-  </header>
+<!-- Contact / Lead Form Section -->
+<section class="lead-form-section">
+    <div class="form-container">
+        <h2>Get Your Free Guide</h2>
+        <p class="tagline">
+            Learn how to make smarter choices with simple, independent insights.
+            No hype. No pressure. Just useful information.
+        </p>
+        
+        <form id="prelanderLeadForm" action="https://formspree.io/f/xyzjwbrl" method="POST">
+            
+            <div class="input-group">
+                <label for="full-name">Full Name *</label>
+                <input 
+                    type="text" 
+                    id="full-name" 
+                    name="name" 
+                    placeholder="Your full name" 
+                    required>
+                <div class="hint">
+                    This helps us communicate with you in a more personal way.
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="email-address">Email Address *</label>
+                <input 
+                    type="email" 
+                    id="email-address" 
+                    name="_replyto" 
+                    placeholder="you@example.com" 
+                    required>
+                <div class="hint">
+                    We’ll send your requested resource and any related updates here.
+                </div>
+            </div>
 
-  <main>
-    <section>
-      <h2>What We Do</h2>
-      <p>
-        We publish independent educational content that helps users
-        understand digital tools, services, and platforms.
-      </p>
-    </section>
-
-    <section>
-      <h2>Featured Guides</h2>
-      <ul>
-        <li>How Online Registries Work</li>
-        <li>Best Tools for Modern Families</li>
-        <li>Popular SaaS Platforms Explained</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Transparency</h2>
-      <p>
-        Some links on this site may be affiliate links.
-        This helps support our content at no extra cost to users.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 SmartGuideHubs. Independent informational resource.</p>
-    <p>
-      <a href="/privacy.html">Privacy Policy</a> |
-      <a href="/terms.html">Terms of Use</a> |
-      <a href="/contact.html">Contact</a>
-    </p>
-  </footer>
-</body>
-</html>
+            <!-- Anti-spam honeypot -->
+            <input type="text" name="_gotcha" style="display:none;">
+            
+            <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Me the Free Guide</span>
+                <span class="btn-subtext">Instant access • No cost</span>
+            </button>
+            
+            <p class="privacy-note">
+                <small>
+                    🔒 Your privacy matters to us. We never sell or misuse your information.
+                    By submitting this form, you agree to receive the requested resource and
+                    occasional educational emails. You may unsubscribe at any time.
+                </small>
+            </p>
+        </form>
+        
+        <div id="formSuccessMessage" style="display: none;">
+            <div class="success-icon">✅</div>
+            <h3>Submission Successful</h3>
+            <p>
+                Thank you for signing up. Your free guide has been sent to your email address.
+                If you don’t see it shortly, please check your spam or promotions folder.
+            </p>
+        </div>
+    </div>
+</section>
