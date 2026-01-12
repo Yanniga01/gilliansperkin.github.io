@@ -714,17 +714,17 @@
         <div class="site-container">
             <nav class="nav-container">
                 <div class="logo">
-                    <a href="/">SmartGuideHubs</a>
+                    <a href="./index.html">SmartGuideHubs</a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
                 
                 <nav class="main-nav" id="mainNav">
                     <ul>
-                        <li><a href="/" class="active">Home</a></li>
-                        <li><a href="/blog">All Reviews</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="./index.html" class="active">Home</a></li>
+                        <li><a href="./blog.html">All Reviews</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </nav>
@@ -748,7 +748,7 @@
                         <div class="blog-card-meta">Updated: Jan 2026 • PDF Tools</div>
                         <h3>PDFfiller Review 2026: The Complete Guide for Small Teams</h3>
                         <p>After 90 days of testing, we reveal whether PDFfiller's e-signature and form automation features justify the cost for growing businesses.</p>
-                        <a href="#article-content" class="read-more">Read Full Review →</a>
+                        <a href="./pdf-filler-review.html" class="read-more">Read Full Review →</a>
                     </div>
                 </article>
 
@@ -787,7 +787,7 @@
             </div>
 
             <div class="text-center mt-3">
-                <a href="/blog" style="display: inline-block; background: #3b82f6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">View All Reviews & Articles</a>
+                <a href="./blog.html" style="display: inline-block; background: #3b82f6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">View All Reviews & Articles</a>
             </div>
         </section>
 
@@ -1031,7 +1031,7 @@
 
                 <div class="text-center mt-3">
                     <p>Have a question about our methodology or a tool you'd like us to review?</p>
-                    <a href="/contact" style="display: inline-block; background: #3b82f6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Contact Our Team</a>
+                    <a href="./contact.html" style="display: inline-block; background: #3b82f6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Contact Our Team</a>
                 </div>
             </div>
         </section>
@@ -1050,12 +1050,12 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/blog">All Reviews</a></li>
-                        <li><a href="/categories/pdf-tools">PDF Tools</a></li>
-                        <li><a href="/categories/project-management">Project Management</a></li>
-                        <li><a href="/categories/finance">Finance Software</a></li>
-                        <li><a href="/about">About Us</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./blog.html">All Reviews</a></li>
+                        <li><a href="./categories/pdf-tools">PDF Tools</a></li>
+                        <li><a href="./categories/project-management">Project Management</a></li>
+                        <li><a href="./categories/finance">Finance Software</a></li>
+                        <li><a href="./about.html">About Us</a></li>
                     </ul>
                 </div>
                 
@@ -1064,9 +1064,9 @@
                     <p>📍 Based remotely, serving globally</p>
                     <p>✉️ <a href="mailto:contact@smartguidehubs.com" style="color: #94a3b8;">contact@smartguidehubs.com</a></p>
                     <div class="mt-2">
-                        <p><a href="/privacy" style="color: #94a3b8;">Privacy Policy</a></p>
-                        <p><a href="/terms" style="color: #94a3b8;">Terms of Use</a></p>
-                        <p><a href="/disclosure" style="color: #94a3b8;">Affiliate Disclosure</a></p>
+                        <p><a href="./privacy.html" style="color: #94a3b8;">Privacy Policy</a></p>
+                        <p><a href="./terms.html" style="color: #94a3b8;">Terms of Use</a></p>
+                        <p><a href="./disclosure.html" style="color: #94a3b8;">Affiliate Disclosure</a></p>
                     </div>
                 </div>
             </div>
@@ -1075,9 +1075,9 @@
                 <p>© 2026 SmartGuideHubs.com. All rights reserved.</p>
                 <p>All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only.</p>
                 <div class="footer-bottom-links">
-                    <a href="/sitemap">Sitemap</a> |
-                    <a href="/contact">Contact</a> |
-                    <a href="/contribute">Contribute</a>
+                    <a href="./sitemap.html">Sitemap</a> |
+                    <a href="./contact.html">Contact</a> |
+                    <a href="./contribute.html">Contribute</a>
                 </div>
             </div>
         </div>
@@ -1096,11 +1096,11 @@
             link.addEventListener('click', function(e) {
                 const target = this.getAttribute('href');
                 
-                if(target === '/') {
+                if(target === './index.html') {
                     document.getElementById('homepage-content').style.display = 'block';
                     document.getElementById('article-content').style.display = 'none';
                     document.getElementById('about-content').style.display = 'none';
-                } else if(target === '/about') {
+                } else if(target === './about.html') {
                     document.getElementById('homepage-content').style.display = 'none';
                     document.getElementById('article-content').style.display = 'none';
                     document.getElementById('about-content').style.display = 'block';
@@ -1114,7 +1114,7 @@
                 document.getElementById('mainNav').classList.remove('active');
                 
                 // Don't actually navigate in this demo
-                if(target.startsWith('/')) e.preventDefault();
+                if(target.startsWith('./')) e.preventDefault();
             });
         });
 
