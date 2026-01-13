@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fix Links</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .link { padding: 10px; margin: 5px; display: block; }
+        .working { background: #d1fae5; }
+        .broken { background: #fecaca; }
+    </style>
+</head>
+<body>
+    <h1>Link Checker</h1>
+    
+    <div id="results">Checking links...</div>
+    
+    <script>
+        // List of all article files from your repository
+        const articles = [
+            'article-pdffiller.html',
+            'Adobe-acrobat-vs-pdffilter.html',
+            'Pdf-filter-review.html',
+            'blog.html',
+            'about.html',
+            'contact.html',
+            'disclosure.html',
+            'privacy.html',
+            'terms.html'
+        ];
+        
+        async function checkLink(url) {
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                return response.status === 200;
+            } catch {
+                return false;
+            }
+        }
+        
+        async function checkAllLinks() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h2>Article Status:</h2>';
+            
+            for (const article of articles) {
+                const exists = await checkLink(article);
+                const status = exists ? '✅ WORKING' : '❌ BROKEN';
+                const cssClass = exists ? 'working' : 'broken';
+                
+                resultsDiv.innerHTML += `
+                    <div class="link ${cssClass}">
+                        ${status} - <a href="${article}" target="_blank">${article}</a>
+                    </div>
+                `;
+            }
+        }
+        
+        checkAllLinks();
+    </script>
+</body>
+</html>
