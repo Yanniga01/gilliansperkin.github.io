@@ -1133,5 +1133,37 @@
 
 
 
+<script>
+// Add this at the bottom of your index.html
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔍 Testing Header Navigation Links...');
+    
+    const navLinks = document.querySelectorAll('#mainNav a');
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        const text = link.textContent;
+        
+        console.log(`Link: "${text}" → ${href}`);
+        
+        // Test if file exists
+        fetch(href)
+            .then(response => {
+                if (response.ok) {
+                    console.log(`✅ ${href} → EXISTS`);
+                    link.style.outline = '2px solid green';
+                } else {
+                    console.warn(`❌ ${href} → MISSING (404)`);
+                    link.style.outline = '2px solid red';
+                    link.title = 'File not found!';
+                }
+            })
+            .catch(error => {
+                console.error(`🚫 ${href} → ERROR:`, error);
+                link.style.outline = '2px solid orange';
+            });
+    });
+});
+</script>
 
 
