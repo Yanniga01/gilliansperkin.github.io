@@ -1,65 +1,362 @@
-
 <!-- Contact / Lead Form Section -->
-<section class="lead-form-section">
-    <div class="form-container">
-        <h2>Get Your Free Guide</h2>
-        <p class="tagline">
-            Learn how to make smarter choices with simple, independent insights.
-            No hype. No pressure. Just useful information.
-        </p>
+<section class="lead-form-section" style="
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 5rem 2rem;
+    margin: 4rem 0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+">
+
+    <!-- Background decorative element -->
+    <div style="
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+        border-radius: 50%;
+    "></div>
+    
+    <div style="
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+        border-radius: 50%;
+    "></div>
+
+    <div class="form-container" style="
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 1;
+    ">
         
-        <form id="prelanderLeadForm" action="https://formspree.io/f/xyzjwbrl" method="POST">
+        <!-- Form Header -->
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <div style="
+                width: 70px;
+                height: 70px;
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.5rem;
+                color: white;
+                font-size: 1.8rem;
+                box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+            ">
+                📘
+            </div>
             
-            <div class="input-group">
-                <label for="full-name">Full Name *</label>
+            <h2 style="
+                color: #1e293b;
+                font-size: 2.2rem;
+                margin-bottom: 0.8rem;
+                font-weight: 700;
+            ">
+                Get Your Free Guide
+            </h2>
+            
+            <p style="
+                color: #64748b;
+                font-size: 1.1rem;
+                line-height: 1.6;
+                max-width: 500px;
+                margin: 0 auto;
+            ">
+                Learn how to make smarter software choices with simple, independent insights.
+                <span style="color: #3b82f6; font-weight: 600;">No hype. No pressure.</span> Just actionable information.
+            </p>
+        </div>
+        
+        <!-- Form -->
+        <form id="prelanderLeadForm" action="https://formspree.io/f/xyzjwbrl" method="POST" style="
+            margin-top: 2rem;
+        ">
+            
+            <!-- Name Field -->
+            <div style="margin-bottom: 2rem;">
+                <label for="full-name" style="
+                    display: block;
+                    color: #334155;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    font-size: 1rem;
+                ">
+                    Full Name *
+                </label>
                 <input 
                     type="text" 
                     id="full-name" 
                     name="name" 
                     placeholder="Your full name" 
-                    required>
-                <div class="hint">
+                    required
+                    style="
+                        width: 100%;
+                        padding: 1rem 1.2rem;
+                        border: 2px solid #e2e8f0;
+                        border-radius: 12px;
+                        font-size: 1rem;
+                        color: #1e293b;
+                        background: #f8fafc;
+                        transition: all 0.3s;
+                        outline: none;
+                        font-family: inherit;
+                    "
+                    onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)';"
+                    onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';"
+                >
+                <div style="
+                    color: #94a3b8;
+                    font-size: 0.85rem;
+                    margin-top: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                ">
+                    <span style="color: #3b82f6;">💡</span>
                     This helps us communicate with you in a more personal way.
                 </div>
             </div>
             
-            <div class="input-group">
-                <label for="email-address">Email Address *</label>
+            <!-- Email Field -->
+            <div style="margin-bottom: 2rem;">
+                <label for="email-address" style="
+                    display: block;
+                    color: #334155;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    font-size: 1rem;
+                ">
+                    Email Address *
+                </label>
                 <input 
                     type="email" 
                     id="email-address" 
                     name="_replyto" 
                     placeholder="you@example.com" 
-                    required>
-                <div class="hint">
-                    We’ll send your requested resource and any related updates here.
+                    required
+                    style="
+                        width: 100%;
+                        padding: 1rem 1.2rem;
+                        border: 2px solid #e2e8f0;
+                        border-radius: 12px;
+                        font-size: 1rem;
+                        color: #1e293b;
+                        background: #f8fafc;
+                        transition: all 0.3s;
+                        outline: none;
+                        font-family: inherit;
+                    "
+                    onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)';"
+                    onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';"
+                >
+                <div style="
+                    color: #94a3b8;
+                    font-size: 0.85rem;
+                    margin-top: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                ">
+                    <span style="color: #3b82f6;">📧</span>
+                    We'll send your requested resource and updates here.
                 </div>
             </div>
 
             <!-- Anti-spam honeypot -->
             <input type="text" name="_gotcha" style="display:none;">
             
-            <button type="submit" class="submit-btn">
-                <span class="btn-text">Send Me the Free Guide</span>
-                <span class="btn-subtext">Instant access • No cost</span>
+            <!-- Submit Button -->
+            <button type="submit" style="
+                width: 100%;
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                color: white;
+                padding: 1.2rem;
+                border: none;
+                border-radius: 12px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+                margin: 2rem 0 1.5rem;
+                box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(59, 130, 246, 0.4)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(59, 130, 246, 0.3)';"
+            >
+                <span>Send Me the Free Guide</span>
+                <span style="
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    opacity: 0.9;
+                ">Instant access • No cost</span>
             </button>
             
-            <p class="privacy-note">
-                <small>
-                    🔒 Your privacy matters to us. We never sell or misuse your information.
-                    By submitting this form, you agree to receive the requested resource and
-                    occasional educational emails. You may unsubscribe at any time.
-                </small>
-            </p>
+            <!-- Privacy Note -->
+            <div style="
+                background: #f0f9ff;
+                border: 1px solid #bae6fd;
+                border-radius: 10px;
+                padding: 1.2rem;
+                margin-top: 1.5rem;
+            ">
+                <p style="
+                    color: #475569;
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    margin: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.8rem;
+                ">
+                    <span style="color: #3b82f6; font-size: 1.2rem;">🔒</span>
+                    <span>
+                        <strong>Your privacy matters to us.</strong> We never sell or misuse your information.
+                        By submitting, you agree to receive the requested resource and occasional
+                        educational emails. Unsubscribe anytime.
+                    </span>
+                </p>
+            </div>
         </form>
         
-        <div id="formSuccessMessage" style="display: none;">
-            <div class="success-icon">✅</div>
-            <h3>Submission Successful</h3>
-            <p>
-                Thank you for signing up. Your free guide has been sent to your email address.
-                If you don’t see it shortly, please check your spam or promotions folder.
+        <!-- Success Message (Hidden by default) -->
+        <div id="formSuccessMessage" style="
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #f0fdf4;
+            border: 2px solid #bbf7d0;
+            border-radius: 16px;
+            margin-top: 2rem;
+        ">
+            <div style="
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, #10b981, #059669);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.5rem;
+                color: white;
+                font-size: 2rem;
+                box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+            ">
+                ✓
+            </div>
+            
+            <h3 style="
+                color: #065f46;
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            ">
+                Thank You! Submission Successful
+            </h3>
+            
+            <p style="
+                color: #047857;
+                line-height: 1.6;
+                max-width: 500px;
+                margin: 0 auto 1.5rem;
+            ">
+                Your free guide has been sent to your email address.
+                <strong>Please check your inbox</strong> (and spam/promotions folder if you don't see it).
             </p>
+            
+            <div style="
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                margin-top: 2rem;
+                flex-wrap: wrap;
+            ">
+                <a href="index.html" style="
+                    display: inline-block;
+                    background: white;
+                    color: #065f46;
+                    padding: 0.8rem 1.8rem;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    border: 2px solid #bbf7d0;
+                    transition: all 0.3s;
+                "
+                onmouseover="this.style.backgroundColor='#bbf7d0';"
+                onmouseout="this.style.backgroundColor='white';"
+                >
+                    ← Back to Home
+                </a>
+                <a href="blog.html" style="
+                    display: inline-block;
+                    background: linear-gradient(135deg, #10b981, #059669);
+                    color: white;
+                    padding: 0.8rem 1.8rem;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s;
+                    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+                "
+                onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(16, 185, 129, 0.4)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(16, 185, 129, 0.3)';"
+                >
+                    Browse More Reviews →
+                </a>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- Success Message JavaScript -->
+<script>
+    document.getElementById('prelanderLeadForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Submit to Formspree
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show success message
+                document.getElementById('prelanderLeadForm').style.display = 'none';
+                document.getElementById('formSuccessMessage').style.display = 'block';
+                
+                // Scroll to success message
+                document.getElementById('formSuccessMessage').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            } else {
+                alert('Oops! Something went wrong. Please try again.');
+            }
+        })
+        .catch(error => {
+            alert('Network error. Please check your connection and try again.');
+        });
+    });
+</script>
