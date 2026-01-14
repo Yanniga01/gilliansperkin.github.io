@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | SmartGuideHubs</title>
+    <meta name="description" content="Cookie Policy for SmartGuideHubs. Learn about the cookies we use and how to manage your preferences.">
+    
+    <style>
+        /* Use your existing CSS from terms.html */
+        :root {
+            --primary: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Copy your header/footer CSS from terms.html */
+        /* Add cookie-specific styles */
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .cookie-table th {
+            background: linear-gradient(135deg, var(--dark), #334155);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .cookie-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .cookie-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .essential {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .analytics {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .marketing {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1.5rem;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none; /* We'll show with JavaScript */
+        }
+        
+        .cookie-controls {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Copy your header from terms.html -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">SmartGuideHubs</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">All Reviews</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🍪 Cookie Policy</h1>
+            <p>This policy explains how SmartGuideHubs uses cookies and similar technologies. Last updated: January 2026</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="terms-content">
+            <!-- Quick Summary -->
+            <div style="background: #f0f9ff; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-top: 0;">Quick Summary</h3>
+                <p>We use cookies to:</p>
+                <ul>
+                    <li>Make the site work properly (essential cookies)</li>
+                    <li>Understand how visitors use our site (analytics)</li>
+                    <li>Track affiliate clicks (marketing cookies)</li>
+                </ul>
+                <p>You can control non-essential cookies using the buttons below.</p>
+            </div>
+
+            <!-- What Are Cookies -->
+            <section class="terms-section">
+                <h2>📖 What Are Cookies?</h2>
+                <p>Cookies are small text files that are placed on your device when you visit websites. They are widely used to make websites work more efficiently and provide information to website owners.</p>
+                
+                <h3>Types of Cookies We Use</h3>
+                <table class="cookie-table">
+                    <tr>
+                        <th>Cookie Type</th>
+                        <th>Purpose</th>
+                        <th>Examples</th>
+                        <th>Duration</th>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-badge essential">Essential</span></td>
+                        <td>Required for basic site functionality</td>
+                        <td>Session management, security</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-badge analytics">Analytics</span></td>
+                        <td>Understand how visitors use our site</td>
+                        <td>Page views, time on site, bounce rate</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-badge marketing">Marketing</span></td>
+                        <td>Track affiliate clicks and conversions</td>
+                        <td>Affiliate network tracking</td>
+                        <td>30-90 days</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Detailed Cookie List -->
+            <section class="terms-section">
+                <h2>🔍 Detailed Cookie List</h2>
+                
+                <h3>Essential Cookies</h3>
+                <p>These cookies are necessary for the website to function and cannot be switched off.</p>
+                <table class="cookie-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Expiry</th>
+                    </tr>
+                    <tr>
+                        <td><code>PHPSESSID</code></td>
+                        <td>SmartGuideHubs</td>
+                        <td>Session management</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td><code>cookieconsent_status</code></td>
+                        <td>SmartGuideHubs</td>
+                        <td>Remember cookie preferences</td>
+                        <td>1 year</td>
+                    </tr>
+                </table>
+
+                <h3>Analytics Cookies</h3>
+                <p>These help us understand how visitors interact with our website.</p>
+                <table class="cookie-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Expiry</th>
+                    </tr>
+                    <tr>
+                        <td><code>_ga</code></td>
+                        <td>Google Analytics</td>
+                        <td>Distinguish unique users</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><code>_gid</code></td>
+                        <td>Google Analytics</td>
+                        <td>Distinguish unique users</td>
+                        <td>24 hours</td>
+                    </tr>
+                    <tr>
+                        <td><code>_gat</code></td>
+                        <td>Google Analytics</td>
+                        <td>Throttle request rate</td>
+                        <td>1 minute</td>
+                    </tr>
+                </table>
+
+                <h3>Marketing/Affiliate Cookies</h3>
+                <p>These track clicks on affiliate links to ensure proper commission tracking.</p>
+                <table class="cookie-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Expiry</th>
+                    </tr>
+                    <tr>
+                        <td><code>awin1</code></td>
+                        <td>AWin</td>
+                        <td>Affiliate click tracking</td>
+                        <td>30 days</td>
+                    </tr>
+                    <tr>
+                        <td><code>ref</code></td>
+                        <td>Various</td>
+                        <td>Referral tracking</td>
+                        <td>30-90 days</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Cookie Controls -->
+            <section class="terms-section">
+                <h2>⚙️ Manage Your Cookie Preferences</h2>
+                
+                <div class="cookie-controls">
+                    <h3>Cookie Settings</h3>
+                    <p>You can control which types of cookies we use:</p>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <input type="checkbox" id="essentialCookies" checked disabled style="margin-right: 1rem;">
+                            <label for="essentialCookies" style="font-weight: 600;">
+                                <span class="cookie-badge essential">Essential Cookies</span>
+                                <p style="margin: 0.5rem 0 0; font-weight: normal; color: var(--gray);">
+                                    Required for site functionality. Cannot be disabled.
+                                </p>
+                            </label>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <input type="checkbox" id="analyticsCookies" style="margin-right: 1rem;">
+                            <label for="analyticsCookies" style="font-weight: 600;">
+                                <span class="cookie-badge analytics">Analytics Cookies</span>
+                                <p style="margin: 0.5rem 0 0; font-weight: normal; color: var(--gray);">
+                                    Help us improve the site by understanding usage patterns.
+                                </p>
+                            </label>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <input type="checkbox" id="marketingCookies" style="margin-right: 1rem;">
+                            <label for="marketingCookies" style="font-weight: 600;">
+                                <span class="cookie-badge marketing">Marketing Cookies</span>
+                                <p style="margin: 0.5rem 0 0; font-weight: normal; color: var(--gray);">
+                                    Track affiliate clicks for commission purposes.
+                                </p>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <button onclick="acceptAllCookies()" style="
+                            background: var(--primary);
+                            color: white;
+                            border: none;
+                            padding: 0.8rem 1.5rem;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        ">
+                            Accept All Cookies
+                        </button>
+                        
+                        <button onclick="savePreferences()" style="
+                            background: white;
+                            color: var(--primary);
+                            border: 2px solid var(--primary);
+                            padding: 0.8rem 1.5rem;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        ">
+                            Save Preferences
+                        </button>
+                        
+                        <button onclick="rejectNonEssential()" style="
+                            background: #f1f5f9;
+                            color: var(--dark);
+                            border: 2px solid #cbd5e1;
+                            padding: 0.8rem 1.5rem;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        ">
+                            Reject Non-Essential
+                        </button>
+                    </div>
+                </div>
+                
+                <h3>Browser Controls</h3>
+                <p>You can also control cookies through your browser settings:</p>
+                <ul>
+                    <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies</li>
+                    <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies</li>
+                    <li><strong>Safari:</strong> Preferences → Privacy → Cookies</li>
+                    <li><strong>Edge:</strong> Settings → Cookies and site permissions</li>
+                </ul>
+            </section>
+
+            <!-- Legal Compliance -->
+            <section class="terms-section">
+                <h2>⚖️ Legal Compliance</h2>
+                
+                <h3>GDPR Compliance</h3>
+                <p>For visitors from the European Union, we comply with the General Data Protection Regulation (GDPR) by:</p>
+                <ul>
+                    <li>Obtaining explicit consent for non-essential cookies</li>
+                    <li>Providing clear information about cookie usage</li>
+                    <li>Allowing easy withdrawal of consent</li>
+                    <li>Documenting consent records</li>
+                </ul>
+                
+                <h3>CCPA Compliance</h3>
+                <p>For California residents, we comply with the California Consumer Privacy Act (CCPA) by providing:</p>
+                <ul>
+                    <li>Right to know what personal information is collected</li>
+                    <li>Right to delete personal information</li>
+                    <li>Right to opt-out of sale of personal information</li>
+                    <li>Non-discrimination for exercising CCPA rights</li>
+                </ul>
+            </section>
+
+            <!-- Updates & Contact -->
+            <section class="terms-section">
+                <h2>📅 Updates & Contact</h2>
+                
+                <h3>Policy Updates</h3>
+                <p>We may update this Cookie Policy periodically. The "Last updated" date at the top indicates when changes were made.</p>
+                
+                <h3>Contact Us</h3>
+                <p>For questions about our Cookie Policy:</p>
+                <ul>
+                    <li>Email: <a href="mailto:privacy@smartguidehubs.com" style="color: var(--primary);">privacy@smartguidehubs.com</a></li>
+                    <li>Contact Form: <a href="contact.html" style="color: var(--primary);">smartguidehubs.com/contact.html</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent-banner">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <p style="margin: 0; font-weight: 600;">🍪 We use cookies to improve your experience</p>
+                <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--gray);">
+                    We use essential, analytics, and marketing cookies. By clicking "Accept All", you consent to all cookies.
+                    <a href="cookies.html" style="color: var(--primary);">Learn more</a>
+                </p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button onclick="acceptAllCookies()" style="
+                    background: var(--primary);
+                    color: white;
+                    border: none;
+                    padding: 0.6rem 1.2rem;
+                    border-radius: 6px;
+                    font-weight: 600;
+                    cursor: pointer;
+                ">
+                    Accept All
+                </button>
+                <button onclick="showPreferences()" style="
+                    background: white;
+                    color: var(--primary);
+                    border: 2px solid var(--primary);
+                    padding: 0.6rem 1.2rem;
+                    border-radius: 6px;
+                    font-weight: 600;
+                    cursor: pointer;
+                ">
+                    Preferences
+                </button>
+                <button onclick="rejectNonEssential()" style="
+                    background: #f1f5f9;
+                    color: var(--dark);
+                    border: 2px solid #cbd5e1;
+                    padding: 0.6rem 1.2rem;
+                    border-radius: 6px;
+                    font-weight: 600;
+                    cursor: pointer;
+                ">
+                    Reject Non-Essential
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy your footer from terms.html -->
+    <footer class="site-footer">
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Cookie Management JavaScript -->
+    <script>
+        // Check if user has already made a choice
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                // Show banner if no choice made
+                document.getElementById('cookieConsent').style.display = 'block';
+            }
+            return consent;
+        }
+
+        // Cookie functions
+        function acceptAllCookies() {
+            localStorage.setItem('cookieConsent', 'all');
+            localStorage.setItem('analyticsCookies', 'true');
+            localStorage.setItem('marketingCookies', 'true');
+            document.getElementById('cookieConsent').style.display = 'none';
+            alert('All cookies accepted. Thank you!');
+        }
+
+        function rejectNonEssential() {
+            localStorage.setItem('cookieConsent', 'essential');
+            localStorage.setItem('analyticsCookies', 'false');
+            localStorage.setItem('marketingCookies', 'false');
+            document.getElementById('cookieConsent').style.display = 'none';
+            alert('Only essential cookies will be used.');
+        }
+
+        function savePreferences() {
+            const analytics = document.getElementById('analyticsCookies').checked;
+            const marketing = document.getElementById('marketingCookies').checked;
+            
+            localStorage.setItem('cookieConsent', 'custom');
+            localStorage.setItem('analyticsCookies', analytics);
+            localStorage.setItem('marketingCookies', marketing);
+            
+            alert('Cookie preferences saved!');
+        }
+
+        function showPreferences() {
+            // Scroll to preferences section
+            document.querySelector('.cookie-controls').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkCookieConsent();
+            
+            // Set checkbox states if preferences exist
+            const analyticsPref = localStorage.getItem('analyticsCookies');
+            const marketingPref = localStorage.getItem('marketingCookies');
+            
+            if (analyticsPref !== null) {
+                document.getElementById('analyticsCookies').checked = analyticsPref === 'true';
+            }
+            if (marketingPref !== null) {
+                document.getElementById('marketingCookies').checked = marketingPref === 'true';
+            }
+        });
+
+        // Simple Google Analytics integration (if you use it)
+        function loadGoogleAnalytics() {
+            const consent = localStorage.getItem('analyticsCookies');
+            if (consent === 'true') {
+                // Add your Google Analytics code here
+                console.log('Google Analytics loaded (with consent)');
+            }
+        }
+
+        // Load analytics if consented
+        window.addEventListener('load', loadGoogleAnalytics);
+    </script>
+</body>
+</html>
