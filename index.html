@@ -1129,6 +1129,127 @@
         // For now, this demo shows how to structure a complete website
         console.log('SmartGuideHubs website loaded. This is a professional template for legitimate affiliate marketing.');
     </script>
+<!-- ======================= -->
+<!-- COOKIE BANNER - START -->
+<!-- ======================= -->
+
+<div id="cookieConsent" style="
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-top: 3px solid #3b82f6;
+">
+    <div style="
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    ">
+        <div style="flex: 1; min-width: 300px;">
+            <p style="margin: 0; font-weight: 600; color: #1e293b; font-size: 1.1rem;">
+                🍪 We use cookies to improve your experience
+            </p>
+            <p style="margin: 8px 0 0; font-size: 0.95rem; color: #64748b; line-height: 1.5;">
+                We use essential, analytics, and marketing cookies. 
+                By clicking "Accept", you consent to our use of cookies.
+                <a href="cookies.html" style="color: #3b82f6; font-weight: 600; margin-left: 5px;">
+                    Learn more
+                </a>
+            </p>
+        </div>
+        
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button onclick="acceptCookies()" style="
+                background: #3b82f6;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 0.95rem;
+                transition: all 0.3s;
+            " 
+            onmouseover="this.style.backgroundColor='#2563eb';"
+            onmouseout="this.style.backgroundColor='#3b82f6';"
+            >
+                Accept Cookies
+            </button>
+            
+            <button onclick="window.location.href='cookies.html'" style="
+                background: white;
+                color: #3b82f6;
+                border: 2px solid #3b82f6;
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 0.95rem;
+                transition: all 0.3s;
+            "
+            onmouseover="this.style.backgroundColor='#f0f9ff';"
+            onmouseout="this.style.backgroundColor='white';"
+            >
+                Cookie Settings
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+// ========================
+// COOKIE FUNCTIONS
+// ========================
+
+// Check if user already made a choice
+function checkCookieConsent() {
+    const choice = localStorage.getItem('cookieChoice');
+    return choice; // Returns 'accepted', 'declined', or null
+}
+
+// Show banner if no choice made yet
+window.addEventListener('load', function() {
+    const hasChoice = checkCookieConsent();
+    if (!hasChoice) {
+        // Wait 2 seconds, then show banner
+        setTimeout(function() {
+            document.getElementById('cookieConsent').style.display = 'block';
+        }, 2000);
+    }
+});
+
+// When user clicks "Accept Cookies"
+function acceptCookies() {
+    // Save their choice
+    localStorage.setItem('cookieChoice', 'accepted');
+    
+    // Hide the banner
+    document.getElementById('cookieConsent').style.display = 'none';
+    
+    // Optional: Show confirmation
+    console.log('Cookies accepted!');
+    
+    // Load analytics/affiliate scripts here if needed
+    // loadGoogleAnalytics();
+    // loadAffiliateScripts();
+}
+
+// When user clicks "Cookie Settings"
+// (Already handled by the button's onclick)
+</script>
+
+<!-- ======================= -->
+<!-- COOKIE BANNER - END -->
+<!-- ======================= -->
 </body>
 </html>
 
@@ -1166,6 +1287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
 
 
 
