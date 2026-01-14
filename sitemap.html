@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map | SmartGuideHubs</title>
+    <meta name="description" content="Complete site map of all pages and articles on SmartGuideHubs.">
+    
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .sitemap-container {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            margin: 2rem 0;
+        }
+        
+        h1 {
+            color: var(--dark);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        h2 {
+            color: var(--dark);
+            margin: 2.5rem 0 1.5rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .sitemap-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+        
+        .sitemap-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sitemap-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .sitemap-list a {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--dark);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        
+        .sitemap-list a:hover {
+            border-color: var(--primary);
+            background: #f0f9ff;
+            transform: translateX(5px);
+        }
+        
+        .last-updated {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sitemap-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .sitemap-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sitemap-container">
+        <h1>🗺️ SmartGuideHubs Site Map</h1>
+        <p>Navigate all pages and articles on our website. Last updated: <strong>January 2024</strong></p>
+        
+        <!-- Main Pages -->
+        <div class="sitemap-section">
+            <h2>🏠 Main Pages</h2>
+            <ul class="sitemap-list">
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="blog.html">All Reviews (Blog)</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+        
+        <!-- PDF Tools Articles -->
+        <div class="sitemap-section">
+            <h2>📄 PDF Tools Reviews</h2>
+            <ul class="sitemap-list">
+                <li><a href="article-pdffiller.html">PDFfiller Review 2024: Complete Guide</a></li>
+                <li><a href="adobe-acrobat-vs-pdffiller.html">Adobe Acrobat vs PDFfiller Comparison</a></li>
+                <li><a href="Pdf-filter-review.html">PDF Filter Review</a></li>
+            </ul>
+        </div>
+        
+        <!-- Analytics Tools Articles -->
+        <div class="sitemap-section">
+            <h2>📊 Analytics Tools Reviews</h2>
+            <ul class="sitemap-list">
+                <li><a href="top-analytics-tools-2024.html">Top 5 Analytics Tools Under $50/Month (2024)</a></li>
+                <!-- Add more analytics articles as you create them -->
+            </ul>
+        </div>
+        
+        <!-- Coming Soon -->
+        <div class="sitemap-section">
+            <h2>🚀 Coming Soon</h2>
+            <ul class="sitemap-list">
+                <li>Asana vs. Trello vs. ClickUp: 2024 Face-Off</li>
+                <li>QuickBooks Online 2024: Is It Still Worth It?</li>
+                <li>Project Management Tools Comparison</li>
+                <li>Finance Software Reviews</li>
+            </ul>
+        </div>
+        
+        <!-- Legal Pages -->
+        <div class="sitemap-section">
+            <h2>⚖️ Legal & Policy Pages</h2>
+            <ul class="sitemap-list">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+                <li><a href="conditions.html">Conditions</a></li>
+            </ul>
+        </div>
+        
+        <div class="last-updated">
+            <p><strong>Note:</strong> This sitemap is manually updated. New articles are added within 24 hours of publication.</p>
+            <p><a href="index.html">← Back to Homepage</a></p>
+        </div>
+    </div>
+</body>
+</html>
