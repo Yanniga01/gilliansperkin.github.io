@@ -1,30 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Terms & Conditions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | SmartGuideHubs</title>
+    <meta name="description" content="Terms of Service for SmartGuideHubs. Learn about our terms, conditions, and user agreements for using our software review platform.">
+    
+    <style>
+        /* Professional CSS matching your site */
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #8b5cf6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        .site-header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .main-nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Terms Content */
+        .terms-content {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Section Styling */
+        .terms-section {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .terms-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .section-number {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        h2 {
+            color: var(--dark);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+        
+        /* Important Notice */
+        .important-notice {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-left: 5px solid #f59e0b;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        
+        .important-notice h3 {
+            color: #92400e;
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th {
+            background: linear-gradient(135deg, var(--dark), #334155);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        tr:hover {
+            background: #f8fafc;
+        }
+        
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        /* Update Info */
+        .update-info {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+        
+        /* Footer */
+        .site-footer {
+            background: linear-gradient(135deg, var(--dark), #0f172a);
+            color: #cbd5e1;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .terms-content {
+                padding: 2rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .site-header, .site-footer, .contact-box {
+                display: none;
+            }
+            
+            .terms-content {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Terms & Conditions</h1>
-  <p>By using this site, you agree to the following terms:</p>
-  <ul>
-    <li>This website is an independent promotional page and is not affiliated with any brand or company listed on it.</li>
-    <li>All content is for informational and lead generation purposes only.</li>
-    <li>We do not guarantee any bookings or outcomes from external websites linked through this page.</li>
-    <li>We are not responsible for third-party content or user experience after redirection.</li>
-    <li>Your use of this website implies consent to our terms and privacy practices.</li>
-  </ul>
-  <p>For questions, contact the website administrator.</p>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">SmartGuideHubs</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">All Reviews</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using SmartGuideHubs. By accessing our website, you agree to be bound by these terms.</p>
+            <div style="margin-top: 2rem; color: var(--gray); font-size: 0.95rem;">
+                Last Updated: January 14, 2026
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="terms-content">
+            <!-- Important Notice -->
+            <div class="important-notice">
+                <h3>⚠️ Important Legal Notice</h3>
+                <p><strong>By using SmartGuideHubs, you acknowledge that:</strong></p>
+                <ul>
+                    <li>This is an independent review site, not affiliated with software vendors</li>
+                    <li>Content is for informational purposes only, not professional advice</li>
+                    <li>We make no warranties about software performance or outcomes</li>
+                    <li>You use external services at your own risk</li>
+                </ul>
+            </div>
+
+            <!-- 1. Acceptance of Terms -->
+            <section class="terms-section">
+                <h2><span class="section-number">1</span> Acceptance of Terms</h2>
+                <p>By accessing and using SmartGuideHubs ("the Website"), you accept and agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access the Website.</p>
+                
+                <h3>Age Requirement</h3>
+                <p>You must be at least 18 years old to use this Website. By using the Website, you represent that you are at least 18 years of age.</p>
+                
+                <h3>Modification Rights</h3>
+                <p>We reserve the right to modify these terms at any time. Continued use of the Website after changes constitutes acceptance of the modified terms.</p>
+            </section>
+
+            <!-- 2. Website Description -->
+            <section class="terms-section">
+                <h2><span class="section-number">2</span> Website Description & Purpose</h2>
+                <p>SmartGuideHubs is an independent software review platform that provides:</p>
+                <ul>
+                    <li>Detailed software reviews based on hands-on testing</li>
+                    <li>Comparison articles between competing tools</li>
+                    <li>Educational content about software selection and implementation</li>
+                    <li>Affiliate links to software vendors (clearly disclosed)</li>
+                </ul>
+                
+                <h3>Independence Statement</h3>
+                <p>We are not affiliated with, endorsed by, or officially connected to any software company reviewed on this site. All reviews represent our independent opinions.</p>
+            </section>
+
+            <!-- 3. User Responsibilities -->
+            <section class="terms-section">
+                <h2><span class="section-number">3</span> User Responsibilities</h2>
+                <p>When using SmartGuideHubs, you agree to:</p>
+                <ul>
+                    <li>Use the Website only for lawful purposes</li>
+                    <li>Not attempt to gain unauthorized access to any part of the Website</li>
+                    <li>Not interfere with or disrupt the Website or servers</li>
+                    <li>Not use automated systems to access the Website without permission</li>
+                    <li>Not reproduce, duplicate, copy, or resell any part of the Website</li>
+                </ul>
+                
+                <h3>Content Usage</h3>
+                <p>You may share our content via social media with proper attribution. For commercial use or republication, please contact us for permission.</p>
+            </section>
+
+            <!-- 4. Intellectual Property -->
+            <section class="terms-section">
+                <h2><span class="section-number">4</span> Intellectual Property Rights</h2>
+                
+                <h3>Our Content</h3>
+                <p>All content on SmartGuideHubs, including but not limited to text, graphics, logos, images, and software, is the property of SmartGuideHubs and protected by copyright laws.</p>
+                
+                <h3>User-Generated Content</h3>
+                <p>If you submit comments or other content to the Website, you grant us a non-exclusive, royalty-free license to use, modify, and display that content.</p>
+                
+                <h3>Trademarks</h3>
+                <p>All trademarks, service marks, and logos displayed on the Website are the property of their respective owners. Our use does not imply endorsement.</p>
+            </section>
+
+            <!-- 5. Affiliate Disclosure -->
+            <section class="terms-section">
+                <h2><span class="section-number">5</span> Affiliate Relationships & Compensation</h2>
+                
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Relationship Type</th>
+                            <th>Description</th>
+                            <th>Disclosure</th>
+                        </tr>
+                        <tr>
+                            <td>Affiliate Links</td>
+                            <td>Links to software vendors that pay commissions on referrals</td>
+                            <td>Clearly marked throughout the site</td>
+                        </tr>
+                        <tr>
+                            <td>Sponsored Content</td>
+                            <td>Paid articles or reviews (currently none)</td>
+                            <td>Clearly labeled as "Sponsored" if applicable</td>
+                        </tr>
+                        <tr>
+                            <td>Advertising</td>
+                            <td>Display ads from third-party networks</td>
+                            <td>Separated from editorial content</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <p><strong>Important:</strong> Affiliate commissions do not influence our reviews. We maintain strict editorial independence and often recommend tools with no affiliate program.</p>
+                <p><a href="disclosure.html" style="color: var(--primary); font-weight: 600;">View our full Affiliate Disclosure →</a></p>
+            </section>
+
+            <!-- 6. Disclaimers & Limitations -->
+            <section class="terms-section">
+                <h2><span class="section-number">6</span> Disclaimers & Limitations of Liability</h2>
+                
+                <h3>No Professional Advice</h3>
+                <p>The content on SmartGuideHubs is for informational purposes only and does not constitute professional advice. Always consult with qualified professionals before making business decisions.</p>
+                
+                <h3>Accuracy of Information</h3>
+                <p>While we strive for accuracy, we make no warranties about the completeness, reliability, or accuracy of information on the Website.</p>
+                
+                <h3>Third-Party Services</h3>
+                <p>We are not responsible for:</p>
+                <ul>
+                    <li>The performance or reliability of software reviewed on our site</li>
+                    <li>Changes made by software vendors after our review</li>
+                    <li>Your experience with third-party websites linked from our site</li>
+                    <li>Pricing or terms offered by software vendors</li>
+                </ul>
+                
+                <h3>Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, SmartGuideHubs shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the Website.</p>
+            </section>
+
+            <!-- 7. Privacy -->
+            <section class="terms-section">
+                <h2><span class="section-number">7</span> Privacy & Data Protection</h2>
+                <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information.</p>
+                <p><a href="privacy.html" style="color: var(--primary); font-weight: 600;">Read our Privacy Policy →</a></p>
+                
+                <h3>Cookies & Tracking</h3>
+                <p>We use cookies and similar technologies to improve user experience. By using the Website, you consent to our use of cookies as described in our Privacy Policy.</p>
+            </section>
+
+            <!-- 8. Termination -->
+            <section class="terms-section">
+                <h2><span class="section-number">8</span> Termination</h2>
+                <p>We may terminate or suspend your access to the Website immediately, without prior notice or liability, for any reason, including if you breach these Terms.</p>
+                
+                <h3>Effect of Termination</h3>
+                <p>Upon termination, your right to use the Website will cease immediately. All provisions of these Terms that should survive termination shall survive.</p>
+            </section>
+
+            <!-- 9. Governing Law -->
+            <section class="terms-section">
+                <h2><span class="section-number">9</span> Governing Law & Dispute Resolution</h2>
+                
+                <h3>Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
+                
+                <h3>Dispute Resolution</h3>
+                <p>Any disputes arising from these Terms or your use of the Website shall be resolved through good-faith negotiations. If unresolved, disputes may be submitted to binding arbitration.</p>
+            </section>
+
+            <!-- 10. Contact Information -->
+            <section class="terms-section">
+                <h2><span class="section-number">10</span> Contact Information</h2>
+                <p>For questions about these Terms of Service, please contact us:</p>
+                
+                <div class="contact-box">
+                    <h3 style="border-left: none; padding-left: 0; text-align: center;">📧 Contact SmartGuideHubs</h3>
+                    <p>Email: <a href="mailto:contact@smartguidehubs.com" style="color: var(--primary);">contact@smartguidehubs.com</a></p>
+                    <p>Contact Form: <a href="contact.html" style="color: var(--primary);">smartguidehubs.com/contact.html</a></p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">We typically respond to legal inquiries within 5 business days.</p>
+                </div>
+            </section>
+
+            <!-- Update Information -->
+            <div class="update-info">
+                <h3 style="border-left: none; padding-left: 0; font-size: 1.1rem;">📝 Document Information</h3>
+                <p><strong>Effective Date:</strong> January 14, 2026</p>
+                <p><strong>Previous Revision:</strong> Initial Publication</p>
+                <p><strong>Next Scheduled Review:</strong> July 15, 2026</p>
+                <p style="margin-top: 1rem;"><em>These Terms of Service were last updated on the date indicated above. We recommend checking this page periodically for updates.</em></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <div>
+                    <div class="footer-logo">SmartGuideHubs</div>
+                    <p style="color: #94a3b8; line-height: 1.6;">
+                        Independent software reviews for small businesses and professionals.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">Legal</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><a href="terms.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
+                        <li><a href="privacy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="disclosure.html" style="color: #cbd5e1; text-decoration: none;">Affiliate Disclosure</a></li>
+                        <li><a href="cookies.html" style="color: #cbd5e1; text-decoration: none;">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">Resources</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><a href="blog.html" style="color: #cbd5e1; text-decoration: none;">All Reviews</a></li>
+                        <li><a href="categories.html" style="color: #cbd5e1; text-decoration: none;">Browse by Category</a></li>
+                        <li><a href="sitemap.html" style="color: #cbd5e1; text-decoration: none;">Site Map</a></li>
+                        <li><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 SmartGuideHubs.com. All rights reserved.</p>
+                <p>All product names, logos, and brands are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-                                                                                      </html>
+</html>
