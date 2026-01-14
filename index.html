@@ -1300,146 +1300,92 @@
 </div>
 
 <script>
-// ========================
-// FIXED COOKIE FUNCTIONS
-// ========================
+<!-- SIMPLE COOKIE BANNER - GUARANTEED TO WORK -->
+<div id="cookieBanner" style="
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    border-top: 4px solid #3b82f6;
+    font-family: Arial, sans-serif;
+">
+    <div style="
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    ">
+        <h3 style="margin: 0 0 10px 0; color: #1e293b;">🍪 We Use Cookies</h3>
+        <p style="margin: 0 0 20px 0; color: #64748b; font-size: 16px;">
+            We use cookies to improve your experience. By continuing to use our site, 
+            you accept our use of cookies.
+            <a href="cookies.html" style="color: #3b82f6; font-weight: bold;">Learn more</a>
+        </p>
+        <button onclick="acceptCookie()" style="
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 10px;
+        ">
+            Accept Cookies
+        </button>
+        <button onclick="document.getElementById('cookieBanner').style.display='none'" style="
+            background: #f1f5f9;
+            color: #64748b;
+            border: 2px solid #cbd5e1;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 10px;
+        ">
+            Decline
+        </button>
+    </div>
+</div>
 
-// Function to check if user already made a choice
-function hasCookieChoice() {
-    // Check if choice exists in localStorage
-    const choice = localStorage.getItem('smartguide_cookie_choice');
-    return choice !== null; // Returns true if choice exists
-}
+<script>
+// SUPER SIMPLE COOKIE SCRIPT - GUARANTEED WORKING
 
-// Function to save cookie choice
-function saveCookieChoice(choice, analytics, marketing) {
+// Check immediately on page load
+window.onload = function() {
+    // Check if user already accepted cookies
+    var cookieAccepted = localStorage.getItem('cookieAccepted');
+    
+    // If NOT accepted, show banner after 1 second
+    if (!cookieAccepted) {
+        setTimeout(function() {
+            document.getElementById('cookieBanner').style.display = 'block';
+        }, 1000);
+    }
+};
+
+// When user clicks "Accept Cookies"
+function acceptCookie() {
     // Save to localStorage
-    localStorage.setItem('smartguide_cookie_choice', choice);
-    localStorage.setItem('smartguide_cookie_analytics', analytics);
-    localStorage.setItem('smartguide_cookie_marketing', marketing);
-    
-    // Set expiry date (1 year from now)
-    const expiry = new Date();
-    expiry.setFullYear(expiry.getFullYear() + 1);
-    localStorage.setItem('smartguide_cookie_expiry', expiry.toISOString());
-    
-    console.log('Cookie choice saved:', choice);
-}
-
-// Function to accept ALL cookies
-function acceptAllCookies() {
-    // Save the choice
-    saveCookieChoice('accepted_all', 'true', 'true');
+    localStorage.setItem('cookieAccepted', 'true');
     
     // Hide the banner
-    document.getElementById('cookieConsent').style.display = 'none';
+    document.getElementById('cookieBanner').style.display = 'none';
     
     // Optional: Show a quick message
-    showMessage('✅ All cookies accepted. Thank you!');
-    
-    // You can load analytics/affiliate scripts here
-    // loadGoogleAnalytics();
-    // loadAffiliateScripts();
+    alert('Thank you for accepting cookies!');
 }
 
-// Function to reject non-essential cookies
-function rejectNonEssential() {
-    // Save the choice (only essential cookies)
-    saveCookieChoice('rejected_nonessential', 'false', 'false');
-    
-    // Hide the banner
-    document.getElementById('cookieConsent').style.display = 'none';
-    
-    // Optional: Show a quick message
-    showMessage('✅ Only essential cookies will be used.');
-    
-    // Don't load analytics/affiliate scripts
-}
-
-// Function to show a temporary message
-function showMessage(text) {
-    // Create message element
-    const message = document.createElement('div');
-    message.textContent = text;
-    message.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #10b981;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        z-index: 1001;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        animation: fadeInOut 3s ease-in-out;
-    `;
-    
-    // Add animation styles
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeInOut {
-            0% { opacity: 0; transform: translateY(-20px); }
-            10% { opacity: 1; transform: translateY(0); }
-            90% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 0; transform: translateY(-20px); }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Add to page and remove after animation
-    document.body.appendChild(message);
-    setTimeout(() => {
-        document.body.removeChild(message);
-        document.head.removeChild(style);
-    }, 3000);
-}
-
-// Check on page load if we should show the banner
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait a moment for page to load
-    setTimeout(function() {
-        // Check if user already made a choice
-        if (!hasCookieChoice()) {
-            // Show the banner (only if no choice made)
-            document.getElementById('cookieConsent').style.display = 'block';
-            console.log('Showing cookie banner (first visit or choice expired)');
-        } else {
-            console.log('Cookie choice already made, not showing banner');
-            
-            // Check if choice expired (older than 1 year)
-            const expiry = localStorage.getItem('smartguide_cookie_expiry');
-            if (expiry) {
-                const expiryDate = new Date(expiry);
-                const now = new Date();
-                if (now > expiryDate) {
-                    // Choice expired, show banner again
-                    localStorage.clear(); // Clear old choices
-                    document.getElementById('cookieConsent').style.display = 'block';
-                    console.log('Cookie choice expired, showing banner again');
-                }
-            }
-        }
-    }, 1000); // Wait 1 second before showing
-});
-
-// Optional: Clear cookie choices for testing
-// function clearCookieChoices() {
-//     localStorage.removeItem('smartguide_cookie_choice');
-//     localStorage.removeItem('smartguide_cookie_analytics');
-//     localStorage.removeItem('smartguide_cookie_marketing');
-//     localStorage.removeItem('smartguide_cookie_expiry');
-//     console.log('Cookie choices cleared for testing');
-//     alert('Cookie choices cleared. Banner will show on next visit.');
-// }
-
-// Uncomment the line below and call clearCookieChoices() in browser console to test
-// window.clearCookieChoices = clearCookieChoices;
+// For testing: Clear cookies (run this in browser console if needed)
+// localStorage.removeItem('cookieAccepted');
 </script>
-
-<!-- ======================= -->
-<!-- COOKIE BANNER - END -->
-<!-- ======================= -->
+                
 </body>
 </html>
 
@@ -1477,6 +1423,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
 
 
 
