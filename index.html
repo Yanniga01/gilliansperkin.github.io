@@ -9,6 +9,11 @@
     <!-- Google Analytics (GA4) Implementation -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DCX56R2GN"></script>
     <script>
+if (window.location.pathname.endsWith("index.html")) {
+  window.location.replace("https://smartguidehubs.com/");
+}
+</script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -1385,6 +1390,7 @@ function acceptCookie() {
 </script>                
 </body>
 </html>
+
 
 
 
