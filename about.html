@@ -587,41 +587,19 @@
             </div>
         </div>
     </footer>
-    <!-- Cookie Banner -->
-<div id="cookieBanner" style="
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background: #111;
-color: #fff;
-padding: 15px;
-text-align: center;
-font-size: 14px;
-z-index: 9999;
-display: none;
-">
-  This website uses cookies to improve your experience.
-  <button onclick="acceptCookies()" style="
-    margin-left: 15px;
-    padding: 6px 12px;
-    background: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-  ">Accept</button>
-</div>
-    <script>
-function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  document.getElementById("cookieBanner").style.display = "none";
-}
+    <!-- Advanced Cookie Consent Banner -->
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>
+      We use cookies to improve your experience and analyze traffic.
+      Read our <a href="/privacy.html">Privacy Policy</a>.
+    </p>
 
-window.onload = function() {
-  if (!localStorage.getItem("cookiesAccepted")) {
-    document.getElementById("cookieBanner").style.display = "block";
-  }
-};
-</script>   
+    <div class="cookie-buttons">
+      <button id="acceptCookies">Accept</button>
+      <button id="rejectCookies">Reject</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
