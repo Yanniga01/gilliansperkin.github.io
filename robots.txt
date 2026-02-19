@@ -1,4 +1,10 @@
+
 User-agent: *
 Allow: /
 
+# Block unnecessary files
+Disallow: /*.js$
+Disallow: /cgi-bin/
+
+# Sitemap
 Sitemap: https://smartguidehubs.com/sitemap.xml
