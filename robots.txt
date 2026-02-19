@@ -1,10 +1,23 @@
+# robots.txt for SmartGuideHubs.com
+# Optimized for Google and other search engines
 
+# Allow all bots full access
 User-agent: *
 Allow: /
 
-# Block unnecessary files
-Disallow: /*.js$
-Disallow: /cgi-bin/
+# Explicitly allow Googlebot to access critical JS and CSS
+User-agent: Googlebot
+Allow: /cookies.js
+Allow: /sitemap.xml
+Allow: /sitemap.html
 
-# Sitemap
+# Disallow any private or sensitive areas (update if you have any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemaps
 Sitemap: https://smartguidehubs.com/sitemap.xml
+Sitemap: https://smartguidehubs.com/sitemap.html
+
+# Optional: Crawl delay for slower bots (Google ignores this)
+# Crawl-delay: 5
