@@ -22,7 +22,7 @@
     const CONFIG = {
         storageKey: 'reviewSiteCookieConsent',
         gaTrackingId: 'G-3DCX56R2GN',
-        privacyUrl: '/privacy',
+        privacyUrl: '/privacy.html',
         bannerId: 'cookieConsentBanner',
         debug: false
     };
