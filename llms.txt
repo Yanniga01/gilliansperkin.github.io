@@ -1,0 +1,23 @@
+# SmartGuideHubs
+
+SmartGuideHubs publishes independent software reviews, comparisons, and practical buyer guides for small businesses.
+
+## Primary URLs
+- https://smartguidehubs.com/
+- https://smartguidehubs.com/blog
+- https://smartguidehubs.com/categories
+
+## Core Review Pages
+- https://smartguidehubs.com/article-pdffiller
+- https://smartguidehubs.com/adobe-acrobat-vs-pdffiller
+- https://smartguidehubs.com/asana-vs-trello-vs-clickup-2026
+- https://smartguidehubs.com/jobber-review-2026
+- https://smartguidehubs.com/monday-review-2026
+- https://smartguidehubs.com/quickbooks-review-2026
+- https://smartguidehubs.com/top-analytics-tools-2026
+
+## Policies
+- https://smartguidehubs.com/privacy
+- https://smartguidehubs.com/terms
+- https://smartguidehubs.com/disclosure
+- https://smartguidehubs.com/cookies
