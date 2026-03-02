@@ -689,6 +689,10 @@
         .mt-2 { margin-top: 2rem; }
         .mt-3 { margin-top: 3rem; }
         
+        @media (max-width: 1024px) {
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 2rem; }
+        }
+
         @media (max-width: 768px) {
             .mobile-menu-btn { display: block; }
             .main-nav { display: none; }
@@ -710,6 +714,10 @@
             .page-header .subtitle { font-size: 1.1rem; }
             .main-content { padding: 1.8rem; }
             .blog-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+            .footer-links h4, .footer-contact h4 { font-size: 1.35rem; }
+            .footer-links a, .footer-contact p, .footer-about p { font-size: 1.08rem; line-height: 1.7; }
+            .footer-bottom-links { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 0.5rem; }
         }
     </style>
 
@@ -1067,7 +1075,8 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="./blog">All Reviews</a></li>
-                        <li><a href="./categories/software-and-pdf-tools">Software and PDF Tools</a></li>
+                        <li><a href="./categories/software-and-pdf-tools">PDF and Document Tools</a></li>
+                        <li><a href="./categories/email-and-marketing-tools">Email and Marketing Tools</a></li>
                         <li><a href="./categories/project-management">Project Management</a></li>
                         <li><a href="./categories/finance">Finance Software</a></li>
                         <li><a href="./about">About Us</a></li>
