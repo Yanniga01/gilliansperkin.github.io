@@ -689,6 +689,10 @@
         .mt-2 { margin-top: 2rem; }
         .mt-3 { margin-top: 3rem; }
         
+        @media (max-width: 1024px) {
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
         @media (max-width: 768px) {
             .mobile-menu-btn { display: block; }
             .main-nav { display: none; }
@@ -710,6 +714,10 @@
             .page-header .subtitle { font-size: 1.1rem; }
             .main-content { padding: 1.8rem; }
             .blog-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+            .footer-links h4, .footer-contact h4 { font-size: 1.35rem; }
+            .footer-links a, .footer-contact p, .footer-about p { font-size: 1.08rem; line-height: 1.7; }
+            .footer-bottom-links { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 0.5rem; }
         }
     </style>
 
@@ -760,10 +768,21 @@
                 <article class="blog-card">
                     <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="PDF editing software interface" class="blog-card-image">
                     <div class="blog-card-content">
-                        <div class="blog-card-meta">Updated: Jan 2026 • PDF Tools</div>
+                        <div class="blog-card-meta">Updated: Jan 2026 • PDF &amp; Document Tools</div>
                         <h3>PDFfiller Review 2026: The Complete Guide for Small Teams</h3>
                         <p>After 90 days of testing, we reveal whether PDFfiller's e-signature and form automation features justify the cost for growing businesses.</p>
                         <a href="./article-pdffiller" class="read-more">Read Full Review →</a>
+                    </div>
+                </article>
+
+                <!-- Email Marketing Card -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="Email marketing campaign dashboard" class="blog-card-image">
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">Updated: Mar 2026 • Email &amp; Marketing Tools</div>
+                        <h3>Campaigner Review 2026: Automation, Deliverability &amp; Pricing</h3>
+                        <p>We tested Campaigner for real campaigns to evaluate workflow automation, list segmentation, and the best plan for growing teams.</p>
+                        <a href="campaigner-review-2026" class="read-more">Read Full Review →</a>
                     </div>
                 </article>
 
@@ -1067,7 +1086,8 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="./blog">All Reviews</a></li>
-                        <li><a href="./categories/software-and-pdf-tools">Software and PDF Tools</a></li>
+                        <li><a href="/categories/email-and-marketing-tools/">Email and Marketing Tools</a></li>
+                        <li><a href="/categories/software-and-pdf-tools/">PDF and Document Tools</a></li>
                         <li><a href="./categories/project-management">Project Management</a></li>
                         <li><a href="./categories/finance">Finance Software</a></li>
                         <li><a href="./about">About Us</a></li>
