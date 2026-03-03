@@ -5,484 +5,1007 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | SmartGuideHubs</title>
   <link rel="canonical" href="https://smartguidehubs.com/contact" />
-  <meta name="description" content="Get in touch with SmartGuideHubs for review requests, partnerships, or general inquiries.">
+  <meta name="description" content="Get in touch with SmartGuideHubs for review requests, partnership opportunities, or general inquiries. Our team typically responds within 24-48 hours.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Get In Touch | SmartGuideHubs">
-  <meta property="og:description" content="Have a question, review request, or partnership inquiry? Contact SmartGuideHubs.">
+  <meta property="og:title" content="Contact SmartGuideHubs | Get in Touch">
+  <meta property="og:description" content="Have a question, review request, or partnership inquiry? Reach out to our team and we'll respond promptly.">
   <meta property="og:url" content="https://smartguidehubs.com/contact">
+  <meta property="og:image" content="https://smartguidehubs.com/assets/og-contact.jpg">
+  
   <style>
-    :root {
-      --primary: #3b82f6;
-      --primary-dark: #2563eb;
-      --secondary: #8b5cf6;
-      --text: #1e293b;
-      --muted: #64748b;
-      --border: #e2e8f0;
-      --bg: #f8fafc;
-      --danger: #dc2626;
+    /* Modern CSS Reset */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    * { box-sizing: border-box; }
+    :root {
+      /* Color System */
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #3b82f6;
+      --primary-lighter: #dbeafe;
+      --secondary: #7c3aed;
+      --secondary-light: #ede9fe;
+      
+      /* Neutral Colors */
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      
+      /* Semantic Colors */
+      --text-primary: var(--gray-900);
+      --text-secondary: var(--gray-600);
+      --text-muted: var(--gray-500);
+      --border-light: var(--gray-200);
+      --border-focus: var(--primary);
+      --bg-body: var(--gray-50);
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      
+      /* Typography */
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      
+      /* Spacing */
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* Shadows */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-focus: 0 0 0 4px rgba(37, 99, 235, 0.15);
+      
+      /* Border Radius */
+      --radius-sm: 6px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
 
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background: var(--bg-body);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     .container {
-      max-width: 980px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 var(--space-md);
     }
 
+    /* Header Styles */
     .site-header {
-      background: #fff;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-light);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.95);
     }
 
     .nav-wrap {
-      min-height: 68px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: var(--space-lg);
     }
 
     .logo a {
       font-size: 1.8rem;
       font-weight: 800;
       text-decoration: none;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
     }
 
     .main-nav {
       display: flex;
-      gap: 24px;
+      gap: var(--space-lg);
       flex-wrap: wrap;
     }
 
     .main-nav a {
       text-decoration: none;
-      color: var(--muted);
+      color: var(--text-secondary);
       font-weight: 600;
+      font-size: 0.95rem;
       padding-bottom: 4px;
       border-bottom: 2px solid transparent;
+      transition: color 0.2s ease;
     }
 
-    .main-nav a:hover,
+    .main-nav a:hover {
+      color: var(--primary);
+    }
+
     .main-nav a.active {
       color: var(--primary);
-      border-color: var(--primary);
+      border-bottom-color: var(--primary);
     }
 
+    /* Page Header */
     .page-header {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 42px 0 30px;
+      background: linear-gradient(to right, #ffffff, #fafafa);
+      border-bottom: 1px solid var(--border-light);
+      padding: var(--space-xl) 0;
     }
 
     .kicker {
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
       color: var(--primary);
       font-weight: 700;
-      margin-bottom: 12px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-xs);
     }
 
     h1 {
-      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
       line-height: 1.2;
-      font-size: clamp(30px, 5vw, 40px);
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-xs) 0;
+      color: var(--gray-900);
     }
 
     .intro {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
       margin: 0;
-      color: var(--muted);
-      max-width: 620px;
     }
 
+    /* Main Content */
     .content {
-      padding: 40px 0 60px;
+      padding: var(--space-xl) 0;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 28px;
+      grid-template-columns: 1fr 340px;
+      gap: var(--space-lg);
       align-items: start;
     }
 
+    /* Card Styles */
     .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.06);
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
     }
 
-    .card h2,
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 var(--space-md) 0;
+      color: var(--gray-900);
+    }
+
     .card h3 {
-      margin-top: 0;
-      color: var(--text);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin: 0 0 var(--space-sm) 0;
     }
 
-    .field-row {
+    /* Form Styles */
+    .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: var(--space-sm);
+    }
+
+    .field {
+      margin-bottom: var(--space-md);
     }
 
     label {
       display: block;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: #475569;
-      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xs);
     }
 
-    input, select, textarea {
+    input,
+    select,
+    textarea {
       width: 100%;
-      border: 1.5px solid #dbe4ef;
-      border-radius: 8px;
-      padding: 12px 14px;
-      font-size: 15px;
-      color: var(--text);
-      background: #fff;
-      transition: 0.2s border-color, 0.2s box-shadow;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
       font-family: inherit;
+      border: 2px solid var(--border-light);
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      color: var(--text-primary);
+      transition: all 0.2s ease;
     }
 
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+    input:hover,
+    select:hover,
+    textarea:hover {
+      border-color: var(--gray-400);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
       outline: none;
+      border-color: var(--primary);
+      box-shadow: var(--shadow-focus);
     }
 
-    textarea { resize: vertical; min-height: 140px; }
-
-    .field { margin-bottom: 18px; }
+    textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
 
     .error {
-      color: var(--danger);
-      font-size: 12px;
-      margin-top: 5px;
-      min-height: 16px;
+      color: #dc2626;
+      font-size: 0.75rem;
+      margin-top: var(--space-xs);
+      min-height: 1.25rem;
     }
 
-    .message-meta {
+    .field-footer {
       display: flex;
       justify-content: space-between;
-      gap: 8px;
       align-items: center;
+      margin-top: var(--space-xs);
     }
 
-    .count {
-      color: #94a3b8;
-      font-size: 12px;
-      margin-top: 5px;
+    .char-count {
+      color: var(--text-muted);
+      font-size: 0.75rem;
     }
 
     .checkbox-row {
       display: flex;
-      gap: 10px;
       align-items: center;
-      margin: 10px 0 20px;
-      color: var(--muted);
-      font-size: 14px;
+      gap: 0.75rem;
+      margin: var(--space-md) 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
     }
 
-    .checkbox-row input {
-      width: 17px;
-      height: 17px;
+    .checkbox-row input[type="checkbox"] {
+      width: 1.1rem;
+      height: 1.1rem;
       accent-color: var(--primary);
-    }
-
-    .btn {
-      width: 100%;
-      border: 0;
-      border-radius: 8px;
-      background: var(--primary);
-      color: #fff;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 14px;
       cursor: pointer;
     }
 
-    .btn:hover { background: var(--primary-dark); }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 0.875rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
 
     .privacy-note {
-      margin: 14px 0 0;
+      margin-top: var(--space-sm);
       text-align: center;
-      color: #94a3b8;
-      font-size: 12px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
     }
 
+    /* Contact Info Items */
     .contact-item {
       display: flex;
-      gap: 10px;
-      margin-bottom: 14px;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
     }
 
-    .contact-item strong {
-      display: block;
-      font-size: 12px;
-      color: #94a3b8;
-      letter-spacing: 1px;
+    .contact-icon {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      background: var(--primary-lighter);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
     }
 
-    .contact-item a { color: var(--primary); text-decoration: none; }
-
-    .list-row {
-      border-bottom: 1px solid #eef2f7;
-      padding: 9px 0;
-      color: #475569;
-      font-size: 14px;
+    .contact-content {
+      flex: 1;
     }
 
-    .list-row:last-child { border-bottom: 0; }
-
-    .affiliate {
-      border: 1px solid #c7d6ff;
-      background: #eef4ff;
-      color: #334155;
-      font-size: 14px;
+    .contact-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
     }
 
-    .success {
+    .contact-value {
+      color: var(--text-primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .contact-value a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
+    }
+
+    /* Topics List */
+    .topic-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .topic-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .topic-item:last-child {
+      border-bottom: none;
+    }
+
+    .topic-bullet {
+      width: 0.4rem;
+      height: 0.4rem;
+      background: var(--primary);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Affiliate Card */
+    .card.affiliate {
+      background: linear-gradient(135deg, #eef2ff, #ede9fe);
+      border-color: var(--primary-lighter);
+    }
+
+    .card.affiliate h3 {
+      color: var(--primary-dark);
+      margin-bottom: var(--space-xs);
+    }
+
+    .card.affiliate p {
+      color: var(--gray-700);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* Success State */
+    .success-state {
       text-align: center;
-      display: none;
+      padding: var(--space-lg) 0;
     }
 
-    .success h2 { margin: 0 0 10px; }
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-md);
+      animation: scaleIn 0.3s ease;
+    }
 
-    .success p { color: var(--muted); margin-bottom: 20px; }
+    .success-state h2 {
+      margin-bottom: var(--space-xs);
+    }
 
-    footer {
-      margin-top: 30px;
-      background: #111827;
-      color: #cbd5e1;
-      padding: 36px 0;
+    .success-state p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding: var(--space-xl) 0;
+      margin-top: var(--space-xl);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 28px;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: var(--space-xl);
     }
 
-    .footer-grid h4 { margin-top: 0; color: #e2e8f0; }
+    .footer-brand h4 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 var(--space-xs) 0;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-    .footer-grid a { color: #93c5fd; text-decoration: none; display: inline-block; margin-bottom: 6px; }
+    .footer-brand p {
+      color: var(--gray-400);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
-    @media (max-width: 900px) {
-      .layout, .footer-grid, .field-row { grid-template-columns: 1fr; }
-      .main-nav { gap: 14px; }
+    .footer-links h4 {
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 var(--space-sm) 0;
+    }
+
+    .footer-links a {
+      display: block;
+      color: var(--gray-400);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-contact p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact a {
+      color: var(--gray-400);
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      margin-top: var(--space-xl);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--gray-800);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+      
+      .nav-wrap {
+        flex-direction: column;
+        padding: var(--space-sm) 0;
+      }
+      
+      .main-nav {
+        justify-content: center;
+      }
+      
+      .card {
+        padding: var(--space-md);
+      }
+    }
+
+    /* Utility Classes */
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <div class="logo"><a href="/">SmartGuideHubs</a></div>
+      <div class="logo">
+        <a href="/" aria-label="SmartGuideHubs Home">SmartGuideHubs</a>
+      </div>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
         <a href="/blog/">All Reviews</a>
         <a href="/about/">About Us</a>
-        <a class="active" href="/contact/">Contact</a>
+        <a href="/contact/" class="active" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="page-header">
     <div class="container">
-      <div class="kicker">SMARTGUIDEHUBS</div>
-      <h1>Get In Touch</h1>
-      <p class="intro">Have a question, review request, or partnership inquiry? Fill out the form below and we’ll respond promptly.</p>
+      <div class="kicker">Get in Touch</div>
+      <h1>Contact SmartGuideHubs</h1>
+      <p class="intro">Have a question about a review? Want to suggest a tool? Interested in partnerships? We're here to help.</p>
     </div>
   </section>
 
   <main class="content">
     <div class="container layout">
-      <section class="card">
+      <!-- Contact Form -->
+      <section class="card" aria-labelledby="form-heading">
         <form id="contactForm" novalidate>
-          <div class="success" id="successBox" aria-live="polite">
-            <div style="font-size:42px; margin-bottom: 8px;">✅</div>
-            <h2>Message Sent!</h2>
+          <!-- Success State -->
+          <div id="successBox" class="success-state hidden" aria-live="polite">
+            <div class="success-icon">✓</div>
+            <h2>Message Sent Successfully</h2>
             <p id="successText"></p>
-            <button type="button" class="btn" id="resetBtn">Send Another Message</button>
+            <button type="button" class="btn" id="resetBtn" style="width: auto; padding: 0.75rem 2rem;">Send Another Message</button>
           </div>
 
+          <!-- Form Fields -->
           <div id="formFields">
-            <h2 style="margin-bottom:20px;">Send Us a Message</h2>
-            <div class="field-row">
+            <h2 id="form-heading">Send Us a Message</h2>
+            
+            <div class="form-row">
               <div class="field">
-                <label for="name">FULL NAME *</label>
-                <input id="name" name="name" type="text" placeholder="Jane Smith" required>
-                <div class="error" id="nameError"></div>
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input 
+                  id="name" 
+                  name="name" 
+                  type="text" 
+                  placeholder="Jane Smith"
+                  required
+                  aria-required="true"
+                  aria-describedby="nameError"
+                >
+                <div class="error" id="nameError" role="alert"></div>
               </div>
+
               <div class="field">
-                <label for="email">EMAIL ADDRESS *</label>
-                <input id="email" name="email" type="email" placeholder="jane@example.com" required>
-                <div class="error" id="emailError"></div>
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  placeholder="jane@example.com"
+                  required
+                  aria-required="true"
+                  aria-describedby="emailError"
+                >
+                <div class="error" id="emailError" role="alert"></div>
               </div>
             </div>
 
             <div class="field">
-              <label for="topic">TOPIC *</label>
-              <select id="topic" name="topic" required>
-                <option value="">Select a topic...</option>
-                <option>General Inquiry</option>
-                <option>Review Request</option>
-                <option>Advertise / Sponsorship</option>
-                <option>Affiliate Partnership</option>
-                <option>Press &amp; Media</option>
-                <option>Report an Error</option>
+              <label for="topic">Topic <span aria-hidden="true">*</span></label>
+              <select 
+                id="topic" 
+                name="topic" 
+                required
+                aria-required="true"
+                aria-describedby="topicError"
+              >
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="general">General Inquiry</option>
+                <option value="review">Review Request</option>
+                <option value="advertise">Advertise / Sponsorship</option>
+                <option value="affiliate">Affiliate Partnership</option>
+                <option value="press">Press & Media</option>
+                <option value="error">Report an Error</option>
               </select>
-              <div class="error" id="topicError"></div>
+              <div class="error" id="topicError" role="alert"></div>
             </div>
 
             <div class="field">
-              <label for="message">YOUR MESSAGE *</label>
-              <textarea id="message" name="message" placeholder="Tell us about your inquiry in detail..." minlength="20" required></textarea>
-              <div class="message-meta">
-                <div class="error" id="messageError"></div>
-                <div class="count"><span id="charCount">0</span> chars</div>
+              <label for="message">Your Message <span aria-hidden="true">*</span></label>
+              <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Please provide as much detail as possible..."
+                minlength="20"
+                required
+                aria-required="true"
+                aria-describedby="messageError charCount"
+              ></textarea>
+              <div class="field-footer">
+                <div class="error" id="messageError" role="alert"></div>
+                <div class="char-count" id="charCount">
+                  <span id="charCountValue">0</span> / 20 minimum
+                </div>
               </div>
             </div>
 
-            <label class="checkbox-row" for="newsletter">
-              <input id="newsletter" name="newsletter" type="checkbox">
-              Subscribe to our newsletter for new reviews &amp; tool comparisons
-            </label>
+            <div class="checkbox-row">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <label for="newsletter" style="text-transform: none; letter-spacing: normal; font-size: 0.9rem;">
+                Subscribe to our newsletter for new reviews and tool comparisons
+              </label>
+            </div>
 
-            <button class="btn" type="submit">Send Message →</button>
-            <p class="privacy-note">🔒 Your information is never shared with third parties.</p>
+            <button type="submit" class="btn" id="submitBtn">
+              Send Message
+              <span style="margin-left: 0.5rem;" aria-hidden="true">→</span>
+            </button>
+            
+            <p class="privacy-note">
+              🔒 Your information is never shared with third parties. 
+              <a href="/privacy/" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
+            </p>
           </div>
         </form>
       </section>
 
-      <aside style="display:flex; flex-direction:column; gap:16px;">
-        <section class="card">
-          <h3 style="font-size:14px; letter-spacing:1px;">CONTACT INFO</h3>
-          <div class="contact-item"><div>✉️</div><div><strong>EMAIL</strong><a href="mailto:contact@smartguidehubs.com">contact@smartguidehubs.com</a></div></div>
-          <div class="contact-item"><div>📍</div><div><strong>LOCATION</strong>Based remotely, serving globally</div></div>
-          <div class="contact-item" style="margin-bottom:0;"><div>🕐</div><div><strong>RESPONSE TIME</strong>Typically within 24–48 hours</div></div>
+      <!-- Sidebar -->
+      <aside style="display: flex; flex-direction: column; gap: var(--space-md);">
+        <!-- Contact Information -->
+        <section class="card" aria-labelledby="contact-info-heading">
+          <h3 id="contact-info-heading">Contact Information</h3>
+          
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">✉️</div>
+            <div class="contact-content">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:contact@smartguidehubs.com">contact@smartguidehubs.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div class="contact-content">
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Remote Team, Serving Globally</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🕐</div>
+            <div class="contact-content">
+              <div class="contact-label">Response Time</div>
+              <div class="contact-value">Within 24-48 hours</div>
+            </div>
+          </div>
         </section>
 
-        <section class="card">
-          <h3 style="font-size:14px; letter-spacing:1px;">WHAT WE COVER</h3>
-          <div class="list-row">Productivity Tools</div>
-          <div class="list-row">Design Software</div>
-          <div class="list-row">Dev Tools</div>
-          <div class="list-row">Marketing Platforms</div>
-          <div class="list-row">AI &amp; Automation</div>
-          <div class="list-row">Business Analytics</div>
+        <!-- Topics We Cover -->
+        <section class="card" aria-labelledby="topics-heading">
+          <h3 id="topics-heading">Topics We Cover</h3>
+          <div class="topic-list">
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              Productivity Tools
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              Project Management
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              Design Software
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              Development Tools
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              Marketing Platforms
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              AI & Automation
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              Business Analytics
+            </div>
+            <div class="topic-item">
+              <span class="topic-bullet" aria-hidden="true"></span>
+              CRM Software
+            </div>
+          </div>
         </section>
 
-        <section class="card affiliate">
-          <h3 style="font-size:13px; color:#1d4ed8; margin:0 0 8px; letter-spacing:1px;">📢 AFFILIATE DISCLOSURE</h3>
-          <p style="margin:0;">Some links on SmartGuideHubs are affiliate links. We may earn a commission — at no extra cost to you. Our reviews remain independent and unbiased.</p>
+        <!-- Affiliate Disclosure -->
+        <section class="card affiliate" aria-labelledby="disclosure-heading">
+          <h3 id="disclosure-heading">📢 Affiliate Disclosure</h3>
+          <p>
+            Some links on SmartGuideHubs are affiliate links. We may earn a commission — at no extra cost to you. 
+            Our reviews remain independent, unbiased, and thoroughly researched.
+          </p>
         </section>
       </aside>
     </div>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <h4>SmartGuideHubs</h4>
-        <p>We provide independent, in-depth software reviews to help you make smarter decisions.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>SmartGuideHubs</h4>
+          <p>Independent, data-driven software reviews to help you make smarter business decisions. We test so you don't have to.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="/">Home</a>
+          <a href="/blog/">All Reviews</a>
+          <a href="/about/">About Us</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact & Legal</h4>
+          <p>📍 Remote Team, Global</p>
+          <p>✉️ <a href="mailto:contact@smartguidehubs.com">contact@smartguidehubs.com</a></p>
+          <p><a href="/privacy/">Privacy Policy</a></p>
+          <p><a href="/terms/">Terms of Use</a></p>
+          <p><a href="/disclosure/">Affiliate Disclosure</a></p>
+        </div>
       </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="/">Home</a><br>
-        <a href="/blog/">All Reviews</a><br>
-        <a href="/categories/pdf-and-document-tools/">PDF And Document Tools</a><br>
-        <a href="/about/">About Us</a>
-      </div>
-      <div>
-        <h4>Contact &amp; Legal</h4>
-        <div>📍 Based remotely, serving globally</div>
-        <a href="mailto:contact@smartguidehubs.com">✉️ contact@smartguidehubs.com</a><br>
-        <a href="/privacy/">Privacy Policy</a><br>
-        <a href="/terms/">Terms of Use</a><br>
-        <a href="/disclosure/">Affiliate Disclosure</a>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> SmartGuideHubs. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    const form = document.getElementById('contactForm');
-    const fieldsWrap = document.getElementById('formFields');
-    const successBox = document.getElementById('successBox');
-    const successText = document.getElementById('successText');
-    const messageInput = document.getElementById('message');
-    const charCount = document.getElementById('charCount');
-    const resetBtn = document.getElementById('resetBtn');
+    (function() {
+      'use strict';
 
-    const errors = {
-      name: document.getElementById('nameError'),
-      email: document.getElementById('emailError'),
-      topic: document.getElementById('topicError'),
-      message: document.getElementById('messageError')
-    };
-
-    function clearErrors() {
-      Object.values(errors).forEach(el => el.textContent = '');
-    }
-
-    function validate(values) {
-      const e = {};
-      if (!values.name.trim()) e.name = 'Please enter your name.';
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) e.email = 'Enter a valid email address.';
-      if (!values.topic) e.topic = 'Please select a topic.';
-      if (values.message.trim().length < 20) e.message = 'Message must be at least 20 characters.';
-      return e;
-    }
-
-    messageInput.addEventListener('input', () => {
-      charCount.textContent = String(messageInput.value.length);
-    });
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      clearErrors();
-
-      const values = {
-        name: form.name.value,
-        email: form.email.value,
-        topic: form.topic.value,
-        message: form.message.value
+      // DOM Elements
+      const form = document.getElementById('contactForm');
+      const fieldsWrap = document.getElementById('formFields');
+      const successBox = document.getElementById('successBox');
+      const successText = document.getElementById('successText');
+      const messageInput = document.getElementById('message');
+      const charCountSpan = document.getElementById('charCountValue');
+      const resetBtn = document.getElementById('resetBtn');
+      const submitBtn = document.getElementById('submitBtn');
+      
+      // Error containers
+      const errors = {
+        name: document.getElementById('nameError'),
+        email: document.getElementById('emailError'),
+        topic: document.getElementById('topicError'),
+        message: document.getElementById('messageError')
       };
 
-      const e = validate(values);
-      if (Object.keys(e).length) {
-        Object.entries(e).forEach(([k, v]) => errors[k].textContent = v);
-        return;
-      }
+      // Helper Functions
+      const showElement = (element) => element.classList.remove('hidden');
+      const hideElement = (element) => element.classList.add('hidden');
+      
+      const clearErrors = () => {
+        Object.values(errors).forEach(el => {
+          if (el) el.textContent = '';
+        });
+      };
 
-      successText.textContent = `Thanks for reaching out, ${values.name}. We'll get back to you at ${values.email} within 24–48 hours.`;
-      fieldsWrap.style.display = 'none';
-      successBox.style.display = 'block';
-    });
+      const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      };
 
-    resetBtn.addEventListener('click', () => {
-      form.reset();
-      charCount.textContent = '0';
-      clearErrors();
-      successBox.style.display = 'none';
-      fieldsWrap.style.display = 'block';
-    });
+      const validate = (values) => {
+        const errors = {};
+        
+        if (!values.name || values.name.trim().length < 2) {
+          errors.name = 'Please enter your full name (minimum 2 characters).';
+        }
+        
+        if (!validateEmail(values.email)) {
+          errors.email = 'Please enter a valid email address.';
+        }
+        
+        if (!values.topic) {
+          errors.topic = 'Please select a topic.';
+        }
+        
+        if (!values.message || values.message.trim().length < 20) {
+          errors.message = 'Message must be at least 20 characters.';
+        }
+        
+        return errors;
+      };
+
+      // Update character count
+      const updateCharCount = () => {
+        const length = messageInput.value.length;
+        charCountSpan.textContent = length;
+        
+        // Visual feedback for minimum requirement
+        if (length < 20) {
+          charCountSpan.style.color = '#dc2626';
+        } else {
+          charCountSpan.style.color = 'var(--text-muted)';
+        }
+      };
+
+      messageInput.addEventListener('input', updateCharCount);
+
+      // Form submission handler
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        clearErrors();
+
+        // Disable submit button to prevent double submission
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const values = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          topic: form.topic.value,
+          message: form.message.value.trim(),
+          newsletter: form.newsletter.checked
+        };
+
+        const validationErrors = validate(values);
+
+        if (Object.keys(validationErrors).length > 0) {
+          // Show errors
+          Object.entries(validationErrors).forEach(([key, value]) => {
+            if (errors[key]) {
+              errors[key].textContent = value;
+            }
+          });
+          
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message →';
+          return;
+        }
+
+        try {
+          // Here you would typically send the data to your backend
+          // For demonstration, we'll simulate a successful submission
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          // Show success message
+          successText.textContent = `Thanks for reaching out, ${values.name}. We'll respond to ${values.email} within 24-48 hours.`;
+          
+          hideElement(fieldsWrap);
+          showElement(successBox);
+          
+          // Scroll to success message
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+        } catch (error) {
+          console.error('Submission error:', error);
+          alert('There was an error sending your message. Please try again.');
+          
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message →';
+        }
+      });
+
+      // Reset form
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        updateCharCount();
+        clearErrors();
+        
+        hideElement(successBox);
+        showElement(fieldsWrap);
+        
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message →';
+        
+        // Focus on first field
+        document.getElementById('name').focus();
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Initialize character count
+      updateCharCount();
+
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Form field validation on blur (for better UX)
+      const addFieldValidation = (field, validator) => {
+        field.addEventListener('blur', () => {
+          const error = validator(field.value);
+          const errorElement = errors[field.id];
+          if (errorElement) {
+            errorElement.textContent = error || '';
+          }
+        });
+      };
+
+      // Add individual field validation
+      addFieldValidation(document.getElementById('name'), (value) => {
+        return value.trim().length < 2 ? 'Please enter your full name.' : '';
+      });
+
+      addFieldValidation(document.getElementById('email'), (value) => {
+        return !validateEmail(value) ? 'Please enter a valid email address.' : '';
+      });
+
+      addFieldValidation(document.getElementById('message'), (value) => {
+        return value.trim().length < 20 ? 'Message must be at least 20 characters.' : '';
+      });
+
+    })();
   </script>
 </body>
 </html>
