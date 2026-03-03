@@ -17,7 +17,6 @@ Allow: /sitemap
 
 # Sitemaps
 Sitemap: https://smartguidehubs.com/sitemap.xml
-Sitemap: https://smartguidehubs.com/sitemap
 
 # Optional: Crawl delay for slower bots (Google ignores this)
 # Crawl-delay: 5
