@@ -3,383 +3,506 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact SmartGuideHubs | Software Review Support</title>
+  <title>Contact Us | SmartGuideHubs</title>
   <link rel="canonical" href="https://smartguidehubs.com/contact" />
-  <meta name="description" content="Contact SmartGuideHubs to request guides, ask questions, or share feedback about software reviews and comparisons.">
-  <meta name="keywords" content="contact SmartGuideHubs, software review support, small business software guidance">
+  <meta name="description" content="Get in touch with SmartGuideHubs for review requests, partnerships, or general inquiries.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact SmartGuideHubs">
-  <meta property="og:description" content="Reach out for software research updates and practical buyer guidance.">
+  <meta property="og:title" content="Get In Touch | SmartGuideHubs">
+  <meta property="og:description" content="Have a question, review request, or partnership inquiry? Contact SmartGuideHubs.">
   <meta property="og:url" content="https://smartguidehubs.com/contact">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Contact SmartGuideHubs | Software Review Support">
-  <meta name="twitter:description" content="Contact SmartGuideHubs to request guides, ask questions, or share feedback about software reviews and comparisons.">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact SmartGuideHubs | Software Review Support", "url": "https://smartguidehubs.com/contact", "description": "Contact SmartGuideHubs to request guides, ask questions, or share feedback about software reviews and comparisons.", "publisher": {"@type": "Organization", "name": "SmartGuideHubs"}}</script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --secondary: #8b5cf6;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --danger: #dc2626;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .site-header {
+      background: #fff;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-wrap {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo a {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .page-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 42px 0 30px;
+    }
+
+    .kicker {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      line-height: 1.2;
+      font-size: clamp(30px, 5vw, 40px);
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .content {
+      padding: 40px 0 60px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 34px;
+      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2,
+    .card h3 {
+      margin-top: 0;
+      color: var(--text);
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #475569;
+      margin-bottom: 7px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1.5px solid #dbe4ef;
+      border-radius: 8px;
+      padding: 13px 15px;
+      font-size: 16px;
+      color: var(--text);
+      background: #fff;
+      transition: 0.2s border-color, 0.2s box-shadow;
+      font-family: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+      outline: none;
+    }
+
+    textarea { resize: vertical; min-height: 140px; }
+
+    .field { margin-bottom: 18px; }
+
+    .error {
+      color: var(--danger);
+      font-size: 12px;
+      margin-top: 5px;
+      min-height: 16px;
+    }
+
+    .message-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .count {
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 10px 0 20px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .checkbox-row input {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--primary);
+    }
+
+    .btn {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 14px;
+      cursor: pointer;
+    }
+
+    .btn:hover { background: var(--primary-dark); }
+
+    .privacy-note {
+      margin: 14px 0 0;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 12px;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    .contact-item a { color: var(--primary); text-decoration: none; }
+
+    .list-row {
+      border-bottom: 1px solid #eef2f7;
+      padding: 9px 0;
+      color: #475569;
+      font-size: 16px;
+    }
+
+    .list-row:last-child { border-bottom: 0; }
+
+    .affiliate {
+      border: 1px solid #c7d6ff;
+      background: #eef4ff;
+      color: #334155;
+      font-size: 14px;
+    }
+
+    .success {
+      text-align: center;
+      display: none;
+    }
+
+    .success h2 { margin: 0 0 10px; }
+
+    .success p { color: var(--muted); margin-bottom: 20px; }
+
+    footer {
+      margin-top: 30px;
+      background: #111827;
+      color: #cbd5e1;
+      padding: 36px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-grid h4 { margin-top: 0; color: #e2e8f0; }
+
+    .footer-grid a { color: #93c5fd; text-decoration: none; display: inline-block; margin-bottom: 6px; }
+
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .field-row, .footer-grid { grid-template-columns: 1fr; }
+      .main-nav { gap: 14px; }
+      .main-nav a { font-size: 15px; }
+      .card { padding: 22px; }
+      .footer-grid h4 { font-size: 22px; margin-bottom: 10px; }
+      .footer-grid a, .footer-grid p, .footer-grid div { font-size: 18px; line-height: 1.6; }
+      .checkbox-row { font-size: 14px; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-wrap { align-items: flex-start; padding-top: 12px; padding-bottom: 12px; }
+      .logo a { font-size: 1.55rem; }
+      .main-nav { width: 100%; justify-content: space-between; gap: 10px; }
+      .main-nav a { font-size: 14px; }
+      .container { padding: 0 16px; }
+      .footer-grid { gap: 20px; }
+    }
+  </style>
 </head>
 <body>
-<!-- Contact / Lead Form Section -->
-<section class="lead-form-section" style="
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    padding: 5rem 2rem;
-    margin: 4rem 0;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-">
-
-    <!-- Background decorative element -->
-    <div style="
-        position: absolute;
-        top: -50px;
-        right: -50px;
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
-        border-radius: 50%;
-    "></div>
-    
-    <div style="
-        position: absolute;
-        bottom: -30px;
-        left: -30px;
-        width: 150px;
-        height: 150px;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
-        border-radius: 50%;
-    "></div>
-
-    <div class="form-container" style="
-        max-width: 600px;
-        margin: 0 auto;
-        background: white;
-        padding: 3rem;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        position: relative;
-        z-index: 1;
-    ">
-        
-        <!-- Form Header -->
-        <div style="text-align: center; margin-bottom: 2.5rem;">
-            <div style="
-                width: 70px;
-                height: 70px;
-                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-                border-radius: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 1.5rem;
-                color: white;
-                font-size: 1.8rem;
-                box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-            ">
-                📘
-            </div>
-            
-            <h2 style="
-                color: #1e293b;
-                font-size: 2.2rem;
-                margin-bottom: 0.8rem;
-                font-weight: 700;
-            ">
-                Get Your Free Guide
-            </h2>
-            
-            <p style="
-                color: #64748b;
-                font-size: 1.1rem;
-                line-height: 1.6;
-                max-width: 500px;
-                margin: 0 auto;
-            ">
-                Learn how to make smarter software choices with simple, independent insights.
-                <span style="color: #3b82f6; font-weight: 600;">No hype. No pressure.</span> Just actionable information.
-            </p>
-        </div>
-        
-        <!-- Form -->
-        <form id="prelanderLeadForm" action="https://formspree.io/f/xyzjwbrl" method="POST" style="
-            margin-top: 2rem;
-        ">
-            
-            <!-- Name Field -->
-            <div style="margin-bottom: 2rem;">
-                <label for="full-name" style="
-                    display: block;
-                    color: #334155;
-                    font-weight: 600;
-                    margin-bottom: 0.5rem;
-                    font-size: 1rem;
-                ">
-                    Full Name *
-                </label>
-                <input 
-                    type="text" 
-                    id="full-name" 
-                    name="name" 
-                    placeholder="Your full name" 
-                    required
-                    style="
-                        width: 100%;
-                        padding: 1rem 1.2rem;
-                        border: 2px solid #e2e8f0;
-                        border-radius: 12px;
-                        font-size: 1rem;
-                        color: #1e293b;
-                        background: #f8fafc;
-                        transition: all 0.3s;
-                        outline: none;
-                        font-family: inherit;
-                    "
-                    onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)';"
-                    onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';"
-                >
-                <div style="
-                    color: #94a3b8;
-                    font-size: 0.85rem;
-                    margin-top: 0.5rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                ">
-                    <span style="color: #3b82f6;">💡</span>
-                    This helps us communicate with you in a more personal way.
-                </div>
-            </div>
-            
-            <!-- Email Field -->
-            <div style="margin-bottom: 2rem;">
-                <label for="email-address" style="
-                    display: block;
-                    color: #334155;
-                    font-weight: 600;
-                    margin-bottom: 0.5rem;
-                    font-size: 1rem;
-                ">
-                    Email Address *
-                </label>
-                <input 
-                    type="email" 
-                    id="email-address" 
-                    name="_replyto" 
-                    placeholder="you@example.com" 
-                    required
-                    style="
-                        width: 100%;
-                        padding: 1rem 1.2rem;
-                        border: 2px solid #e2e8f0;
-                        border-radius: 12px;
-                        font-size: 1rem;
-                        color: #1e293b;
-                        background: #f8fafc;
-                        transition: all 0.3s;
-                        outline: none;
-                        font-family: inherit;
-                    "
-                    onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)';"
-                    onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none';"
-                >
-                <div style="
-                    color: #94a3b8;
-                    font-size: 0.85rem;
-                    margin-top: 0.5rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                ">
-                    <span style="color: #3b82f6;">📧</span>
-                    We'll send your requested resource and updates here.
-                </div>
-            </div>
-
-            <!-- Anti-spam honeypot -->
-            <input type="text" name="_gotcha" style="display:none;">
-            
-            <!-- Submit Button -->
-            <button type="submit" style="
-                width: 100%;
-                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-                color: white;
-                padding: 1.2rem;
-                border: none;
-                border-radius: 12px;
-                font-size: 1.1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.3s;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 0.3rem;
-                margin: 2rem 0 1.5rem;
-                box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
-            "
-            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(59, 130, 246, 0.4)';"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(59, 130, 246, 0.3)';"
-            >
-                <span>Send Me the Free Guide</span>
-                <span style="
-                    font-size: 0.9rem;
-                    font-weight: 400;
-                    opacity: 0.9;
-                ">Instant access • No cost</span>
-            </button>
-            
-            <!-- Privacy Note -->
-            <div style="
-                background: #f0f9ff;
-                border: 1px solid #bae6fd;
-                border-radius: 10px;
-                padding: 1.2rem;
-                margin-top: 1.5rem;
-            ">
-                <p style="
-                    color: #475569;
-                    font-size: 0.9rem;
-                    line-height: 1.5;
-                    margin: 0;
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 0.8rem;
-                ">
-                    <span style="color: #3b82f6; font-size: 1.2rem;">🔒</span>
-                    <span>
-                        <strong>Your privacy matters to us.</strong> We never sell or misuse your information.
-                        By submitting, you agree to receive the requested resource and occasional
-                        educational emails. Unsubscribe anytime.
-                    </span>
-                </p>
-            </div>
-        </form>
-        
-        <!-- Success Message (Hidden by default) -->
-        <div id="formSuccessMessage" style="
-            display: none;
-            text-align: center;
-            padding: 3rem 2rem;
-            background: #f0fdf4;
-            border: 2px solid #bbf7d0;
-            border-radius: 16px;
-            margin-top: 2rem;
-        ">
-            <div style="
-                width: 80px;
-                height: 80px;
-                background: linear-gradient(135deg, #10b981, #059669);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 1.5rem;
-                color: white;
-                font-size: 2rem;
-                box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-            ">
-                ✓
-            </div>
-            
-            <h3 style="
-                color: #065f46;
-                font-size: 1.8rem;
-                margin-bottom: 1rem;
-                font-weight: 700;
-            ">
-                Thank You! Submission Successful
-            </h3>
-            
-            <p style="
-                color: #047857;
-                line-height: 1.6;
-                max-width: 500px;
-                margin: 0 auto 1.5rem;
-            ">
-                Your free guide will be sent to your email address.
-                <strong>please check your inbox within next 2 businessdays</strong> (and spam/promotions folder if you don't see it).
-            </p>
-            
-            <div style="
-                display: flex;
-                gap: 1rem;
-                justify-content: center;
-                margin-top: 2rem;
-                flex-wrap: wrap;
-            ">
-                <a href="/" style="
-                    display: inline-block;
-                    background: white;
-                    color: #065f46;
-                    padding: 0.8rem 1.8rem;
-                    border-radius: 10px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    border: 2px solid #bbf7d0;
-                    transition: all 0.3s;
-                "
-                onmouseover="this.style.backgroundColor='#bbf7d0';"
-                onmouseout="this.style.backgroundColor='white';"
-                >
-                    ← Back to Home
-                </a>
-                <a href="/blog" style="
-                    display: inline-block;
-                    background: linear-gradient(135deg, #10b981, #059669);
-                    color: white;
-                    padding: 0.8rem 1.8rem;
-                    border-radius: 10px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    transition: all 0.3s;
-                    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-                "
-                onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(16, 185, 129, 0.4)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(16, 185, 129, 0.3)';"
-                >
-                    Browse More Reviews →
-                </a>
-            </div>
-        </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="logo"><a href="/">SmartGuideHubs</a></div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">All Reviews</a>
+        <a href="/about/">About Us</a>
+        <a class="active" href="/contact/">Contact</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- Success Message JavaScript -->
-<script>
-    document.getElementById('prelanderLeadForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        
-        // Submit to Formspree
-        fetch(this.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                // Show success message
-                document.getElementById('prelanderLeadForm').style.display = 'none';
-                document.getElementById('formSuccessMessage').style.display = 'block';
-                
-                // Scroll to success message
-                document.getElementById('formSuccessMessage').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-            } else {
-                alert('Oops! Something went wrong. Please try again.');
-            }
-        })
-        .catch(error => {
-            alert('Network error. Please check your connection and try again.');
-        });
+  <section class="page-header">
+    <div class="container">
+      <div class="kicker">SMARTGUIDEHUBS</div>
+      <h1>Get In Touch</h1>
+      <p class="intro">Have a question, review request, or partnership inquiry? Fill out the form below and we’ll respond promptly.</p>
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="container layout">
+      <section class="card">
+        <form id="contactForm" novalidate>
+          <div class="success" id="successBox" aria-live="polite">
+            <div style="font-size:42px; margin-bottom: 8px;">✅</div>
+            <h2>Message Sent!</h2>
+            <p id="successText"></p>
+            <button type="button" class="btn" id="resetBtn">Send Another Message</button>
+          </div>
+
+          <div id="formFields">
+            <h2 style="margin-bottom:20px;">Send Us a Message</h2>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">FULL NAME *</label>
+                <input id="name" name="name" type="text" placeholder="Jane Smith" required>
+                <div class="error" id="nameError"></div>
+              </div>
+              <div class="field">
+                <label for="email">EMAIL ADDRESS *</label>
+                <input id="email" name="email" type="email" placeholder="jane@example.com" required>
+                <div class="error" id="emailError"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="topic">TOPIC *</label>
+              <select id="topic" name="topic" required>
+                <option value="">Select a topic...</option>
+                <option>General Inquiry</option>
+                <option>Review Request</option>
+                <option>Advertise / Sponsorship</option>
+                <option>Affiliate Partnership</option>
+                <option>Press &amp; Media</option>
+                <option>Report an Error</option>
+              </select>
+              <div class="error" id="topicError"></div>
+            </div>
+
+            <div class="field">
+              <label for="message">YOUR MESSAGE *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your inquiry in detail..." minlength="20" required></textarea>
+              <div class="message-meta">
+                <div class="error" id="messageError"></div>
+                <div class="count"><span id="charCount">0</span> chars</div>
+              </div>
+            </div>
+
+            <label class="checkbox-row" for="newsletter">
+              <input id="newsletter" name="newsletter" type="checkbox">
+              Subscribe to our newsletter for new reviews &amp; tool comparisons
+            </label>
+
+            <button class="btn" type="submit">Send Message →</button>
+            <p class="privacy-note">🔒 Your information is never shared with third parties.</p>
+          </div>
+        </form>
+      </section>
+
+      <aside style="display:flex; flex-direction:column; gap:16px;">
+        <section class="card">
+          <h3 style="font-size:14px; letter-spacing:1px;">CONTACT INFO</h3>
+          <div class="contact-item"><div>✉️</div><div><strong>EMAIL</strong><a href="mailto:contact@smartguidehubs.com">contact@smartguidehubs.com</a></div></div>
+          <div class="contact-item"><div>📍</div><div><strong>LOCATION</strong>Based remotely, serving globally</div></div>
+          <div class="contact-item" style="margin-bottom:0;"><div>🕐</div><div><strong>RESPONSE TIME</strong>Typically within 24–48 hours</div></div>
+        </section>
+
+        <section class="card">
+          <h3 style="font-size:14px; letter-spacing:1px;">WHAT WE COVER</h3>
+          <div class="list-row">Productivity Tools</div>
+          <div class="list-row">Design Software</div>
+          <div class="list-row">Dev Tools</div>
+          <div class="list-row">Marketing Platforms</div>
+          <div class="list-row">AI &amp; Automation</div>
+          <div class="list-row">Business Analytics</div>
+        </section>
+
+        <section class="card affiliate">
+          <h3 style="font-size:13px; color:#1d4ed8; margin:0 0 8px; letter-spacing:1px;">📢 AFFILIATE DISCLOSURE</h3>
+          <p style="margin:0;">Some links on SmartGuideHubs are affiliate links. We may earn a commission — at no extra cost to you. Our reviews remain independent and unbiased.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>SmartGuideHubs</h4>
+        <p>We provide independent, in-depth software reviews to help you make smarter decisions.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="/">Home</a><br>
+        <a href="/blog/">All Reviews</a><br>
+        <a href="/categories/software-and-pdf-tools/">PDF and Document Tools</a><br>
+        <a href="/categories/email-and-marketing-tools/">Email and Marketing Tools</a><br>
+        <a href="/about/">About Us</a>
+      </div>
+      <div>
+        <h4>Contact &amp; Legal</h4>
+        <div>📍 Based remotely, serving globally</div>
+        <a href="mailto:contact@smartguidehubs.com">✉️ contact@smartguidehubs.com</a><br>
+        <a href="/privacy/">Privacy Policy</a><br>
+        <a href="/terms/">Terms of Use</a><br>
+        <a href="/disclosure/">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const fieldsWrap = document.getElementById('formFields');
+    const successBox = document.getElementById('successBox');
+    const successText = document.getElementById('successText');
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const errors = {
+      name: document.getElementById('nameError'),
+      email: document.getElementById('emailError'),
+      topic: document.getElementById('topicError'),
+      message: document.getElementById('messageError')
+    };
+
+    function clearErrors() {
+      Object.values(errors).forEach(el => el.textContent = '');
+    }
+
+    function validate(values) {
+      const e = {};
+      if (!values.name.trim()) e.name = 'Please enter your name.';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) e.email = 'Enter a valid email address.';
+      if (!values.topic) e.topic = 'Please select a topic.';
+      if (values.message.trim().length < 20) e.message = 'Message must be at least 20 characters.';
+      return e;
+    }
+
+    messageInput.addEventListener('input', () => {
+      charCount.textContent = String(messageInput.value.length);
     });
-</script>
 
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      clearErrors();
+
+      const values = {
+        name: form.name.value,
+        email: form.email.value,
+        topic: form.topic.value,
+        message: form.message.value
+      };
+
+      const e = validate(values);
+      if (Object.keys(e).length) {
+        Object.entries(e).forEach(([k, v]) => errors[k].textContent = v);
+        return;
+      }
+
+      successText.textContent = `Thanks for reaching out, ${values.name}. We'll get back to you at ${values.email} within 24–48 hours.`;
+      fieldsWrap.style.display = 'none';
+      successBox.style.display = 'block';
+    });
+
+    resetBtn.addEventListener('click', () => {
+      form.reset();
+      charCount.textContent = '0';
+      clearErrors();
+      successBox.style.display = 'none';
+      fieldsWrap.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
