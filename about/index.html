@@ -8,7 +8,41 @@
     <meta name="description" content="Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.">
     <meta name="keywords" content="about SmartGuideHubs, software review methodology, independent tech reviews, small business tools, unbiased software testing">
     
-    <!-- Use your site's CSS or copy the professional styles -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About SmartGuideHubs | Independent Software Reviews & Expert Guides">
+    <meta property="og:description" content="Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.">
+    <meta property="og:url" content="https://smartguidehubs.com/about/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About SmartGuideHubs | Independent Software Reviews & Expert Guides">
+    <meta name="twitter:description" content="Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "About SmartGuideHubs | Independent Software Reviews & Expert Guides",
+        "description": "Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.",
+        "url": "https://smartguidehubs.com/about/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "SmartGuideHubs",
+            "founder": {
+                "@type": "Person",
+                "name": "Emmanuel Okoye"
+            }
+        },
+        "about": [
+            {"@type": "Thing", "name": "software review methodology"},
+            {"@type": "Thing", "name": "independent tech reviews"},
+            {"@type": "Thing", "name": "small business tools"},
+            {"@type": "Thing", "name": "unbiased software testing"}
+        ]
+    }
+    </script>
+
     <style>
         /* Professional CSS matching your site */
         :root {
@@ -19,6 +53,7 @@
             --light: #f8fafc;
             --gray: #64748b;
             --success: #10b981;
+            --warning: #f59e0b;
         }
         
         * {
@@ -40,7 +75,7 @@
             padding: 0 2rem;
         }
         
-        /* Header - Use your existing header style */
+        /* Header */
         .site-header {
             background: white;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
@@ -85,7 +120,7 @@
             color: var(--primary);
         }
         
-        /* Hero Section */
+        /* Hero */
         .about-hero {
             text-align: center;
             padding: 5rem 2rem;
@@ -105,7 +140,7 @@
             font-size: 1.3rem;
             color: var(--gray);
             max-width: 700px;
-            margin: 0 auto 2rem;
+            margin: 0 auto;
         }
         
         .stats-grid {
@@ -171,87 +206,95 @@
             color: var(--dark);
         }
         
-        /* Mission Statement */
-        .mission-statement {
-            background: linear-gradient(135deg, #fef3c7, #fde68a);
-            border-left: 5px solid var(--warning);
+        /* Founder Story */
+        .founder-story {
+            background: #f0f9ff;
+            border-left: 5px solid var(--primary);
             padding: 2.5rem;
             border-radius: 15px;
             margin: 2.5rem 0;
         }
         
-        /* Methodology */
-        .methodology-grid {
+        /* Category Grid */
+        .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
         
-        .method-card {
+        .category-card {
             background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .category-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .category-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .principle-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        /* Editorial Team */
+        .team-note {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
             padding: 2rem;
             border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s;
+            margin: 2rem 0;
         }
         
-        .method-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-        
-        .method-card h3 {
-            color: var(--dark);
-            margin-bottom: 1rem;
+        /* Founder Signature */
+        .founder-signature {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-        }
-        
-        /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
         
-        .team-card {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .team-avatar {
-            width: 100px;
-            height: 100px;
+        .founder-image {
+            width: 120px;
+            height: 120px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
-        /* Values */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+        .founder-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
         }
         
-        .value-card {
-            text-align: center;
-            padding: 2rem;
-            background: #f0f9ff;
-            border-radius: 12px;
+        .founder-details p {
+            color: var(--gray);
         }
         
         /* CTA */
@@ -337,18 +380,13 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
+            
+            .founder-signature {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About SmartGuideHubs | Independent Software Reviews & Expert Guides">
-    <meta property="og:description" content="Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.">
-    <meta property="og:url" content="https://smartguidehubs.com/about/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="About SmartGuideHubs | Independent Software Reviews & Expert Guides">
-    <meta name="twitter:description" content="Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.">
-    <meta name="robots" content="index, follow">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "About SmartGuideHubs | Independent Software Reviews & Expert Guides", "description": "Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.", "url": "https://smartguidehubs.com/about/", "publisher": {"@type": "Organization", "name": "SmartGuideHubs"}, "about": [{"@type": "Thing", "name": "about SmartGuideHubs"}, {"@type": "Thing", "name": "software review methodology"}, {"@type": "Thing", "name": "independent tech reviews"}, {"@type": "Thing", "name": "small business tools"}, {"@type": "Thing", "name": "unbiased software testing"}]}</script>
 </head>
 <body>
     <!-- Header -->
@@ -373,10 +411,8 @@
         <div class="container">
             <h1>About SmartGuideHubs</h1>
             <p class="hero-subtitle">
-                We're on a mission to help small businesses and professionals make smarter 
-                software decisions through independent, hands-on testing and unbiased reviews.
+                Independent software reviews built on clarity, context, and practical insight — not hype.
             </p>
-            
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">90+</div>
@@ -387,7 +423,7 @@
                     <div class="stat-label">Independent Research</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">8+</div>
+                    <div class="stat-number">9+</div>
                     <div class="stat-label">Tools Tested Annually</div>
                 </div>
                 <div class="stat-card">
@@ -399,154 +435,254 @@
     </section>
 
     <main class="container">
-        <!-- Our Mission -->
+        <!-- Founder Story -->
         <section class="content-section">
             <div class="section-header">
-                <div class="section-icon">🎯</div>
-                <h2>Our Mission & Purpose</h2>
+                <div class="section-icon">👋</div>
+                <h2>Hi there, I’m Emmanuel Okoye</h2>
             </div>
-            
-            <div class="mission-statement">
-                <h3 style="color: #92400e; margin-bottom: 1rem;">Clear Purpose</h3>
-                <p style="font-size: 1.2rem; line-height: 1.6;">
-                    <strong>To help small businesses, freelancers, and professionals make confident software decisions</strong> 
-                    by providing honest, hands-on reviews that cut through marketing noise and focus on real-world usability.
+            <div class="founder-story">
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                    <strong>SmartGuideHubs started from a simple frustration.</strong>
+                </p>
+                <p>
+                    When I began researching software tools online, I noticed that many reviews were not written to actually help people make good decisions.
+                    Many of them simply repeat marketing claims, promote affiliate links, or list dozens of tools without explaining when they are truly useful.
+                    For someone trying to choose the right tool for their business or workflow, this creates more confusion instead of clarity.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    So I built SmartGuideHubs as a place where software is explained in a clearer and more practical way.
                 </p>
             </div>
-            
-            <p>In today's crowded software market, it's challenging to separate genuine value from hype. We exist to bridge that gap by:</p>
-            
-            <ul style="margin: 1.5rem 0 1.5rem 2rem;">
-                <li>Testing tools in actual business scenarios, not just lab environments</li>
-                <li>Focusing on ROI and practical benefits for small teams</li>
-                <li>Providing transparent comparisons with clear pros and cons</li>
-                <li>Updating reviews regularly as software evolves</li>
-            </ul>
         </section>
 
-        <!-- Our Methodology -->
+        <!-- What SmartGuideHubs Is -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🧭</div>
+                <h2>What SmartGuideHubs Is</h2>
+            </div>
+            <p>
+                SmartGuideHubs is an independent software review website focused on helping professionals, entrepreneurs, and small businesses understand the tools they use every day.
+            </p>
+            <p style="margin: 1.5rem 0;">
+                Instead of publishing endless lists of tools, we focus on explaining:
+            </p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>what a tool actually does</li>
+                <li>what type of user it is best for</li>
+                <li>where it performs well</li>
+                <li>where it may not be the best option</li>
+            </ul>
+            <p>
+                Because the truth is simple: <strong>the best software depends on the situation.</strong><br>
+                A tool that works perfectly for one business may be completely wrong for another.
+                Our goal is to help readers understand those differences so they can make smarter decisions.
+            </p>
+        </section>
+
+        <!-- What We Cover -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📚</div>
+                <h2>What We Cover</h2>
+            </div>
+            <p>SmartGuideHubs focuses on software that helps businesses operate more efficiently.</p>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div style="font-size: 2rem;">📄</div>
+                    <h3>PDF & Document Tools</h3>
+                    <p>Editing, signing, converting, and managing digital documents.</p>
+                </div>
+                <div class="category-card">
+                    <div style="font-size: 2rem;">📧</div>
+                    <h3>Email & Marketing Tools</h3>
+                    <p>Newsletters, email campaigns, automation, audience communication.</p>
+                </div>
+                <div class="category-card">
+                    <div style="font-size: 2rem;">📊</div>
+                    <h3>Project Management</h3>
+                    <p>Task management, team collaboration, workflows.</p>
+                </div>
+                <div class="category-card">
+                    <div style="font-size: 2rem;">💰</div>
+                    <h3>Finance & Accounting</h3>
+                    <p>Invoicing, bookkeeping, financial tracking, accounting.</p>
+                </div>
+            </div>
+            <p>These tools are used by freelancers, startups, remote teams, and growing businesses around the world.</p>
+        </section>
+
+        <!-- How We Review Software -->
         <section class="content-section">
             <div class="section-header">
                 <div class="section-icon">🔬</div>
-                <h2>Our Testing Methodology</h2>
+                <h2>How We Review Software</h2>
             </div>
-            
-            <p>Every tool we review undergoes rigorous, multi-stage testing to ensure our recommendations are trustworthy and actionable.</p>
-            
-            <div class="methodology-grid">
-                <div class="method-card">
-                    <h3><span style="color: var(--primary);">1.</span> Research Phase</h3>
-                    <p>We analyze market trends, read user feedback, and identify key features small businesses actually need.</p>
+            <p>
+                At SmartGuideHubs, reviews are written with one goal: helping readers understand how software works in real life.
+            </p>
+            <p>
+                Instead of focusing only on marketing claims or feature lists, we evaluate tools based on practical factors such as:
+            </p>
+            <ul style="margin: 1.5rem 0 1.5rem 2rem;">
+                <li>usability and learning curve</li>
+                <li>pricing transparency</li>
+                <li>feature usefulness</li>
+                <li>long-term value</li>
+                <li>real business use cases</li>
+            </ul>
+            <p>
+                Our goal is not to declare one tool the “best” for everyone. Instead, we aim to explain which tool works best for specific situations.
+            </p>
+        </section>
+
+        <!-- Review Methodology -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">⚙️</div>
+                <h2>Our Review Methodology</h2>
+            </div>
+            <p>When evaluating software platforms, SmartGuideHubs looks at several key areas that affect real users.</p>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h3>Feature Capabilities</h3>
+                    <p>We analyze what the platform actually allows users to do and whether those features solve real problems.</p>
                 </div>
-                
-                <div class="method-card">
-                    <h3><span style="color: var(--primary);">2.</span> Hands-On Testing</h3>
-                    <p>Minimum 60-90 days of real-world use in business scenarios. We purchase tools ourselves to avoid bias.</p>
+                <div class="principle-card">
+                    <h3>Ease of Use</h3>
+                    <p>We evaluate how intuitive the platform is, including setup, onboarding, and everyday workflows.</p>
                 </div>
-                
-                <div class="method-card">
-                    <h3><span style="color: var(--primary);">3.</span> Team Evaluation</h3>
-                    <p>Multiple team members test each tool, ensuring diverse perspectives on usability and value.</p>
+                <div class="principle-card">
+                    <h3>Pricing and Value</h3>
+                    <p>Pricing plans are examined to understand the long-term cost and whether the platform provides fair value.</p>
                 </div>
-                
-                <div class="method-card">
-                    <h3><span style="color: var(--primary);">4.</span> Analysis & Scoring</h3>
-                    <p>We score tools across 5 categories: Features, Ease of Use, Value, Support, and Performance.</p>
+                <div class="principle-card">
+                    <h3>Workflow Integration</h3>
+                    <p>We consider how the software fits into real work environments, including freelancers, small businesses, and growing teams.</p>
                 </div>
+                <div class="principle-card">
+                    <h3>Alternative Solutions</h3>
+                    <p>Whenever possible, we compare tools with similar platforms to help readers understand the differences.</p>
+                </div>
+            </div>
+            <p>This process helps readers see where a tool performs well and where it may not be the best choice.</p>
+        </section>
+
+        <!-- Editorial Policy -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📝</div>
+                <h2>Our Editorial Policy</h2>
+            </div>
+            <p>
+                SmartGuideHubs follows a clear editorial approach focused on accuracy, clarity, and usefulness.
+                Our reviews aim to explain software in a way that helps readers make informed decisions.
+            </p>
+            <p>We focus on answering practical questions such as:</p>
+            <ul style="margin: 1.5rem 0 1.5rem 2rem;">
+                <li>Who should use this tool?</li>
+                <li>What problems does it solve?</li>
+                <li>How does it compare to alternatives?</li>
+                <li>What are the limitations users should know?</li>
+            </ul>
+            <p>Rather than copying marketing materials, our goal is to explain tools in a way that reflects real usage.</p>
+        </section>
+
+        <!-- How SmartGuideHubs Makes Money -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">💡</div>
+                <h2>How SmartGuideHubs Makes Money</h2>
+            </div>
+            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 2rem; border-radius: 12px;">
+                <p>
+                    SmartGuideHubs may earn commissions through affiliate partnerships.
+                    If a reader signs up for a product through one of our links, we may receive a commission at no additional cost to the user.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>However, affiliate relationships do not influence how tools are evaluated.</strong>
+                    Our priority is to provide clear information that helps readers understand software before committing to it.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Transparency is important for building long-term trust with our audience.
+                </p>
             </div>
         </section>
 
-        <!-- Our Team -->
+        <!-- Why Readers Trust SmartGuideHubs -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🤝</div>
+                <h2>Why Readers Trust SmartGuideHubs</h2>
+            </div>
+            <p>SmartGuideHubs is built around several simple principles:</p>
+            <ul style="margin: 1.5rem 0 1.5rem 2rem;">
+                <li><strong>Clarity over hype:</strong> We focus on explaining how tools work instead of repeating marketing claims.</li>
+                <li><strong>Context over rankings:</strong> Rather than declaring a single “best” tool, we explain which tools fit different needs.</li>
+                <li><strong>Transparency:</strong> Affiliate relationships are clearly disclosed.</li>
+                <li><strong>Practical insights:</strong> Reviews focus on real-world usage rather than feature lists alone.</li>
+            </ul>
+            <p>These principles help readers evaluate software with confidence.</p>
+        </section>
+
+        <!-- Mission -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>Our Mission</h2>
+            </div>
+            <p>
+                SmartGuideHubs exists to make software research easier and more transparent.
+                By focusing on practical explanations, honest insights, and real business use cases,
+                we aim to help professionals and businesses choose the tools that work best for them.
+            </p>
+        </section>
+
+        <!-- Editorial Team Note -->
         <section class="content-section">
             <div class="section-header">
                 <div class="section-icon">👥</div>
-                <h2>Who We Are</h2>
+                <h2>Our Editorial Team</h2>
             </div>
-            
-            <p>SmartGuideHubs is run by a small team of technology professionals with deep experience in software evaluation and small business operations.</p>
-            
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">SG</div>
-                    <h3>SmartGuideHubs Team</h3>
-                    <p style="color: var(--gray); font-size: 0.95rem;">
-                        Our collective experience spans software development, business operations, 
-                        and technology consulting for small to medium-sized businesses.
-                    </p>
-                </div>
-            </div>
-            
-            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
-                <h3 style="color: var(--dark); margin-bottom: 0.5rem;">Our Background</h3>
-                <p>We've worked with dozens of small businesses to implement and optimize their tech stack. This hands-on experience informs every review we publish.</p>
-            </div>
-        </section>
-
-        <!-- Our Values -->
-        <section class="content-section">
-            <div class="section-header">
-                <div class="section-icon">💎</div>
-                <h2>Our Core Values</h2>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔍</div>
-                    <h3>Transparency</h3>
-                    <p>We disclose our methodology and affiliate relationships upfront.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">⚖️</div>
-                    <h3>Impartiality</h3>
-                    <p>Our reviews are never influenced by affiliate commissions or partnerships.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
-                    <h3>Practicality</h3>
-                    <p>We focus on real-world value, not just feature lists.</p>
-                </div>
-                
-                <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔄</div>
-                    <h3>Currency</h3>
-                    <p>We regularly update reviews to reflect software changes.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Transparency & Affiliate Disclosure -->
-        <section class="content-section">
-            <div class="section-header">
-                <div class="section-icon">📜</div>
-                <h2>Transparency & Ethics</h2>
-            </div>
-            
-            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                <h3 style="color: #92400e; margin-bottom: 1rem;">Affiliate Disclosure</h3>
+            <div class="team-note">
                 <p>
-                    <strong>SmartGuideHubs is reader-supported.</strong> We use affiliate links in our reviews. 
-                    If you purchase through our links, we may earn a commission at no extra cost to you. 
-                    This helps fund our independent testing and research.
+                    Articles on SmartGuideHubs may be published under the SmartGuideHubs Editorial Team.
+                    This label represents content produced, reviewed, or maintained by SmartGuideHubs to ensure consistency and clarity across the website.
                 </p>
                 <p style="margin-top: 1rem;">
-                    <strong>Important:</strong> Affiliate relationships never influence our reviews. We maintain 
-                    strict editorial independence and often recommend tools with no affiliate program if they're 
-                    the best choice for our readers.
-                </p>
-                <p style="margin-top: 1rem;">
-                    <a href="/disclosure" style="color: #92400e; font-weight: 600;">Read our full affiliate disclosure →</a>
+                    While SmartGuideHubs was founded by Emmanuel Okoye, some articles are published under the editorial team name to reflect the platform’s editorial standards and long-term growth.
                 </p>
             </div>
-            
-            <h3 style="margin-top: 2rem;">Our Promise to Readers</h3>
-            <ul style="margin: 1.5rem 0 1.5rem 2rem;">
-                <li>We only recommend tools we've tested extensively and would use ourselves</li>
-                <li>Negative reviews are published when deserved</li>
-                <li>We disclose potential conflicts of interest transparently</li>
-                <li>Reader trust is our most important asset</li>
-            </ul>
+        </section>
+
+        <!-- Founder Signature -->
+        <section class="content-section" style="text-align: center;">
+            <div class="founder-signature">
+                <div class="founder-image">EO</div>
+                <div class="founder-details">
+                    <h3>Emmanuel Okoye</h3>
+                    <p>Founder, SmartGuideHubs</p>
+                    <p style="margin-top: 0.5rem;">SmartGuideHubs.com</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; color: var(--gray);">✅</p>
+        </section>
+
+        <!-- Stay Connected -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📬</div>
+                <h2>Stay Connected</h2>
+            </div>
+            <p>
+                If you want to discover better tools, compare software platforms, and learn how different systems work for real businesses,
+                SmartGuideHubs is built for you.
+            </p>
+            <p style="margin-top: 1rem;">
+                You can also subscribe to the newsletter to receive updates whenever new reviews and guides are published.
+            </p>
+            <!-- MailerLite signup form can be added here if desired -->
         </section>
 
         <!-- CTA -->
@@ -566,8 +702,8 @@
                 <div>
                     <div class="footer-logo">SmartGuideHubs</div>
                     <p style="color: #94a3b8; line-height: 1.6;">
-                        Independent software reviews for small businesses and professionals. 
-                        Making tech decisions simpler since 2023.
+                        Independent software reviews for small businesses and professionals.
+                        Making tech decisions simpler.
                     </p>
                 </div>
                 
