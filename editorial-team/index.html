@@ -108,7 +108,7 @@
       padding: 0 1.5rem;
     }
 
-    /* Hero section with larger professional image */
+    /* Hero section with large professional image */
     .team-hero {
       background: linear-gradient(135deg, #dbeafe, #ede9fe);
       border-radius: var(--radius);
@@ -127,6 +127,7 @@
       border: 4px solid white;
       box-shadow: 0 20px 30px -10px rgba(37,99,235,0.3);
       transition: transform 0.3s ease;
+      background: #ffffff; /* neutral background for contain mode */
     }
     .team-image:hover {
       transform: scale(1.02);
@@ -134,7 +135,8 @@
     .team-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain; /* Ensures full image is visible without cropping */
+      display: block;
     }
 
     .team-hero h1 {
@@ -268,7 +270,7 @@
   </header>
 
   <main class="container">
-    <!-- Hero Section with Large Professional Image (200x200) -->
+    <!-- Hero Section with Large Professional Image -->
     <div class="team-hero">
       <div class="team-image">
         <img src="/images/editorial-team-smartguidehubs.png"
