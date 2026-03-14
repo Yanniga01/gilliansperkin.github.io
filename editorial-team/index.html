@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +107,7 @@
       padding: 0 1.5rem;
     }
 
-    /* Hero image area */
+    /* Hero section with image */
     .team-hero {
       background: linear-gradient(135deg, #dbeafe, #ede9fe);
       border-radius: var(--radius);
@@ -117,29 +118,18 @@
     }
 
     .team-image {
-      width: 180px;
-      height: 180px;
+      width: 120px;
+      height: 120px;
       margin: 0 auto 1.5rem;
-      background: white;
+      overflow: hidden;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 20px rgba(37,99,235,0.15);
       border: 4px solid white;
+      box-shadow: 0 10px 20px rgba(37,99,235,0.15);
     }
-    .team-image svg {
-      width: 100px;
-      height: 100px;
-      fill: none;
-      stroke: var(--primary);
-      stroke-width: 2;
-    }
-    /* Fallback text if image not loaded */
-    .team-image .placeholder-icon {
-      font-size: 5rem;
-      line-height: 1;
-      color: var(--primary);
+    .team-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .team-hero h1 {
@@ -154,8 +144,8 @@
       margin: 0 auto;
     }
 
-    /* Card */
-    .card {
+    /* Card for the main introductory text */
+    .intro-card {
       background: white;
       border: 1px solid var(--gray-200);
       border-radius: var(--radius);
@@ -163,34 +153,72 @@
       box-shadow: 0 8px 24px rgba(15,23,42,0.05);
     }
 
-    .card h2 {
+    .intro-card h2 {
       font-size: 1.5rem;
       color: #1e3a8a;
       margin: 2rem 0 1rem;
       border-bottom: 2px solid var(--gray-200);
       padding-bottom: 0.5rem;
     }
-    .card h2:first-of-type {
+    .intro-card h2:first-of-type {
       margin-top: 0;
     }
 
-    .card ul {
+    .intro-card ul {
       padding-left: 1.8rem;
       margin: 1rem 0;
     }
-    .card li {
+    .intro-card li {
       margin-bottom: 0.5rem;
     }
 
-    .card a {
+    .intro-card a {
       color: var(--primary);
       font-weight: 500;
       text-decoration: none;
     }
-    .card a:hover {
+    .intro-card a:hover {
       text-decoration: underline;
     }
 
+    /* New sections styling */
+    .editorial-summary,
+    .editorial-standards,
+    .related-pages {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .editorial-summary h2,
+    .editorial-standards h2,
+    .related-pages h2 {
+      font-size: 1.3rem;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--gray-200);
+      padding-bottom: 0.5rem;
+    }
+
+    .related-pages ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .related-pages li {
+      margin-bottom: 0.5rem;
+    }
+    .related-pages a {
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .related-pages a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
     .footer {
       text-align: center;
       padding: 2rem 0;
@@ -211,11 +239,8 @@
         font-size: 2.2rem;
       }
       .team-image {
-        width: 140px;
-        height: 140px;
-      }
-      .team-image .placeholder-icon {
-        font-size: 4rem;
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
@@ -235,21 +260,19 @@
   </header>
 
   <main class="container">
-    <!-- Hero Section with Image -->
+    <!-- Hero Section with Image (120x120) -->
     <div class="team-hero">
       <div class="team-image">
-        <!-- Professional placeholder for editorial team image -->
-        <!-- Replace src with actual team photo when available -->
-        <span class="placeholder-icon" role="img" aria-label="Editorial Team">👥</span>
-        <!-- Alternatively, you can use an <img> tag:
-        <img src="/images/editorial-team.jpg" alt="SmartGuideHubs editorial team" style="width:100%; height:100%; object-fit:cover; border-radius:50%;"> 
-        -->
+        <img src="/images/editorial-team-smartguidehubs.png"
+             alt="SmartGuideHubs Editorial Team"
+             width="120" height="120">
       </div>
       <h1>SmartGuideHubs Editorial Team</h1>
       <p>Research‑driven, reader‑first software insights</p>
     </div>
 
-    <article class="card">
+    <!-- Original introductory content (as card) -->
+    <div class="intro-card">
       <p>The SmartGuideHubs Editorial Team is responsible for researching, analyzing, and publishing software reviews and guides on SmartGuideHubs.</p>
       <p>Our editorial content focuses on helping professionals, entrepreneurs, and small businesses understand software tools before choosing them.</p>
       <p>Articles published under the SmartGuideHubs Editorial Team are written or reviewed according to our editorial standards and review methodology.</p>
@@ -265,7 +288,34 @@
 
       <p>Our goal is to help readers evaluate software clearly by explaining how tools work, where they perform well, and when they are most useful.</p>
       <p>Learn more about our review process on our <a href="/how-we-test-software/">How We Test Software</a> page.</p>
-    </article>
+    </div>
+
+    <!-- New sections exactly as provided -->
+    <section class="editorial-summary">
+      <h2>What the SmartGuideHubs Editorial Team Does</h2>
+      <p>The SmartGuideHubs Editorial Team researches and publishes software insights designed to help professionals and businesses understand digital tools before adopting them.</p>
+      <p>Our team focuses on explaining how software platforms work, where they perform best, and how they compare with alternative solutions available in the market.</p>
+    </section>
+
+    <section class="editorial-standards">
+      <h2>Our Editorial Standards</h2>
+      <ul>
+        <li>Clear and practical explanations of software tools</li>
+        <li>Focus on real-world business use cases</li>
+        <li>Transparent discussion of strengths and limitations</li>
+        <li>Research-based comparisons between tools</li>
+        <li>Independent editorial approach</li>
+      </ul>
+    </section>
+
+    <section class="related-pages">
+      <h2>Learn More About SmartGuideHubs</h2>
+      <ul>
+        <li><a href="/about/">About SmartGuideHubs</a></li>
+        <li><a href="/how-we-test-software/">How We Test Software</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer class="footer">
@@ -273,3 +323,4 @@
   </footer>
 </body>
 </html>
+```
