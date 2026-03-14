@@ -264,6 +264,32 @@
             border-radius: 12px;
             margin: 2rem 0;
         }
+
+        .newsletter-form {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 1rem;
+        }
+
+        .newsletter-button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 999px;
+            padding: 0.85rem 1.4rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
         
         /* Founder Signature */
         .founder-signature {
@@ -682,7 +708,21 @@
             <p style="margin-top: 1rem;">
                 You can also subscribe to the newsletter to receive updates whenever new reviews and guides are published.
             </p>
-            <!-- MailerLite signup form can be added here if desired -->
+
+            <form class="newsletter-form" action="#" method="post" aria-label="Newsletter signup form">
+                <label for="about-newsletter-email" style="position: absolute; left: -9999px;">Email address</label>
+                <input
+                    id="about-newsletter-email"
+                    class="newsletter-input"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+            <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.75rem;">
+                Newsletter form code added. Connect this form action to your email platform (MailerLite, ConvertKit, etc.) when ready.
+            </p>
         </section>
 
         <!-- CTA -->
