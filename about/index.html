@@ -54,6 +54,8 @@
             --gray: #64748b;
             --success: #10b981;
             --warning: #f59e0b;
+            --border: #cbd5e1;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
         }
         
         * {
@@ -709,19 +711,21 @@
                 You can also subscribe to the newsletter to receive updates whenever new reviews and guides are published.
             </p>
 
-            <form class="newsletter-form" action="#" method="post" aria-label="Newsletter signup form">
-                <label for="about-newsletter-email" style="position: absolute; left: -9999px;">Email address</label>
+            <form class="newsletter-form" id="aboutNewsletterForm" method="post" novalidate aria-label="Newsletter signup form">
+                <label for="about-newsletter-email" style="position: absolute; left: -9999px;">Work email address</label>
                 <input
                     id="about-newsletter-email"
                     class="newsletter-input"
                     type="email"
                     name="email"
-                    placeholder="Enter your email address"
+                    placeholder="Work email address"
+                    autocomplete="email"
+                    inputmode="email"
                     required>
-                <button type="submit" class="newsletter-button">Subscribe</button>
+                <button type="submit" class="newsletter-button">Join the Newsletter</button>
             </form>
-            <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.75rem;">
-                Newsletter form code added. Connect this form action to your email platform (MailerLite, ConvertKit, etc.) when ready.
+            <p id="newsletterMessage" style="font-size: 0.9rem; color: var(--gray); margin-top: 0.75rem;">
+                We send practical product research updates. No spam. Unsubscribe anytime.
             </p>
         </section>
 
@@ -774,5 +778,36 @@
         </div>
     </footer>
     <script src="/cookies.js"></script>
+
+    <script>
+        (function () {
+            const form = document.getElementById('aboutNewsletterForm');
+            const emailInput = document.getElementById('about-newsletter-email');
+            const message = document.getElementById('newsletterMessage');
+
+            if (!form || !emailInput || !message) return;
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const email = emailInput.value.trim();
+
+                if (!email || !emailInput.checkValidity()) {
+                    message.textContent = 'Please enter a valid email address to subscribe.';
+                    message.style.color = '#b91c1c';
+                    emailInput.focus();
+                    return;
+                }
+
+                const subject = encodeURIComponent('Newsletter subscription request');
+                const body = encodeURIComponent('Hello SmartGuideHubs team,%0D%0A%0D%0APlease add this email to the newsletter:%0D%0A' + email + '%0D%0A%0D%0AThank you.');
+                window.location.href = `mailto:contact@smartguidehubs.com?subject=${subject}&body=${body}`;
+
+                message.textContent = 'Almost done: your email app will open so you can confirm your subscription request.';
+                message.style.color = '#0f766e';
+                form.reset();
+            });
+        })();
+    </script>
+
 </body>
 </html>
