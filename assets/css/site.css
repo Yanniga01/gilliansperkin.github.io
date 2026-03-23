@@ -819,3 +819,104 @@ p {
     color: black;
   }
 }
+/* ---------- Comparison Verdict Component ---------- */
+.sgh-comparison-verdict {
+  margin: 2rem 0 2.5rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+}
+
+.verdict-header {
+  margin-bottom: 1rem;
+}
+
+.verdict-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: #dbeafe;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.verdict-heading {
+  margin: 0 0 0.5rem;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  color: #0f172a;
+}
+
+.verdict-intro {
+  margin: 0;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.verdict-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.verdict-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.verdict-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  border-color: #2563eb;
+}
+
+.verdict-card-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.verdict-card-label {
+  margin: 0 0 0.5rem;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.verdict-card-desc {
+  margin: 0 0 0.85rem;
+  color: #475569;
+  font-size: 0.94rem;
+}
+
+.verdict-card-link {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+
+.verdict-card-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: stack cards on mobile */
+@media (max-width: 768px) {
+  .verdict-cards {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .verdict-heading {
+    font-size: 1.4rem;
+  }
+}
+
