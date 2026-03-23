@@ -1,6 +1,3 @@
-{% assign path = page.path | downcase %}
-
-{% if path == 'index.html' %}
 <footer class="site-footer" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: #cbd5e1; padding: 4rem 0 2rem; margin-top: 4rem;">
   <div class="footer-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem; margin-bottom:2.5rem;">
@@ -21,7 +18,7 @@
       </div>
 
       <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Quick Links</h4>
+        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Explore</h4>
         <a href="/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Home</a>
         <a href="/about/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">About</a>
         <a href="/blog/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">All Reviews</a>
@@ -32,14 +29,14 @@
 
       <div>
         <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Main Categories</h4>
-        <a href="/categories/email-and-marketing-tools/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Email & Marketing Tools</a>
+        <a href="/categories/email-and-marketing-tools/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Email &amp; Marketing Tools</a>
         <a href="/categories/project-management/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Project Management</a>
         <a href="/categories/finance/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Finance Software</a>
-        <a href="/categories/pdf-and-document-tools/" style="display:block; color:#94a3b8; text-decoration:none;">PDF & Document Tools</a>
+        <a href="/categories/pdf-and-document-tools/" style="display:block; color:#94a3b8; text-decoration:none;">PDF &amp; Document Tools</a>
       </div>
 
       <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Trust & Legal</h4>
+        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Trust &amp; Legal</h4>
         <a href="/how-we-test-software/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">How We Test Software</a>
         <a href="/privacy/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Privacy Policy</a>
         <a href="/terms/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Terms of Service</a>
@@ -62,115 +59,3 @@
     </div>
   </div>
 </footer>
-
-{% elsif path == 'about/index.html'
-   or path == 'contact/index.html'
-   or path == 'privacy/index.html'
-   or path == 'terms/index.html'
-   or path == 'disclosure/index.html'
-   or path == 'cookies/index.html'
-   or path == 'editorial-team/index.html'
-   or path == 'how-we-test-software/index.html'
-   or path == 'sitemap/index.html'
-   or path == 'contribute/index.html'
-   or path == 'write-for-us/index.html'
-   or path contains 'categories/' %}
-<footer class="site-footer" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: #cbd5e1; padding: 4rem 0 2rem; margin-top: 4rem;">
-  <div class="footer-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem; margin-bottom:2.5rem;">
-
-      <div>
-        <div style="font-size:1.8rem; font-weight:800; margin-bottom:1rem; background:linear-gradient(90deg,#60a5fa,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
-          SmartGuideHubs
-        </div>
-        <p style="color:#cbd5e1; line-height:1.7; margin-bottom:1rem;">
-          Independent software reviews for small businesses and professionals.
-        </p>
-        <p style="color:#94a3b8; margin-bottom:.6rem;">
-          <span style="color:#ef4444;">📍</span> Remote team, serving globally
-        </p>
-        <p style="margin-bottom:0;">
-          <a href="mailto:contact@smartguidehubs.com" style="color:#93c5fd; text-decoration:none; font-weight:600;">contact@smartguidehubs.com</a>
-        </p>
-      </div>
-
-      <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Explore</h4>
-        <a href="/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Home</a>
-        <a href="/about/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">About</a>
-        <a href="/blog/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">All Reviews</a>
-        <a href="/categories/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">All Categories</a>
-        <a href="/contact/" style="display:block; color:#94a3b8; text-decoration:none;">Contact</a>
-      </div>
-
-      <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Top Categories</h4>
-        <a href="/categories/email-and-marketing-tools/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Email & Marketing Tools</a>
-        <a href="/categories/project-management/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Project Management</a>
-        <a href="/categories/finance/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Finance Software</a>
-        <a href="/categories/pdf-and-document-tools/" style="display:block; color:#94a3b8; text-decoration:none;">PDF & Document Tools</a>
-      </div>
-
-      <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Legal & Trust</h4>
-        <a href="/editorial-team/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Editorial Team</a>
-        <a href="/how-we-test-software/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">How We Test Software</a>
-        <a href="/privacy/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Privacy Policy</a>
-        <a href="/terms/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Terms of Service</a>
-        <a href="/disclosure/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Affiliate Disclosure</a>
-        <a href="/cookies/" style="display:block; color:#94a3b8; text-decoration:none;">Cookie Policy</a>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #334155; padding-top:1.5rem; text-align:center;">
-      <p style="margin-bottom:.8rem; color:#94a3b8;">
-        <a href="https://www.facebook.com/profile.php?id=100075674055124" target="_blank" rel="noopener noreferrer" style="color:#94a3b8; text-decoration:none; margin:0 .45rem;">Facebook</a> |
-        <span style="color:#94a3b8; margin:0 .45rem;">YouTube</span> |
-        <a href="https://x.com/Emmanuel623142" target="_blank" rel="noopener noreferrer" style="color:#94a3b8; text-decoration:none; margin:0 .45rem;">X</a> |
-        <a href="https://www.instagram.com/smartguidehubs.official?igsh=MWw3ZTB2bmozOThxNA==" target="_blank" rel="noopener noreferrer" style="color:#94a3b8; text-decoration:none; margin:0 .45rem;">Instagram</a> |
-        <span style="color:#94a3b8; margin:0 .45rem;">Pinterest</span>
-      </p>
-      <p style="margin-bottom:.5rem; color:#94a3b8;">© 2025–{{ "now" | date: "%Y" }} SmartGuideHubs.com. All rights reserved.</p>
-      <p style="margin:0; color:#64748b; font-size:.9rem;">All product names, logos, and brands are property of their respective owners.</p>
-    </div>
-  </div>
-</footer>
-
-{% else %}
-<footer class="site-footer" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: #cbd5e1; padding: 3.5rem 0 2rem; margin-top: 4rem;">
-  <div class="footer-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem; margin-bottom:2rem;">
-
-      <div>
-        <div style="font-size:1.7rem; font-weight:800; margin-bottom:1rem; background:linear-gradient(90deg,#60a5fa,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
-          SmartGuideHubs
-        </div>
-        <p style="color:#cbd5e1; line-height:1.7; margin:0;">
-          Independent software reviews for small businesses and professionals.
-        </p>
-      </div>
-
-      <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Navigate</h4>
-        <a href="/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Home</a>
-        <a href="/about/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">About</a>
-        <a href="/blog/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">All Reviews</a>
-        <a href="/categories/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Categories</a>
-        <a href="/contact/" style="display:block; color:#94a3b8; text-decoration:none;">Contact</a>
-      </div>
-
-      <div>
-        <h4 style="color:#fff; margin-bottom:1rem; font-size:1.05rem;">Legal</h4>
-        <a href="/privacy/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Privacy Policy</a>
-        <a href="/terms/" style="display:block; color:#94a3b8; text-decoration:none; margin-bottom:.65rem;">Terms of Service</a>
-        <a href="/disclosure/" style="display:block; color:#94a3b8; text-decoration:none;">Affiliate Disclosure</a>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #334155; padding-top:1.35rem; text-align:center;">
-      <p style="margin-bottom:.5rem; color:#94a3b8;">© 2025–{{ "now" | date: "%Y" }} SmartGuideHubs.com. All rights reserved.</p>
-      <p style="margin:0; color:#64748b; font-size:.9rem;">All product names, logos, and brands are property of their respective owners.</p>
-    </div>
-  </div>
-</footer>
-{% endif %}
