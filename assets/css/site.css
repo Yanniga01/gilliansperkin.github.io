@@ -920,3 +920,75 @@ p {
   }
 }
 
+/* ---------- Affiliate CTA Component ---------- */
+.sgh-cta {
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  margin: 3rem 0;
+}
+
+.cta-badge {
+  margin-bottom: 0.75rem;
+}
+
+.cta-badge span {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cta-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.cta-text {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #fff;
+  color: #1e293b;
+  font-weight: 700;
+  padding: 1rem 1.8rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: #2563eb;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-subtext {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 640px) {
+  .cta-title {
+    font-size: 1.6rem;
+  }
+  .sgh-cta {
+    padding: 1.5rem;
+  }
+}
