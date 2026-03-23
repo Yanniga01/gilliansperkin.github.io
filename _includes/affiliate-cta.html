@@ -1,28 +1,30 @@
-<div class="sgh-cta cta-section">
-  {% if include.badge %}
-  <div class="cta-badge">
-    <span>{{ include.badge }}</span>
+<div class="sgh-comparison-verdict">
+  <div class="verdict-header">
+    <span class="verdict-badge">SmartGuideHubs Verdict</span>
+    <h2 class="verdict-heading">{{ include.heading | default: "Quick Verdict" }}</h2>
+    <p class="verdict-intro">{{ include.intro | default: "A fast summary for readers who want the best option first." }}</p>
   </div>
-  {% endif %}
 
-  <h2 class="cta-title">
-    {{ include.title | default: "Ready to get started?" }}
-  </h2>
+  <div class="verdict-cards">
+    <div class="verdict-card">
+      <h3 class="verdict-card-title">{{ include.card1_name }}</h3>
+      <p class="verdict-card-label">{{ include.card1_label }}</p>
+      <p class="verdict-card-desc">{{ include.card1_desc }}</p>
+      <a href="{{ include.card1_url }}" class="verdict-card-link" rel="sponsored noopener">Explore {{ include.card1_name }}</a>
+    </div>
 
-  <p class="cta-text">
-    {{ include.text | default: "Try this tool and see how it can improve your workflow." }}
-  </p>
+    <div class="verdict-card">
+      <h3 class="verdict-card-title">{{ include.card2_name }}</h3>
+      <p class="verdict-card-label">{{ include.card2_label }}</p>
+      <p class="verdict-card-desc">{{ include.card2_desc }}</p>
+      <a href="{{ include.card2_url }}" class="verdict-card-link" rel="sponsored noopener">Explore {{ include.card2_name }}</a>
+    </div>
 
-  <a href="{{ include.button_url }}" 
-     class="cta-button" 
-     target="_blank" 
-     rel="sponsored noopener">
-    {{ include.button_text | default: "Get Started" }} →
-  </a>
-
-  {% if include.subtext %}
-  <p class="cta-subtext">
-    {{ include.subtext }}
-  </p>
-  {% endif %}
+    <div class="verdict-card">
+      <h3 class="verdict-card-title">{{ include.card3_name }}</h3>
+      <p class="verdict-card-label">{{ include.card3_label }}</p>
+      <p class="verdict-card-desc">{{ include.card3_desc }}</p>
+      <a href="{{ include.card3_url }}" class="verdict-card-link" rel="sponsored noopener">Explore {{ include.card3_name }}</a>
+    </div>
+  </div>
 </div>
