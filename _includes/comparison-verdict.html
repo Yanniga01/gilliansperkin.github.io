@@ -1,1 +1,32 @@
+<div class="sgh-comparison-verdict" style="margin:2rem 0 2.5rem; padding:1.5rem; background:#f8fafc; border:1px solid #e2e8f0; border-radius:18px;">
+  <div style="margin-bottom:1rem;">
+    <span style="display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#2563eb; background:#dbeafe; padding:.35rem .65rem; border-radius:999px; margin-bottom:.75rem;">
+      SmartGuideHubs Verdict
+    </span>
+    <h2 style="margin:0 0 .5rem; font-size:1.7rem; line-height:1.25; color:#0f172a;">{{ include.heading | default: "Quick Verdict" }}</h2>
+    <p style="margin:0; color:#475569; font-size:1rem;">{{ include.intro | default: "A fast summary for readers who want the best option first." }}</p>
+  </div>
 
+  <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.9rem;">
+    <div style="background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:1rem;">
+      <h3 style="margin:0 0 .35rem; font-size:1.1rem;">{{ include.card1_name }}</h3>
+      <p style="margin:0 0 .5rem; color:#475569; font-size:.9rem; font-weight:700;">{{ include.card1_label }}</p>
+      <p style="margin:0 0 .85rem; color:#475569; font-size:.94rem;">{{ include.card1_desc }}</p>
+      <a href="{{ include.card1_url }}" rel="sponsored noopener" style="color:#2563eb; font-weight:700; text-decoration:none;">Explore {{ include.card1_name }}</a>
+    </div>
+
+    <div style="background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:1rem;">
+      <h3 style="margin:0 0 .35rem; font-size:1.1rem;">{{ include.card2_name }}</h3>
+      <p style="margin:0 0 .5rem; color:#475569; font-size:.9rem; font-weight:700;">{{ include.card2_label }}</p>
+      <p style="margin:0 0 .85rem; color:#475569; font-size:.94rem;">{{ include.card2_desc }}</p>
+      <a href="{{ include.card2_url }}" rel="sponsored noopener" style="color:#2563eb; font-weight:700; text-decoration:none;">Explore {{ include.card2_name }}</a>
+    </div>
+
+    <div style="background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:1rem;">
+      <h3 style="margin:0 0 .35rem; font-size:1.1rem;">{{ include.card3_name }}</h3>
+      <p style="margin:0 0 .5rem; color:#475569; font-size:.9rem; font-weight:700;">{{ include.card3_label }}</p>
+      <p style="margin:0 0 .85rem; color:#475569; font-size:.94rem;">{{ include.card3_desc }}</p>
+      <a href="{{ include.card3_url }}" rel="sponsored noopener" style="color:#2563eb; font-weight:700; text-decoration:none;">Explore {{ include.card3_name }}</a>
+    </div>
+  </div>
+</div>
