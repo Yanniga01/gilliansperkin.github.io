@@ -1,48 +1,41 @@
-
-<div class="sgh-picks" style="margin:2rem 0 2.5rem; padding:1.5rem; background:#f8fafc; border:1px solid #e2e8f0; border-radius:18px;">
-  <div style="margin-bottom:1rem;">
-    <span style="display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#2563eb; background:#dbeafe; padding:.35rem .65rem; border-radius:999px; margin-bottom:.75rem;">
-      SmartGuideHubs Pick
-    </span>
-    <h2 style="margin:0 0 .5rem; font-size:1.7rem; line-height:1.25; color:#0f172a;">{{ include.heading | default: "Recommended Tool" }}</h2>
-    <p style="margin:0; color:#475569; font-size:1rem;">{{ include.intro | default: "Based on usability, features, pricing, and overall value." }}</p>
+<div class="sgh-picks">
+  <div class="picks-header">
+    <span class="picks-badge">SmartGuideHubs Pick</span>
+    <h2 class="picks-heading">{{ include.heading | default: "Recommended Tool" }}</h2>
+    <p class="picks-intro">{{ include.intro | default: "Based on usability, features, pricing, and overall value." }}</p>
   </div>
 
-  <div style="display:grid; grid-template-columns:88px 1fr; gap:1rem; align-items:start; background:#ffffff; border:1px solid #dbeafe; border-radius:18px; padding:1.1rem; box-shadow:0 8px 24px rgba(15,23,42,.06);">
-    <div style="width:88px; height:88px; border-radius:16px; background:#ffffff; border:1px solid #e2e8f0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <img src="{{ include.logo }}" alt="{{ include.name }} logo" style="max-width:72%; max-height:72%; object-fit:contain; display:block;">
+  <div class="picks-card">
+    <div class="picks-logo">
+      <img src="{{ include.logo }}" alt="{{ include.name }} logo">
     </div>
 
     <div>
-      <div style="display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:.55rem;">
-        <span style="display:inline-block; font-size:.78rem; font-weight:700; padding:.32rem .58rem; border-radius:999px; background:linear-gradient(135deg,#2563eb,#9333ea); color:#fff;">
-          {{ include.badge | default: "Best Overall" }}
-        </span>
+      <div class="picks-tags">
+        <span class="picks-main-badge">{{ include.badge | default: "Best Overall" }}</span>
         {% if include.tag %}
-        <span style="display:inline-block; font-size:.78rem; font-weight:700; padding:.32rem .58rem; border-radius:999px; background:#eef2ff; color:#4338ca;">
-          {{ include.tag }}
-        </span>
+        <span class="picks-tag">{{ include.tag }}</span>
         {% endif %}
       </div>
 
-      <h3 style="margin:0 0 .35rem; font-size:1.4rem; line-height:1.25; color:#0f172a;">{{ include.name }}</h3>
-      <p style="margin:0 0 .75rem; color:#334155; font-weight:600;">{{ include.subtitle }}</p>
-      <p style="margin:0 0 .85rem; color:#475569;">{{ include.description }}</p>
+      <h3 class="picks-title">{{ include.name }}</h3>
+      <p class="picks-subtitle">{{ include.subtitle }}</p>
+      <p class="picks-description">{{ include.description }}</p>
 
-      <ul style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.55rem 1rem; list-style:none; padding:0; margin:0 0 1rem;">
+      <ul class="picks-points">
         {% if include.point1 %}<li>✔ {{ include.point1 }}</li>{% endif %}
         {% if include.point2 %}<li>✔ {{ include.point2 }}</li>{% endif %}
         {% if include.point3 %}<li>✔ {{ include.point3 }}</li>{% endif %}
         {% if include.point4 %}<li>✔ {{ include.point4 }}</li>{% endif %}
       </ul>
 
-      <div style="display:flex; flex-wrap:wrap; gap:.75rem; align-items:center;">
-        <a href="{{ include.primary_url }}" rel="sponsored noopener" style="display:inline-block; text-decoration:none; font-weight:700; padding:.8rem 1.1rem; border-radius:12px; color:#fff; background:linear-gradient(135deg,#2563eb,#9333ea); box-shadow:0 8px 18px rgba(37,99,235,.2);">
+      <div class="picks-actions">
+        <a href="{{ include.primary_url }}" class="picks-button-primary" rel="sponsored noopener">
           {{ include.primary_text | default: "Try Now" }}
         </a>
 
         {% if include.secondary_url and include.secondary_text %}
-        <a href="{{ include.secondary_url }}" style="display:inline-block; text-decoration:none; font-weight:700; padding:.8rem 1.1rem; border-radius:12px; color:#0f172a; background:#e2e8f0;">
+        <a href="{{ include.secondary_url }}" class="picks-button-secondary">
           {{ include.secondary_text }}
         </a>
         {% endif %}
