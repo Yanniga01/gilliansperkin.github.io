@@ -1,1 +1,38 @@
 
+<div class="toc-container" style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+  <h3 style="color: var(--primary, #2563eb); margin-bottom: 1rem;">📖 Article Navigation</h3>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+    {% if include.link1 and include.label1 %}
+      <a href="{{ include.link1 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label1 }}</a>
+    {% endif %}
+
+    {% if include.link2 and include.label2 %}
+      <a href="{{ include.link2 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label2 }}</a>
+    {% endif %}
+
+    {% if include.link3 and include.label3 %}
+      <a href="{{ include.link3 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label3 }}</a>
+    {% endif %}
+
+    {% if include.link4 and include.label4 %}
+      <a href="{{ include.link4 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label4 }}</a>
+    {% endif %}
+
+    {% if include.link5 and include.label5 %}
+      <a href="{{ include.link5 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label5 }}</a>
+    {% endif %}
+
+    {% if include.link6 and include.label6 %}
+      <a href="{{ include.link6 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label6 }}</a>
+    {% endif %}
+
+    {% if include.link7 and include.label7 %}
+      <a href="{{ include.link7 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label7 }}</a>
+    {% endif %}
+
+    {% if include.link8 and include.label8 %}
+      <a href="{{ include.link8 }}" style="color: var(--primary, #2563eb); text-decoration: none; font-weight: 600;">{{ include.label8 }}</a>
+    {% endif %}
+  </div>
+</div>
