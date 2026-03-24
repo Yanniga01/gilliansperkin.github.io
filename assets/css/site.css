@@ -1221,3 +1221,315 @@ p {
     padding: var(--space-md);
   }
 }
+/* ============================================
+   Additional Styles from Jobber/Monday Review
+   ============================================ */
+
+/* Scorecards Grid */
+.scorecards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.scorecard {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.scorecard:hover {
+  transform: translateY(-5px);
+}
+
+.scorecard.winner {
+  border: 2px solid var(--primary);
+  position: relative;
+}
+
+.scorecard.winner:after {
+  content: '🏆 BEST OVERALL';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.tool-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+}
+
+.monday-logo {
+  background: linear-gradient(135deg, #FF5A5F, #FF8A8F);
+}
+
+.asana-logo {
+  background: linear-gradient(135deg, #FF6B6B, #FF9B9B);
+}
+
+.clickup-logo {
+  background: linear-gradient(135deg, #7B68EE, #9B88FF);
+}
+
+.trello-logo {
+  background: linear-gradient(135deg, #0080FF, #4DA6FF);
+}
+
+.smartsuite-logo {
+  background: linear-gradient(135deg, #00C7B1, #30E7D1);
+}
+
+.rating-stars {
+  color: var(--warning, #f59e0b);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Feature Table */
+.feature-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3rem 0;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.feature-table th {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.feature-table td {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.feature-table tr:last-child td {
+  border-bottom: none;
+}
+
+.best-feature {
+  background: #dbeafe !important;
+  color: var(--primary-dark);
+  font-weight: 700;
+  position: relative;
+}
+
+.best-feature:after {
+  content: '✓';
+  color: var(--primary);
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+/* Detailed Review Sections */
+.tool-review {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 3rem 0;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+/* Pros & Cons Grid */
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.pros-box, .cons-box {
+  padding: 1.8rem;
+  border-radius: 12px;
+}
+
+.pros-box {
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+}
+
+.cons-box {
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.pricing-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.pricing-card.popular {
+  border: 2px solid var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.15);
+}
+
+.price-tag {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 1rem 0;
+}
+
+/* Migration Guide */
+.migration-guide {
+  background: linear-gradient(135deg, #f0fff8, #e3f9ef);
+  padding: 3rem;
+  border-radius: 16px;
+  margin: 3rem 0;
+}
+
+/* Use Case Matrix */
+.use-case-matrix {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  margin: 3rem 0;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.matrix-card {
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  background: #f5f7fa;
+  transition: transform 0.3s;
+}
+
+.matrix-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Field Service Features (if used) */
+.field-service-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Implementation Timeline */
+.implementation-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.timeline-step {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Feature Update & Alert Boxes */
+.feature-update {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--primary);
+}
+
+.alert-box {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+/* Responsive adjustments for complex components */
+@media (max-width: 768px) {
+  .scorecards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pros-cons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .tool-review {
+    padding: 1.5rem;
+  }
+}
