@@ -1769,3 +1769,162 @@ p {
     justify-content: center;
   }
 }
+/* ============================================
+   Enhanced Comparison Verdict Component
+   ============================================ */
+
+.sgh-comparison-verdict {
+  margin: 2rem 0 2.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-radius: 28px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.verdict-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.verdict-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 0.35rem 1rem;
+  border-radius: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.verdict-heading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.verdict-intro {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.verdict-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.verdict-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.verdict-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+  border-color: #cbd5e1;
+}
+
+.verdict-card-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.verdict-card-logo img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+
+.verdict-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #0f172a;
+  text-align: center;
+}
+
+.verdict-card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FF5A5F; /* brand accent – can be overridden per card */
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.verdict-card-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.verdict-card-link {
+  display: inline-block;
+  background: transparent;
+  color: #FF5A5F;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  text-align: center;
+  border: 1px solid #FF5A5F;
+  margin-top: auto;
+}
+
+.verdict-card-link:hover {
+  background: #FF5A5F;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255,90,95,0.2);
+}
+
+/* Responsive: stack cards on mobile */
+@media (max-width: 768px) {
+  .verdict-cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .verdict-heading {
+    font-size: 1.5rem;
+  }
+  .verdict-card {
+    padding: 1.2rem;
+  }
+  .verdict-card-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .verdict-card-title {
+    font-size: 1.2rem;
+  }
+}
