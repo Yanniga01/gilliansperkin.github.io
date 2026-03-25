@@ -1928,3 +1928,52 @@ p {
     font-size: 1.2rem;
   }
 }
+/* Social Sharing Buttons */
+.social-share {
+  margin: 2rem 0 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-share-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.social-share-list {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-share-list li {
+  margin: 0;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--gray-500);
+  transition: fill 0.2s ease;
+}
+
+.social-icon:hover {
+  fill: var(--primary);
+}
+
+/* Optional: make icons larger on touch devices */
+@media (max-width: 640px) {
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
