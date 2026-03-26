@@ -1,3 +1,8 @@
 title: SmartGuideHubs
 description: Independent software reviews
 url: https://smartguidehubs.com
+plugins:
+  - jekyll-paginate
+
+paginate: 12          # number of posts per page
+paginate_path: "/blog/page:num/"
