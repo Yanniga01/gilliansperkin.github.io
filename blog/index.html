@@ -35,6 +35,9 @@
     </script>
     <!-- End MailerLite Universal -->
 
+    <!-- Include Lunr.js for search -->
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -54,186 +57,111 @@
         ]
     }
     </script>
+
     <style>
-  /* Basic reset for the blog page */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  /* Stats row */
-  .stats-row {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
-  .stat-item {
-    text-align: center;
-  }
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #2563eb, #8b5cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .stat-label {
-    color: #4b5563;
-    font-weight: 600;
-    font-size: 0.875rem;
-  }
-
-  /* Category sections */
-  .category-section {
-    margin-bottom: 3rem;
-  }
-  .category-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 0.75rem;
-  }
-  .category-icon {
-    font-size: 1.8rem;
-  }
-  .category-section h2 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #1e293b;
-  }
-  .category-count {
-    margin-left: auto;
-    background: #f1f5f9;
-    padding: 0.25rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: #1e293b;
-  }
-
-  /* Article grid & cards */
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 1.5rem;
-  }
-  .article-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1.8rem;
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .article-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    border-color: #3b82f6;
-  }
-  .article-image {
-    height: 160px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-  }
-  .article-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .article-meta {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-  }
-  .article-date, .article-category {
-    background: #f1f5f9;
-    color: #4b5563;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-  .article-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-    color: #1e293b;
-  }
-  .article-card p {
-    color: #4b5563;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-  }
-  .article-link {
-    color: #3b82f6;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .article-link:hover {
-    gap: 0.8rem;
-  }
-  .article-link::after {
-    content: "→";
-    transition: transform 0.2s;
-  }
-  .article-link:hover::after {
-    transform: translateX(3px);
-  }
-
-  /* CTA & Newsletter sections */
-  .cta-section {
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
-    text-align: center;
-    padding: 3rem;
-    border-radius: 24px;
-    margin: 4rem 0;
-  }
-  .cta-section h2 {
-    color: white;
-  }
-  .cta-section p {
-    color: rgba(255,255,255,0.9);
-  }
-  .cta-button {
-    display: inline-block;
-    background: white;
-    color: #2563eb;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-  .newsletter-section {
-    background: #dbeafe;
-    text-align: center;
-    padding: 3rem;
-    border-radius: 24px;
-    margin-bottom: 3rem;
-  }
-  .newsletter-section h3 {
-    color: #1e3a8a;
-  }
-  .newsletter-section p {
-    color: #1e293b;
-  }
-</style>
+        /* Additional styles for blog page (fallback) */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        .blog-main {
+            min-width: 0; /* prevent overflow */
+        }
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .sidebar-widget {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .sidebar-widget h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #1e293b;
+        }
+        .sidebar-widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-widget li {
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-widget a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .sidebar-widget a:hover {
+            text-decoration: underline;
+        }
+        .search-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .search-results {
+            margin-top: 1rem;
+            display: none;
+        }
+        .search-results ul {
+            list-style: none;
+            padding: 0;
+        }
+        .search-results li {
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .search-results li a {
+            font-weight: 600;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            padding: 1rem 0;
+        }
+        .pagination a, .pagination span {
+            padding: 0.5rem 1rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2563eb;
+        }
+        .pagination a:hover {
+            background: #2563eb;
+            color: white;
+        }
+        .pagination .current {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+    </style>
 </head>
 <body>
     <!-- Skip link -->
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Header (copied from your existing articles) -->
+    <!-- Header (copy from your existing header) -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">
@@ -254,49 +182,26 @@
     <main class="container" id="main">
 
         <!-- Hero section -->
-        <div class="page-hero" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); text-align: center; padding: 3rem 2rem; border-radius: 24px; margin-bottom: 3rem;">
+        <div class="page-hero" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); text-align: center; padding: 3rem 2rem; border-radius: 24px; margin-bottom: 2rem;">
             <h1 style="color: white; margin-bottom: 1rem;">📚 All Software Reviews</h1>
             <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;">Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
         </div>
 
         <!-- Stats row -->
-        <div class="stats-row" style="margin-bottom: 3rem;">
+        <div class="stats-row" style="margin-bottom: 2rem;">
             <div class="stat-item"><div class="stat-number">90+</div><div class="stat-label">Days of Testing</div></div>
             <div class="stat-item"><div class="stat-number">{{ site.posts | size }}+</div><div class="stat-label">Tools Reviewed</div></div>
             <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Independent Testing</div></div>
             <div class="stat-item"><div class="stat-number">2026</div><div class="stat-label">Updated Reviews</div></div>
         </div>
 
-        <!-- Group posts by first category -->
-        {% assign posts_by_category = site.posts | group_by: "categories[0]" %}
-
-        {% for category in posts_by_category %}
-            {% assign cat_name = category.name | replace: "-", " " | capitalize %}
-            {% assign cat_icon = "📄" %}
-
-            <!-- Map your four category slugs to icons -->
-            {% case category.name %}
-                {% when "pdf-and-document-tools" %}
-                    {% assign cat_icon = "📄" %}
-                {% when "email-and-marketing-tools" %}
-                    {% assign cat_icon = "📧" %}
-                {% when "project-management" %}
-                    {% assign cat_icon = "✅" %}
-                {% when "finance" %}
-                    {% assign cat_icon = "💰" %}
-                {% else %}
-                    {% assign cat_icon = "📁" %}
-            {% endcase %}
-
-            <section class="category-section">
-                <div class="category-header">
-                    <div class="category-icon">{{ cat_icon }}</div>
-                    <h2>{{ cat_name }}</h2>
-                    <span class="category-count">{{ category.items.size }} Reviews</span>
-                </div>
-                <div class="articles-grid">
-                    {% for post in category.items %}
-                        <article class="article-card">
+        <!-- Two‑column layout with sidebar -->
+        <div class="blog-layout">
+            <div class="blog-main">
+                <!-- Paginated posts list -->
+                {% if paginator.posts %}
+                    {% for post in paginator.posts %}
+                        <article class="article-card" style="margin-bottom: 1.5rem;">
                             <div class="article-image">
                                 {% if post.image %}
                                     <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
@@ -306,29 +211,64 @@
                             </div>
                             <div class="article-meta">
                                 <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
-                                <span class="article-category">{{ cat_name }}</span>
+                                <span class="article-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
                             </div>
                             <h3>{{ post.title }}</h3>
                             <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
                             <a href="{{ post.url }}" class="article-link">Read Full Review →</a>
                         </article>
                     {% endfor %}
-                </div>
-            </section>
-        {% endfor %}
+                {% else %}
+                    <p>No posts found.</p>
+                {% endif %}
 
-        <!-- CTA Section -->
+                <!-- Pagination links -->
+                {% if paginator.total_pages > 1 %}
+                <div class="pagination">
+                    {% if paginator.previous_page %}
+                        <a href="{{ paginator.previous_page_path }}">← Previous</a>
+                    {% endif %}
+                    <span class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                    {% if paginator.next_page %}
+                        <a href="{{ paginator.next_page_path }}">Next →</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+
+            <aside class="blog-sidebar">
+                <!-- Search Widget -->
+                <div class="sidebar-widget">
+                    <h3>🔍 Search Reviews</h3>
+                    <input type="text" id="search-input" class="search-input" placeholder="Type to search...">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget">
+                    <h3>📂 Categories</h3>
+                    <ul>
+                        <li><a href="/categories/pdf-and-document-tools/">PDF & Document Tools</a></li>
+                        <li><a href="/categories/email-and-marketing-tools/">Email & Marketing Tools</a></li>
+                        <li><a href="/categories/project-management/">Project Management</a></li>
+                        <li><a href="/categories/finance/">Finance & Accounting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="sidebar-widget newsletter-widget">
+                    <h3>📬 Get New Reviews</h3>
+                    <p>Subscribe to get the latest software reviews delivered straight to your inbox.</p>
+                    <div class="ml-embedded" data-form="0xw1l4"></div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- CTA Section (full width) -->
         <div class="cta-section" style="margin: 4rem 0; text-align: center;">
             <h2 style="color: white;">Want a Specific Tool Reviewed?</h2>
             <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 1rem auto;">We take requests! Let us know which software you'd like us to test next.</p>
             <a href="/contact" class="cta-button" style="background: white; color: var(--primary); display: inline-block;">Suggest a Tool for Review →</a>
-        </div>
-
-        <!-- Newsletter Section -->
-        <div class="newsletter-section" style="margin-bottom: 3rem;">
-            <h3>📬 Get practical software insights in your inbox</h3>
-            <p>Join SmartGuideHubs readers and receive new reviews, comparisons, and buying guides as they go live.</p>
-            <div class="ml-embedded" data-form="0xw1l4"></div>
         </div>
 
     </main>
@@ -336,5 +276,58 @@
     {% include footer.html %}
 
     <script src="/cookies.js"></script>
+
+    <!-- Search functionality -->
+    <script>
+        // Load search index and initialize Lunr
+        var idx = null;
+        var documents = [];
+
+        fetch('/search.json')
+            .then(response => response.json())
+            .then(data => {
+                documents = data;
+                idx = lunr(function() {
+                    this.ref('url');
+                    this.field('title');
+                    this.field('excerpt');
+                    this.field('categories');
+                    documents.forEach(function(doc) {
+                        this.add(doc);
+                    }, this);
+                });
+            });
+
+        // Perform search on input
+        var searchInput = document.getElementById('search-input');
+        var searchResults = document.getElementById('search-results');
+
+        searchInput.addEventListener('input', function() {
+            var query = this.value.trim();
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+            if (!idx) return;
+
+            var results = idx.search(query);
+            if (results.length === 0) {
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            var output = '<ul>';
+            results.slice(0, 10).forEach(function(result) {
+                var doc = documents.find(d => d.url === result.ref);
+                if (doc) {
+                    output += `<li><a href="${doc.url}">${doc.title}</a><br><small>${doc.date} · ${doc.categories}</small></li>`;
+                }
+            });
+            output += '</ul>';
+            searchResults.innerHTML = output;
+            searchResults.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
