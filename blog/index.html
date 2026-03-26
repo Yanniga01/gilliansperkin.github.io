@@ -59,7 +59,7 @@
     </script>
 
     <style>
-        /* Additional styles for blog page (fallback) */
+        /* Fallback inline styles – ensures layout works even if site.css fails */
         .blog-layout {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -72,7 +72,7 @@
             }
         }
         .blog-main {
-            min-width: 0; /* prevent overflow */
+            min-width: 0;
         }
         .blog-sidebar {
             display: flex;
@@ -86,57 +86,22 @@
             border: 1px solid #e2e8f0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .sidebar-widget h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            color: #1e293b;
-        }
-        .sidebar-widget ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar-widget li {
-            margin-bottom: 0.5rem;
-        }
-        .sidebar-widget a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .sidebar-widget a:hover {
-            text-decoration: underline;
-        }
         .search-input {
             width: 100%;
             padding: 0.75rem;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            font-size: 0.95rem;
             margin-bottom: 1rem;
         }
         .search-results {
-            margin-top: 1rem;
             display: none;
-        }
-        .search-results ul {
-            list-style: none;
-            padding: 0;
-        }
-        .search-results li {
-            margin-bottom: 0.75rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-        .search-results li a {
-            font-weight: 600;
+            margin-top: 1rem;
         }
         .pagination {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin-top: 3rem;
-            padding: 1rem 0;
         }
         .pagination a, .pagination span {
             padding: 0.5rem 1rem;
@@ -146,14 +111,9 @@
             text-decoration: none;
             color: #2563eb;
         }
-        .pagination a:hover {
-            background: #2563eb;
-            color: white;
-        }
         .pagination .current {
             background: #2563eb;
             color: white;
-            border-color: #2563eb;
         }
     </style>
 </head>
@@ -182,7 +142,7 @@
     <main class="container" id="main">
 
         <!-- Hero section -->
-        <div class="page-hero" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); text-align: center; padding: 3rem 2rem; border-radius: 24px; margin-bottom: 2rem;">
+        <div class="page-hero" style="background: linear-gradient(135deg, #0f2b4d, #1e3a8a); text-align: center; padding: 3rem 2rem; border-radius: 24px; margin-bottom: 2rem;">
             <h1 style="color: white; margin-bottom: 1rem;">📚 All Software Reviews</h1>
             <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;">Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
         </div>
@@ -198,7 +158,7 @@
         <!-- Two‑column layout with sidebar -->
         <div class="blog-layout">
             <div class="blog-main">
-                <!-- Posts list (pagination if available) -->
+                <!-- Paginated posts list -->
                 {% if paginator %}
                     {% assign posts = paginator.posts %}
                 {% else %}
@@ -226,7 +186,7 @@
                     <p>No posts found.</p>
                 {% endfor %}
 
-                <!-- Pagination links (only if paginator exists) -->
+                <!-- Pagination links -->
                 {% if paginator and paginator.total_pages > 1 %}
                 <div class="pagination">
                     {% if paginator.previous_page %}
@@ -283,7 +243,6 @@
 
     <!-- Search functionality -->
     <script>
-        // Load search index and initialize Lunr
         var idx = null;
         var documents = [];
 
@@ -302,7 +261,6 @@
                 });
             });
 
-        // Perform search on input
         var searchInput = document.getElementById('search-input');
         var searchResults = document.getElementById('search-results');
 
