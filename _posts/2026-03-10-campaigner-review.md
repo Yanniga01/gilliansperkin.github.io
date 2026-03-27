@@ -1,8 +1,369 @@
 ---
 layout: post
 title: "Campaigner Review 2026: Features, Pricing & Pros and Cons"
-date: 2026-03-10
+date: 2026-03-01
 categories: [email-and-marketing-tools]
 image: /assets/images/campaigner-card.jpg
 excerpt: "In-depth analysis of Campaigner’s automation tools, pricing plans, deliverability, and whether it’s worth it for growing businesses."
+permalink: /campaigner-review-2026/
 ---
+
+<!-- Author Box -->
+<div class="author-box">
+    <div class="author-avatar">
+        <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
+    </div>
+    <div>
+        <h3>
+            Reviewed by 
+            <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
+                SmartGuideHubs Editorial Team
+            </a>
+        </h3>
+        <p>
+            Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
+            and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
+            the right fit before starting a trial or subscription.
+        </p>
+    </div>
+</div>
+
+<!-- TOC Include -->
+{% include article-toc.html
+  link1="#quick-verdict" label1="⚡ Quick Verdict"
+  link2="#features" label2="🔑 Key Features"
+  link3="#pricing" label3="💰 Pricing"
+  link4="#pros-cons" label4="✅ Pros & Cons"
+  link5="#target-audience" label5="🎯 Who Should Use"
+  link6="#comparison" label6="🆚 Competitors"
+  link7="#faq" label7="❓ FAQ"
+  link8="#verdict" label8="🎯 Final Verdict"
+%}
+
+<!-- Review Pick Include -->
+{% include review-pick.html
+  heading="Our Top Pick"
+  intro="Campaigner stands out as the best choice for mid-sized businesses needing enterprise-grade automation without enterprise pricing."
+  logo="/assets/logos/campaigner.png"
+  badge="Best for Automation"
+  tag="Email Marketing"
+  name="Campaigner"
+  subtitle="Best for mid-sized businesses needing advanced automation"
+  description="Campaigner delivers powerful automation workflows, deep segmentation, and integrated SMS at a price point that fits growing teams."
+  point1="Enterprise-grade automation"
+  point2="Deep segmentation with AND/OR logic"
+  point3="Email + SMS in one platform"
+  point4="900+ templates"
+  primary_text="Start Free Trial"
+  primary_url="https://pstk.campaigner.com/7i8kiezd3s44"
+  secondary_text="Jump to Pricing"
+  secondary_url="#pricing"
+%}
+
+<!-- Quick Verdict -->
+<div class="quick-verdict" id="quick-verdict">
+    <span class="winner-badge">📧 MID-MARKET POWERHOUSE</span>
+    <h2 style="color: var(--campaigner); margin-top: 0;">Campaigner: The Automation Specialist</h2>
+    <p><strong>Campaigner occupies a strategic sweet spot</strong> between basic email tools (Mailchimp, MailerLite) and enterprise platforms (HubSpot, Marketo). With 20+ years in email marketing, it packs enterprise-grade automation features at mid-market pricing — ideal for businesses that have outgrown simple tools but aren't ready for five-figure monthly investments.</p>
+    
+    <!-- Rating Summary -->
+    <div class="rating-summary">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <div style="font-size: 3rem; font-weight: 800; color: var(--campaigner);">4.1</div>
+            <div style="font-size: 1.2rem; color: var(--gray);">/5 Overall</div>
+            <div class="rating-stars" style="font-size: 1.5rem;">★★★★☆</div>
+        </div>
+        <div class="rating-grid">
+            <div class="rating-item">
+                <div class="rating-number">4.2</div>
+                <div class="rating-label">Ease of Use</div>
+            </div>
+            <div class="rating-item">
+                <div class="rating-number">4.3</div>
+                <div class="rating-label">Feature Depth</div>
+            </div>
+            <div class="rating-item">
+                <div class="rating-number">3.6</div>
+                <div class="rating-label">Value for Money</div>
+            </div>
+            <div class="rating-item">
+                <div class="rating-number">4.3</div>
+                <div class="rating-label">Integrations</div>
+            </div>
+            <div class="rating-item">
+                <div class="rating-number">4.2</div>
+                <div class="rating-label">Documentation</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Affiliate CTA (Mid-Article) -->
+{% include affiliate-cta.html
+  badge="SmartGuideHubs Recommended"
+  title="Ready to Test Campaigner's Automation Power?"
+  text="See if Campaigner's advanced features are right for your business with a 30-day free trial."
+  button_text="Start My Free Trial"
+  button_url="https://pstk.campaigner.com/7i8kiezd3s44"
+  subtext="30-day trial • Credit card required • Cancel anytime"
+%}
+
+<!-- Key Features Section -->
+<h2 id="features">🔑 Key Features That Define Campaigner in 2026</h2>
+<div class="features-grid">
+    <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Advanced Automation Workflows</h3>
+        <p>Campaigner's visual workflow builder lets you create multi-step sequences triggered by opens, clicks, purchases, sign-ups, page visits, or custom events. Branch workflows based on conditions, set time delays, apply tags, move subscribers between lists, and trigger SMS alongside emails.</p>
+        <p><strong>Enterprise-grade automation at mid-market pricing</strong> — rivals tools costing 2-3x more.</p>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Deep Segmentation</h3>
+        <p>Go beyond basic demographics. Segment by engagement history, behavioral data, geographic location, custom fields, and tags using nested AND/OR logic. Target subscribers who opened your last 3 emails AND purchased in the last 30 days AND are located in California.</p>
+        <p><strong>Precision targeting</strong> that enterprise marketers demand.</p>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Email + SMS Marketing</h3>
+        <p>SMS included in Essential ($179/month) and Advanced ($649/month) plans with 1,000 SMS sends/month on Essential. Send standalone SMS or include SMS steps within automation workflows. Supports personalization, segmentation, geolocation targeting, recurring campaigns. Free phone number included.</p>
+        <p><em>Note: SMS only available for US/Canadian numbers as of early 2026.</em></p>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">🖼️</div>
+        <h3>900+ Template Library</h3>
+        <p>Access 900+ responsive email templates organized by industry, occasion, and style. Drag-and-drop editor handles layout, images, buttons, and text. Full code editor available for HTML-savvy users. Dynamic content blocks automatically swap content based on subscriber attributes.</p>
+        <p><strong>One of the largest template libraries</strong> in the industry.</p>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>A/B & Multivariate Testing</h3>
+        <p>Standard A/B testing on subject lines, sender names, content, and send times — plus multivariate testing allowing simultaneous testing of multiple variables. This enterprise feature is rarely available at this price point.</p>
+        <p><strong>Systematically optimize</strong> every campaign element.</p>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">🛒</div>
+        <h3>Ecommerce Integration</h3>
+        <p>Native integrations with Shopify and Magento sync product catalogs, customer data, and purchase history. Trigger automation based on buying behavior — abandoned cart emails, product recommendations, win-back campaigns.</p>
+        <p><strong>Ecommerce-specific workflows</strong> out of the box.</p>
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<h2 id="pricing">💰 Campaigner Pricing 2026: Complete Breakdown</h2>
+<div class="pricing-grid">
+    <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="contact-limit">Up to 5,000 contacts</div>
+        <div class="price-tag">$59</div>
+        <div class="price-period">per month</div>
+        <ul>
+            <li>✓ Drag-and-drop editor</li>
+            <li>✓ 900+ templates</li>
+            <li>✓ Autoresponders</li>
+            <li>✓ A/B testing</li>
+            <li>✓ Landing pages</li>
+            <li>✓ Geolocation</li>
+        </ul>
+        <p><strong>Email only</strong> — SMS not included</p>
+        <a href="https://pstk.campaigner.com/7i8kiezd3s44" target="_blank" rel="sponsored noopener" class="picks-button-primary" style="display: inline-block; margin-top: 1rem;">Start Free Trial →</a>
+    </div>
+    <div class="pricing-card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <h3>Essential</h3>
+        <div class="contact-limit">Up to 25,000 contacts</div>
+        <div class="price-tag">$179</div>
+        <div class="price-period">per month</div>
+        <ul>
+            <li>✓ Everything in Starter</li>
+            <li>✓ 1,000 SMS/month</li>
+            <li>✓ Advanced segmentation</li>
+            <li>✓ Geolocation targeting</li>
+            <li>✓ Free phone number</li>
+            <li>✓ Priority support</li>
+        </ul>
+        <p><strong>Best for:</strong> Growing ecommerce & marketing teams</p>
+        <a href="https://pstk.campaigner.com/7i8kiezd3s44" target="_blank" rel="sponsored noopener" class="picks-button-primary" style="display: inline-block; margin-top: 1rem;">Start Free Trial →</a>
+    </div>
+    <div class="pricing-card">
+        <h3>Advanced</h3>
+        <div class="contact-limit">Up to 100,000 contacts</div>
+        <div class="price-tag">$649</div>
+        <div class="price-period">per month</div>
+        <ul>
+            <li>✓ Everything in Essential</li>
+            <li>✓ Advanced automation</li>
+            <li>✓ Behavioral targeting</li>
+            <li>✓ Purchase tracking</li>
+            <li>✓ API access</li>
+            <li>✓ Higher SMS limits</li>
+        </ul>
+        <p><strong>Best for:</strong> High-volume senders</p>
+        <a href="https://pstk.campaigner.com/7i8kiezd3s44" target="_blank" rel="sponsored noopener" class="picks-button-primary" style="display: inline-block; margin-top: 1rem;">Start Free Trial →</a>
+    </div>
+</div>
+
+<!-- Pros & Cons -->
+<h2 id="pros-cons">✅ Pros & ❌ Cons: The Honest Assessment</h2>
+<div class="pros-cons-grid">
+    <div class="pros-box">
+        <h3>✅ What Campaigner Does Well</h3>
+        <ul>
+            <li><strong>Automation depth at mid-market pricing</strong> — workflow builder rivals tools costing 2-3x more</li>
+            <li><strong>Segmentation precision</strong> — nested AND/OR logic with behavioral, geographic, and engagement data</li>
+            <li><strong>Email + SMS in one platform</strong> — eliminates need for separate SMS tool</li>
+            <li><strong>Multivariate testing</strong> — rare at this price point</li>
+            <li><strong>97% deliverability rate</strong> — automatic pre-send email checking prevents delivery problems</li>
+            <li><strong>Flexible contact model</strong> — some plans price by monthly volume rather than contact count</li>
+            <li><strong>900+ templates</strong> — one of the largest libraries available</li>
+        </ul>
+    </div>
+    <div class="cons-box">
+        <h3>❌ Where Campaigner Falls Short</h3>
+        <ul>
+            <li><strong>Steep learning curve</strong> — not a "send first email in 15 minutes" tool</li>
+            <li><strong>Design editor quirks</strong> — users report spacing changes, font reassignment, broken links, occasional loss of work</li>
+            <li><strong>No mobile app</strong> — all campaign management on desktop only (as of early 2026)</li>
+            <li><strong>Customer support gaps</strong> — slow response times, difficulty reaching knowledgeable agents</li>
+            <li><strong>Limited native integrations</strong> — beyond Shopify/Magento, most require API or Zapier</li>
+            <li><strong>No free version</strong> — free trial requires credit card upfront</li>
+            <li><strong>SMS limited to US/Canada</strong> — not available internationally</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Target Audience -->
+<h2 id="target-audience">🎯 Who Should Use Campaigner in 2026?</h2>
+<div class="audience-matrix">
+    <div class="audience-card good-for">
+        <h4 style="color: var(--success);">✅ Good For</h4>
+        <ul>
+            <li><strong>Mid-sized businesses</strong> that have outgrown Mailchimp/MailerLite</li>
+            <li><strong>Ecommerce stores</strong> on Shopify or Magento</li>
+            <li><strong>Marketing teams</strong> that rely heavily on segmentation</li>
+            <li><strong>Organizations</strong> needing multivariate testing</li>
+            <li><strong>Businesses wanting</strong> integrated email + SMS</li>
+            <li><strong>Companies with</strong> dedicated marketing staff to manage complexity</li>
+        </ul>
+    </div>
+    <div class="audience-card skip-if">
+        <h4 style="color: var(--danger);">❌ Skip If</h4>
+        <ul>
+            <li><strong>New to email marketing</strong> — need beginner-friendly tools</li>
+            <li><strong>Polished design experience</strong> is critical</li>
+            <li><strong>Mobile campaign management</strong> needed (no app)</li>
+            <li><strong>Small list under 2,000</strong> — better value elsewhere</li>
+            <li><strong>International SMS</strong> required</li>
+            <li><strong>Tight budget</strong> — no free version, credit card required for trial</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Competitor Comparison -->
+<h2 id="comparison">🆚 Campaigner vs. Competitors (2026)</h2>
+<table class="feature-table">
+    <thead>
+        30<th>Feature</th><th>Campaigner</th><th>Campaign Monitor</th><th>Mailchimp</th><th>HubSpot</th> </thead>
+    <tbody>
+        20<td><strong>Starting Price (10k contacts)</strong>20<td class="best-feature">$179/month</td><td>$111/month</td><td>$120/month</td><td>$800+/month</td>
+        <tr><td><strong>Automation Depth</strong></td><td class="best-feature">Enterprise-grade</td><td>Mid-tier</td><td>Basic-Mid</td><td class="best-feature">Enterprise-grade</td></tr>
+        <tr><td><strong>Template Library</strong></td><td class="best-feature">900+</td><td>100+</td><td>200+</td><td>150+</td></tr>
+        <tr><td><strong>SMS Included</strong></td><td class="best-feature">Yes (Mid plans+)</td><td>No</td><td>Add-on</td><td>Add-on</td></tr>
+        <tr><td><strong>Multivariate Testing</strong></td><td class="best-feature">Yes</td><td>No</td><td>No</td><td>Yes (Enterprise)</td></tr>
+        <tr><td><strong>Design Quality</strong></td><td>Functional</td><td class="best-feature">Excellent</td><td>Good</td><td>Good</td></tr>
+        <tr><td><strong>Mobile App</strong></td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+    </tbody>
+</table>
+<div style="background: #f1f5f9; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+    <p><strong>Key Takeaway:</strong> At 10,000 subscribers, Campaign Monitor costs $111/month versus Campaigner's $179/month. Campaigner wins on automation complexity and template quantity (900+ vs. 100+), while Campaign Monitor wins on design quality and agency features. Choose based on whether you need depth (Campaigner) or polish (Campaign Monitor).</p>
+</div>
+
+<!-- FAQ Section (Interactive) -->
+<div id="faq" class="faq-section">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Is Campaigner good for small businesses?</div>
+        <div class="faq-answer">Campaigner is best for mid-sized businesses (2,000+ subscribers) that need advanced automation and segmentation. For very small businesses, simpler tools like Mailchimp or MailerLite may be more cost-effective and easier to use.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Does Campaigner have a free plan?</div>
+        <div class="faq-answer">No, Campaigner does not offer a free plan. A 30-day free trial is available, but requires a credit card. Paid plans start at $59/month.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Can I use Campaigner for SMS marketing?</div>
+        <div class="faq-answer">Yes, SMS marketing is included in the Essential ($179/month) and Advanced ($649/month) plans. It supports segmentation, automation, and personalization, but is currently limited to US and Canadian numbers.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">How does Campaigner compare to Mailchimp?</div>
+        <div class="faq-answer">Campaigner offers more advanced automation and segmentation than Mailchimp, making it better for growing businesses. Mailchimp is easier to start with and has a free plan, but its automation capabilities are more limited.</div>
+    </div>
+</div>
+
+<!-- Social Sharing -->
+{% include article-social.html %}
+
+<!-- Interlinking Section (with required URLs) -->
+<div class="interlinking-section">
+    <h2>📚 More Software Reviews & Comparisons</h2>
+    <div class="interlinking-grid">
+        <div class="interlink-card">
+            <a href="/best-smtp-servers-bulk-email-2026/"><strong>📧 Best SMTP Servers for Bulk Email 2026</strong></a>
+            <p>Top providers compared for deliverability and pricing</p>
+        </div>
+        <div class="interlink-card">
+            <a href="/categories/email-and-marketing-tools/"><strong>📨 Email & Marketing Tools</strong></a>
+            <p>Browse all email marketing software reviews</p>
+        </div>
+        <div class="interlink-card">
+            <a href="/categories/"><strong>📂 All Categories</strong></a>
+            <p>Explore all software review categories</p>
+        </div>
+        <div class="interlink-card">
+            <a href="/asana-vs-trello-vs-clickup-2026/"><strong>📊 Asana vs. Trello vs. ClickUp 2026</strong></a>
+            <p>Ultimate project management face-off</p>
+        </div>
+    </div>
+</div>
+
+<!-- Affiliate CTA (Final) -->
+{% include affiliate-cta.html
+  badge="Top Pick for Growing Teams"
+  title="Ready to Upgrade Your Email Marketing?"
+  text="Try Campaigner free for 30 days. No commitment, cancel anytime."
+  button_text="Start Campaigner Free Trial"
+  button_url="https://pstk.campaigner.com/7i8kiezd3s44"
+  subtext="30-day free trial • Credit card required • Cancel anytime"
+%}
+
+<!-- MailerLite Embedded Form -->
+<div style="margin: 2rem 0; text-align: center;">
+    <div class="ml-embedded" data-form="0xw1l4"></div>
+</div>
+
+<!-- Disclosure -->
+<div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
+    <h3 style="color: #92400e;">💎 Transparency Note</h3>
+    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links (like <a href="https://pstk.campaigner.com/7i8kiezd3s44" target="_blank" rel="sponsored noopener" style="color: var(--campaigner);">this Campaigner free trial link</a>), we may earn a commission at no extra cost to you. Affiliate commissions do not directly change our conclusions. We aim to keep reviews fair using research, product documentation, and hands-on checks where possible.</p>
+    <p><strong>Testing Methodology:</strong> This review is based on feature-by-feature analysis, pricing verification, platform documentation, and practical workflow checks for common marketing scenarios.</p>
+</div>
+
+<!-- FAQ Toggle Script -->
+<script>
+    function toggleAnswer(element) {
+        var answer = element.nextElementSibling;
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            element.classList.remove("open");
+        } else {
+            answer.style.display = "block";
+            element.classList.add("open");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var answers = document.querySelectorAll(".faq-answer");
+        answers.forEach(function(answer) {
+            answer.style.display = "none";
+        });
+    });
+</script>
