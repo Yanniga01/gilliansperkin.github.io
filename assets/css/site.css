@@ -1729,7 +1729,6 @@ p {
 .article-card p {
   color: var(--gray-600);
   margin-bottom: 1.5rem;
-  flex-grow: 1;
 }
 .article-link {
   color: var(--primary);
