@@ -307,19 +307,40 @@
             border-radius: 8px;
             font-size: 0.95rem;
             margin-bottom: 1rem;
+            background: #f9fafb;
+            transition: all 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #2563eb;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
         }
         .search-results {
             margin-top: 1rem;
             display: none;
+            background: white;
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            max-height: 300px;
+            overflow-y: auto;
         }
         .search-results ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         .search-results li {
             margin-bottom: 0.75rem;
             border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 0.5rem;
+            padding: 0.5rem;
+        }
+        .search-results li a {
+            font-weight: 600;
+        }
+        .search-results li small {
+            font-size: 0.75rem;
+            color: #6b7280;
         }
 
         /* Pagination */
@@ -381,6 +402,7 @@
             color: #cbd5e1;
             padding: 4rem 0 2rem;
             margin-top: 2rem;
+            clear: both;
         }
         .footer-container {
             max-width: 1200px;
@@ -517,12 +539,14 @@
             </div>
 
             <aside class="blog-sidebar">
+                <!-- Search Widget -->
                 <div class="sidebar-widget">
                     <h3>🔍 Search Reviews</h3>
-                    <input type="text" id="search-input" class="search-input" placeholder="Type to search...">
+                    <input type="text" id="search-input" class="search-input" placeholder="Type to search... (e.g., PDFfiller, Monday.com)">
                     <div id="search-results" class="search-results"></div>
                 </div>
 
+                <!-- Categories Widget -->
                 <div class="sidebar-widget">
                     <h3>📂 Categories</h3>
                     <ul>
@@ -533,6 +557,7 @@
                     </ul>
                 </div>
 
+                <!-- Newsletter Widget -->
                 <div class="sidebar-widget newsletter-widget">
                     <h3>📬 Get New Reviews</h3>
                     <p>Subscribe to get the latest software reviews delivered straight to your inbox.</p>
