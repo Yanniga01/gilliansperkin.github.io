@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | SmartGuideHubs</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="/assets/css/site.css">
+
+    <!-- Open Graph / Twitter (optional – you can add from your blog.html) -->
+    <meta property="og:site_name" content="SmartGuideHubs">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://smartguidehubs.com/editorial-team-smartguidehubs.png">
+    <meta property="og:image:alt" content="SmartGuideHubs editorial team and software review brand image">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="https://smartguidehubs.com/editorial-team-smartguidehubs.png">
+
+    <!-- MailerLite Universal -->
+    <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2164742');
+    </script>
+    <!-- End MailerLite Universal -->
+
+    <!-- Include Lunr.js for search (if needed) -->
+    <!-- <script src="https://unpkg.com/lunr/lunr.js"></script> -->
+</head>
+<body>
+    <!-- Skip link -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">SmartGuideHubs</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                    <li><a href="/blog" {% if page.url contains "/blog" %}class="active"{% endif %}>All Reviews</a></li>
+                    <li><a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
+                    <li><a href="/editorial-team" {% if page.url == "/editorial-team/" %}class="active"{% endif %}>Editorial Team</a></li>
+                    <li><a href="/contact" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">SmartGuideHubs</div>
+                    <p>Independent software reviews for small businesses and professionals.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="/blog/">All Reviews</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Policies</h4>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                    <a href="/disclosure/">Affiliate Disclosure</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© {{ site.time | date: "%Y" }} SmartGuideHubs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/cookies.js"></script>
+</body>
+</html>
