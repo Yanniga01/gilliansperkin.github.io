@@ -3,7 +3,7 @@ layout: post
 title: "Jobber 2026 Review: Is It Still the Best Field Service Software?"
 date: 2026-03-20
 categories: [project-management]
-image: /assets/images/jobber-card.jpg
+image: /images/jobber-card.png
 excerpt: "Complete analysis of pricing, AI features, and competitors for plumbing, HVAC, and cleaning businesses in 2026. 90-day real-world testing results."
 permalink: /jobber-review-2026/
 ---
