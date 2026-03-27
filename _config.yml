@@ -6,3 +6,4 @@ plugins:
 
 paginate: 12          # number of posts per page
 paginate_path: "/blog/page:num/"
+permalink: /:title/
