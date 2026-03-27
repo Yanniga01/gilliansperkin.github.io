@@ -1,633 +1,466 @@
 ---
+layout: default
+title: All Software Reviews & Comparisons
+description: Browse all our in-depth software reviews, comparisons, and guides. Find the best tools for your business needs in 2026.
+permalink: /blog/
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Software Reviews & Comparisons | SmartGuideHubs</title>
-    <meta name="description" content="Browse all our in-depth software reviews, comparisons, and guides. Find the best tools for your business needs in 2026.">
-    <meta name="keywords" content="software reviews blog, SaaS comparisons, small business software guides, business tools articles">
-    <link rel="canonical" href="https://smartguidehubs.com/blog/">
-    <link rel="stylesheet" href="/assets/css/site.css">
 
-    <meta property="og:site_name" content="SmartGuideHubs">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://smartguidehubs.com/editorial-team-smartguidehubs.png">
-    <meta property="og:image:alt" content="SmartGuideHubs editorial team and software review brand image">
-    <meta property="og:title" content="All Software Reviews & Comparisons | SmartGuideHubs">
-    <meta property="og:description" content="Browse all our in-depth software reviews, comparisons, and guides. Find the best tools for your business needs in 2026.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smartguidehubs.com/blog/">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="All Software Reviews & Comparisons | SmartGuideHubs">
-    <meta name="twitter:description" content="Browse all our in-depth software reviews, comparisons, and guides. Find the best tools for your business needs in 2026.">
-    <meta name="twitter:image" content="https://smartguidehubs.com/editorial-team-smartguidehubs.png">
-
-    <!-- MailerLite Universal -->
-    <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2164742');
-    </script>
-    <!-- End MailerLite Universal -->
-
-    <!-- Include Lunr.js for search -->
-    <script src="https://unpkg.com/lunr/lunr.js"></script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "All Software Reviews & Comparisons | SmartGuideHubs",
-        "description": "Browse all our in-depth software reviews, comparisons, and guides. Find the best tools for your business needs in 2026.",
-        "url": "https://smartguidehubs.com/blog/",
-        "publisher": {
-            "@type": "Organization",
-            "name": "SmartGuideHubs"
-        },
-        "about": [
-            {"@type": "Thing", "name": "software reviews blog"},
-            {"@type": "Thing", "name": "SaaS comparisons"},
-            {"@type": "Thing", "name": "small business software guides"},
-            {"@type": "Thing", "name": "business tools articles"}
-        ]
+<style>
+    /* ============================================
+       Blog page styles (self‑contained)
+       ============================================ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    </script>
 
-    <style>
-        /* ============================================
-           Full blog page styles (self‑contained)
-           ============================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: #f8fafc;
+        color: #1e293b;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Hero */
+    .page-hero {
+        background: linear-gradient(135deg, #0f2b4d, #1e3a8a);
+        text-align: center;
+        padding: 3rem 2rem;
+        border-radius: 24px;
+        margin-bottom: 2rem;
+    }
+    .page-hero h1 {
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+    .page-hero p {
+        color: rgba(255,255,255,0.9);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Stats */
+    .stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    .stat-item {
+        text-align: center;
+    }
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .stat-label {
+        color: #4b5563;
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+
+    /* Grid layout */
+    .blog-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    @media (max-width: 1024px) {
+        .blog-layout {
+            grid-template-columns: 1fr;
         }
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            line-height: 1.6;
-        }
+    /* Main column */
+    .blog-main {
+        min-width: 0; /* prevents overflow */
+    }
 
+    /* Article cards */
+    .article-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.8rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .article-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        border-color: #2563eb;
+    }
+    .article-image {
+        height: 160px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    .article-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .no-image {
+        background: #f1f5f9;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+    }
+    .article-meta {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    .article-date, .article-category {
+        background: #f1f5f9;
+        color: #4b5563;
+        padding: 0.2rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    .article-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        color: #1e293b;
+    }
+    .article-card p {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+    }
+    .article-link {
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .article-link:hover {
+        gap: 0.8rem;
+    }
+    .article-link::after {
+        content: "→";
+        transition: transform 0.2s;
+    }
+    .article-link:hover::after {
+        transform: translateX(3px);
+    }
+
+    /* Sidebar */
+    .blog-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .sidebar-widget {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .sidebar-widget h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: #1e293b;
+    }
+    .sidebar-widget ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .sidebar-widget li {
+        margin-bottom: 0.5rem;
+    }
+    .sidebar-widget a {
+        color: #2563eb;
+        text-decoration: none;
+    }
+    .sidebar-widget a:hover {
+        text-decoration: underline;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        background: #f9fafb;
+        transition: all 0.2s;
+    }
+    .search-input:focus {
+        outline: none;
+        border-color: #2563eb;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .search-results {
+        margin-top: 1rem;
+        display: none;
+        background: white;
+        border-radius: 8px;
+        padding: 0.5rem 0;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .search-results ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .search-results li {
+        margin-bottom: 0.75rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 0.5rem;
+    }
+    .search-results li a {
+        font-weight: 600;
+    }
+    .search-results li small {
+        font-size: 0.75rem;
+        color: #6b7280;
+    }
+
+    /* Pagination */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+    .pagination a, .pagination span {
+        padding: 0.5rem 1rem;
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #2563eb;
+    }
+    .pagination a:hover {
+        background: #2563eb;
+        color: white;
+    }
+    .pagination .current {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+    }
+
+    /* CTA */
+    .cta-section {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        text-align: center;
+        padding: 3rem;
+        border-radius: 24px;
+        margin: 4rem 0;
+    }
+    .cta-section h2 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .cta-section p {
+        color: rgba(255,255,255,0.9);
+        max-width: 600px;
+        margin: 1rem auto;
+    }
+    .cta-button {
+        display: inline-block;
+        background: white;
+        color: #2563eb;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
         }
-
-        /* Header */
-        .site-header {
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(8px);
-            background: rgba(255,255,255,0.95);
-        }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .logo a {
-            font-size: 1.8rem;
-            font-weight: 800;
-            text-decoration: none;
-            background: linear-gradient(135deg, #2563eb, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .main-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        .main-nav a {
-            text-decoration: none;
-            color: #64748b;
-            font-weight: 600;
-        }
-        .main-nav a.active {
-            color: #2563eb;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 0.25rem;
-        }
-
-        /* Hero */
-        .page-hero {
-            background: linear-gradient(135deg, #0f2b4d, #1e3a8a);
-            text-align: center;
-            padding: 3rem 2rem;
-            border-radius: 24px;
-            margin-bottom: 2rem;
+        .blog-layout {
+            gap: 1.5rem;
         }
         .page-hero h1 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
-        .page-hero p {
-            color: rgba(255,255,255,0.9);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Stats */
         .stats-row {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        .stat-item {
-            text-align: center;
+            gap: 1.5rem;
         }
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
         }
-        .stat-label {
-            color: #4b5563;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
+    }
+</style>
 
-        /* Grid layout */
-        .blog-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        @media (max-width: 1024px) {
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-        }
+<main class="container" id="main">
 
-        /* Main column */
-        .blog-main {
-            min-width: 0; /* prevents overflow */
-        }
+    <!-- Hero section -->
+    <div class="page-hero">
+        <h1>📚 All Software Reviews</h1>
+        <p>Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
+    </div>
 
-        /* Article cards */
-        .article-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-            height: auto;
-        }
-        .article-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            border-color: #2563eb;
-        }
-        .article-image {
-            height: 160px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-        .article-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .no-image {
-            background: #f1f5f9;
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-        }
-        .article-meta {
-            display: flex;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-        .article-date, .article-category {
-            background: #f1f5f9;
-            color: #4b5563;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .article-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-            color: #1e293b;
-        }
-        .article-card p {
-            color: #4b5563;
-            margin-bottom: 1.5rem;
-        }
-        .article-link {
-            color: #2563eb;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .article-link:hover {
-            gap: 0.8rem;
-        }
-        .article-link::after {
-            content: "→";
-            transition: transform 0.2s;
-        }
-        .article-link:hover::after {
-            transform: translateX(3px);
-        }
+    <!-- Stats row -->
+    <div class="stats-row">
+        <div class="stat-item"><div class="stat-number">90+</div><div class="stat-label">Days of Testing</div></div>
+        <div class="stat-item"><div class="stat-number">{{ site.posts | size }}+</div><div class="stat-label">Tools Reviewed</div></div>
+        <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Independent Testing</div></div>
+        <div class="stat-item"><div class="stat-number">2026</div><div class="stat-label">Updated Reviews</div></div>
+    </div>
 
-        /* Sidebar */
-        .blog-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        .sidebar-widget {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .sidebar-widget h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            color: #1e293b;
-        }
-        .sidebar-widget ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar-widget li {
-            margin-bottom: 0.5rem;
-        }
-        .sidebar-widget a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        .sidebar-widget a:hover {
-            text-decoration: underline;
-        }
+    <!-- Two‑column layout with sidebar -->
+    <div class="blog-layout">
+        <div class="blog-main">
+            {% if paginator %}
+                {% assign posts = paginator.posts %}
+            {% else %}
+                {% assign posts = site.posts %}
+            {% endif %}
 
-        .search-input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            background: #f9fafb;
-            transition: all 0.2s;
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: #2563eb;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-        }
-        .search-results {
-            margin-top: 1rem;
-            display: none;
-            background: white;
-            border-radius: 8px;
-            padding: 0.5rem 0;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        .search-results ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .search-results li {
-            margin-bottom: 0.75rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 0.5rem;
-        }
-        .search-results li a {
-            font-weight: 600;
-        }
-        .search-results li small {
-            font-size: 0.75rem;
-            color: #6b7280;
-        }
+            {% for post in posts %}
+                <article class="article-card">
+                    <div class="article-image">
+                        {% if post.image %}
+                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                        {% else %}
+                            <div class="no-image">No image</div>
+                        {% endif %}
+                    </div>
+                    <div class="article-meta">
+                        <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
+                        <span class="article-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+                    </div>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                    <a href="{{ post.url }}" class="article-link">Read Full Review →</a>
+                </article>
+            {% else %}
+                <p>No posts found.</p>
+            {% endfor %}
 
-        /* Pagination */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 3rem;
-        }
-        .pagination a, .pagination span {
-            padding: 0.5rem 1rem;
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #2563eb;
-        }
-        .pagination a:hover {
-            background: #2563eb;
-            color: white;
-        }
-        .pagination .current {
-            background: #2563eb;
-            color: white;
-            border-color: #2563eb;
-        }
-
-        /* CTA */
-        .cta-section {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            text-align: center;
-            padding: 3rem;
-            border-radius: 24px;
-            margin: 4rem 0;
-        }
-        .cta-section h2 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        .cta-section p {
-            color: rgba(255,255,255,0.9);
-            max-width: 600px;
-            margin: 1rem auto;
-        }
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #2563eb;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        /* Footer */
-        .site-footer {
-            background: linear-gradient(135deg, #1f2937, #111827);
-            color: #cbd5e1;
-            padding: 4rem 0 2rem;
-            margin-top: 2rem;
-            clear: both;
-        }
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-        .footer-links h4 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-            .header-container {
-                flex-direction: column;
-            }
-            .main-nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Skip link -->
-    <a href="#main" class="skip-link">Skip to content</a>
-
-    <!-- Header -->
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="/">SmartGuideHubs</a>
+            {% if paginator and paginator.total_pages > 1 %}
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path }}">← Previous</a>
+                {% endif %}
+                <span class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path }}">Next →</a>
+                {% endif %}
             </div>
-            <nav class="main-nav">
+            {% endif %}
+        </div>
+
+        <aside class="blog-sidebar">
+            <!-- Search Widget -->
+            <div class="sidebar-widget">
+                <h3>🔍 Search Reviews</h3>
+                <input type="text" id="search-input" class="search-input" placeholder="Type to search... (e.g., PDFfiller, Monday.com)">
+                <div id="search-results" class="search-results"></div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="sidebar-widget">
+                <h3>📂 Categories</h3>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog" class="active">All Reviews</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/editorial-team/">Editorial Team</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/categories/pdf-and-document-tools/">PDF & Document Tools</a></li>
+                    <li><a href="/categories/email-and-marketing-tools/">Email & Marketing Tools</a></li>
+                    <li><a href="/categories/project-management/">Project Management</a></li>
+                    <li><a href="/categories/finance/">Finance & Accounting</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container" id="main">
-
-        <!-- Hero -->
-        <div class="page-hero">
-            <h1>📚 All Software Reviews</h1>
-            <p>Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats-row">
-            <div class="stat-item"><div class="stat-number">90+</div><div class="stat-label">Days of Testing</div></div>
-            <div class="stat-item"><div class="stat-number">{{ site.posts | size }}+</div><div class="stat-label">Tools Reviewed</div></div>
-            <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Independent Testing</div></div>
-            <div class="stat-item"><div class="stat-number">2026</div><div class="stat-label">Updated Reviews</div></div>
-        </div>
-
-        <!-- Main layout -->
-        <div class="blog-layout">
-            <div class="blog-main">
-                {% if paginator %}
-                    {% assign posts = paginator.posts %}
-                {% else %}
-                    {% assign posts = site.posts %}
-                {% endif %}
-
-                {% for post in posts %}
-                    <article class="article-card">
-                        <div class="article-image">
-                            {% if post.image %}
-                                <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-                            {% else %}
-                                <div class="no-image">No image</div>
-                            {% endif %}
-                        </div>
-                        <div class="article-meta">
-                            <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
-                            <span class="article-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-                        </div>
-                        <h3>{{ post.title }}</h3>
-                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                        <a href="{{ post.url }}" class="article-link">Read Full Review →</a>
-                    </article>
-                {% else %}
-                    <p>No posts found.</p>
-                {% endfor %}
-
-                {% if paginator and paginator.total_pages > 1 %}
-                <div class="pagination">
-                    {% if paginator.previous_page %}
-                        <a href="{{ paginator.previous_page_path }}">← Previous</a>
-                    {% endif %}
-                    <span class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-                    {% if paginator.next_page %}
-                        <a href="{{ paginator.next_page_path }}">Next →</a>
-                    {% endif %}
-                </div>
-                {% endif %}
             </div>
 
-            <aside class="blog-sidebar">
-                <!-- Search Widget -->
-                <div class="sidebar-widget">
-                    <h3>🔍 Search Reviews</h3>
-                    <input type="text" id="search-input" class="search-input" placeholder="Type to search... (e.g., PDFfiller, Monday.com)">
-                    <div id="search-results" class="search-results"></div>
-                </div>
+            <!-- Newsletter Widget -->
+            <div class="sidebar-widget newsletter-widget">
+                <h3>📬 Get New Reviews</h3>
+                <p>Subscribe to get the latest software reviews delivered straight to your inbox.</p>
+                <div class="ml-embedded" data-form="0xw1l4"></div>
+            </div>
+        </aside>
+    </div>
 
-                <!-- Categories Widget -->
-                <div class="sidebar-widget">
-                    <h3>📂 Categories</h3>
-                    <ul>
-                        <li><a href="/categories/pdf-and-document-tools/">PDF & Document Tools</a></li>
-                        <li><a href="/categories/email-and-marketing-tools/">Email & Marketing Tools</a></li>
-                        <li><a href="/categories/project-management/">Project Management</a></li>
-                        <li><a href="/categories/finance/">Finance & Accounting</a></li>
-                    </ul>
-                </div>
+    <!-- CTA Section (full width) -->
+    <div class="cta-section">
+        <h2>Want a Specific Tool Reviewed?</h2>
+        <p>We take requests! Let us know which software you'd like us to test next.</p>
+        <a href="/contact" class="cta-button">Suggest a Tool for Review →</a>
+    </div>
 
-                <!-- Newsletter Widget -->
-                <div class="sidebar-widget newsletter-widget">
-                    <h3>📬 Get New Reviews</h3>
-                    <p>Subscribe to get the latest software reviews delivered straight to your inbox.</p>
-                    <div class="ml-embedded" data-form="0xw1l4"></div>
-                </div>
-            </aside>
-        </div>
+</main>
 
-        <!-- CTA -->
-        <div class="cta-section">
-            <h2>Want a Specific Tool Reviewed?</h2>
-            <p>We take requests! Let us know which software you'd like us to test next.</p>
-            <a href="/contact" class="cta-button">Suggest a Tool for Review →</a>
-        </div>
+<!-- Search script -->
+<script>
+    var idx = null;
+    var documents = [];
 
-    </main>
-
-    {% include footer.html %}
-
-    <script src="/cookies.js"></script>
-
-    <!-- Search script -->
-    <script>
-        var idx = null;
-        var documents = [];
-
-        fetch('/search.json')
-            .then(response => response.json())
-            .then(data => {
-                documents = data;
-                idx = lunr(function() {
-                    this.ref('url');
-                    this.field('title');
-                    this.field('excerpt');
-                    this.field('categories');
-                    documents.forEach(function(doc) {
-                        this.add(doc);
-                    }, this);
-                });
+    fetch('/search.json')
+        .then(response => response.json())
+        .then(data => {
+            documents = data;
+            idx = lunr(function() {
+                this.ref('url');
+                this.field('title');
+                this.field('excerpt');
+                this.field('categories');
+                documents.forEach(function(doc) {
+                    this.add(doc);
+                }, this);
             });
-
-        var searchInput = document.getElementById('search-input');
-        var searchResults = document.getElementById('search-results');
-
-        searchInput.addEventListener('input', function() {
-            var query = this.value.trim();
-            if (query.length < 2) {
-                searchResults.style.display = 'none';
-                return;
-            }
-            if (!idx) return;
-
-            var results = idx.search(query);
-            if (results.length === 0) {
-                searchResults.style.display = 'block';
-                searchResults.innerHTML = '<p>No results found.</p>';
-                return;
-            }
-
-            var output = '<ul>';
-            results.slice(0, 10).forEach(function(result) {
-                var doc = documents.find(d => d.url === result.ref);
-                if (doc) {
-                    output += `<li><a href="${doc.url}">${doc.title}</a><br><small>${doc.date} · ${doc.categories}</small></li>`;
-                }
-            });
-            output += '</ul>';
-            searchResults.innerHTML = output;
-            searchResults.style.display = 'block';
         });
-    </script>
-</body>
-</html>
+
+    var searchInput = document.getElementById('search-input');
+    var searchResults = document.getElementById('search-results');
+
+    searchInput.addEventListener('input', function() {
+        var query = this.value.trim();
+        if (query.length < 2) {
+            searchResults.style.display = 'none';
+            return;
+        }
+        if (!idx) return;
+
+        var results = idx.search(query);
+        if (results.length === 0) {
+            searchResults.style.display = 'block';
+            searchResults.innerHTML = '<p>No results found.</p>';
+            return;
+        }
+
+        var output = '<ul>';
+        results.slice(0, 10).forEach(function(result) {
+            var doc = documents.find(d => d.url === result.ref);
+            if (doc) {
+                output += `<li><a href="${doc.url}">${doc.title}</a><br><small>${doc.date} · ${doc.categories}</small></li>`;
+            }
+        });
+        output += '</ul>';
+        searchResults.innerHTML = output;
+        searchResults.style.display = 'block';
+    });
+</script>
