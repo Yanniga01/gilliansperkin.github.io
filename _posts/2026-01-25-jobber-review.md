@@ -564,7 +564,7 @@ permalink: /jobber-review-2026/
     <p><strong>Verdict:</strong> Housecall Pro wins for solo operators who live on their phones communicating with customers. Jobber wins for growing businesses that need complete business management.</p>
 </div>
 <div class="tool-review" style="background: #f0f7ff; margin-top: 2rem;">
-    <div class="review-header"><img src="/assets/logos/servicetitan.png" alt="ServiceTitan logo" style="width: 60px; height: 60px; object-fit: contain;"><div><h3 style="margin: 0; color: var(--servicetitan);">ServiceTitan: The Enterprise Powerhouse</h3><p style="color: var(--gray); margin: 0.5rem 0 0;">When you need enterprise features at enterprise prices</p></div></div>
+    <div class="review-header"><img src="/assets/logos/serviceTitan.png" alt="ServiceTitan logo" style="width: 60px; height: 60px; object-fit: contain;"><div><h3 style="margin: 0; color: var(--servicetitan);">ServiceTitan: The Enterprise Powerhouse</h3><p style="color: var(--gray); margin: 0.5rem 0 0;">When you need enterprise features at enterprise prices</p></div></div>
     <p><strong>Choose ServiceTitan if:</strong> You're a plumbing, HVAC, or electrical business with 20+ employees and need advanced inventory management, complex dispatching, and enterprise reporting.</p>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
         <div><h4>✅ Advantages Over Jobber</h4><ul><li>Advanced inventory management</li><li>Complex dispatching center</li><li>Enterprise-level reporting</li><li>Better for large teams (20+)</li></ul></div>
