@@ -1687,7 +1687,7 @@ p {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .article-card:hover {
@@ -1729,7 +1729,6 @@ p {
 .article-card p {
   color: var(--gray-600);
   margin-bottom: 1.5rem;
-  flex-grow: 1;
 }
 .article-link {
   color: var(--primary);
@@ -1786,11 +1785,6 @@ p {
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
-}
-@media (max-width: 768px) {
-  .blog-layout {
-    grid-template-columns: 1fr;
-  }
 }
 .blog-main {
   min-width: 0;

@@ -175,12 +175,6 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-        @media (max-width: 768px) {
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-        }
-
         /* Main column */
         .blog-main {
             min-width: 0; /* prevents overflow */
@@ -196,7 +190,7 @@
             transition: all 0.3s;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: auto;
         }
         .article-card:hover {
             transform: translateY(-3px);
@@ -245,7 +239,6 @@
         .article-card p {
             color: #4b5563;
             margin-bottom: 1.5rem;
-            flex-grow: 1;
         }
         .article-link {
             color: #2563eb;
