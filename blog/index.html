@@ -59,7 +59,116 @@
     </script>
 
     <style>
-        /* Fallback inline styles – ensures layout works even if site.css fails */
+        /* ============================================
+           Full blog page styles (self‑contained)
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .site-header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.95);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-decoration: none;
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 600;
+        }
+        .main-nav a.active {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 0.25rem;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #0f2b4d, #1e3a8a);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            margin-bottom: 2rem;
+        }
+        .page-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .page-hero p {
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Stats */
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-label {
+            color: #4b5563;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        /* Grid layout */
         .blog-layout {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -71,9 +180,93 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Main column */
         .blog-main {
-            min-width: 0;
+            min-width: 0; /* prevents overflow */
         }
+
+        /* Article cards */
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border-color: #2563eb;
+        }
+        .article-image {
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .no-image {
+            background: #f1f5f9;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+        }
+        .article-meta {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .article-date, .article-category {
+            background: #f1f5f9;
+            color: #4b5563;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .article-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            color: #1e293b;
+        }
+        .article-card p {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .article-link {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .article-link:hover {
+            gap: 0.8rem;
+        }
+        .article-link::after {
+            content: "→";
+            transition: transform 0.2s;
+        }
+        .article-link:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* Sidebar */
         .blog-sidebar {
             display: flex;
             flex-direction: column;
@@ -86,17 +279,51 @@
             border: 1px solid #e2e8f0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
+        .sidebar-widget h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #1e293b;
+        }
+        .sidebar-widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-widget li {
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-widget a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .sidebar-widget a:hover {
+            text-decoration: underline;
+        }
+
         .search-input {
             width: 100%;
             padding: 0.75rem;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
+            font-size: 0.95rem;
             margin-bottom: 1rem;
         }
         .search-results {
-            display: none;
             margin-top: 1rem;
+            display: none;
         }
+        .search-results ul {
+            list-style: none;
+            padding: 0;
+        }
+        .search-results li {
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Pagination */
         .pagination {
             display: flex;
             justify-content: center;
@@ -111,9 +338,101 @@
             text-decoration: none;
             color: #2563eb;
         }
+        .pagination a:hover {
+            background: #2563eb;
+            color: white;
+        }
         .pagination .current {
             background: #2563eb;
             color: white;
+            border-color: #2563eb;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            text-align: center;
+            padding: 3rem;
+            border-radius: 24px;
+            margin: 4rem 0;
+        }
+        .cta-section h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: linear-gradient(135deg, #1f2937, #111827);
+            color: #cbd5e1;
+            padding: 4rem 0 2rem;
+            margin-top: 2rem;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .header-container {
+                flex-direction: column;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -141,24 +460,23 @@
 
     <main class="container" id="main">
 
-        <!-- Hero section -->
-        <div class="page-hero" style="background: linear-gradient(135deg, #0f2b4d, #1e3a8a); text-align: center; padding: 3rem 2rem; border-radius: 24px; margin-bottom: 2rem;">
-            <h1 style="color: white; margin-bottom: 1rem;">📚 All Software Reviews</h1>
-            <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;">Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
+        <!-- Hero -->
+        <div class="page-hero">
+            <h1>📚 All Software Reviews</h1>
+            <p>Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
         </div>
 
-        <!-- Stats row -->
-        <div class="stats-row" style="margin-bottom: 2rem;">
+        <!-- Stats -->
+        <div class="stats-row">
             <div class="stat-item"><div class="stat-number">90+</div><div class="stat-label">Days of Testing</div></div>
             <div class="stat-item"><div class="stat-number">{{ site.posts | size }}+</div><div class="stat-label">Tools Reviewed</div></div>
             <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Independent Testing</div></div>
             <div class="stat-item"><div class="stat-number">2026</div><div class="stat-label">Updated Reviews</div></div>
         </div>
 
-        <!-- Two‑column layout with sidebar -->
+        <!-- Main layout -->
         <div class="blog-layout">
             <div class="blog-main">
-                <!-- Paginated posts list -->
                 {% if paginator %}
                     {% assign posts = paginator.posts %}
                 {% else %}
@@ -166,12 +484,12 @@
                 {% endif %}
 
                 {% for post in posts %}
-                    <article class="article-card" style="margin-bottom: 1.5rem;">
+                    <article class="article-card">
                         <div class="article-image">
                             {% if post.image %}
                                 <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
                             {% else %}
-                                <div class="no-image" style="background: #f1f5f9; height: 160px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">No image</div>
+                                <div class="no-image">No image</div>
                             {% endif %}
                         </div>
                         <div class="article-meta">
@@ -186,7 +504,6 @@
                     <p>No posts found.</p>
                 {% endfor %}
 
-                <!-- Pagination links -->
                 {% if paginator and paginator.total_pages > 1 %}
                 <div class="pagination">
                     {% if paginator.previous_page %}
@@ -201,14 +518,12 @@
             </div>
 
             <aside class="blog-sidebar">
-                <!-- Search Widget -->
                 <div class="sidebar-widget">
                     <h3>🔍 Search Reviews</h3>
                     <input type="text" id="search-input" class="search-input" placeholder="Type to search...">
                     <div id="search-results" class="search-results"></div>
                 </div>
 
-                <!-- Categories Widget -->
                 <div class="sidebar-widget">
                     <h3>📂 Categories</h3>
                     <ul>
@@ -219,7 +534,6 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter Widget -->
                 <div class="sidebar-widget newsletter-widget">
                     <h3>📬 Get New Reviews</h3>
                     <p>Subscribe to get the latest software reviews delivered straight to your inbox.</p>
@@ -228,11 +542,11 @@
             </aside>
         </div>
 
-        <!-- CTA Section (full width) -->
-        <div class="cta-section" style="margin: 4rem 0; text-align: center;">
-            <h2 style="color: white;">Want a Specific Tool Reviewed?</h2>
-            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 1rem auto;">We take requests! Let us know which software you'd like us to test next.</p>
-            <a href="/contact" class="cta-button" style="background: white; color: var(--primary); display: inline-block;">Suggest a Tool for Review →</a>
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Want a Specific Tool Reviewed?</h2>
+            <p>We take requests! Let us know which software you'd like us to test next.</p>
+            <a href="/contact" class="cta-button">Suggest a Tool for Review →</a>
         </div>
 
     </main>
@@ -241,7 +555,7 @@
 
     <script src="/cookies.js"></script>
 
-    <!-- Search functionality -->
+    <!-- Search script -->
     <script>
         var idx = null;
         var documents = [];
