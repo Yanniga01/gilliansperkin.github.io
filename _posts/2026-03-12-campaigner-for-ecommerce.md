@@ -3,7 +3,7 @@ layout: post
 title: "Is Campaigner Good for Ecommerce Stores? (Honest Analysis)"
 date: 2026-03-12
 categories: [email-and-marketing-tools]
-image: /assets/images/campaigner-ecommerce-card.jpg
+image: /Images/campaigner-ecommerce-card.jpg
 excerpt: "Honest analysis of Campaigner for ecommerce stores, including Shopify fit, automation features, pricing, and whether it’s a smart choice for online businesses."
 permalink: /campaigner-for-ecommerce-stores/
 ---
