@@ -3,7 +3,7 @@ layout: post
 title: "PDFfiller Review 2026: Best E-Signature & Form Solution for Small Businesses"
 date: 2026-03-01
 categories: [pdf-and-document-tools]
-image: /images/pdffiller-card.jpg
+image: /Images/pdffiller-card.jpg
 excerpt: "After 90 days of testing, we reveal whether PDFfiller's e-signature and automation features justify the cost for growing businesses."
 permalink: /article-pdffiller/
 ---
