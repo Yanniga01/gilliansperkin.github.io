@@ -3,6 +3,12 @@ description: Independent software reviews
 url: https://smartguidehubs.com
 plugins:
   - jekyll-paginate
+  - jekyll-responsive-magick
+
+responsive:
+  widths: [400, 640, 800, 1200]
+  quality: 75
+  format: webp
 
 paginate: 12          # number of posts per page
 paginate_path: "/blog/page:num/"
