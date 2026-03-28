@@ -107,19 +107,25 @@ permalink: /blog/
         border-color: #2563eb;
     }
     .article-image {
-        height: 160px;
+        height: 220px;
         border-radius: 8px;
         overflow: hidden;
         margin-bottom: 1rem;
+        background: #f8fafc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .article-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center;
+        background: #f8fafc;
     }
     .no-image {
         background: #f1f5f9;
-        height: 160px;
+        height: 220px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -315,6 +321,31 @@ permalink: /blog/
         .stat-number {
             font-size: 2rem;
         }
+        .article-image,
+        .no-image {
+            height: 180px;
+        }
+    }
+
+    /* Show full featured image on desktop cards */
+    @media (min-width: 1025px) {
+        .article-card {
+            min-height: 560px;
+        }
+
+        .article-image {
+            height: 320px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .no-image {
+            height: 320px;
+        }
     }
 </style>
 
@@ -347,7 +378,14 @@ permalink: /blog/
                 <article class="article-card">
                     <div class="article-image">
                         {% if post.image %}
-                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                            <img
+                                src="{{ post.image }}"
+                                alt="{{ post.title }}"
+                                loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
+                                fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+                                decoding="async"
+                                width="1200"
+                                height="630">
                         {% else %}
                             <div class="no-image">No image</div>
                         {% endif %}
