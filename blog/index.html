@@ -397,11 +397,9 @@ permalink: /blog/
                             <img
                                 src="{{ post.image }}"
                                 srcset="{{ post.image | srcset }}"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
                                 width="{{ post.image | width }}"
                                 height="{{ post.image | height }}"
-                                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
-                                fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+                                loading="lazy"
                                 alt="{{ post.title }}">
                         {% else %}
                             <div class="no-image">No image</div>
