@@ -640,29 +640,6 @@
                 flex-wrap: wrap;
             }
         }
-
-        .article-brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
-
-        .article-brand img {
-            width: 26px;
-            height: 26px;
-            border-radius: 6px;
-            border: 1px solid var(--border-light);
-            background: #fff;
-            object-fit: contain;
-            padding: 2px;
-        }
-
     </style>
 </head>
 <body>
@@ -956,45 +933,6 @@
                     console.log('Filter clicked:', tag.textContent);
                 });
             });
-
-            const brandLogoMap = [
-                { key: 'semrush', label: 'Semrush', domain: 'semrush.com' },
-                { key: 'campaigner', label: 'Campaigner', domain: 'campaigner.com' },
-                { key: 'smtp', label: 'SMTP', domain: 'smtp.com' },
-                { key: 'asana', label: 'Asana', domain: 'asana.com' },
-                { key: 'trello', label: 'Trello', domain: 'trello.com' },
-                { key: 'clickup', label: 'ClickUp', domain: 'clickup.com' },
-                { key: 'jobber', label: 'Jobber', domain: 'getjobber.com' },
-                { key: 'monday', label: 'monday.com', domain: 'monday.com' },
-                { key: 'quickbooks', label: 'QuickBooks', domain: 'quickbooks.intuit.com' },
-                { key: 'pdffiller', label: 'pdfFiller', domain: 'pdffiller.com' },
-                { key: 'adobe', label: 'Adobe Acrobat', domain: 'adobe.com' }
-            ];
-
-            const findBrandLogo = (href, titleText) => {
-                const haystack = `${href || ''} ${titleText || ''}`.toLowerCase();
-                const match = brandLogoMap.find(item => haystack.includes(item.key));
-                return match || { label: 'SmartGuideHubs', domain: 'smartguidehubs.com' };
-            };
-
-            document.querySelectorAll('.article-card').forEach(card => {
-                if (card.querySelector('.article-brand')) return;
-
-                const articleLink = card.querySelector('a[href]');
-                const articleTitle = card.querySelector('h3');
-                if (!articleLink || !articleTitle) return;
-
-                const brand = findBrandLogo(articleLink.getAttribute('href'), articleTitle.textContent);
-                const brandBlock = document.createElement('div');
-                brandBlock.className = 'article-brand';
-                brandBlock.innerHTML = `
-                    <img src="https://www.google.com/s2/favicons?domain=${brand.domain}&sz=64" alt="${brand.label} logo" loading="lazy">
-                    <span>${brand.label}</span>
-                `;
-
-                articleTitle.insertAdjacentElement('beforebegin', brandBlock);
-            });
-
         })();
     </script>
 
