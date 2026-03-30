@@ -4,9 +4,6 @@
 # Allow all bots full access
 User-agent: *
 Allow: /
-Disallow: /index.html
-Disallow: /index.htm
-
 # Explicitly allow Googlebot to access critical JS and CSS
 User-agent: Googlebot
 Allow: /cookies.js
