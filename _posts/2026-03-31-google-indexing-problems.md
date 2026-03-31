@@ -185,7 +185,7 @@ permalink: /google-indexing-problems/
             </figure>
         </div>
     </div>
-    <p class="walkthrough-note"><strong>Note:</strong> Replace the placeholder image paths above with actual screenshots from your Google Search Console account for maximum accuracy. The images should clearly illustrate the statuses and steps discussed in this guide.</p>
+    <p class="walkthrough-note"><strong>Note:</strong> This is an AI-generated visual created to simplify complex concepts and improve reader understanding.</p>
 </section>
 
 <!-- Pros & Cons Grid: Common Mistakes vs. What Works -->
