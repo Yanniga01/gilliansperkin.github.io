@@ -384,14 +384,10 @@ permalink: /blog/
     <!-- Two‑column layout with sidebar -->
     <div class="blog-layout">
         <div class="blog-main">
-            {% if paginator %}
-                {% assign posts = paginator.posts %}
-            {% else %}
-                {% assign posts = site.posts %}
-            {% endif %}
+            {% assign posts = site.posts | sort: "date" | reverse %}
 
             {% for post in posts %}
-                <article class="article-card">
+                <article class="article-card" data-title="{{ post.title | downcase }}" data-category="{{ post.categories | join: ' ' | downcase }}">
                     <div class="article-image">
                         {% if post.image %}
                             <img
@@ -417,17 +413,11 @@ permalink: /blog/
                 <p>No posts found.</p>
             {% endfor %}
 
-            {% if paginator and paginator.total_pages > 1 %}
-            <div class="pagination">
-                {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path }}">← Previous</a>
-                {% endif %}
-                <span class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-                {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path }}">Next →</a>
-                {% endif %}
+            <div class="pagination" id="blog-pagination">
+                <button type="button" id="prev-page" disabled>← Previous</button>
+                <span class="current" id="page-indicator">Page 1</span>
+                <button type="button" id="next-page">Next →</button>
             </div>
-            {% endif %}
         </div>
 
         <aside class="blog-sidebar">
@@ -467,53 +457,81 @@ permalink: /blog/
 
 </main>
 
-<!-- Search script -->
+<!-- Search + client-side pagination script -->
 <script>
-    var idx = null;
-    var documents = [];
+    (function() {
+        var PAGE_SIZE = 12;
+        var currentPage = 1;
+        var searchInput = document.getElementById('search-input');
+        var searchResults = document.getElementById('search-results');
+        var prevButton = document.getElementById('prev-page');
+        var nextButton = document.getElementById('next-page');
+        var pageIndicator = document.getElementById('page-indicator');
+        var allCards = Array.prototype.slice.call(document.querySelectorAll('.blog-main .article-card'));
+        var filteredCards = allCards.slice();
 
-    fetch('/search.json')
-        .then(response => response.json())
-        .then(data => {
-            documents = data;
-            idx = lunr(function() {
-                this.ref('url');
-                this.field('title');
-                this.field('excerpt');
-                this.field('categories');
-                documents.forEach(function(doc) {
-                    this.add(doc);
-                }, this);
+        function renderPage() {
+            var totalPages = Math.max(1, Math.ceil(filteredCards.length / PAGE_SIZE));
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            var start = (currentPage - 1) * PAGE_SIZE;
+            var end = start + PAGE_SIZE;
+
+            allCards.forEach(function(card) { card.style.display = 'none'; });
+            filteredCards.slice(start, end).forEach(function(card) { card.style.display = 'flex'; });
+
+            pageIndicator.textContent = 'Page ' + currentPage + ' of ' + totalPages;
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+        }
+
+        function updateSearch() {
+            var query = searchInput.value.trim().toLowerCase();
+            if (!query) {
+                filteredCards = allCards.slice();
+                searchResults.style.display = 'none';
+                searchResults.innerHTML = '';
+                currentPage = 1;
+                renderPage();
+                return;
+            }
+
+            filteredCards = allCards.filter(function(card) {
+                var title = card.dataset.title || '';
+                var category = card.dataset.category || '';
+                var excerptNode = card.querySelector('p');
+                var excerpt = excerptNode ? excerptNode.textContent.toLowerCase() : '';
+                return title.includes(query) || category.includes(query) || excerpt.includes(query);
             });
-        });
 
-    var searchInput = document.getElementById('search-input');
-    var searchResults = document.getElementById('search-results');
+            if (filteredCards.length === 0) {
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '<p>No results found.</p>';
+            } else {
+                searchResults.style.display = 'none';
+                searchResults.innerHTML = '';
+            }
 
-    searchInput.addEventListener('input', function() {
-        var query = this.value.trim();
-        if (query.length < 2) {
-            searchResults.style.display = 'none';
-            return;
-        }
-        if (!idx) return;
-
-        var results = idx.search(query);
-        if (results.length === 0) {
-            searchResults.style.display = 'block';
-            searchResults.innerHTML = '<p>No results found.</p>';
-            return;
+            currentPage = 1;
+            renderPage();
         }
 
-        var output = '<ul>';
-        results.slice(0, 10).forEach(function(result) {
-            var doc = documents.find(d => d.url === result.ref);
-            if (doc) {
-                output += `<li><a href="${doc.url}">${doc.title}</a><br><small>${doc.date} · ${doc.categories}</small></li>`;
+        prevButton.addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                renderPage();
             }
         });
-        output += '</ul>';
-        searchResults.innerHTML = output;
-        searchResults.style.display = 'block';
-    });
+
+        nextButton.addEventListener('click', function() {
+            var totalPages = Math.max(1, Math.ceil(filteredCards.length / PAGE_SIZE));
+            if (currentPage < totalPages) {
+                currentPage += 1;
+                renderPage();
+            }
+        });
+
+        searchInput.addEventListener('input', updateSearch);
+        renderPage();
+    })();
 </script>
