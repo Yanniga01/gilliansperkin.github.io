@@ -163,7 +163,7 @@ permalink: /google-indexing-problems/
 <!-- Visual Walkthrough Section with Professional Images -->
 <section id="visual-walkthrough" class="content-section">
     <h2>Visual Walkthrough: Diagnosing Indexing Issues in Google Search Console</h2>
-    <p>Here's what the actual Google Search Console interface looks like when you're identifying indexing problems. Use these screenshots as a guide when you check your own site.</p>
+    <p>Here's what the actual Google Search Console interface looks like when you're identifying indexing problems. Use these al generated images as a guide when you check your own site.</p>
 
     <div class="walkthrough-grid">
         <div class="walkthrough-item">
