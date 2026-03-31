@@ -25,9 +25,51 @@ permalink: /google-indexing-problems/
   link2="#indexing-statuses" label2="The Two Statuses That Matter"
   link3="#real-reasons" label3="Why Pages Aren't Indexed"
   link4="#fix-action-plan" label4="Action Plan to Fix Indexing"
-  link5="#uncomfortable-truth" label5="The Truth About New Sites"
+  link5="#visual-walkthrough" label5="Visual Walkthrough"
   link6="#final-thought" label6="Final Thought"
 %}
+
+<!-- Review Pick Component (Custom) -->
+<div class="sgh-picks">
+  <div class="picks-header">
+    <span class="picks-badge">SmartGuideHubs Pick</span>
+    <h2 class="picks-heading">The Best Tool to Diagnose & Fix Indexing Issues</h2>
+    <p class="picks-intro">We've tested dozens of SEO tools – Semrush is the only one that gives you a complete picture of your site's indexing health, crawl budget, and AI visibility.</p>
+  </div>
+
+  <div class="picks-card">
+    <div class="picks-logo">
+      <img src="/assets/logos/semrush.png" alt="Semrush logo">
+    </div>
+
+    <div>
+      <div class="picks-tags">
+        <span class="picks-main-badge">Editor's Choice</span>
+        <span class="picks-tag">SEO & Analytics</span>
+      </div>
+
+      <h3 class="picks-title">Semrush</h3>
+      <p class="picks-subtitle">Best for agencies and in-house teams</p>
+      <p class="picks-description">Semrush helps you monitor indexing status, track crawl errors, and understand why pages aren't making it into Google. With its Site Audit and Log File Analyzer, you get actionable insights to fix indexing problems fast.</p>
+
+      <ul class="picks-points">
+        <li>✔ Real‑time indexing alerts via Search Console integration</li>
+        <li>✔ Crawl budget analysis to stop wasting Google's resources</li>
+        <li>✔ Identify orphaned pages and internal linking gaps</li>
+        <li>✔ Track AI visibility to see if AI tools cite your content</li>
+      </ul>
+
+      <div class="picks-actions">
+        <a href="https://semrush.sjv.io/9VLZdE" class="picks-button-primary" rel="sponsored noopener">
+          Start Free Trial
+        </a>
+        <a href="#pricing" class="picks-button-secondary">
+          Compare Plans
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Introduction -->
 <div class="content-section">
@@ -116,6 +158,34 @@ permalink: /google-indexing-problems/
 
     <h3>Step 6: Build Authority in Parallel</h3>
     <p>All the technical fixes in the world won't fully solve slow indexing if your site is new and lacks external trust signals. Build quality backlinks by reaching out to reputable sites in your niche for guest posts or collaborations. Refresh existing articles to keep them relevant. Publish consistently — regular updates signal an active, reliable site. These aren't overnight fixes, but they compound quickly once you start.</p>
+</section>
+
+<!-- Visual Walkthrough Section with Professional Images -->
+<section id="visual-walkthrough" class="content-section">
+    <h2>Visual Walkthrough: Diagnosing Indexing Issues in Google Search Console</h2>
+    <p>Here's what the actual Google Search Console interface looks like when you're identifying indexing problems. Use these screenshots as a guide when you check your own site.</p>
+
+    <div class="walkthrough-grid">
+        <div class="walkthrough-item">
+            <figure class="walkthrough-figure">
+                <img src="/Images/gsc-pages-report.jpg" alt="Google Search Console Pages report showing Indexed vs Not Indexed" loading="lazy" class="walkthrough-img">
+                <figcaption><strong>1. Pages Report</strong> – This is where you'll see the split between indexed and non‑indexed pages. Export the list to find patterns.</figcaption>
+            </figure>
+        </div>
+        <div class="walkthrough-item">
+            <figure class="walkthrough-figure">
+                <img src="/Images/gsc-crawled-not-indexed.jpg" alt="Crawled – Currently Not Indexed status" loading="lazy" class="walkthrough-img">
+                <figcaption><strong>2. "Crawled – Currently Not Indexed"</strong> – A quality judgment. Improve the content and use the "Request Indexing" button.</figcaption>
+            </figure>
+        </div>
+        <div class="walkthrough-item">
+            <figure class="walkthrough-figure">
+                <img src="/Images/gsc-discovered-not-indexed.jpg" alt="Discovered – Currently Not Indexed status" loading="lazy" class="walkthrough-img">
+                <figcaption><strong>3. "Discovered – Currently Not Indexed"</strong> – A crawl budget issue. Strengthen internal linking and reduce low‑value pages.</figcaption>
+            </figure>
+        </div>
+    </div>
+    <p class="walkthrough-note"><strong>Note:</strong> Replace the placeholder image paths above with actual screenshots from your Google Search Console account for maximum accuracy. The images should clearly illustrate the statuses and steps discussed in this guide.</p>
 </section>
 
 <!-- Pros & Cons Grid: Common Mistakes vs. What Works -->
@@ -292,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 </script>
 
-<!-- FAQ Schema (auto-generated from FAQ section) -->
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -341,3 +411,51 @@ document.addEventListener("DOMContentLoaded", function() {
   ]
 }
 </script>
+
+<style>
+/* Additional styles for the visual walkthrough section */
+.walkthrough-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.walkthrough-item {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.walkthrough-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+.walkthrough-figure {
+    margin: 0;
+    padding: 0;
+}
+.walkthrough-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #e2e8f0;
+}
+.walkthrough-figure figcaption {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #334155;
+    background: #f9fafb;
+}
+.walkthrough-note {
+    background: #f0f9ff;
+    border-left: 4px solid #2563eb;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Ensure the review pick component styles are applied (they are assumed to be in your site.css) */
+/* If not, you can add fallback styles here, but your site.css should already define them. */
+</style>
