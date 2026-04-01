@@ -249,6 +249,32 @@ permalink: /blog/
         font-size: 0.75rem;
         color: #6b7280;
     }
+    .search-result-link {
+        display: inline-block;
+        margin-top: 0.4rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1d4ed8;
+        text-decoration: none;
+    }
+    .search-result-link:hover {
+        text-decoration: underline;
+    }
+    .search-proceed-btn {
+        display: block;
+        width: 100%;
+        margin-top: 0.75rem;
+        text-align: center;
+        background: #2563eb;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.6rem 0.8rem;
+        font-weight: 700;
+    }
+    .search-proceed-btn:hover {
+        background: #1d4ed8;
+    }
 
     /* Pagination */
     .pagination {
@@ -424,7 +450,7 @@ permalink: /blog/
             <!-- Search Widget -->
             <div class="sidebar-widget">
                 <h3>🔍 Search Reviews</h3>
-                <input type="text" id="search-input" class="search-input" placeholder="Type to search... (e.g., PDFfiller, Monday.com)">
+                <input type="text" id="search-input" class="search-input" placeholder="Type 1+ letter to search articles...">
                 <div id="search-results" class="search-results"></div>
             </div>
 
@@ -487,7 +513,7 @@ permalink: /blog/
 
         function updateSearch() {
             var query = searchInput.value.trim().toLowerCase();
-            if (!query) {
+            if (query.length === 0) {
                 filteredCards = allCards.slice();
                 searchResults.style.display = 'none';
                 searchResults.innerHTML = '';
@@ -508,8 +534,20 @@ permalink: /blog/
                 searchResults.style.display = 'block';
                 searchResults.innerHTML = '<p>No results found.</p>';
             } else {
-                searchResults.style.display = 'none';
-                searchResults.innerHTML = '';
+                var preview = filteredCards.slice(0, 6).map(function(card) {
+                    var titleNode = card.querySelector('h3');
+                    var title = titleNode ? titleNode.textContent.trim() : 'Article';
+                    var urlNode = card.querySelector('.article-link');
+                    var url = urlNode ? urlNode.getAttribute('href') : '#';
+                    return '<li><a href="' + url + '">' + title + '</a><br><a class="search-result-link" href="' + url + '">Open article</a></li>';
+                }).join('');
+
+                var firstLinkNode = filteredCards[0].querySelector('.article-link');
+                var firstLink = firstLinkNode ? firstLinkNode.getAttribute('href') : '#';
+
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '<ul>' + preview + '</ul>' +
+                    '<a class="search-proceed-btn" href="' + firstLink + '">Proceed to article</a>';
             }
 
             currentPage = 1;
