@@ -135,10 +135,9 @@ permalink: /article-pdffiller/
 <h2 id="pricing">💰 2026 Pricing: Transparent Comparison</h2>
 <p>PDFfiller offers a 30-day free trial (credit card required). Here's how it compares for small business needs:</p>
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>PDFfiller Pro</th><th>Adobe Acrobat Pro</th><th>Smallpdf Pro</th> </thead>
+    <thead><tr><th>Feature</th><th>PDFfiller Pro</th><th>Adobe Acrobat Pro</th><th>Smallpdf Pro</th></tr></thead>
     <tbody>
-        20<tr><td>Monthly Price (Annual)</td><td class="best-feature">$20.00/month</td><td>$23.99/month</td><td>$12.00/month</td></tr>
+        <tr><td>Monthly Price (Annual)</td><td class="best-feature">$20.00/month</td><td>$23.99/month</td><td>$12.00/month</td></tr>
         <tr><td>E-Signatures Included</td><td class="best-feature">Unlimited</td><td>Limited (10/month)</td><td>Extra Cost</td></tr>
         <tr><td>Free Trial</td><td class="best-feature">30 Days</td><td>7 Days</td><td>14 Days</td></tr>
         <tr><td>Mobile App Features</td><td class="best-feature">Full Features</td><td>Most Features</td><td>Limited</td></tr>

@@ -165,10 +165,9 @@ permalink: /jobber-review-2026/
 <p>This comprehensive table breaks down exactly what each platform offers. Green cells indicate the best-in-class feature for that category.</p>
 
 <table class="comparison-table">
-    <thead>
-        30<th>Feature Category</th><th>Jobber</th><th>Housecall Pro</th><th>ServiceTitan</th><th>FieldRoutes</th> </thead>
+    <thead><tr><th>Feature Category</th><th>Jobber</th><th>Housecall Pro</th><th>ServiceTitan</th><th>FieldRoutes</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price (Monthly)</strong></td><td>$49</td><td class="best-feature">$49</td><td>$359</td><td>$99</td> </tr>
+        <tr><td><strong>Starting Price (Monthly)</strong></td><td>$49</td><td class="best-feature">$49</td><td>$359</td><td>$99</td> </tr>
         <tr><td><strong>Scheduling Interface</strong></td><td class="best-feature">Drag & drop calendar, team view</td><td>Simple calendar</td><td>Advanced dispatch center</td><td>Route-based scheduling</td> </tr>
         <tr><td><strong>Mobile App Rating (iOS)</strong></td><td class="best-feature">4.9/5 (10,000+ reviews)</td><td>4.8/5 (8,000+ reviews)</td><td>4.7/5 (5,000+ reviews)</td><td>4.5/5 (3,000+ reviews)</td> </tr>
         <tr><td><strong>Invoicing & Payments</strong></td><td class="best-feature">On-site + online, estimates</td><td class="best-feature">Excellent payment processing</td><td>Enterprise invoicing</td><td>Basic invoicing</td> </tr>

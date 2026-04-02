@@ -147,10 +147,9 @@ permalink: /monday-review-2026/
 <p>This table breaks down the key features of each platform. Green cells indicate best-in-class.</p>
 
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>Monday.com</th><th>Asana</th><th>ClickUp</th><th>Trello</th><th>SmartSuite</th> </thead>
+    <thead><tr><th>Feature</th><th>Monday.com</th><th>Asana</th><th>ClickUp</th><th>Trello</th><th>SmartSuite</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price (per user/mo)</strong>20<td class="best-feature">$10</td><td>$0 (Free plan)</td><td>$5</td><td>$0 (Free plan)</td><td>$12</td>
+        <tr><td><strong>Starting Price (per user/mo)</strong></td><td class="best-feature">$10</td><td>$0 (Free plan)</td><td>$5</td><td>$0 (Free plan)</td><td>$12</td></tr>
         <tr><td><strong>Visual Interface</strong></td><td class="best-feature">Colorful, intuitive</td><td>Clean, elegant</td><td>Functional but busy</td><td>Simple kanban</td><td>Database-focused</td></tr>
         <tr><td><strong>Customization</strong></td><td class="best-feature">Extremely flexible</td><td>Limited</td><td>Highly customizable</td><td>Basic</td><td>Good</td></tr>
         <tr><td><strong>Automation</strong></td><td class="best-feature">Visual builder</td><td>Basic automation</td><td>Advanced automation</td><td>Limited</td><td>Good</td></tr>

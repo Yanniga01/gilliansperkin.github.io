@@ -89,8 +89,7 @@ permalink: /top-analytics-tools-2026/
 <!-- Quick Comparison -->
 <h2 id="comparison-table">⚖️ Quick Comparison Table</h2>
 <table class="comparison-table">
-    <thead>
-        30<th>Tool</th><th>Starting Price</th><th>Best For</th><th>Key Feature</th><th>Our Rating</th> </thead>
+    <thead><tr><th>Tool</th><th>Starting Price</th><th>Best For</th><th>Key Feature</th><th>Our Rating</th></tr></thead>
     <tbody>
         <tr><td><strong>Matomo</strong></td><td>$29/month</td><td>Complete GA alternative</td><td>100% data ownership</td><td><span class="winner-badge">4.8/5</span></td></tr>
         <tr><td><strong>Plausible</strong></td><td>$9/month</td><td>Privacy-focused sites</td><td>GDPR compliant</td><td>4.6/5</td></tr>

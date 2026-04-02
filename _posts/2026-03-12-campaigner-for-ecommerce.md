@@ -275,12 +275,11 @@ permalink: /campaigner-for-ecommerce-stores/
 <!-- Competitor Comparison -->
 <h2>🆚 Campaigner vs. Klaviyo vs. Omnisend (2026)</h2>
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>Campaigner (eCommerce)</th><th>Klaviyo</th><th>Omnisend</th> </thead>
+    <thead><tr><th>Feature</th><th>Campaigner (eCommerce)</th><th>Klaviyo</th><th>Omnisend</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price (10k contacts)</strong>20<td class="best-feature">$79.95/mo (unlimited)20<td>$60/mo + overages</td><td>$59/mo + overages</td>
-        32<td><strong>Unlimited Contacts</strong>32<td class="best-feature">✅ Yes</td><td>❌ No</td><td>❌ No</td>
-        5<td><strong>Shopify Integration</strong>5<td>Native</td><td>Deep</td><td>Native</td>
+        <tr><td><strong>Starting Price (10k contacts)</strong></td><td class="best-feature">$79.95/mo (unlimited)</td><td>$60/mo + overages</td><td>$59/mo + overages</td></tr>
+        <tr><td><strong>Unlimited Contacts</strong></td><td class="best-feature">✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        <tr><td><strong>Shopify Integration</strong></td><td>Native</td><td>Deep</td><td>Native</td></tr>
         <tr><td><strong>SMS Included</strong></td><td class="best-feature">✅ Yes (Essential+)</td><td>Add-on</td><td>✅ Yes</td></tr>
         <tr><td><strong>Multivariate Testing</strong></td><td class="best-feature">✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
         <tr><td><strong>Mobile App</strong></td><td>❌ No</td><td>✅ Yes</td><td>✅ Yes</td></tr>
