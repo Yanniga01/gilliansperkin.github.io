@@ -236,10 +236,9 @@ permalink: /best-smtp-servers-bulk-email-2026/
 <section id="comparison-table" class="content-section">
     <h2>Side-by-Side Comparison</h2>
     <table class="comparison-table">
-        <thead>
-            30<th>Provider</th><th>Starting Price</th><th>Free Plan</th><th>Dedicated IP</th><th>Best For</th> </thead>
+        <thead><tr><th>Provider</th><th>Starting Price</th><th>Free Plan</th><th>Dedicated IP</th><th>Best For</th></tr></thead>
         <tbody>
-            20<td><strong>Mailtrap</strong></td><td>$15/mo</td><td>Yes (4K/mo)</td><td>Yes</td><td>Dev teams, testing + sending</td> </tr>
+            <tr><td><strong>Mailtrap</strong></td><td>$15/mo</td><td>Yes (4K/mo)</td><td>Yes</td><td>Dev teams, testing + sending</td> </tr>
             <tr><td><strong>Postmark</strong></td><td>$15/mo</td><td>100/mo</td><td>Yes</td><td>Pure deliverability</td></tr>
             <tr><td><strong>Amazon SES</strong></td><td>$0.10/1K</td><td>3K/mo (yr 1)</td><td>Add-on</td><td>Budget-conscious dev teams</td></tr>
             <tr><td><strong>SendGrid</strong></td><td>$19.95/mo</td><td>100/day</td><td>Paid add-on</td><td>All-in-one marketing + sending</td></tr>

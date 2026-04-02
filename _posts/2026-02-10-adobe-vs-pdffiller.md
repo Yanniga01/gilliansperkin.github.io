@@ -73,10 +73,9 @@ permalink: /adobe-acrobat-vs-pdffiller/
 <!-- Feature Comparison -->
 <h2 id="feature-comparison">📊 Feature-by-Feature Comparison</h2>
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>Adobe Acrobat Pro</th><th>PDFfiller</th> </thead>
+    <thead><tr><th>Feature</th><th>Adobe Acrobat Pro</th><th>PDFfiller</th></tr></thead>
     <tbody>
-        20<td><strong>E-Signature Workflow</strong></td><td>Limited (10/month on basic plan)</td><td class="best-feature">Unlimited, better tracking</td> </tr>
+        <tr><td><strong>E-Signature Workflow</strong></td><td>Limited (10/month on basic plan)</td><td class="best-feature">Unlimited, better tracking</td> </tr>
         <tr><td><strong>Form Recognition & Automation</strong></td><td>Good manual tools</td><td class="best-feature">Excellent auto-detection</td> </tr>
         <tr><td><strong>Advanced PDF Editing</strong></td><td class="best-feature">Industry standard</td><td>Basic editing only</td> </tr>
         <tr><td><strong>Mobile App Experience</strong></td><td>Full-featured but complex</td><td class="best-feature">Simplified and intuitive</td> </tr>

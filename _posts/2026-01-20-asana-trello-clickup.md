@@ -114,10 +114,9 @@ permalink: /asana-vs-trello-vs-clickup-2026/
 <!-- Feature Comparison Table -->
 <h2 id="comparison">⚡ Feature-by-Feature Comparison</h2>
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>Asana</th><th>Trello</th><th>ClickUp</th> </thead>
+    <thead><tr><th>Feature</th><th>Asana</th><th>Trello</th><th>ClickUp</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price</strong></td><td>$13.99/user/mo</td><td>$6/user/mo</td><td class="best-feature">$5/user/mo</td> </tr>
+        <tr><td><strong>Starting Price</strong></td><td>$13.99/user/mo</td><td>$6/user/mo</td><td class="best-feature">$5/user/mo</td> </tr>
         <tr><td><strong>Free Plan Limit</strong></td><td>15 users max</td><td class="best-feature">Unlimited users</td><td class="best-feature">Unlimited users</td> </tr>
         <tr><td><strong>Task Views</strong></td><td>List, Board, Timeline</td><td>Board only</td><td class="best-feature">List, Board, Calendar, Gantt, Mind Map</td> </tr>
         <tr><td><strong>Automation Rules</strong></td><td class="best-feature">Unlimited</td><td>250/month (Pro)</td><td class="best-feature">Unlimited</td> </tr>

@@ -262,10 +262,9 @@ permalink: /campaigner-review-2026/
 <!-- Competitor Comparison -->
 <h2 id="comparison">🆚 Campaigner vs. Competitors (2026)</h2>
 <table class="feature-table">
-    <thead>
-        30<th>Feature</th><th>Campaigner</th><th>Campaign Monitor</th><th>Mailchimp</th><th>HubSpot</th> </thead>
+    <thead><tr><th>Feature</th><th>Campaigner</th><th>Campaign Monitor</th><th>Mailchimp</th><th>HubSpot</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price (10k contacts)</strong>20<td class="best-feature">$179/month</td><td>$111/month</td><td>$120/month</td><td>$800+/month</td>
+        <tr><td><strong>Starting Price (10k contacts)</strong></td><td class="best-feature">$179/month</td><td>$111/month</td><td>$120/month</td><td>$800+/month</td></tr>
         <tr><td><strong>Automation Depth</strong></td><td class="best-feature">Enterprise-grade</td><td>Mid-tier</td><td>Basic-Mid</td><td class="best-feature">Enterprise-grade</td></tr>
         <tr><td><strong>Template Library</strong></td><td class="best-feature">900+</td><td>100+</td><td>200+</td><td>150+</td></tr>
         <tr><td><strong>SMS Included</strong></td><td class="best-feature">Yes (Mid plans+)</td><td>No</td><td>Add-on</td><td>Add-on</td></tr>

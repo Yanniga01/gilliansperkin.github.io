@@ -63,7 +63,7 @@ permalink: /google-indexing-problems/
         <a href="https://semrush.sjv.io/9VLZdE" class="picks-button-primary" rel="sponsored noopener">
           Start Free Trial
         </a>
-        <a href="#pricing" class="picks-button-secondary">
+        <a href="/semrush-review/#pricing" class="picks-button-secondary">
           Compare Plans
         </a>
       </div>
