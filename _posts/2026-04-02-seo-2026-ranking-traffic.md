@@ -32,6 +32,26 @@ permalink: /seo-2026-ranking-traffic/
   link9="#north-star" label9="Your New North Star Metric"
 %}
 
+<!-- Review Pick (Semrush) - Added for conversion -->
+{% include review-pick.html
+  heading="The Best Tool to Track AI Visibility & Brand Citations"
+  intro="Ranking #1 isn't enough anymore. You need to know where your brand appears in AI answers – even when no click happens. Semrush is the only platform that gives you complete visibility across Google, ChatGPT, and other LLMs."
+  logo="/assets/logos/semrush.png"
+  badge="Editor's Choice"
+  tag="SEO & AI Visibility"
+  name="Semrush"
+  subtitle="Best for tracking zero‑click impact and AI citations"
+  description="Semrush's AI Visibility Toolkit shows you exactly where your brand is mentioned in ChatGPT, Google AI Overviews, and other LLMs. Track branded search volume, monitor citation trends, and identify content gaps that AI systems prefer."
+  point1="AI Overview monitoring across 58% of Google queries"
+  point2="Brand mention tracking in ChatGPT and Perplexity"
+  point3="Identify which content types AI cites most often"
+  point4="Measure branded search volume – your new North Star metric"
+  primary_text="Start Free Trial"
+  primary_url="https://semrush.sjv.io/9VLZdE"
+  secondary_text="Compare Plans"
+  secondary_url="#pricing"
+%}
+
 <!-- Introduction -->
 <div class="content-section">
     <p>Here's something that would have sounded absurd five years ago: you can rank first on Google for a keyword with thousands of monthly searches and still get almost no traffic from it.</p>
@@ -172,7 +192,7 @@ permalink: /seo-2026-ranking-traffic/
     <p>That's a bigger game than pure SEO. But it's also a more defensible one.</p>
 </section>
 
-<!-- Affiliate CTA for Semrush -->
+<!-- Affiliate CTA (additional) -->
 {% include affiliate-cta.html
   badge="SmartGuideHubs Recommended"
   title="Track Your Brand Mentions & AI Citations with Semrush"
