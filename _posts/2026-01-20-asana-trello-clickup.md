@@ -8,26 +8,6 @@ excerpt: "90-day testing reveals which project management tool delivers the best
 permalink: /asana-vs-trello-vs-clickup-2026/
 ---
 
-<!-- Author Box -->
-<div class="author-box">
-    <div class="author-avatar">
-        <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
-    </div>
-    <div>
-        <h3>
-            Reviewed by 
-            <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
-                SmartGuideHubs Editorial Team
-            </a>
-        </h3>
-        <p>
-            Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
-            and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
-            the right fit before starting a trial or subscription.
-        </p>
-    </div>
-</div>
-
 <!-- TOC Include -->
 {% include article-toc.html
   link1="#quick-verdict" label1="⚡ Quick Verdict"
