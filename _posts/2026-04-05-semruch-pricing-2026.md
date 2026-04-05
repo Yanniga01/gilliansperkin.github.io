@@ -8,9 +8,6 @@ excerpt: "Semrush pricing in 2026: Pro, Guru, Business, and Semrush One plans br
 permalink: /semrush-pricing-2026/
 ---
 
-<!-- Author Box -->
-{% include author-box.html %}
-
 <!-- Table of Contents -->
 {% include article-toc.html
   link1="#pricing-structure" label1="Pricing Structure Has Changed"
