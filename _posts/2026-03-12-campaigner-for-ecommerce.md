@@ -70,7 +70,7 @@ permalink: /campaigner-for-ecommerce-stores/
 <h2 id="what-reviews-miss">🔍 What Most Reviews Won't Tell You About Campaigner</h2>
 <div class="content-section">
     <p><strong>Most Campaigner reviews focus on its general email features.</strong> What they skip over is that Campaigner actually offers a separate, dedicated eCommerce plan — not just an add-on, but an entirely distinct pricing tier with Shopify and Magento integration built in <span style="color: var(--gray); font-size: 0.9rem;">(Influencer Marketing Hub)</span>. That's a critical distinction. You're not bolting ecommerce features onto a generic email tool; you're buying a version of the platform specifically built for stores.</p>
-    <p>Another thing worth knowing: Campaigner includes a list verification tool called <strong>Reputation Defender</strong>, which periodically assesses the quality of your uploaded email addresses and flags risky ones <span style="color: var(--gray);">(Influencer Marketing Hub)</span> — something particularly valuable for ecommerce stores that grow lists fast through promotions and pop-ups. Dirty lists kill deliverability, and Campaigner tries to stop that before it becomes a problem.</p>
+    <p>Another thing worth knowing: Campaigner includes a list verification tool called <strong>Reputation Defender</strong>, which periodically assesses the quality of your uploaded email addresses and flags risky ones <span style="color: var(--gray);"></span> — something particularly valuable for ecommerce stores that grow lists fast through promotions and pop-ups. Dirty lists kill deliverability, and Campaigner tries to stop that before it becomes a problem.</p>
 </div>
 
 <!-- Campaigner for Shopify -->
