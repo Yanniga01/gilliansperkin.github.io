@@ -315,32 +315,32 @@ permalink: /asana-vs-trello-vs-clickup-2026/
     <h2 style="text-align: center;">🎯 Which Tool Is Right For You?</h2>
     <div class="matrix-grid">
         <div class="matrix-card" style="background: #f0f9ff;">
-            <h4>👨‍💼 Solo Entrepreneurs</h4>
+            <h3>👨‍💼 Solo Entrepreneurs</h3>
             <p><strong>Recommendation: Trello Free</strong></p>
             <p>Simple visual management, zero cost, perfect for personal productivity.</p>
         </div>
         <div class="matrix-card" style="background: #f0fdf4;">
-            <h4>👥 Small Teams (2-10)</h4>
+            <h3>👥 Small Teams (2-10)</h3>
             <p><strong>Recommendation: ClickUp Free/Unlimited</strong></p>
             <p>Best value, grows with your team, all essential features included.</p>
         </div>
         <div class="matrix-card" style="background: #fef3c7;">
-            <h4>🏢 Growing Companies (10-50)</h4>
+            <h3>🏢 Growing Companies (10-50)</h3>
             <p><strong>Recommendation: ClickUp Business</strong></p>
             <p>Advanced features without enterprise pricing, excellent scalability.</p>
         </div>
         <div class="matrix-card" style="background: #f0f9ff;">
-            <h4>🏛️ Enterprise Teams (50+)</h4>
+            <h3>🏛️ Enterprise Teams (50+)</h3>
             <p><strong>Recommendation: Asana Business</strong></p>
             <p>Proven reliability, enterprise security, complex workflow support.</p>
         </div>
         <div class="matrix-card" style="background: #fef3c7;">
-            <h4>🎨 Creative Agencies</h4>
+            <h3>🎨 Creative Agencies</h3>
             <p><strong>Recommendation: ClickUp + Asana combo</strong></p>
             <p>ClickUp for internal work, Asana for client portals if needed.</p>
         </div>
         <div class="matrix-card" style="background: #f0fdf4;">
-            <h4>⚡ Development Teams</h4>
+            <h3>⚡ Development Teams</h3>
             <p><strong>Recommendation: ClickUp or Asana</strong></p>
             <p>ClickUp for budget, Asana if you need advanced portfolio management.</p>
         </div>

@@ -80,7 +80,7 @@ permalink: /campaigner-for-ecommerce-stores/
     <p>Specifically, <strong>abandoned cart emails, product recommendation sequences, post-purchase reviews, and win-back campaigns</strong> based on purchase recency are all supported out of the box <span style="color: var(--gray);">(Techpresso)</span>.</p>
 
     <div class="alert-box" style="background: #f8fafc; border: 1px solid #e2e8f0; margin: 1.5rem 0;">
-        <h4 style="color: var(--primary-dark); margin-bottom: 1rem;">⚡ What You Can Automate with Shopify:</h4>
+        <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">⚡ What You Can Automate with Shopify:</h3>
         <ul>
             <li><strong>Abandoned Cart Recovery:</strong> Automatically email shoppers who leave items behind</li>
             <li><strong>Product Recommendations:</strong> Suggest related products based on purchase history</li>
@@ -92,7 +92,7 @@ permalink: /campaigner-for-ecommerce-stores/
     <p><strong>Here's what makes this notable:</strong> most mid-tier email platforms offer some Shopify connection, but it's often shallow. Campaigner's ecommerce plan includes <strong>unlimited contacts and specialized ecommerce automation features</strong> <span style="color: var(--gray);">(Techpresso)</span>, which is a real differentiator — because with most platforms, contact limits are what drive your bill up as your store grows.</p>
 
     <div class="alert-box" style="background: #fff3cd; border: 1px solid #ffeaa7;">
-        <h4 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Honest Caveat</h4>
+        <h3 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Honest Caveat</h3>
         <p>For WooCommerce or BigCommerce stores, the integration is less direct and may require Zapier or API work <span style="color: var(--gray);">(Techpresso)</span>. If you're not on Shopify or Magento, Campaigner becomes a harder sell.</p>
     </div>
 </div>
@@ -231,7 +231,7 @@ permalink: /campaigner-for-ecommerce-stores/
 <h2 id="who-should-use">🎯 Who Should Use Campaigner for Their Ecommerce Store?</h2>
 <div class="audience-matrix">
     <div class="audience-card good-for">
-        <h4 style="color: var(--success);">✅ Good For</h4>
+        <h3 style="color: var(--success);">✅ Good For</h3>
         <ul>
             <li><strong>Mid-sized businesses</strong> that have outgrown Mailchimp/MailerLite</li>
             <li><strong>Shopify or Magento stores</strong> wanting deep integration</li>
@@ -241,7 +241,7 @@ permalink: /campaigner-for-ecommerce-stores/
         </ul>
     </div>
     <div class="audience-card skip-if">
-        <h4 style="color: var(--danger);">❌ Skip If</h4>
+        <h3 style="color: var(--danger);">❌ Skip If</h3>
         <ul>
             <li><strong>You're on WooCommerce or BigCommerce</strong> (integration is less seamless)</li>
             <li><strong>You need a mobile app</strong> for campaign management</li>
