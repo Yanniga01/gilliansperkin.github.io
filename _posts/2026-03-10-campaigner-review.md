@@ -14,12 +14,10 @@ permalink: /campaigner-review-2026/
         <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
     </div>
     <div>
-        <h3>
-            Reviewed by 
+        <p class="author-reviewed-by"><strong>Reviewed by 
             <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
                 SmartGuideHubs Editorial Team
-            </a>
-        </h3>
+            </a></strong></p>
         <p>
             Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
             and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
@@ -236,7 +234,7 @@ permalink: /campaigner-review-2026/
 <h2 id="target-audience">🎯 Who Should Use Campaigner in 2026?</h2>
 <div class="audience-matrix">
     <div class="audience-card good-for">
-        <h4 style="color: var(--success);">✅ Good For</h4>
+        <h3 style="color: var(--success);">✅ Good For</h3>
         <ul>
             <li><strong>Mid-sized businesses</strong> that have outgrown Mailchimp/MailerLite</li>
             <li><strong>Ecommerce stores</strong> on Shopify or Magento</li>
@@ -247,7 +245,7 @@ permalink: /campaigner-review-2026/
         </ul>
     </div>
     <div class="audience-card skip-if">
-        <h4 style="color: var(--danger);">❌ Skip If</h4>
+        <h3 style="color: var(--danger);">❌ Skip If</h3>
         <ul>
             <li><strong>New to email marketing</strong> — need beginner-friendly tools</li>
             <li><strong>Polished design experience</strong> is critical</li>
@@ -262,10 +260,9 @@ permalink: /campaigner-review-2026/
 <!-- Competitor Comparison -->
 <h2 id="comparison">🆚 Campaigner vs. Competitors (2026)</h2>
 <table class="feature-table">
-    <thead>
-        30<th>Feature</th><th>Campaigner</th><th>Campaign Monitor</th><th>Mailchimp</th><th>HubSpot</th> </thead>
+    <thead><tr><th>Feature</th><th>Campaigner</th><th>Campaign Monitor</th><th>Mailchimp</th><th>HubSpot</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price (10k contacts)</strong>20<td class="best-feature">$179/month</td><td>$111/month</td><td>$120/month</td><td>$800+/month</td>
+        <tr><td><strong>Starting Price (10k contacts)</strong></td><td class="best-feature">$179/month</td><td>$111/month</td><td>$120/month</td><td>$800+/month</td></tr>
         <tr><td><strong>Automation Depth</strong></td><td class="best-feature">Enterprise-grade</td><td>Mid-tier</td><td>Basic-Mid</td><td class="best-feature">Enterprise-grade</td></tr>
         <tr><td><strong>Template Library</strong></td><td class="best-feature">900+</td><td>100+</td><td>200+</td><td>150+</td></tr>
         <tr><td><strong>SMS Included</strong></td><td class="best-feature">Yes (Mid plans+)</td><td>No</td><td>Add-on</td><td>Add-on</td></tr>

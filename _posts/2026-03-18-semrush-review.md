@@ -14,12 +14,10 @@ permalink: /semrush-review/
         <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
     </div>
     <div>
-        <h3>
-            Reviewed by 
+        <p class="author-reviewed-by"><strong>Reviewed by 
             <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
                 SmartGuideHubs Editorial Team
-            </a>
-        </h3>
+            </a></strong></p>
         <p>
             Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
             and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
@@ -99,10 +97,9 @@ permalink: /semrush-review/
 
     <h3>Classic SEO Plans</h3>
     <table class="comparison-table">
-        <thead>
-            30<th>Plan</th><th>Monthly</th><th>Annual (per month)</th><th>Keyword Limit</th><th>Projects</th> </thead>
+        <thead><tr><th>Plan</th><th>Monthly</th><th>Annual (per month)</th><th>Keyword Limit</th><th>Projects</th></tr></thead>
         <tbody>
-            20<td>Pro</td><td>$139.95</td><td>$117.33</td><td>500</td><td>5</td>
+            <tr><td>Pro</td><td>$139.95</td><td>$117.33</td><td>500</td><td>5</td></tr>
             <tr><td>Guru</td><td>$249.95</td><td>$208.33</td><td>1,500</td><td>15</td></tr>
             <tr><td>Business</td><td>$499.95</td><td>$416.66</td><td>5,000</td><td>40</td></tr>
         </tbody>
@@ -221,8 +218,8 @@ permalink: /semrush-review/
             <p>Top providers compared for deliverability and pricing</p>
         </div>
         <div class="interlink-card">
-            <a href="/categories/email-and-marketing-tools/"><strong>📨 Email & Marketing Tools</strong></a>
-            <p>Browse all email marketing software reviews</p>
+            <a href="/google-indexing-problems/"><strong>🧭 Google Indexing Problems (Fix Guide)</strong></a>
+            <p>Step-by-step fixes for discovered and crawled but not indexed pages</p>
         </div>
         <div class="interlink-card">
             <a href="/categories/"><strong>📂 All Categories</strong></a>

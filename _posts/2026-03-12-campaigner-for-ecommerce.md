@@ -14,12 +14,10 @@ permalink: /campaigner-for-ecommerce-stores/
         <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
     </div>
     <div>
-        <h3>
-            Reviewed by 
+        <p class="author-reviewed-by"><strong>Reviewed by 
             <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
                 SmartGuideHubs Editorial Team
-            </a>
-        </h3>
+            </a></strong></p>
         <p>
             Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
             and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
@@ -100,7 +98,7 @@ permalink: /campaigner-for-ecommerce-stores/
     <p>Specifically, <strong>abandoned cart emails, product recommendation sequences, post-purchase reviews, and win-back campaigns</strong> based on purchase recency are all supported out of the box <span style="color: var(--gray);">(Techpresso)</span>.</p>
 
     <div class="alert-box" style="background: #f8fafc; border: 1px solid #e2e8f0; margin: 1.5rem 0;">
-        <h4 style="color: var(--primary-dark); margin-bottom: 1rem;">⚡ What You Can Automate with Shopify:</h4>
+        <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">⚡ What You Can Automate with Shopify:</h3>
         <ul>
             <li><strong>Abandoned Cart Recovery:</strong> Automatically email shoppers who leave items behind</li>
             <li><strong>Product Recommendations:</strong> Suggest related products based on purchase history</li>
@@ -112,7 +110,7 @@ permalink: /campaigner-for-ecommerce-stores/
     <p><strong>Here's what makes this notable:</strong> most mid-tier email platforms offer some Shopify connection, but it's often shallow. Campaigner's ecommerce plan includes <strong>unlimited contacts and specialized ecommerce automation features</strong> <span style="color: var(--gray);">(Techpresso)</span>, which is a real differentiator — because with most platforms, contact limits are what drive your bill up as your store grows.</p>
 
     <div class="alert-box" style="background: #fff3cd; border: 1px solid #ffeaa7;">
-        <h4 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Honest Caveat</h4>
+        <h3 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Honest Caveat</h3>
         <p>For WooCommerce or BigCommerce stores, the integration is less direct and may require Zapier or API work <span style="color: var(--gray);">(Techpresso)</span>. If you're not on Shopify or Magento, Campaigner becomes a harder sell.</p>
     </div>
 </div>
@@ -251,7 +249,7 @@ permalink: /campaigner-for-ecommerce-stores/
 <h2 id="who-should-use">🎯 Who Should Use Campaigner for Their Ecommerce Store?</h2>
 <div class="audience-matrix">
     <div class="audience-card good-for">
-        <h4 style="color: var(--success);">✅ Good For</h4>
+        <h3 style="color: var(--success);">✅ Good For</h3>
         <ul>
             <li><strong>Mid-sized businesses</strong> that have outgrown Mailchimp/MailerLite</li>
             <li><strong>Shopify or Magento stores</strong> wanting deep integration</li>
@@ -261,7 +259,7 @@ permalink: /campaigner-for-ecommerce-stores/
         </ul>
     </div>
     <div class="audience-card skip-if">
-        <h4 style="color: var(--danger);">❌ Skip If</h4>
+        <h3 style="color: var(--danger);">❌ Skip If</h3>
         <ul>
             <li><strong>You're on WooCommerce or BigCommerce</strong> (integration is less seamless)</li>
             <li><strong>You need a mobile app</strong> for campaign management</li>
@@ -275,12 +273,11 @@ permalink: /campaigner-for-ecommerce-stores/
 <!-- Competitor Comparison -->
 <h2>🆚 Campaigner vs. Klaviyo vs. Omnisend (2026)</h2>
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>Campaigner (eCommerce)</th><th>Klaviyo</th><th>Omnisend</th> </thead>
+    <thead><tr><th>Feature</th><th>Campaigner (eCommerce)</th><th>Klaviyo</th><th>Omnisend</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price (10k contacts)</strong>20<td class="best-feature">$79.95/mo (unlimited)20<td>$60/mo + overages</td><td>$59/mo + overages</td>
-        32<td><strong>Unlimited Contacts</strong>32<td class="best-feature">✅ Yes</td><td>❌ No</td><td>❌ No</td>
-        5<td><strong>Shopify Integration</strong>5<td>Native</td><td>Deep</td><td>Native</td>
+        <tr><td><strong>Starting Price (10k contacts)</strong></td><td class="best-feature">$79.95/mo (unlimited)</td><td>$60/mo + overages</td><td>$59/mo + overages</td></tr>
+        <tr><td><strong>Unlimited Contacts</strong></td><td class="best-feature">✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        <tr><td><strong>Shopify Integration</strong></td><td>Native</td><td>Deep</td><td>Native</td></tr>
         <tr><td><strong>SMS Included</strong></td><td class="best-feature">✅ Yes (Essential+)</td><td>Add-on</td><td>✅ Yes</td></tr>
         <tr><td><strong>Multivariate Testing</strong></td><td class="best-feature">✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
         <tr><td><strong>Mobile App</strong></td><td>❌ No</td><td>✅ Yes</td><td>✅ Yes</td></tr>
