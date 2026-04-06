@@ -14,12 +14,10 @@ permalink: /asana-vs-trello-vs-clickup-2026/
         <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
     </div>
     <div>
-        <h3>
-            Reviewed by 
+        <p class="author-reviewed-by"><strong>Reviewed by 
             <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
                 SmartGuideHubs Editorial Team
-            </a>
-        </h3>
+            </a></strong></p>
         <p>
             Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
             and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
@@ -114,10 +112,9 @@ permalink: /asana-vs-trello-vs-clickup-2026/
 <!-- Feature Comparison Table -->
 <h2 id="comparison">⚡ Feature-by-Feature Comparison</h2>
 <table class="comparison-table">
-    <thead>
-        30<th>Feature</th><th>Asana</th><th>Trello</th><th>ClickUp</th> </thead>
+    <thead><tr><th>Feature</th><th>Asana</th><th>Trello</th><th>ClickUp</th></tr></thead>
     <tbody>
-        20<td><strong>Starting Price</strong></td><td>$13.99/user/mo</td><td>$6/user/mo</td><td class="best-feature">$5/user/mo</td> </tr>
+        <tr><td><strong>Starting Price</strong></td><td>$13.99/user/mo</td><td>$6/user/mo</td><td class="best-feature">$5/user/mo</td> </tr>
         <tr><td><strong>Free Plan Limit</strong></td><td>15 users max</td><td class="best-feature">Unlimited users</td><td class="best-feature">Unlimited users</td> </tr>
         <tr><td><strong>Task Views</strong></td><td>List, Board, Timeline</td><td>Board only</td><td class="best-feature">List, Board, Calendar, Gantt, Mind Map</td> </tr>
         <tr><td><strong>Automation Rules</strong></td><td class="best-feature">Unlimited</td><td>250/month (Pro)</td><td class="best-feature">Unlimited</td> </tr>
@@ -183,7 +180,7 @@ permalink: /asana-vs-trello-vs-clickup-2026/
     </ul>
 
     <div class="alert-box" style="background: #f0f9ff;">
-        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">💡 Pro Tip for Implementation</h4>
+        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">💡 Pro Tip for Implementation</h3>
         <p>Start with ClickUp's templates rather than building from scratch. Their marketing, development, and agency templates saved us 15+ hours of setup time.</p>
     </div>
 </section>
@@ -336,32 +333,32 @@ permalink: /asana-vs-trello-vs-clickup-2026/
     <h2 style="text-align: center;">🎯 Which Tool Is Right For You?</h2>
     <div class="matrix-grid">
         <div class="matrix-card" style="background: #f0f9ff;">
-            <h4>👨‍💼 Solo Entrepreneurs</h4>
+            <h3>👨‍💼 Solo Entrepreneurs</h3>
             <p><strong>Recommendation: Trello Free</strong></p>
             <p>Simple visual management, zero cost, perfect for personal productivity.</p>
         </div>
         <div class="matrix-card" style="background: #f0fdf4;">
-            <h4>👥 Small Teams (2-10)</h4>
+            <h3>👥 Small Teams (2-10)</h3>
             <p><strong>Recommendation: ClickUp Free/Unlimited</strong></p>
             <p>Best value, grows with your team, all essential features included.</p>
         </div>
         <div class="matrix-card" style="background: #fef3c7;">
-            <h4>🏢 Growing Companies (10-50)</h4>
+            <h3>🏢 Growing Companies (10-50)</h3>
             <p><strong>Recommendation: ClickUp Business</strong></p>
             <p>Advanced features without enterprise pricing, excellent scalability.</p>
         </div>
         <div class="matrix-card" style="background: #f0f9ff;">
-            <h4>🏛️ Enterprise Teams (50+)</h4>
+            <h3>🏛️ Enterprise Teams (50+)</h3>
             <p><strong>Recommendation: Asana Business</strong></p>
             <p>Proven reliability, enterprise security, complex workflow support.</p>
         </div>
         <div class="matrix-card" style="background: #fef3c7;">
-            <h4>🎨 Creative Agencies</h4>
+            <h3>🎨 Creative Agencies</h3>
             <p><strong>Recommendation: ClickUp + Asana combo</strong></p>
             <p>ClickUp for internal work, Asana for client portals if needed.</p>
         </div>
         <div class="matrix-card" style="background: #f0fdf4;">
-            <h4>⚡ Development Teams</h4>
+            <h3>⚡ Development Teams</h3>
             <p><strong>Recommendation: ClickUp or Asana</strong></p>
             <p>ClickUp for budget, Asana if you need advanced portfolio management.</p>
         </div>
@@ -381,7 +378,7 @@ permalink: /asana-vs-trello-vs-clickup-2026/
         <li><strong>Train team:</strong> 1-hour orientation covers 90% of daily use</li>
     </ol>
     <div class="alert-box" style="background: white; margin-top: 1.5rem;">
-        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">⚠️ Important Migration Tip</h4>
+        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">⚠️ Important Migration Tip</h3>
         <p>Don't try to recreate everything exactly. Use migration as an opportunity to streamline workflows. 
            Most teams find they need 30% fewer boards/lists after switching to ClickUp.</p>
     </div>

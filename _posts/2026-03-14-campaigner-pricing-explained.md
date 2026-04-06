@@ -14,12 +14,10 @@ permalink: /campaigner-pricing-explained-2026/
         <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
     </div>
     <div>
-        <h3>
-            Reviewed by 
+        <p class="author-reviewed-by"><strong>Reviewed by 
             <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">
                 SmartGuideHubs Editorial Team
-            </a>
-        </h3>
+            </a></strong></p>
         <p>
             Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, 
             and overall value. We focus on helping readers understand usability, performance, and whether a tool is 
@@ -54,10 +52,9 @@ permalink: /campaigner-pricing-explained-2026/
     <p>Every Campaigner plan includes access to the drag-and-drop and full code editor, geolocation targeting, social media integration, conversion tracking, A/B split testing, email reports, autoresponders, customer segmentation tools, and over 900 email templates. That's the base — these are not upsells.</p>
 
     <table class="comparison-table">
-        <thead>
-            30<th>Plan</th><th>Monthly Price</th><th>Contacts</th><th>Notable Additions</th> </thead>
+        <thead><tr><th>Plan</th><th>Monthly Price</th><th>Contacts</th><th>Notable Additions</th></tr></thead>
         <tbody>
-            20<td><strong>Starter</strong></td><td>$59/mo</td><td>5,000</td><td>All base features</td> </tr>
+            <tr><td><strong>Starter</strong></td><td>$59/mo</td><td>5,000</td><td>All base features</td> </tr>
             <tr class="best-feature"><td><strong>Essential</strong></td><td>$179/mo</td><td>25,000</td><td>Dynamic content, multivariate testing, SMS included</td> </tr>
             <tr><td><strong>Advanced</strong></td><td>$649/mo</td><td>100,000</td><td>Higher SMS limits, full feature set</td> </tr>
             <tr><td><strong>eCommerce</strong></td><td>$79.95–$149.95/mo</td><td>Unlimited</td><td>Shopify/Magento sync, cart abandonment, unlimited contacts</td> </tr>
@@ -143,8 +140,7 @@ permalink: /campaigner-pricing-explained-2026/
     <p>Here's where Campaigner sits in the market honestly:</p>
 
     <table class="comparison-table">
-        <thead>
-            30<th>Tool</th><th>~25K Contacts</th><th>SMS Included?</th><th>Free Plan?</th> </thead>
+        <thead><tr><th>Tool</th><th>~25K Contacts</th><th>SMS Included?</th><th>Free Plan?</th></tr></thead>
         <tbody>
             <tr class="best-feature"><td><strong>Campaigner Essential</strong></td><td>$179/mo</td><td>Yes (1,000/mo)</td><td>No</td> </tr>
             <tr><td>Klaviyo</td><td>~$400/mo</td><td>Add-on</td><td>No</td> </tr>

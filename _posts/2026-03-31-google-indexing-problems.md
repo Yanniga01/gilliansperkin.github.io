@@ -14,7 +14,7 @@ permalink: /google-indexing-problems/
         <img src="/editorial-team-smartguidehubs.png" alt="SmartGuideHubs Editorial Team" loading="lazy">
     </div>
     <div>
-        <h3>Reviewed by <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">SmartGuideHubs Editorial Team</a></h3>
+        <p class="author-reviewed-by"><strong>Reviewed by <a href="/editorial-team/" style="color: inherit; text-decoration: underline;">SmartGuideHubs Editorial Team</a></strong></p>
         <p>Our editorial team conducts structured evaluations based on real-world usage, feature analysis, pricing, and overall value. We focus on helping readers understand usability, performance, and whether a tool is the right fit before starting a trial or subscription.</p>
     </div>
 </div>
@@ -63,7 +63,7 @@ permalink: /google-indexing-problems/
         <a href="https://semrush.sjv.io/9VLZdE" class="picks-button-primary" rel="sponsored noopener">
           Start Free Trial
         </a>
-        <a href="#pricing" class="picks-button-secondary">
+        <a href="/semrush-review/#pricing" class="picks-button-secondary">
           Compare Plans
         </a>
       </div>

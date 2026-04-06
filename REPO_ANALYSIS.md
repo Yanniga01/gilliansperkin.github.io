@@ -1,76 +1,66 @@
-# Repository Analysis (March 28, 2026)
+# Repository Analysis (Updated April 2, 2026)
 
-This audit focused on potential indexing, duplication, and crawl-quality issues across the site.
+This audit focused on indexing quality, table HTML validity, and discoverability issues that can affect Google performance (including Monday review visibility).
 
-## What was checked
+## What was fixed in recent patches
 
-- Duplicate `<title>` usage across HTML pages.
-- Case-sensitive asset path mismatches (important on Linux hosts).
-- Coverage gaps between live pages and `sitemap.xml`.
-- Future-dated post filenames in `_posts/` that can delay publishing.
+### 1) Metadata consistency and safer social/search snippets
+- Updated `_layouts/default.html` so description tags fall back to post excerpts (not only generic site description).
+- Added conditional keywords output, explicit robots directive, and dynamic `og:type` for post vs page.
 
-## Findings
+**Why it matters:** clearer, page-specific metadata improves crawl interpretation and CTR potential.
 
-### 1) Duplicate indexable pages and title overlap
+### 2) Monday article parsing issue fixed
+- Repaired malformed table header/body markup in both source and published Monday pages:
+  - `_posts/2026-03-15-monday-review.md`
+  - `monday-review-2026/index.html`
 
-- `sitemap.html` and `sitemap/index.html` both exist and share the same page intent/title.
-- `contribute/index.html` and `write-for-us/index.html` currently share the same title text.
+**Why it matters:** malformed table HTML can reduce parser confidence and content extraction quality for search systems.
 
-**Impact:** This can dilute signals and cause search engines to split ranking signals across near-duplicate URLs.
+### 3) Site-wide malformed table token cleanup
+- Fixed malformed token patterns (e.g., `30<th`, `20<td`, `32<td`) across impacted review pages and matching static pages.
+- Fixed remaining broken opening rows in Campaigner source posts.
 
-**Action taken in this patch:**  
-- Kept `sitemap.html` as non-indexable and aligned its canonical + OG URL to the preferred `/sitemap/` URL.
+**Why it matters:** table-heavy comparison content is a core ranking asset for these pages; structural validity helps readability for both users and crawlers.
 
-### 2) Case-sensitive asset path issue
+### 4) Blog search UX improvements
+- Search now shows preview results immediately (including one-letter searches) with direct article links.
+- Added a bottom “Proceed to article” action for fastest path to top match.
 
-- `jobber-review-2026/index.html` referenced `/assets/logos/servicetitan.png`, but the real file is `/assets/logos/ServiceTitan.png`.
+**Why it matters:** better internal navigation can improve engagement and reduce orphan-like behavior for newer posts.
 
-**Impact:** On case-sensitive production file systems, this can produce broken images and lower quality signals on important pages.
+## Current known issues still worth addressing
 
-**Action taken in this patch:**  
-- Updated the image path casing to match the actual file.
+1. Duplicate title intent still exists:
+   - `contribute/index.html` and `write-for-us/index.html`
+   - `sitemap.html` and `sitemap/index.html`
 
-### 3) `sitemap.xml` does not include all crawlable pages
+2. `sitemap.xml` still omits several crawlable utility/legal pages (`/privacy/`, `/terms/`, `/cookies/`, etc.).
 
-The following pages exist but are currently missing from `sitemap.xml`:
+3. `scripts/repo_audit.py` flags a “future post” by filename for `_posts/2026-06-15-quickbooks-review.md` even though frontmatter date differs.
 
-- `/terms/`
-- `/contribute/`
-- `/cookies/`
-- `/privacy/`
-- `/media-kit/`
-- `/conditions/`
-- `/sitemap/`
-- `/disclosure/`
-- `/write-for-us/`
+## What to do going forward (priority order)
 
-**Impact:** Not fatal (search engines can still discover via links), but slower discovery/re-crawl and weaker crawl guidance.
+1. **Consolidate duplicate-intent URLs**
+   - Pick one canonical “Write for Us” URL and one sitemap URL.
+   - 301 redirect alternates and keep titles unique.
 
-### 4) One future-dated post filename
+2. **Tighten sitemap strategy**
+   - Include pages that should be indexed.
+   - Keep non-index pages out of sitemap.
 
-- `_posts/2026-06-15-quickbooks-review.md` is dated in the future relative to this audit date (March 28, 2026).
+3. **Run monthly structural QA**
+   - `python3 scripts/repo_audit.py`
+   - `rg -n "\\b\\d+<t[dh]|</strong><td|<thead>\\s*<th" _posts *.html */index.html`
 
-**Impact:** Jekyll generally skips future posts by default unless `future: true` is enabled during build.
+4. **For Monday article specifically**
+   - Keep updating the comparison table quarterly with fresh pricing and feature deltas.
+   - Add 2–3 internal links to Monday review from related project-management pages.
+   - Re-submit URL in Search Console after meaningful update (not repeatedly without changes).
 
-## Recommended next steps
-
-1. Add missing URLs to `sitemap.xml` (especially legal pages and submission pages).
-2. Choose one “Write for Us” URL as primary and:
-   - 301 redirect the alternate, or
-   - keep both but use distinct intents/titles and strong cross-canonical strategy.
-3. Consider removing legacy `sitemap.html` or auto-redirecting it to `/sitemap/`.
-4. Decide whether the June 15, 2026 post should stay unpublished until that date or be backdated for immediate visibility.
-
-## Tooling added
-
-- `scripts/repo_audit.py` was added to make repeat audits easy:
-  - Duplicate titles
-  - Case-sensitive path problems
-  - Sitemap coverage gaps
-  - Future-dated posts
-
-Run with:
+## Quick command checklist
 
 ```bash
-python scripts/repo_audit.py
+python3 scripts/repo_audit.py
+rg -n "\\b\\d+<t[dh]|</strong><td|<thead>\\s*<th" _posts *.html */index.html
 ```
