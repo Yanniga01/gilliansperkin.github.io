@@ -69,15 +69,15 @@ permalink: /campaigner-for-ecommerce-stores/
 <!-- What Most Reviews Miss -->
 <h2 id="what-reviews-miss">🔍 What Most Reviews Won't Tell You About Campaigner</h2>
 <div class="content-section">
-    <p><strong>Most Campaigner reviews focus on its general email features.</strong> What they skip over is that Campaigner actually offers a separate, dedicated eCommerce plan — not just an add-on, but an entirely distinct pricing tier with Shopify and Magento integration built in <span style="color: var(--gray); font-size: 0.9rem;">(Influencer Marketing Hub)</span>. That's a critical distinction. You're not bolting ecommerce features onto a generic email tool; you're buying a version of the platform specifically built for stores.</p>
+    <p><strong>Most Campaigner reviews focus on its general email features.</strong> What they skip over is that Campaigner actually offers a separate, dedicated eCommerce plan — not just an add-on, but an entirely distinct pricing tier with Shopify and Magento integration built in <span style="color: var(--gray); font-size: 0.9rem;"></span>. That's a critical distinction. You're not bolting ecommerce features onto a generic email tool; you're buying a version of the platform specifically built for stores.</p>
     <p>Another thing worth knowing: Campaigner includes a list verification tool called <strong>Reputation Defender</strong>, which periodically assesses the quality of your uploaded email addresses and flags risky ones <span style="color: var(--gray);"></span> — something particularly valuable for ecommerce stores that grow lists fast through promotions and pop-ups. Dirty lists kill deliverability, and Campaigner tries to stop that before it becomes a problem.</p>
 </div>
 
 <!-- Campaigner for Shopify -->
 <h2 id="shopify-integration">🛒 Campaigner for Shopify: How the Integration Actually Works</h2>
 <div class="content-section">
-    <p>The native Shopify integration syncs product catalogs, customer data, and purchase history so you can trigger automation based on buying behavior <span style="color: var(--gray);">(Techpresso)</span>. This means you can build campaigns that react to what a customer actually did — not just whether they opened an email.</p>
-    <p>Specifically, <strong>abandoned cart emails, product recommendation sequences, post-purchase reviews, and win-back campaigns</strong> based on purchase recency are all supported out of the box <span style="color: var(--gray);">(Techpresso)</span>.</p>
+    <p>The native Shopify integration syncs product catalogs, customer data, and purchase history so you can trigger automation based on buying behavior <span style="color: var(--gray);"></span>. This means you can build campaigns that react to what a customer actually did — not just whether they opened an email.</p>
+    <p>Specifically, <strong>abandoned cart emails, product recommendation sequences, post-purchase reviews, and win-back campaigns</strong> based on purchase recency are all supported out of the box <span style="color: var(--gray);"></span>.</p>
 
     <div class="alert-box" style="background: #f8fafc; border: 1px solid #e2e8f0; margin: 1.5rem 0;">
         <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">⚡ What You Can Automate with Shopify:</h3>
@@ -108,7 +108,7 @@ permalink: /campaigner-for-ecommerce-stores/
     <div class="feature-card">
         <div class="feature-icon">📊</div>
         <h3>Multivariate Testing</h3>
-        <p>Campaigner goes past standard A/B split testing to include multivariate experiments <span style="color: var(--gray);">(Influencer Marketing Hub)</span>. You can test subject line, sender name, and content simultaneously — a meaningful edge for high-volume stores.</p>
+        <p>Campaigner goes past standard A/B split testing to include multivariate experiments <span style="color: var(--gray);"></span>. You can test subject line, sender name, and content simultaneously — a meaningful edge for high-volume stores.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">💰</div>
@@ -217,8 +217,8 @@ permalink: /campaigner-for-ecommerce-stores/
         <h3>❌ Where Campaigner Falls Short</h3>
         <ul>
             <li><strong>No mobile app</strong> — desktop-only management <span style="color: var(--gray);"></span></li>
-            <li><strong>Limited integrations</strong> beyond Shopify/Magento; many require Zapier <span style="color: var(--gray);">(Techpresso)</span></li>
-            <li><strong>Support can be inconsistent</strong> — slower response times on lower plans <span style="color: var(--gray);">(Work-management)</span></li>
+            <li><strong>Limited integrations</strong> beyond Shopify/Magento; many require Zapier <span style="color: var(--gray);"></span></li>
+            <li><strong>Support can be inconsistent</strong> — slower response times on lower plans <span style="color: var(--gray);"></span></li>
             <li><strong>Design editor quirks</strong> — spacing issues, broken links reported</li>
             <li><strong>Annual contract lock-in risk</strong> — review terms carefully <span style="color: var(--gray);">(Software Advice)</span></li>
             <li><strong>SMS limited to US/Canada</strong> — not international</li>
