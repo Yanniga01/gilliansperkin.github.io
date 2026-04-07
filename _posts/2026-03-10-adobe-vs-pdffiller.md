@@ -10,9 +10,6 @@ permalink: /adobe-acrobat-vs-pdffiller/
 canonical_url: https://smartguidehubs.com/adobe-acrobat-vs-pdffiller/
 ---
 
-<!-- Author Box -->
-{% include author-box.html %}
-
 <!-- TOC Include -->
 {% include article-toc.html
   link1="#quick-verdict" label1="⚡ Quick Verdict"
