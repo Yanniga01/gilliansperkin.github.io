@@ -1,4 +1,3 @@
-```html
 ---
 layout: post
 title: "Adobe Acrobat vs PDFfiller 2026: Best PDF Editor for Small Business?"
