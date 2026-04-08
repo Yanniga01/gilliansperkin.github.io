@@ -3,19 +3,18 @@ description: Independent software reviews
 url: https://smartguidehubs.com
 plugins:
   - jekyll-paginate-v2
-  - jekyll-responsive-magick
-
-responsive:
-  widths: [400, 640, 800, 1200]
-  quality: 75
-  format: webp
 
 pagination:
   enabled: true
   per_page: 12
-  permalink: "/page/:num/"
-  title: ":title - page :num"
-  sort_field: "date"
+  permalink: '/page/:num/'
+  sort_field: 'date'
   sort_reverse: true
-permalink: /:title/
-future: true
+
+autopages:
+  enabled: true
+  categories:
+    enabled: true
+    layouts:
+      - 'autopage_category.html'
+    permalink: '/categories/:cat'
