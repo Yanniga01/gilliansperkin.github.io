@@ -290,7 +290,7 @@ p {
   background: #fff;
 }
 
-.author-box h3 {
+.author-box .reviewed-by {
   margin-bottom: var(--space-xs);
   font-size: var(--font-size-lg);
 }

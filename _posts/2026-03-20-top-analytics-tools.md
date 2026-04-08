@@ -48,7 +48,7 @@ permalink: /top-analytics-tools-2026/
 
     <div class="key-takeaways">
         <div class="takeaway-card">
-            <h4>💰 Best Overall Value</h4>
+            <h3>💰 Best Overall Value</h3>
             <p><strong>Matomo Analytics</strong> - Self-hosted option for $0, cloud starts at $29/month</p>
         </div>
         <div class="takeaway-card">
