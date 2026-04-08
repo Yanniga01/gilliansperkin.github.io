@@ -4,7 +4,6 @@ title: Cookie Policy | SmartGuideHubs
 description: Cookie Policy for SmartGuideHubs. Learn about the cookies we use and how to manage your preferences.
 permalink: /cookies/
 canonical_url: https://smartguidehubs.com/cookies/
-noindex: true
 ---
 
 <style>
