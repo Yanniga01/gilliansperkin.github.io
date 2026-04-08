@@ -69,15 +69,15 @@ permalink: /campaigner-for-ecommerce-stores/
 <!-- What Most Reviews Miss -->
 <h2 id="what-reviews-miss">🔍 What Most Reviews Won't Tell You About Campaigner</h2>
 <div class="content-section">
-    <p><strong>Most Campaigner reviews focus on its general email features.</strong> What they skip over is that Campaigner actually offers a separate, dedicated eCommerce plan — not just an add-on, but an entirely distinct pricing tier with Shopify and Magento integration built in <span style="color: var(--gray); font-size: 0.9rem;">(Influencer Marketing Hub)</span>. That's a critical distinction. You're not bolting ecommerce features onto a generic email tool; you're buying a version of the platform specifically built for stores.</p>
-    <p>Another thing worth knowing: Campaigner includes a list verification tool called <strong>Reputation Defender</strong>, which periodically assesses the quality of your uploaded email addresses and flags risky ones <span style="color: var(--gray);">(Influencer Marketing Hub)</span> — something particularly valuable for ecommerce stores that grow lists fast through promotions and pop-ups. Dirty lists kill deliverability, and Campaigner tries to stop that before it becomes a problem.</p>
+    <p><strong>Most Campaigner reviews focus on its general email features.</strong> What they skip over is that Campaigner actually offers a separate, dedicated eCommerce plan — not just an add-on, but an entirely distinct pricing tier with Shopify and Magento integration built in <span style="color: var(--gray); font-size: 0.9rem;"></span>. That's a critical distinction. You're not bolting ecommerce features onto a generic email tool; you're buying a version of the platform specifically built for stores.</p>
+    <p>Another thing worth knowing: Campaigner includes a list verification tool called <strong>Reputation Defender</strong>, which periodically assesses the quality of your uploaded email addresses and flags risky ones <span style="color: var(--gray);"></span> — something particularly valuable for ecommerce stores that grow lists fast through promotions and pop-ups. Dirty lists kill deliverability, and Campaigner tries to stop that before it becomes a problem.</p>
 </div>
 
 <!-- Campaigner for Shopify -->
 <h2 id="shopify-integration">🛒 Campaigner for Shopify: How the Integration Actually Works</h2>
 <div class="content-section">
-    <p>The native Shopify integration syncs product catalogs, customer data, and purchase history so you can trigger automation based on buying behavior <span style="color: var(--gray);">(Techpresso)</span>. This means you can build campaigns that react to what a customer actually did — not just whether they opened an email.</p>
-    <p>Specifically, <strong>abandoned cart emails, product recommendation sequences, post-purchase reviews, and win-back campaigns</strong> based on purchase recency are all supported out of the box <span style="color: var(--gray);">(Techpresso)</span>.</p>
+    <p>The native Shopify integration syncs product catalogs, customer data, and purchase history so you can trigger automation based on buying behavior <span style="color: var(--gray);"></span>. This means you can build campaigns that react to what a customer actually did — not just whether they opened an email.</p>
+    <p>Specifically, <strong>abandoned cart emails, product recommendation sequences, post-purchase reviews, and win-back campaigns</strong> based on purchase recency are all supported out of the box <span style="color: var(--gray);"></span>.</p>
 
     <div class="alert-box" style="background: #f8fafc; border: 1px solid #e2e8f0; margin: 1.5rem 0;">
         <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">⚡ What You Can Automate with Shopify:</h3>
@@ -89,11 +89,11 @@ permalink: /campaigner-for-ecommerce-stores/
         </ul>
     </div>
 
-    <p><strong>Here's what makes this notable:</strong> most mid-tier email platforms offer some Shopify connection, but it's often shallow. Campaigner's ecommerce plan includes <strong>unlimited contacts and specialized ecommerce automation features</strong> <span style="color: var(--gray);">(Techpresso)</span>, which is a real differentiator — because with most platforms, contact limits are what drive your bill up as your store grows.</p>
+    <p><strong>Here's what makes this notable:</strong> most mid-tier email platforms offer some Shopify connection, but it's often shallow. Campaigner's ecommerce plan includes <strong>unlimited contacts and specialized ecommerce automation features</strong> <span style="color: var(--gray);"></span>, which is a real differentiator — because with most platforms, contact limits are what drive your bill up as your store grows.</p>
 
     <div class="alert-box" style="background: #fff3cd; border: 1px solid #ffeaa7;">
         <h3 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Honest Caveat</h3>
-        <p>For WooCommerce or BigCommerce stores, the integration is less direct and may require Zapier or API work <span style="color: var(--gray);">(Techpresso)</span>. If you're not on Shopify or Magento, Campaigner becomes a harder sell.</p>
+        <p>For WooCommerce or BigCommerce stores, the integration is less direct and may require Zapier or API work <span style="color: var(--gray);"></span>. If you're not on Shopify or Magento, Campaigner becomes a harder sell.</p>
     </div>
 </div>
 
@@ -103,39 +103,39 @@ permalink: /campaigner-for-ecommerce-stores/
     <div class="feature-card">
         <div class="feature-icon">🛒</div>
         <h3>Abandoned Cart Recovery</h3>
-        <p>Campaigner's automation tools let you create workflows for welcome emails, cart reminders, and holiday promotions — set them up once, and let them run for a long time <span style="color: var(--gray);">(Wegic)</span>. For ecommerce, that compounding effect is where the ROI really adds up.</p>
+        <p>Campaigner's automation tools let you create workflows for welcome emails, cart reminders, and holiday promotions — set them up once, and let them run for a long time <span style="color: var(--gray);"></span>. For ecommerce, that compounding effect is where the ROI really adds up.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">📊</div>
         <h3>Multivariate Testing</h3>
-        <p>Campaigner goes past standard A/B split testing to include multivariate experiments <span style="color: var(--gray);">(Influencer Marketing Hub)</span>. You can test subject line, sender name, and content simultaneously — a meaningful edge for high-volume stores.</p>
+        <p>Campaigner goes past standard A/B split testing to include multivariate experiments <span style="color: var(--gray);"></span>. You can test subject line, sender name, and content simultaneously — a meaningful edge for high-volume stores.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">💰</div>
         <h3>Revenue Attribution</h3>
-        <p>Campaigner includes eCommerce and conversion tracking tools that let you attribute sales directly to your email campaigns <span style="color: var(--gray);">(Work-management)</span>. Essential for proving ROI to business partners.</p>
+        <p>Campaigner includes eCommerce and conversion tracking tools that let you attribute sales directly to your email campaigns <span style="color: var(--gray);"></span>. Essential for proving ROI to business partners.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">📱</div>
         <h3>Email + SMS in One Platform</h3>
-        <p>Having SMS alongside email with shared segmentation and unified reporting eliminates the need for a separate SMS tool and reduces costs <span style="color: var(--gray);">(Techpresso)</span>. Perfect for flash sales and back-in-stock alerts.</p>
+        <p>Having SMS alongside email with shared segmentation and unified reporting eliminates the need for a separate SMS tool and reduces costs <span style="color: var(--gray);"></span>. Perfect for flash sales and back-in-stock alerts.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">🎯</div>
         <h3>Deep Segmentation</h3>
-        <p>The nested AND/OR segmentation with behavioral, geographic, and engagement data lets you target micro-audiences that basic tools cannot isolate <span style="color: var(--gray);">(Techpresso)</span>. Example: customers who bought in the last 30 days, opened your last 3 emails, and are located in the US.</p>
+        <p>The nested AND/OR segmentation with behavioral, geographic, and engagement data lets you target micro-audiences that basic tools cannot isolate <span style="color: var(--gray);"></span>. Example: customers who bought in the last 30 days, opened your last 3 emails, and are located in the US.</p>
     </div>
     <div class="feature-card">
         <div class="feature-icon">⚡</div>
         <h3>Automation Depth</h3>
-        <p>Multi-step, multi-channel automation with behavioral triggers and conditional branching is available starting at the Essential plan <span style="color: var(--gray);">(Techpresso)</span>. The workflow builder rivals tools costing 2-3x more.</p>
+        <p>Multi-step, multi-channel automation with behavioral triggers and conditional branching is available starting at the Essential plan <span style="color: var(--gray);"></span>. The workflow builder rivals tools costing 2-3x more.</p>
     </div>
 </div>
 
 <!-- Pricing Breakdown -->
 <h2 id="pricing">💰 Pricing Breakdown for Ecommerce Stores</h2>
 <div class="content-section">
-    <p>The dedicated eCommerce plan is priced at <strong>$79.95/month</strong>, and it includes unlimited contacts, abandoned cart emails, Magento integration, and all Advanced plan features — plus a dedicated account manager and 24/7 priority support <span style="color: var(--gray);">(Tekpon)</span>.</p>
+    <p>The dedicated eCommerce plan is priced at <strong>$79.95/month</strong>, and it includes unlimited contacts, abandoned cart emails, Magento integration, and all Advanced plan features — plus a dedicated account manager and 24/7 priority support <span style="color: var(--gray);"></span>.</p>
 
     <div class="pricing-grid">
         <div class="pricing-card">
@@ -195,7 +195,7 @@ permalink: /campaigner-for-ecommerce-stores/
             <a href="https://pstk.campaigner.com/7i8kiezd3s44" target="_blank" rel="sponsored noopener" class="picks-button-primary" style="display: inline-block; margin-top: 1rem;">Free Trial</a>
         </div>
     </div>
-    <p class="affiliate-note" style="text-align: center;"><em>The eCommerce plan is arguably the best value in their lineup — unlimited contacts at $79.95/month makes it a strong alternative to Klaviyo at a lower price point, with the added benefit of SMS <span style="color: var(--gray);">(Techpresso)</span>. A 30-day free trial is available.</em></p>
+    <p class="affiliate-note" style="text-align: center;"><em>The eCommerce plan is arguably the best value in their lineup — unlimited contacts at $79.95/month makes it a strong alternative to Klaviyo at a lower price point, with the added benefit of SMS <span style="color: var(--gray);"></span>. A 30-day free trial is available.</em></p>
 </div>
 
 <!-- Pros & Cons -->
@@ -216,9 +216,9 @@ permalink: /campaigner-for-ecommerce-stores/
     <div class="cons-box">
         <h3>❌ Where Campaigner Falls Short</h3>
         <ul>
-            <li><strong>No mobile app</strong> — desktop-only management <span style="color: var(--gray);">(Techpresso)</span></li>
-            <li><strong>Limited integrations</strong> beyond Shopify/Magento; many require Zapier <span style="color: var(--gray);">(Techpresso)</span></li>
-            <li><strong>Support can be inconsistent</strong> — slower response times on lower plans <span style="color: var(--gray);">(Work-management)</span></li>
+            <li><strong>No mobile app</strong> — desktop-only management <span style="color: var(--gray);"></span></li>
+            <li><strong>Limited integrations</strong> beyond Shopify/Magento; many require Zapier <span style="color: var(--gray);"></span></li>
+            <li><strong>Support can be inconsistent</strong> — slower response times on lower plans <span style="color: var(--gray);"></span></li>
             <li><strong>Design editor quirks</strong> — spacing issues, broken links reported</li>
             <li><strong>Annual contract lock-in risk</strong> — review terms carefully <span style="color: var(--gray);">(Software Advice)</span></li>
             <li><strong>SMS limited to US/Canada</strong> — not international</li>
