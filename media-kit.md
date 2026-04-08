@@ -197,6 +197,11 @@ canonical_url: https://smartguidehubs.com/media-kit/
   <section class="media-kit-hero">
     <h1>SmartGuideHubs Media Kit</h1>
     <p>
+      <div style="margin-top: 1.5rem;">
+  <a href="/media-kit-print.html" class="pdf-button" target="_blank">
+    📄 Download PDF Version
+  </a>
+   </div>
       SmartGuideHubs is a content-focused platform covering software reviews, comparisons, and practical buying guides
       for professionals, freelancers, and growing businesses. We help readers understand tools clearly before they sign up,
       subscribe, or buy.
