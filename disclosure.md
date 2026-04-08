@@ -3,7 +3,6 @@ layout: default
 title: Affiliate Disclosure | SmartGuideHubs
 description: Our affiliate disclosure and ethics policy. Learn how we maintain editorial independence while using affiliate links.
 permalink: /disclosure/
-noindex: true
 canonical_url: https://smartguidehubs.com/disclosure/
 ---
 
