@@ -4,6 +4,13 @@ title: Project Management Software Reviews 2026 | Team Collaboration Tools | Sma
 description: Independent, research-based reviews of project management software for teams and freelancers. Compare features, pricing, and best-use cases across top tools.
 permalink: /categories/project-management/
 canonical_url: https://smartguidehubs.com/categories/project-management/
+pagination:
+  enabled: true
+  category: "project-management"
+  per_page: 6
+  permalink: "/page/:num/"
+  sort_field: "date"
+  sort_reverse: true
 ---
 
 <!-- Category Hero Section -->
@@ -61,7 +68,7 @@ canonical_url: https://smartguidehubs.com/categories/project-management/
             </div>
 
             <div class="reviews-grid">
-                {% assign category_posts = site.categories['project-management'] | sort: 'date' | reverse %}
+                {% assign category_posts = paginator.posts | default: site.categories['project-management'] | sort: 'date' | reverse %}
                 {% for post in category_posts %}
                 <article class="review-card">
                     <div class="review-card-inner">
@@ -84,6 +91,26 @@ canonical_url: https://smartguidehubs.com/categories/project-management/
                 <p class="no-results">No reviews in this category yet. Check back soon.</p>
                 {% endfor %}
             </div>
+
+            {% if paginator and paginator.total_pages > 1 %}
+            <nav class="pagination-nav" aria-label="Pagination">
+                <div class="pagination-inner">
+                    {% if paginator.previous_page %}
+                    <a class="pagination-link prev" href="{{ paginator.previous_page_path | relative_url }}">← Previous</a>
+                    {% else %}
+                    <span class="pagination-link prev disabled">← Previous</span>
+                    {% endif %}
+
+                    <span class="pagination-status">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+                    {% if paginator.next_page %}
+                    <a class="pagination-link next" href="{{ paginator.next_page_path | relative_url }}">Next →</a>
+                    {% else %}
+                    <span class="pagination-link next disabled">Next →</span>
+                    {% endif %}
+                </div>
+            </nav>
+            {% endif %}
 
             <!-- How We Review Section (trust builder) -->
             <div class="how-we-review">
@@ -425,6 +452,38 @@ canonical_url: https://smartguidehubs.com/categories/project-management/
     }
     .nav-link:hover {
         text-decoration: underline;
+    }
+    .pagination-nav {
+        margin: 1.75rem 0 2rem;
+    }
+    .pagination-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0.85rem 1rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        background: #ffffff;
+    }
+    .pagination-link {
+        font-weight: 600;
+        text-decoration: none;
+        color: #2563eb;
+    }
+    .pagination-link:hover {
+        text-decoration: underline;
+    }
+    .pagination-link.disabled {
+        color: #94a3b8;
+        pointer-events: none;
+        text-decoration: none;
+    }
+    .pagination-status {
+        color: #475569;
+        font-size: 0.92rem;
+        font-weight: 600;
     }
     @media (max-width: 768px) {
         .category-layout {
