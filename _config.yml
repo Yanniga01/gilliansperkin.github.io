@@ -2,19 +2,8 @@ title: SmartGuideHubs
 description: Independent software reviews
 url: https://smartguidehubs.com
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
+  - jekyll-responsive-magick
 
-pagination:
-  enabled: true
-  per_page: 12
-  permalink: '/page/:num/'
-  sort_field: 'date'
-  sort_reverse: true
-
-autopages:
-  enabled: true
-  categories:
-    enabled: true
-    layouts:
-      - 'autopage_category.html'
-    permalink: '/categories/:cat'
+paginate: 12          # Number of posts per page
+paginate_path: "/blog/page:num/"
