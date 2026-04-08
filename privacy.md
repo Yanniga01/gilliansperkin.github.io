@@ -1,0 +1,371 @@
+---
+layout: default
+title: Privacy Policy | SmartGuideHubs - Data Protection & Privacy
+description: Privacy Policy for SmartGuideHubs. Learn how we collect, use, and protect your personal information in compliance with GDPR, CCPA, and other privacy regulations.
+permalink: /privacy/
+canonical_url: https://smartguidehubs.com/privacy/
+---
+
+<style>
+  /* Page‑specific styles – can be moved to site.css later */
+  .legal-page {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  }
+  .legal-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark, #1e293b);
+  }
+  .last-updated {
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  .legal-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .legal-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .section-number {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: var(--dark, #1e293b);
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #3b82f6;
+    color: var(--dark, #1e293b);
+  }
+  p, li {
+    color: #334155;
+    line-height: 1.7;
+  }
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  .important-notice {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border-left: 5px solid #3b82f6;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+  }
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .data-table th {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  .data-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .right-card {
+    background: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #bae6fd;
+  }
+  .contact-section {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .update-info {
+    background: #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 768px) {
+    .legal-page {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    .data-table th, .data-table td {
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+<div class="legal-page">
+  <h1>Privacy Policy</h1>
+  <div class="last-updated">Last Updated: January 13, 2026 | Effective Date: January 13, 2026</div>
+
+  <!-- Important Notice -->
+  <div class="important-notice">
+    <h3 style="color: #3b82f6; margin-top: 0;">🔐 Key Points Summary</h3>
+    <ul style="margin-bottom: 0;">
+      <li>We collect minimal data necessary for site operation</li>
+      <li>We never sell your personal information</li>
+      <li>You control your data and can request deletion</li>
+      <li>We use industry-standard security measures</li>
+      <li>We comply with GDPR, CCPA, and other privacy regulations</li>
+    </ul>
+  </div>
+
+  <!-- 1. Introduction & Scope -->
+  <div class="legal-section">
+    <h2><span class="section-number">1</span> Introduction & Scope</h2>
+    <p>This Privacy Policy describes how SmartGuideHubs ("we", "us", or "our") collects, uses, and shares your personal information when you use our website <strong>smartguidehubs.com</strong> and related services.</p>
+    <h3>Our Commitment</h3>
+    <p>We are committed to protecting your privacy and being transparent about our data practices. This policy applies to all information collected through our website and any related services, sales, marketing, or events.</p>
+    <h3>Who This Policy Covers</h3>
+    <p>This policy applies to:</p>
+    <ul>
+      <li>Visitors to our website</li>
+      <li>Users who submit contact forms</li>
+      <li>Newsletter subscribers</li>
+      <li>Anyone whose data we process</li>
+    </ul>
+  </div>
+
+  <!-- 2. Information We Collect -->
+  <div class="legal-section">
+    <h2><span class="section-number">2</span> Information We Collect</h2>
+    <h3>Information You Provide Directly</h3>
+    <p>We collect information that you voluntarily provide to us:</p>
+    <table class="data-table">
+      <thead><tr><th>Data Type</th><th>Purpose</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Contact Information</strong></td><td>Respond to inquiries, send updates</td><td>Name, email address</td></tr>
+        <tr><td><strong>Form Submissions</strong></td><td>Provide requested resources</td><td>Free guide requests, contact forms</td></tr>
+        <tr><td><strong>Communication Data</strong></td><td>Customer support</td><td>Emails, messages</td></tr>
+      </tbody>
+    </table>
+    <h3>Automatically Collected Information</h3>
+    <p>When you visit our website, we may automatically collect certain information:</p>
+    <ul>
+      <li><strong>Device Information:</strong> IP address, browser type, operating system</li>
+      <li><strong>Usage Data:</strong> Pages visited, time spent, click patterns</li>
+      <li><strong>Location Data:</strong> General location (country/region level)</li>
+      <li><strong>Cookies & Tracking:</strong> See our <a href="/cookies" style="color: #3b82f6;">Cookie Policy</a></li>
+    </ul>
+    <h3>Information from Third Parties</h3>
+    <p>We may receive information about you from:</p>
+    <ul>
+      <li>Affiliate networks (for commission tracking)</li>
+      <li>Analytics providers (Google Analytics)</li>
+      <li>Social media platforms (if you interact with us)</li>
+    </ul>
+  </div>
+
+  <!-- 3. How We Use Your Information -->
+  <div class="legal-section">
+    <h2><span class="section-number">3</span> How We Use Your Information</h2>
+    <table class="data-table">
+      <thead><tr><th>Purpose</th><th>Legal Basis</th><th>Data Used</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Website Operation</strong></td><td>Legitimate interest</td><td>Device info, cookies</td></tr>
+        <tr><td><strong>Content Delivery</strong></td><td>Contractual necessity</td><td>Form submissions</td></tr>
+        <tr><td><strong>Analytics & Improvement</strong></td><td>Legitimate interest</td><td>Usage data, analytics</td></tr>
+        <tr><td><strong>Marketing Communications</strong></td><td>Consent</td><td>Email address, preferences</td></tr>
+        <tr><td><strong>Affiliate Tracking</strong></td><td>Legitimate interest</td><td>Click data, referral info</td></tr>
+        <tr><td><strong>Legal Compliance</strong></td><td>Legal obligation</td><td>As required by law</td></tr>
+      </tbody>
+    </table>
+    <h3>Legitimate Interests</h3>
+    <p>Where we rely on legitimate interests, our interests include:</p>
+    <ul>
+      <li>Providing and improving our services</li>
+      <li>Understanding how users interact with our website</li>
+      <li>Marketing our services to interested users</li>
+      <li>Preventing fraud and ensuring security</li>
+    </ul>
+  </div>
+
+  <!-- 4. Data Sharing & Disclosure -->
+  <div class="legal-section">
+    <h2><span class="section-number">4</span> Data Sharing & Disclosure</h2>
+    <h3>Service Providers</h3>
+    <p>We may share your information with trusted service providers who assist us in operating our website:</p>
+    <ul>
+      <li><strong>Hosting Providers:</strong> GitHub Pages, Netlify</li>
+      <li><strong>Analytics:</strong> Google Analytics (anonymized data)</li>
+      <li><strong>Email Services:</strong> For newsletter delivery</li>
+      <li><strong>Form Processors:</strong> Formspree, Google Forms</li>
+    </ul>
+    <h3>Legal Requirements</h3>
+    <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
+    <h3>Business Transfers</h3>
+    <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
+    <h3>What We DO NOT Do</h3>
+    <ul>
+      <li>❌ <strong>We do not sell</strong> your personal information</li>
+      <li>❌ <strong>We do not share</strong> your data with advertisers for targeted ads</li>
+      <li>❌ <strong>We do not use</strong> your data for purposes unrelated to our services</li>
+    </ul>
+  </div>
+
+  <!-- 5. Cookies & Tracking -->
+  <div class="legal-section">
+    <h2><span class="section-number">5</span> Cookies & Tracking Technologies</h2>
+    <p>We use cookies and similar tracking technologies to collect and use personal information about you. For detailed information about the cookies we use and your choices regarding cookies, please visit our <a href="/cookies" style="color: #3b82f6; font-weight: 600;">Cookie Policy</a>.</p>
+    <h3>Types of Cookies We Use</h3>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Necessary for website functionality</li>
+      <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our site</li>
+      <li><strong>Marketing Cookies:</strong> Track affiliate clicks and conversions</li>
+    </ul>
+    <h3>Your Cookie Choices</h3>
+    <p>You can control cookies through your browser settings. Most browsers allow you to refuse cookies or delete existing cookies.</p>
+  </div>
+
+  <!-- 6. Data Security -->
+  <div class="legal-section">
+    <h2><span class="section-number">6</span> Data Security</h2>
+    <h3>Our Security Measures</h3>
+    <p>We implement appropriate technical and organizational security measures designed to protect your personal information, including:</p>
+    <ul>
+      <li>HTTPS encryption for all data transmissions</li>
+      <li>Regular security assessments</li>
+      <li>Limited access to personal data</li>
+      <li>Secure hosting infrastructure</li>
+    </ul>
+    <h3>Data Retention</h3>
+    <p>We retain your personal information only for as long as necessary:</p>
+    <ul>
+      <li><strong>Contact information:</strong> Until you unsubscribe or request deletion</li>
+      <li><strong>Analytics data:</strong> 26 months (Google Analytics default)</li>
+      <li><strong>Server logs:</strong> 30 days</li>
+      <li><strong>Legal requirements:</strong> As required by applicable law</li>
+    </ul>
+  </div>
+
+  <!-- 7. Your Privacy Rights -->
+  <div class="legal-section">
+    <h2><span class="section-number">7</span> Your Privacy Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+    <div class="rights-grid">
+      <div class="right-card"><h4 style="color: #3b82f6; margin-top: 0;">👁️ Right to Access</h4><p>Request a copy of the personal information we hold about you.</p></div>
+      <div class="right-card"><h4 style="color: #3b82f6; margin-top: 0;">✏️ Right to Correction</h4><p>Request correction of inaccurate or incomplete information.</p></div>
+      <div class="right-card"><h4 style="color: #3b82f6; margin-top: 0;">🗑️ Right to Deletion</h4><p>Request deletion of your personal information.</p></div>
+      <div class="right-card"><h4 style="color: #3b82f6; margin-top: 0;">⏸️ Right to Restriction</h4><p>Request restriction of processing your information.</p></div>
+      <div class="right-card"><h4 style="color: #3b82f6; margin-top: 0;">📤 Right to Portability</h4><p>Request transfer of your data to another organization.</p></div>
+      <div class="right-card"><h4 style="color: #3b82f6; margin-top: 0;">❌ Right to Object</h4><p>Object to processing of your personal information.</p></div>
+    </div>
+    <h3>How to Exercise Your Rights</h3>
+    <p>To exercise any of these rights, please contact us using the information in the "Contact Us" section below. We will respond to your request within 30 days.</p>
+    <h3>Complaints</h3>
+    <p>If you believe we have violated your privacy rights, you have the right to lodge a complaint with your local data protection authority.</p>
+  </div>
+
+  <!-- 8. International Data Transfers -->
+  <div class="legal-section">
+    <h2><span class="section-number">8</span> International Data Transfers</h2>
+    <p>Our website is hosted in the United States. If you are located outside the United States, please be aware that information we collect may be transferred to and processed in the United States.</p>
+    <h3>GDPR Compliance</h3>
+    <p>For users in the European Economic Area (EEA), we comply with the General Data Protection Regulation (GDPR) by:</p>
+    <ul>
+      <li>Obtaining clear consent where required</li>
+      <li>Implementing appropriate safeguards for data transfers</li>
+      <li>Respecting all GDPR rights as outlined above</li>
+    </ul>
+    <h3>CCPA Compliance</h3>
+    <p>For California residents, we comply with the California Consumer Privacy Act (CCPA) by providing:</p>
+    <ul>
+      <li>Right to know what personal information is collected</li>
+      <li>Right to delete personal information</li>
+      <li>Right to opt-out of sale of personal information (though we do not sell data)</li>
+      <li>Non-discrimination for exercising CCPA rights</li>
+    </ul>
+  </div>
+
+  <!-- 9. Children's Privacy -->
+  <div class="legal-section">
+    <h2><span class="section-number">9</span> Children's Privacy</h2>
+    <p>Our website is not intended for children under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+    <p>If we learn we have collected personal information from a child under 16, we will delete that information as quickly as possible.</p>
+  </div>
+
+  <!-- 10. Third-Party Links & Affiliates -->
+  <div class="legal-section">
+    <h2><span class="section-number">10</span> Third-Party Links & Affiliates</h2>
+    <p>Our website contains links to third-party websites, including affiliate links to software vendors. When you click on these links, you will leave our site and be subject to the privacy policies of those third-party sites.</p>
+    <h3>Affiliate Relationships</h3>
+    <p>We participate in affiliate marketing programs. When you click on affiliate links, those vendors may place cookies on your device and collect information in accordance with their own privacy policies. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites.</p>
+    <p>For more information about our affiliate relationships, please see our <a href="/disclosure" style="color: #3b82f6; font-weight: 600;">Affiliate Disclosure</a>.</p>
+  </div>
+
+  <!-- 11. Contact Information -->
+  <div class="legal-section">
+    <h2><span class="section-number">11</span> Contact Us</h2>
+    <div class="contact-section">
+      <h3 style="color: #3b82f6; margin-top: 0;">📧 Contact Information</h3>
+      <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+      <div style="margin: 1.5rem 0;">
+        <p><strong>Email:</strong> <a href="mailto:contact@smartguidehubs.com" style="color: #3b82f6;">contact@smartguidehubs.com</a></p>
+        <p><strong>Contact Form:</strong> <a href="/contact" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
+        <p><strong>Response Time:</strong> We typically respond to privacy inquiries within 5-7 business days.</p>
+      </div>
+      <p style="font-size: 0.95rem;">For data deletion requests, please include "Data Deletion Request" in your subject line.</p>
+    </div>
+  </div>
+
+  <!-- 12. Policy Updates -->
+  <div class="legal-section">
+    <h2><span class="section-number">12</span> Policy Updates</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.</p>
+    <div class="update-info">
+      <h3 style="color: #1e293b; margin-top: 0;">📝 Update History</h3>
+      <p><strong>Current Version:</strong> 2.0</p>
+      <p><strong>Last Updated:</strong> January 13, 2026</p>
+      <p><strong>Previous Version:</strong> 1.0 (Initial publication)</p>
+      <p><strong>Next Scheduled Review:</strong> July 13, 2024</p>
+      <p style="margin-top: 1rem;"><em>We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</em></p>
+    </div>
+  </div>
+</div>
