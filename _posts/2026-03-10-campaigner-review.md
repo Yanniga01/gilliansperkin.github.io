@@ -216,7 +216,7 @@ permalink: /campaigner-review-2026/
 <h2 id="target-audience">🎯 Who Should Use Campaigner in 2026?</h2>
 <div class="audience-matrix">
     <div class="audience-card good-for">
-        <h4 style="color: var(--success);">✅ Good For</h4>
+        <h3 style="color: var(--success);">✅ Good For</h3>
         <ul>
             <li><strong>Mid-sized businesses</strong> that have outgrown Mailchimp/MailerLite</li>
             <li><strong>Ecommerce stores</strong> on Shopify or Magento</li>
@@ -227,7 +227,7 @@ permalink: /campaigner-review-2026/
         </ul>
     </div>
     <div class="audience-card skip-if">
-        <h4 style="color: var(--danger);">❌ Skip If</h4>
+        <h3 style="color: var(--danger);">❌ Skip If</h3>
         <ul>
             <li><strong>New to email marketing</strong> — need beginner-friendly tools</li>
             <li><strong>Polished design experience</strong> is critical</li>
