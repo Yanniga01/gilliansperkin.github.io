@@ -1930,3 +1930,20 @@ p {
 .affiliate-card {
     background: linear-gradient(135deg, #fef3c7, #fde68a);
 }
+.pdf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  border: 2px solid var(--primary, #ff6b35);
+  color: var(--primary, #ff6b35);
+  padding: 0.7rem 1.3rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.pdf-button:hover {
+  background: var(--primary, #ff6b35);
+  color: white;
+}
