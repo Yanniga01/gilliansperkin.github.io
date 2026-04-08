@@ -4,6 +4,7 @@ title: Terms and Conditions | SmartGuideHubs
 description: Read SmartGuideHubs terms and conditions, including content usage, affiliate disclosures, and user responsibilities.
 permalink: /conditions/
 canonical_url: https://smartguidehubs.com/conditions/
+noindex: true
 ---
 
 <style>
