@@ -56,17 +56,18 @@ canonical_url: https://smartguidehubs.com/categories/finance/
         <!-- Main content: list of reviews -->
         <div class="category-content">
             <div class="category-header">
-                <h2>💰 All Finance & Accounting Tool Reviews</h2>
-                <p class="subhead">Hand‑picked, tested, and ranked for small businesses, freelancers, and growing teams.</p>
+                <h2>💰 Latest Finance & Accounting Tool Reviews</h2>
+                <p class="subhead">The newest reviews, tested and ranked for small businesses, freelancers, and growing teams.</p>
             </div>
 
             <div class="reviews-grid">
-                {% assign category_posts = site.categories['finance'] | sort: 'date' | reverse %}
-                
-                {% if category_posts.size == 0 %}
+                {% assign all_posts = site.categories['finance'] | sort: 'date' | reverse %}
+                {% assign recent_posts = all_posts | limit: 10 %}
+
+                {% if recent_posts.size == 0 %}
                     <p class="no-results">No reviews in this category yet. Check back soon.</p>
                 {% else %}
-                    {% for post in category_posts %}
+                    {% for post in recent_posts %}
                     <article class="review-card">
                         <div class="review-card-inner">
                             <div class="review-meta">
@@ -87,6 +88,14 @@ canonical_url: https://smartguidehubs.com/categories/finance/
                     {% endfor %}
                 {% endif %}
             </div>
+
+            {% if all_posts.size > 10 %}
+            <div style="text-align: center; margin: 2rem 0 1rem;">
+                <a href="/blog/" class="view-all-link">
+                    📚 View all {{ all_posts.size }} finance & accounting tool reviews on our blog →
+                </a>
+            </div>
+            {% endif %}
 
             <!-- How We Review Section (trust builder) -->
             <div class="how-we-review">
@@ -428,6 +437,21 @@ canonical_url: https://smartguidehubs.com/categories/finance/
     }
     .nav-link:hover {
         text-decoration: underline;
+    }
+    /* New style for "View all" link */
+    .view-all-link {
+        display: inline-block;
+        background: #f1f5f9;
+        padding: 0.75rem 1.5rem;
+        border-radius: 40px;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    .view-all-link:hover {
+        background: #e2e8f0;
+        transform: translateY(-2px);
     }
     @media (max-width: 768px) {
         .category-layout {
