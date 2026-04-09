@@ -4,13 +4,6 @@ title: Email & Marketing Tools Reviews 2026 | SmartGuideHubs
 description: Independent, research-based reviews of email marketing and campaign automation platforms. Compare features, pricing, and best-use cases for growing businesses.
 permalink: /categories/email-and-marketing-tools/
 canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
-pagination:
-  enabled: true
-  category: "email-and-marketing-tools"
-  per_page: 6
-  permalink: "/page/:num/"
-  sort_field: "date"
-  sort_reverse: true
 ---
 
 <!-- Category Hero Section -->
@@ -41,7 +34,7 @@ pagination:
 
 <!-- Main Content -->
 <div class="container category-main">
-    <!-- Breadcrumbs (structured data ready) -->
+    <!-- Breadcrumbs -->
     <nav class="category-breadcrumbs" aria-label="Breadcrumb">
         <ol itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -68,48 +61,32 @@ pagination:
             </div>
 
             <div class="reviews-grid">
-                {% for post in paginator.posts %}
-                <article class="review-card">
-                    <div class="review-card-inner">
-                        <div class="review-meta">
-                            <span class="review-date">{{ post.date | date: "%b %Y" }}</span>
-                            <span class="review-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-                        </div>
-                        <div class="review-icon">
-                            <span class="tool-icon">📧</span>
-                        </div>
-                        <h3 class="review-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                        <p class="review-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                        <div class="review-footer">
-                            <a href="{{ post.url }}" class="review-link">Read Full Review →</a>
-                            <span class="review-year">{{ post.date | date: "%Y" }}</span>
-                        </div>
-                    </div>
-                </article>
+                {% assign category_posts = site.categories['email-and-marketing-tools'] | sort: 'date' | reverse %}
+                
+                {% if category_posts.size == 0 %}
+                    <p class="no-results">No reviews in this category yet. Check back soon.</p>
                 {% else %}
-                <p class="no-results">No reviews in this category yet. Check back soon.</p>
-                {% endfor %}
+                    {% for post in category_posts %}
+                    <article class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-meta">
+                                <span class="review-date">{{ post.date | date: "%b %Y" }}</span>
+                                <span class="review-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+                            </div>
+                            <div class="review-icon">
+                                <span class="tool-icon">📧</span>
+                            </div>
+                            <h3 class="review-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                            <p class="review-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                            <div class="review-footer">
+                                <a href="{{ post.url }}" class="review-link">Read Full Review →</a>
+                                <span class="review-year">{{ post.date | date: "%Y" }}</span>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                {% endif %}
             </div>
-
-            {% if paginator.total_pages > 1 %}
-            <nav class="pagination-nav" aria-label="Pagination">
-                <div class="pagination-inner">
-                    {% if paginator.previous_page %}
-                    <a class="pagination-link prev" href="{{ paginator.previous_page_path }}">← Previous</a>
-                    {% else %}
-                    <span class="pagination-link prev disabled">← Previous</span>
-                    {% endif %}
-
-                    <span class="pagination-status">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-                    {% if paginator.next_page %}
-                    <a class="pagination-link next" href="{{ paginator.next_page_path }}">Next →</a>
-                    {% else %}
-                    <span class="pagination-link next disabled">Next →</span>
-                    {% endif %}
-                </div>
-            </nav>
-            {% endif %}
 
             <!-- How We Review Section (trust builder) -->
             <div class="how-we-review">
@@ -163,9 +140,9 @@ pagination:
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};l=d.createElement(e);l.async=1;l.src=u;n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
 </script>
 
-<!-- Additional CSS for category page (assumes global CSS provides base styles) -->
+<!-- Additional CSS (same as your existing styles) -->
 <style>
-    /* Category-specific styles – not in global CSS */
+    /* Keep all your existing CSS styles here – unchanged */
     .category-hero {
         background: linear-gradient(135deg, #f0f9ff 0%, #f5f3ff 100%);
         padding: 3rem 0;
@@ -451,38 +428,6 @@ pagination:
     }
     .nav-link:hover {
         text-decoration: underline;
-    }
-    .pagination-nav {
-        margin: 1.75rem 0 2rem;
-    }
-    .pagination-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        flex-wrap: wrap;
-        padding: 0.85rem 1rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        background: #ffffff;
-    }
-    .pagination-link {
-        font-weight: 600;
-        text-decoration: none;
-        color: #2563eb;
-    }
-    .pagination-link:hover {
-        text-decoration: underline;
-    }
-    .pagination-link.disabled {
-        color: #94a3b8;
-        pointer-events: none;
-        text-decoration: none;
-    }
-    .pagination-status {
-        color: #475569;
-        font-size: 0.92rem;
-        font-weight: 600;
     }
     @media (max-width: 768px) {
         .category-layout {
