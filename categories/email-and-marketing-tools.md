@@ -56,17 +56,18 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
         <!-- Main content: list of reviews -->
         <div class="category-content">
             <div class="category-header">
-                <h2>📧 All Email & Marketing Tool Reviews</h2>
-                <p class="subhead">Hand‑picked, tested, and ranked for growing businesses.</p>
+                <h2>📧 Latest Email & Marketing Tool Reviews</h2>
+                <p class="subhead">The newest reviews, tested and ranked for growing businesses.</p>
             </div>
 
             <div class="reviews-grid">
-                {% assign category_posts = site.categories['email-and-marketing-tools'] | sort: 'date' | reverse %}
-                
-                {% if category_posts.size == 0 %}
+                {% assign all_posts = site.categories['email-and-marketing-tools'] | sort: 'date' | reverse %}
+                {% assign recent_posts = all_posts | limit: 10 %}
+
+                {% if recent_posts.size == 0 %}
                     <p class="no-results">No reviews in this category yet. Check back soon.</p>
                 {% else %}
-                    {% for post in category_posts %}
+                    {% for post in recent_posts %}
                     <article class="review-card">
                         <div class="review-card-inner">
                             <div class="review-meta">
@@ -87,6 +88,14 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
                     {% endfor %}
                 {% endif %}
             </div>
+
+            {% if all_posts.size > 10 %}
+            <div style="text-align: center; margin: 2rem 0 1rem;">
+                <a href="/blog/" class="view-all-link">
+                    📚 View all {{ all_posts.size }} email & marketing tool reviews on our blog →
+                </a>
+            </div>
+            {% endif %}
 
             <!-- How We Review Section (trust builder) -->
             <div class="how-we-review">
@@ -140,9 +149,9 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};l=d.createElement(e);l.async=1;l.src=u;n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
 </script>
 
-<!-- Additional CSS (same as your existing styles) -->
+<!-- Additional CSS for category page (includes view-all-link) -->
 <style>
-    /* Keep all your existing CSS styles here – unchanged */
+    /* Category-specific styles – not in global CSS */
     .category-hero {
         background: linear-gradient(135deg, #f0f9ff 0%, #f5f3ff 100%);
         padding: 3rem 0;
@@ -428,6 +437,21 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
     }
     .nav-link:hover {
         text-decoration: underline;
+    }
+    /* New style for "View all" link */
+    .view-all-link {
+        display: inline-block;
+        background: #f1f5f9;
+        padding: 0.75rem 1.5rem;
+        border-radius: 40px;
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    .view-all-link:hover {
+        background: #e2e8f0;
+        transform: translateY(-2px);
     }
     @media (max-width: 768px) {
         .category-layout {
