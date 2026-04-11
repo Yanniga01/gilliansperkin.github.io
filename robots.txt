@@ -4,12 +4,7 @@
 # Allow all bots full access
 User-agent: *
 Allow: /
-# Explicitly allow Googlebot to access critical JS and CSS
-User-agent: Googlebot
-Allow: /cookies.js
-Allow: /sitemap.xml
-Allow: /sitemap
-
+Disallow: /sitemap.html
 # Disallow any private or sensitive areas (update if you have any)
 # Disallow: /admin/
 # Disallow: /private/
