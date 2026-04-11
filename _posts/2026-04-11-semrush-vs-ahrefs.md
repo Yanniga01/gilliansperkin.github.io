@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Semrush vs Ahrefs: Which SEO Tool Is Better in 2026?"
