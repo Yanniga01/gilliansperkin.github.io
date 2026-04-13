@@ -183,13 +183,15 @@ p {
 }
 
 .logo a {
-  font-size: 1.8rem;
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+}
+
+.logo img {
+  width: clamp(180px, 24vw, 300px);
+  height: auto;
+  display: block;
 }
 
 /* Navigation */
