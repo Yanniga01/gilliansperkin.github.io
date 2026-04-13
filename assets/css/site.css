@@ -1625,6 +1625,11 @@ p {
   margin: 0 auto;
 }
 
+.page-hero .highlight,
+.page-header .highlight {
+  color: #38e8ff;
+}
+
 .stats-row {
   display: flex;
   justify-content: center;
