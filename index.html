@@ -10,6 +10,7 @@ if (window.location.pathname === "/index.html") {
 }
 </script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -73,13 +74,15 @@ if (window.location.pathname === "/index.html") {
         }
         
         .logo a {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #1e293b;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        }
+
+        .logo img {
+            width: clamp(180px, 24vw, 300px);
+            height: auto;
+            display: block;
         }
         
         .main-nav ul {
@@ -126,20 +129,27 @@ if (window.location.pathname === "/index.html") {
         /* ===== HERO / PAGE HEADER ===== */
         .page-header {
             text-align: center;
-            padding: 4rem 1rem 3rem;
+            padding: 4rem 1.5rem 3rem;
             margin-bottom: 2rem;
+            background: linear-gradient(135deg, #06122e, #0b2a54);
+            border-radius: 24px;
+            box-shadow: 0 18px 36px rgba(2, 8, 23, 0.28);
         }
         
         .page-header h1 {
             font-size: 2.8rem;
-            color: #1e293b;
+            color: #ffffff;
             margin-bottom: 1rem;
             line-height: 1.2;
+        }
+
+        .page-header h1 .highlight {
+            color: #38e8ff;
         }
         
         .page-header .subtitle {
             font-size: 1.25rem;
-            color: #64748b;
+            color: rgba(255, 255, 255, 0.9);
             max-width: 700px;
             margin: 0 auto;
         }
@@ -803,7 +813,9 @@ if (window.location.pathname === "/index.html") {
         <div class="site-container">
             <nav class="nav-container">
                 <div class="logo">
-                    <a href="/">SmartGuideHubs</a>
+                    <a href="/" aria-label="SmartGuideHubs home">
+                        <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs">
+                    </a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -825,7 +837,7 @@ if (window.location.pathname === "/index.html") {
         <!-- This section shows the blog homepage with multiple articles -->
         <section id="homepage-content" style="display: block;">
             <div class="page-header">
-                <h1>Expert Software Reviews for Small Businesses</h1>
+                <h1>Expert <span class="highlight">Software Reviews</span> for Small Businesses</h1>
                 <p class="subtitle">Unbiased, in-depth analysis of the tools that help you work smarter. We test, compare, and verify so you can make confident decisions.</p>
             </div>
 
