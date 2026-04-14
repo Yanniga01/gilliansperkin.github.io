@@ -1,0 +1,36 @@
+<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SmartGuideHubs logo</title>
+  <desc id="desc">SmartGuideHubs brand mark with icon and wordmark</desc>
+  <defs>
+    <linearGradient id="sghGradient" x1="60" y1="40" x2="430" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#44e1de"/>
+      <stop offset="1" stop-color="#1d4cff"/>
+    </linearGradient>
+    <linearGradient id="sghTextGradient" x1="470" y1="55" x2="1020" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#44e1de"/>
+      <stop offset="1" stop-color="#1d4cff"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(0 2) scale(0.5)" fill="none" stroke="url(#sghGradient)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="230" cy="220" r="150" stroke-width="28"/>
+    <line x1="128" y1="326" x2="52" y2="402" stroke-width="34"/>
+    <path d="M235 130c47 0 85 38 85 85v84c0 17-13 30-30 30h-37" stroke-width="18"/>
+    <path d="M233 129c-32 5-57 32-61 66" stroke-width="18"/>
+    <path d="M142 176h58" stroke-width="13"/>
+    <circle cx="206" cy="176" r="8" stroke-width="10"/>
+    <path d="M132 222h98" stroke-width="13"/>
+    <circle cx="238" cy="222" r="11" stroke-width="10"/>
+    <path d="M144 268h54" stroke-width="13"/>
+    <circle cx="204" cy="268" r="8" stroke-width="10"/>
+    <path d="M186 176l20-22" stroke-width="10"/>
+    <path d="M190 268l20 20" stroke-width="10"/>
+    <path d="M378 292c16 7 31 17 43 31" stroke-width="22"/>
+    <path d="M324 360h26" stroke-width="22"/>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="112" font-weight="800" dominant-baseline="middle">
+    <text x="240" y="130" fill="#ffffff">Smart</text>
+    <text x="590" y="130" fill="url(#sghTextGradient)">GuideHubs</text>
+  </g>
+</svg>
