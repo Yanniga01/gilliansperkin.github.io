@@ -599,6 +599,56 @@ if (window.location.pathname === "/index.html") {
             color: rgba(255, 255, 255, 0.88);
         }
         
+
+        .newsletter-band .ml-form-embedContainer,
+        .newsletter-band .ml-form-embedBody,
+        .newsletter-band .ml-form-embedContent,
+        .newsletter-band .ml-form-embedWrapper,
+        .newsletter-band .ml-form-formContent,
+        .newsletter-band .ml-form-successBody {
+            background: rgba(7, 22, 48, 0.86) !important;
+            color: #e2f7ff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 14px 28px rgba(2, 8, 23, 0.24);
+            border: 1px solid rgba(103, 232, 249, 0.24) !important;
+        }
+
+        .newsletter-band .ml-form-embedSubmit button,
+        .newsletter-band .ml-form-embedSubmit .primary {
+            background: #22d3ee !important;
+            border-color: #67e8f9 !important;
+            color: #082f49 !important;
+            border-radius: 999px !important;
+            box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3) !important;
+            font-weight: 700 !important;
+        }
+
+        .newsletter-band .ml-form-embedSubmit button::after {
+            content: "";
+        }
+
+        .newsletter-band .ml-form-embedSubmit button:hover,
+        .newsletter-band .ml-form-embedSubmit .primary:hover {
+            background: #67e8f9 !important;
+            box-shadow: 0 10px 22px rgba(0, 194, 255, 0.34) !important;
+        }
+
+        .newsletter-band .ml-form-embedWrapper h4,
+        .newsletter-band .ml-form-embedWrapper h3,
+        .newsletter-band .ml-form-embedWrapper .ml-form-embedTitle {
+            font-size: 1rem !important;
+            line-height: 1.35 !important;
+            color: #e2f7ff !important;
+            margin-bottom: 0.55rem !important;
+        }
+
+        .newsletter-trust {
+            margin-top: 1rem !important;
+            font-size: 0.92rem;
+            color: #a5f3fc !important;
+            font-weight: 600;
+        }
+
         /* ===== ABOUT US PAGE ===== */
         .about-section {
             margin: 3rem 0;
@@ -1197,6 +1247,28 @@ if (window.location.pathname === "/index.html") {
     {% include footer.html %}
 
     <script>
+
+        // Normalize newsletter CTA label so there is only one clear action
+        function syncNewsletterButtonLabel() {
+            const selectors = [
+                '.newsletter-band .ml-form-embedSubmit button',
+                '.newsletter-band button[type="submit"]',
+                '.newsletter-band input[type="submit"]'
+            ];
+            selectors.forEach((selector) => {
+                document.querySelectorAll(selector).forEach((btn) => {
+                    if (btn.tagName.toLowerCase() === 'input') {
+                        btn.value = 'Join the Newsletter';
+                    } else {
+                        btn.textContent = 'Join the Newsletter';
+                    }
+                });
+            });
+        }
+
+        syncNewsletterButtonLabel();
+        setTimeout(syncNewsletterButtonLabel, 1200);
+
         // Mobile Menu Toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             const nav = document.getElementById('mainNav');
