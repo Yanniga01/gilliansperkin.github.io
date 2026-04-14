@@ -1,33 +1,27 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">SmartGuideHubs icon</title>
-  <desc id="desc">Magnifying glass around a profile with circuit lines</desc>
+  <desc id="desc">Dark blue background with a cyan magnifying glass and profile circuit mark</desc>
   <defs>
-    <linearGradient id="sghGradient" x1="60" y1="40" x2="430" y2="430" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#44e1de"/>
-      <stop offset="1" stop-color="#1d4cff"/>
+    <linearGradient id="bgGradient" x1="0" y1="256" x2="512" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#040a2c"/>
+      <stop offset="1" stop-color="#0b1140"/>
+    </linearGradient>
+    <linearGradient id="sghGradient" x1="172" y1="152" x2="410" y2="374" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#53ecff"/>
+      <stop offset="1" stop-color="#29b8ff"/>
     </linearGradient>
   </defs>
 
-  <g fill="none" stroke="url(#sghGradient)" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="230" cy="220" r="150" stroke-width="28"/>
-    <line x1="128" y1="326" x2="52" y2="402" stroke-width="34"/>
+  <rect width="512" height="512" rx="20" fill="url(#bgGradient)"/>
 
-    <path d="M235 130c47 0 85 38 85 85v84c0 17-13 30-30 30h-37" stroke-width="18"/>
-    <path d="M233 129c-32 5-57 32-61 66" stroke-width="18"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="328" cy="236" r="92" stroke="url(#sghGradient)" stroke-width="20"/>
+    <line x1="281" y1="289" x2="230" y2="340" stroke="#2aaeff" stroke-width="26"/>
 
-    <path d="M142 176h58" stroke-width="13"/>
-    <circle cx="206" cy="176" r="8" stroke-width="10"/>
-
-    <path d="M132 222h98" stroke-width="13"/>
-    <circle cx="238" cy="222" r="11" stroke-width="10"/>
-
-    <path d="M144 268h54" stroke-width="13"/>
-    <circle cx="204" cy="268" r="8" stroke-width="10"/>
-
-    <path d="M186 176l20-22" stroke-width="10"/>
-    <path d="M190 268l20 20" stroke-width="10"/>
-
-    <path d="M378 292c16 7 31 17 43 31" stroke-width="22"/>
-    <path d="M324 360h26" stroke-width="22"/>
+    <path d="M341 198v68l-20 14" stroke="#0f389d" stroke-width="12"/>
+    <path d="M286 202h55" stroke="#0f389d" stroke-width="10"/>
+    <circle cx="298" cy="198" r="6" fill="#2aaeff" stroke="none"/>
+    <circle cx="309" cy="214" r="6" fill="#2aaeff" stroke="none"/>
+    <circle cx="323" cy="193" r="6" fill="#2aaeff" stroke="none"/>
   </g>
 </svg>
