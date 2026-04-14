@@ -7,12 +7,12 @@
 /* ---------- CSS Variables ---------- */
 :root {
   /* Color system */
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --primary-lighter: #dbeafe;
-  --accent: #8b5cf6;
-  --accent-light: #ede9fe;
+  --primary: #22d3ee;
+  --primary-dark: #06b6d4;
+  --primary-light: #67e8f9;
+  --primary-lighter: #e0f2fe;
+  --accent: #0b2a54;
+  --accent-light: #dbeafe;
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
@@ -163,12 +163,11 @@ p {
 /* ---------- Header ---------- */
 .site-header {
   background: white;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid #e2e8f0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(8px);
-  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -207,14 +206,14 @@ p {
   font-weight: 600;
   font-size: 0.95rem;
   padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: var(--transition-base);
 }
 
 .main-nav a:hover,
 .main-nav a.active {
   color: var(--primary);
-  border-bottom-color: var(--primary);
+  border-bottom-color: var(--primary-dark);
 }
 
 @media (max-width: 768px) {
@@ -233,8 +232,9 @@ p {
 .article-header {
   text-align: center;
   padding: var(--space-xl) var(--space-md);
-  background: linear-gradient(135deg, var(--primary-lighter), var(--accent-light));
-  border-radius: 0 0 30px 30px;
+  background: linear-gradient(135deg, #06122e, #0b2a54);
+  border-radius: 24px;
+  box-shadow: 0 18px 36px rgba(2, 8, 23, 0.28);
   margin-bottom: var(--space-xl);
 }
 
@@ -242,7 +242,11 @@ p {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  color: #1e3a8a;
+  color: #ffffff;
+}
+
+.article-header p {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .meta-info {
