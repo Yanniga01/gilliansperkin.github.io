@@ -186,10 +186,6 @@ p {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  background: linear-gradient(135deg, #06122e, #0b2a54);
-  padding: 0.45rem 0.85rem;
-  border-radius: 14px;
-  box-shadow: 0 8px 18px rgba(2, 8, 23, 0.16);
 }
 
 .logo img {
