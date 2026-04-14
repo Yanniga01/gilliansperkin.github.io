@@ -10,6 +10,7 @@ if (window.location.pathname === "/index.html") {
 }
 </script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -73,13 +74,19 @@ if (window.location.pathname === "/index.html") {
         }
         
         .logo a {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #1e293b;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: linear-gradient(135deg, #06122e, #0b2a54);
+            padding: 0.45rem 0.85rem;
+            border-radius: 14px;
+            box-shadow: 0 8px 18px rgba(2, 8, 23, 0.16);
+        }
+
+        .logo img {
+            width: clamp(180px, 24vw, 300px);
+            height: auto;
+            display: block;
         }
         
         .main-nav ul {
@@ -100,7 +107,7 @@ if (window.location.pathname === "/index.html") {
         
         .main-nav a:hover,
         .main-nav a.active {
-            color: #3b82f6;
+            color: #22d3ee;
         }
         
         .main-nav a.active::after {
@@ -110,7 +117,7 @@ if (window.location.pathname === "/index.html") {
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(90deg, #22d3ee, #06b6d4);
             border-radius: 3px;
         }
         
@@ -126,20 +133,27 @@ if (window.location.pathname === "/index.html") {
         /* ===== HERO / PAGE HEADER ===== */
         .page-header {
             text-align: center;
-            padding: 4rem 1rem 3rem;
+            padding: 4rem 1.5rem 3rem;
             margin-bottom: 2rem;
+            background: linear-gradient(135deg, #06122e, #0b2a54);
+            border-radius: 24px;
+            box-shadow: 0 18px 36px rgba(2, 8, 23, 0.28);
         }
         
         .page-header h1 {
             font-size: 2.8rem;
-            color: #1e293b;
+            color: #ffffff;
             margin-bottom: 1rem;
             line-height: 1.2;
+        }
+
+        .page-header h1 .highlight {
+            color: #22d3ee;
         }
         
         .page-header .subtitle {
             font-size: 1.25rem;
-            color: #64748b;
+            color: rgba(255, 255, 255, 0.9);
             max-width: 700px;
             margin: 0 auto;
         }
@@ -192,7 +206,7 @@ if (window.location.pathname === "/index.html") {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #22d3ee, #06b6d4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -323,7 +337,7 @@ if (window.location.pathname === "/index.html") {
         .feature-icon {
             min-width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #22d3ee, #06b6d4);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -426,33 +440,19 @@ if (window.location.pathname === "/index.html") {
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(90deg, #22d3ee, #06b6d4);
             border-radius: 5px;
         }
         
         .cta-widget {
             text-align: center;
-            border: 2px solid #3b82f6;
+            border: 2px solid #22d3ee;
         }
         
         .cta-button {
-            display: block;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            color: white;
-            text-align: center;
-            padding: 1.2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
             margin: 1.2rem 0;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            width: 100%;
+            font-size: 1.1rem;
         }
         
         .quick-facts {
@@ -535,20 +535,124 @@ if (window.location.pathname === "/index.html") {
             margin-bottom: 1rem;
         }
         
+        .brand-button,
+        .cta-button,
         .read-more {
-            color: #3b82f6;
-            font-weight: 600;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-top: auto;
+            justify-content: center;
+            gap: 0.45rem;
+            background: #22d3ee;
+            color: #04263b;
+            border: 1px solid #67e8f9;
+            border-radius: 999px;
+            padding: 0.88rem 1.6rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3);
         }
-        
+
+        .brand-button:hover,
+        .cta-button:hover,
         .read-more:hover {
-            color: #1d4ed8;
+            transform: translateY(-2px);
+            background: #67e8f9;
+            color: #082f49;
+            box-shadow: 0 10px 22px rgba(0, 194, 255, 0.34);
+        }
+
+        .read-more {
+            margin-top: auto;
+            width: fit-content;
+        }
+
+        .newsletter-band {
+            margin: 3rem 0 3.5rem;
+            padding: 2.3rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #06122e, #0b2a54);
+            border: 1px solid rgba(103, 232, 249, 0.45);
+            box-shadow: 0 18px 36px rgba(2, 8, 23, 0.28);
+        }
+
+        .newsletter-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .newsletter-eyebrow {
+            margin: 0 0 .45rem;
+            font-size: .8rem;
+            letter-spacing: .08em;
+            color: #67e8f9;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .newsletter-band h2 {
+            margin: 0 0 .75rem;
+            font-size: 1.55rem;
+            color: #ffffff;
+        }
+
+        .newsletter-band p {
+            margin: 0 0 1.2rem;
+            color: rgba(255, 255, 255, 0.88);
         }
         
+
+        .newsletter-band .ml-form-embedContainer,
+        .newsletter-band .ml-form-embedBody,
+        .newsletter-band .ml-form-embedContent,
+        .newsletter-band .ml-form-embedWrapper,
+        .newsletter-band .ml-form-formContent,
+        .newsletter-band .ml-form-successBody {
+            background: rgba(7, 22, 48, 0.86) !important;
+            color: #e2f7ff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 14px 28px rgba(2, 8, 23, 0.24);
+            border: 1px solid rgba(103, 232, 249, 0.24) !important;
+        }
+
+        .newsletter-band .ml-form-embedSubmit button,
+        .newsletter-band .ml-form-embedSubmit .primary {
+            background: #22d3ee !important;
+            border-color: #67e8f9 !important;
+            color: #082f49 !important;
+            border-radius: 999px !important;
+            box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3) !important;
+            font-weight: 700 !important;
+        }
+
+        .newsletter-band .ml-form-embedSubmit button::after {
+            content: "";
+        }
+
+        .newsletter-band .ml-form-embedSubmit button:hover,
+        .newsletter-band .ml-form-embedSubmit .primary:hover {
+            background: #67e8f9 !important;
+            box-shadow: 0 10px 22px rgba(0, 194, 255, 0.34) !important;
+        }
+
+        .newsletter-band .ml-form-embedWrapper h4,
+        .newsletter-band .ml-form-embedWrapper h3,
+        .newsletter-band .ml-form-embedWrapper .ml-form-embedTitle {
+            font-size: 1rem !important;
+            line-height: 1.35 !important;
+            color: #e2f7ff !important;
+            margin-bottom: 0.55rem !important;
+        }
+
+        .newsletter-trust {
+            margin-top: 1rem !important;
+            font-size: 0.92rem;
+            color: #a5f3fc !important;
+            font-weight: 600;
+        }
+
         /* ===== ABOUT US PAGE ===== */
         .about-section {
             margin: 3rem 0;
@@ -579,7 +683,7 @@ if (window.location.pathname === "/index.html") {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #22d3ee, #06b6d4);
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
@@ -803,7 +907,9 @@ if (window.location.pathname === "/index.html") {
         <div class="site-container">
             <nav class="nav-container">
                 <div class="logo">
-                    <a href="/">SmartGuideHubs</a>
+                    <a href="/" aria-label="SmartGuideHubs home">
+                        <img src="/assets/branding/sgh-logo-dark.svg" alt="SmartGuideHubs">
+                    </a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -825,8 +931,9 @@ if (window.location.pathname === "/index.html") {
         <!-- This section shows the blog homepage with multiple articles -->
         <section id="homepage-content" style="display: block;">
             <div class="page-header">
-                <h1>Expert Software Reviews for Small Businesses</h1>
-                <p class="subtitle">Unbiased, in-depth analysis of the tools that help you work smarter. We test, compare, and verify so you can make confident decisions.</p>
+                <h1>Expert <span class="highlight">Software Reviews</span> for Small Businesses</h1>
+                <p class="subtitle">Find the best tools to grow faster with tested, unbiased insights.</p>
+                <a href="./blog" class="brand-button">Explore Reviews</a>
             </div>
 
             <h2 class="section-heading">Latest software reviews</h2>
@@ -880,7 +987,7 @@ if (window.location.pathname === "/index.html") {
             </div>
 
             <div class="text-center mt-3">
-                <a href="./blog" style="display: inline-block; background: #3b82f6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">View All Reviews & Articles</a>
+                <a href="./blog" class="brand-button">Explore All Reviews</a>
             </div>
         </section>
 
@@ -1124,17 +1231,18 @@ if (window.location.pathname === "/index.html") {
 
                 <div class="text-center mt-3">
                     <p>Have a question about our methodology or a tool you'd like us to review?</p>
-                    <a href="./contact" style="display: inline-block; background: #3b82f6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Contact Our Team</a>
+                    <a href="./contact" class="brand-button">Contact Our Team</a>
                 </div>
             </div>
         </section>
     
-        <section style="margin: 3rem 0 3.5rem; padding: 2.2rem; border-radius: 14px; background: linear-gradient(135deg, #f0f9ff, #eef2ff); border: 1px solid #dbeafe; box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06);">
-            <div style="max-width: 760px; margin: 0 auto; text-align: center;">
-                <p style="margin: 0 0 .45rem; font-size: .8rem; letter-spacing: .08em; color: #2563eb; font-weight: 700; text-transform: uppercase;">Newsletter</p>
-                <h2 style="margin: 0 0 .75rem; font-size: 1.55rem; color: #0f172a;">Get practical software insights in your inbox</h2>
-                <p style="margin: 0 0 1.2rem; color: #475569;">Join SmartGuideHubs readers and receive new reviews, comparisons, and buying guides as they go live.</p>
+        <section class="newsletter-band">
+            <div class="newsletter-inner">
+                <p class="newsletter-eyebrow">Newsletter</p>
+                <h2>Get practical software insights in your inbox</h2>
+                <p>Join SmartGuideHubs readers and receive new reviews, comparisons, and buying guides as they go live.</p>
                 <div class="ml-embedded" data-form="0xw1l4"></div>
+                <p id="trust" class="newsletter-trust">✔ No spam &nbsp;&nbsp; ✔ Only high-quality insights &nbsp;&nbsp; ✔ Unsubscribe anytime</p>
             </div>
         </section>
 
@@ -1144,6 +1252,28 @@ if (window.location.pathname === "/index.html") {
     {% include footer.html %}
 
     <script>
+
+        // Normalize newsletter CTA label so there is only one clear action
+        function syncNewsletterButtonLabel() {
+            const selectors = [
+                '.newsletter-band .ml-form-embedSubmit button',
+                '.newsletter-band button[type="submit"]',
+                '.newsletter-band input[type="submit"]'
+            ];
+            selectors.forEach((selector) => {
+                document.querySelectorAll(selector).forEach((btn) => {
+                    if (btn.tagName.toLowerCase() === 'input') {
+                        btn.value = 'Join the Newsletter';
+                    } else {
+                        btn.textContent = 'Join the Newsletter';
+                    }
+                });
+            });
+        }
+
+        syncNewsletterButtonLabel();
+        setTimeout(syncNewsletterButtonLabel, 1200);
+
         // Mobile Menu Toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             const nav = document.getElementById('mainNav');
