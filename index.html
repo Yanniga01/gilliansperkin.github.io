@@ -503,6 +503,68 @@ gtag('config', 'G-3DCX56R2GN');
             left: 0;
         }
         
+
+        .homepage-guide {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 1.5rem;
+            margin: 0 0 2rem;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+        }
+
+        .homepage-guide h2 {
+            margin: 0 0 .6rem;
+            font-size: 1.4rem;
+            color: #0f172a;
+        }
+
+        .homepage-guide p {
+            margin: 0 0 1rem;
+            color: #475569;
+        }
+
+        .category-quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: .85rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-quick-links a {
+            display: block;
+            padding: .85rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            color: #0f172a;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .2s ease;
+        }
+
+        .category-quick-links a:hover {
+            border-color: #0e7490;
+            background: #ecfeff;
+            color: #0e7490;
+            transform: translateY(-2px);
+        }
+
+        .authority-signal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+        }
+
+        .authority-signal span {
+            background: #e2e8f0;
+            color: #0f172a;
+            border-radius: 999px;
+            padding: .42rem .85rem;
+            font-size: .88rem;
+            font-weight: 600;
+        }
+
         /* ===== BLOG HOMEPAGE ===== */
         .blog-grid {
             display: grid;
@@ -932,7 +994,7 @@ gtag('config', 'G-3DCX56R2GN');
             <nav class="nav-container">
                 <div class="logo">
                     <a href="/" aria-label="SmartGuideHubs home">
-                        <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs">
+                        <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="1200" height="260">
                     </a>
                 </div>
                 
@@ -958,6 +1020,24 @@ gtag('config', 'G-3DCX56R2GN');
                 <h1>Expert <span class="highlight">Software Reviews</span> for Small Businesses</h1>
                 <p class="subtitle">Unbiased, in-depth analysis of the tools that help you work smarter. We test, compare, and verify so you can make confident decisions.</p>
             </div>
+
+
+            <section class="homepage-guide" aria-label="Software category guide">
+                <h2>Find the Best Tool for Your Business</h2>
+                <p>Start with your category to narrow your choices faster and compare only the tools that match your workflow.</p>
+                <div class="category-quick-links">
+                    <a href="/categories/pdf-and-document-tools/">📄 PDF &amp; Document Tools</a>
+                    <a href="/categories/email-and-marketing-tools/">📧 Email &amp; Marketing Tools</a>
+                    <a href="/categories/project-management/">📊 Project Management</a>
+                    <a href="/categories/finance/">💼 Finance &amp; Accounting</a>
+                </div>
+                <div class="authority-signal" aria-label="Authority signals">
+                    <span>✅ 90+ Days Hands-On Testing</span>
+                    <span>✅ Transparent Editorial Policy</span>
+                    <span>✅ Updated Reviews for 2026</span>
+                    <span>✅ Independent Comparison Method</span>
+                </div>
+            </section>
 
             <h2 class="section-heading">Latest software reviews</h2>
 
@@ -1010,7 +1090,7 @@ gtag('config', 'G-3DCX56R2GN');
             </div>
 
             <div class="text-center mt-3">
-                <a href="./blog" class="brand-button">EXPLORE ALL REVIEWS</a>
+                <a href="./blog" class="brand-button">Find the Best Tool for Your Business</a>
             </div>
         </section>
 
@@ -1276,6 +1356,24 @@ gtag('config', 'G-3DCX56R2GN');
 
     <script>
 
+
+        // Replace embedded form heading tags to prevent heading-level skips
+        function normalizeNewsletterEmbedHeadings() {
+            const headingSelectors = [
+                '.newsletter-band .ml-form-embedWrapper h4',
+                '.newsletter-band .ml-form-embedWrapper h3'
+            ];
+
+            headingSelectors.forEach((selector) => {
+                document.querySelectorAll(selector).forEach((heading) => {
+                    const replacement = document.createElement('p');
+                    replacement.className = heading.className || 'ml-form-embedTitle';
+                    replacement.innerHTML = heading.innerHTML;
+                    heading.replaceWith(replacement);
+                });
+            });
+        }
+
         // Normalize newsletter CTA label so there is only one clear action
         function syncNewsletterButtonLabel() {
             const selectors = [
@@ -1295,7 +1393,11 @@ gtag('config', 'G-3DCX56R2GN');
         }
 
         syncNewsletterButtonLabel();
-        setTimeout(syncNewsletterButtonLabel, 1200);
+        normalizeNewsletterEmbedHeadings();
+        setTimeout(() => {
+            syncNewsletterButtonLabel();
+            normalizeNewsletterEmbedHeadings();
+        }, 1200);
 
         // Mobile Menu Toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
