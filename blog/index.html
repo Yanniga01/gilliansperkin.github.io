@@ -424,10 +424,11 @@ permalink: /blog/
                         {% if post.image %}
                             <img
                                 src="{{ post.image }}"
-                                srcset="{{ post.image | srcset }}"
-                                width="{{ post.image | width }}"
-                                height="{{ post.image | height }}"
+                                width="320"
+                                height="214"
                                 loading="lazy"
+                                decoding="async"
+                                sizes="(max-width: 768px) 100vw, 320px"
                                 alt="{{ post.title }}">
                         {% else %}
                             <div class="no-image">No image</div>
