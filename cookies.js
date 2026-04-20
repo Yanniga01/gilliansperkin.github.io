@@ -178,7 +178,7 @@
                             text-decoration: underline;
                             transition: opacity 0.2s;
                         " onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                            Learn more
+                            Read our privacy policy
                         </a>
                     </p>
                     <div style="
