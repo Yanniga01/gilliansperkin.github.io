@@ -1276,6 +1276,24 @@ gtag('config', 'G-3DCX56R2GN');
 
     <script>
 
+
+        // Replace embedded form heading tags to prevent heading-level skips
+        function normalizeNewsletterEmbedHeadings() {
+            const headingSelectors = [
+                '.newsletter-band .ml-form-embedWrapper h4',
+                '.newsletter-band .ml-form-embedWrapper h3'
+            ];
+
+            headingSelectors.forEach((selector) => {
+                document.querySelectorAll(selector).forEach((heading) => {
+                    const replacement = document.createElement('p');
+                    replacement.className = heading.className || 'ml-form-embedTitle';
+                    replacement.innerHTML = heading.innerHTML;
+                    heading.replaceWith(replacement);
+                });
+            });
+        }
+
         // Normalize newsletter CTA label so there is only one clear action
         function syncNewsletterButtonLabel() {
             const selectors = [
@@ -1295,7 +1313,11 @@ gtag('config', 'G-3DCX56R2GN');
         }
 
         syncNewsletterButtonLabel();
-        setTimeout(syncNewsletterButtonLabel, 1200);
+        normalizeNewsletterEmbedHeadings();
+        setTimeout(() => {
+            syncNewsletterButtonLabel();
+            normalizeNewsletterEmbedHeadings();
+        }, 1200);
 
         // Mobile Menu Toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
