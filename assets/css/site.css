@@ -1036,44 +1036,6 @@ p {
   font-weight: 600;
 }
 
-/* ---------- Review Top Pick (Premium Variant) ---------- */
-.sgh-cta-review-pick {
-  background: linear-gradient(145deg, #0b1a35, #112a52);
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 16px 42px rgba(8, 20, 45, 0.35);
-}
-
-.sgh-cta-review-pick .cta-badge span {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #1f2937;
-}
-
-.sgh-cta-review-pick .cta-title {
-  color: #f8fafc;
-}
-
-.sgh-cta-review-pick .cta-text {
-  color: #dbeafe;
-}
-
-.sgh-cta-review-pick .cta-button {
-  background: linear-gradient(135deg, #34d399, #10b981);
-  color: #052e2b;
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.28);
-}
-
-.sgh-cta-review-pick .cta-button:hover {
-  box-shadow: 0 14px 30px rgba(16, 185, 129, 0.38);
-}
-
-.sgh-cta-review-pick .cta-subtext {
-  color: #bfdbfe;
-}
-
-.sgh-cta-review-pick .cta-note {
-  color: #fcd34d;
-}
-
 @media (max-width: 640px) {
   .cta-title {
     font-size: 1.5rem;
