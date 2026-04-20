@@ -178,7 +178,7 @@
                             text-decoration: underline;
                             transition: opacity 0.2s;
                         " onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-                            Learn more
+                            Read our privacy policy
                         </a>
                     </p>
                     <div style="
@@ -187,7 +187,7 @@
                         flex-wrap: wrap;
                     ">
                         <button id="acceptCookiesBtn" style="
-                            background: #28a745;
+                            background: #1f7a35;
                             color: white;
                             border: none;
                             padding: 8px 24px;
@@ -197,8 +197,8 @@
                             font-size: 14px;
                             transition: all 0.2s;
                             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                        " onmouseover="this.style.background='#2c974b';this.style.transform='translateY(-1px)'" 
-                           onmouseout="this.style.background='#28a745';this.style.transform='translateY(0)'"
+                        " onmouseover="this.style.background='#19662c';this.style.transform='translateY(-1px)'"
+                           onmouseout="this.style.background='#1f7a35';this.style.transform='translateY(0)'"
                            onfocus="this.style.outline='2px solid #66b0ff';this.style.outlineOffset='2px'"
                            onblur="this.style.outline='none'">
                             Accept
