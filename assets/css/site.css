@@ -7,8 +7,8 @@
 /* ---------- CSS Variables ---------- */
 :root {
   /* Color system */
-  --primary: #22d3ee;
-  --primary-dark: #06b6d4;
+  --primary: #0e7490;
+  --primary-dark: #155e75;
   --primary-light: #67e8f9;
   --primary-lighter: #e0f2fe;
   --accent: #0b2a54;
@@ -110,6 +110,30 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 2000;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: 2px solid #ffffff;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
 }
 
 /* ---------- Typography ---------- */

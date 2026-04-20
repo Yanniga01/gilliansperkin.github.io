@@ -144,7 +144,9 @@ permalink: /blog/
         font-size: 0.85rem;
         font-weight: 600;
     }
-    .article-card h3 {
+    .article-title {
+        border: 0;
+        padding: 0;
         font-size: 1.3rem;
         margin-bottom: 1rem;
         line-height: 1.4;
@@ -186,7 +188,9 @@ permalink: /blog/
         border: 1px solid #e2e8f0;
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
-    .sidebar-widget h3 {
+    .sidebar-heading {
+        border: 0;
+        padding: 0;
         margin-top: 0;
         margin-bottom: 1rem;
         font-size: 1.2rem;
@@ -432,7 +436,7 @@ permalink: /blog/
                         <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
                         <span class="article-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
                     </div>
-                    <h3>{{ post.title }}</h3>
+                    <h2 class="article-title">{{ post.title }}</h2>
                     <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
                     <a href="{{ post.url }}" class="article-link">Read Full Review →</a>
                 </article>
@@ -450,14 +454,14 @@ permalink: /blog/
         <aside class="blog-sidebar">
             <!-- Search Widget -->
             <div class="sidebar-widget">
-                <h3>🔍 Search Reviews</h3>
+                <h2 class="sidebar-heading">🔍 Search Reviews</h2>
                 <input type="text" id="search-input" class="search-input" placeholder="Type 1+ letter to search articles...">
                 <div id="search-results" class="search-results"></div>
             </div>
 
             <!-- Categories Widget -->
             <div class="sidebar-widget">
-                <h3>📂 Categories</h3>
+                <h2 class="sidebar-heading">📂 Categories</h2>
                 <ul>
                     <li><a href="/categories/pdf-and-document-tools/">PDF & Document Tools</a></li>
                     <li><a href="/categories/email-and-marketing-tools/">Email & Marketing Tools</a></li>
@@ -468,7 +472,7 @@ permalink: /blog/
 
             <!-- Newsletter Widget -->
             <div class="sidebar-widget newsletter-widget">
-                <h3>📬 Get New Reviews</h3>
+                <h2 class="sidebar-heading">📬 Get New Reviews</h2>
                 <p>Subscribe to get the latest software reviews delivered straight to your inbox.</p>
                 <div class="ml-embedded" data-form="0xw1l4"></div>
             </div>
