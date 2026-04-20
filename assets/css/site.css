@@ -853,10 +853,11 @@ p {
 /* ---------- Comparison Verdict Component ---------- */
 .sgh-comparison-verdict {
   margin: 2rem 0 2.5rem;
-  padding: 1.5rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  padding: 1.7rem;
+  background: linear-gradient(135deg, #f8fbff, #f3f8ff);
+  border: 1px solid rgba(14, 116, 144, 0.18);
   border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
 }
 
 .verdict-header {
@@ -869,8 +870,8 @@ p {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #2563eb;
-  background: #dbeafe;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
   margin-bottom: 0.75rem;
@@ -880,7 +881,7 @@ p {
   margin: 0 0 0.5rem;
   font-size: 1.7rem;
   line-height: 1.25;
-  color: #0f172a;
+  color: #0b1f3a;
 }
 
 .verdict-intro {
@@ -897,17 +898,28 @@ p {
 }
 
 .verdict-card {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border: 1px solid #d9e5f6;
   border-radius: 16px;
-  padding: 1rem;
+  padding: 1.05rem;
   transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.verdict-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #14b8a6, #2563eb);
 }
 
 .verdict-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-  border-color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+  border-color: #93c5fd;
 }
 
 .verdict-card-title {
@@ -918,7 +930,7 @@ p {
 
 .verdict-card-label {
   margin: 0 0 0.5rem;
-  color: #475569;
+  color: #0f766e;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -930,7 +942,7 @@ p {
 }
 
 .verdict-card-link {
-  color: #2563eb;
+  color: #1d4ed8;
   font-weight: 700;
   text-decoration: none;
   font-size: 0.94rem;
@@ -938,6 +950,7 @@ p {
 
 .verdict-card-link:hover {
   text-decoration: underline;
+  color: #0f3aa6;
 }
 
 /* Responsive: stack cards on mobile */
