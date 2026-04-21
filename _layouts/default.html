@@ -129,6 +129,15 @@
             </nav>
         </div>
     </header>
+    {% unless page.url == "/best-tools/" %}
+    <div class="best-tools-banner" role="complementary" aria-label="Best Tools quick link">
+        <div class="best-tools-banner-inner">
+            <span class="best-tools-banner-kicker">New</span>
+            <p>Looking for our full software shortlist? Explore the complete 2026 picks.</p>
+            <a href="/best-tools/" class="best-tools-banner-link">View Best Tools →</a>
+        </div>
+    </div>
+    {% endunless %}
 
     <!-- Main content -->
     <main id="main">
