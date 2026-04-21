@@ -1,21 +1,11 @@
 <div class="sgh-cta sgh-cta-review-pick">
   <div class="cta-badge">
-    <span>{{ include.badge | default: "SmartGuideHubs Top Pick" }}</span>
+    <span>{{ include.heading | default: "SmartGuideHubs Top Pick" }}</span>
   </div>
 
   <h2 class="cta-title">
-    {{ include.title | default: include.heading | default: "Want to Try Our Top Recommendation?" }}
+    {{ include.title | default: "Want to Try Our Top Recommendation?" }}
   </h2>
-
-  <div class="cta-logo-wrap">
-    {% if include.logo %}
-    <img src="{{ include.logo }}" alt="{{ include.name | default: include.title | default: 'Recommended tool' }} logo" class="cta-logo">
-    {% else %}
-    <div class="cta-logo-placeholder" aria-hidden="true">
-      {{ include.name | default: include.title | default: "Top Pick" | slice: 0 }}
-    </div>
-    {% endif %}
-  </div>
 
   <p class="cta-text">
     {{ include.text | default: include.intro | default: include.description | default: "Explore the platform and test if it fits your workflow before committing to a paid plan." }}
