@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About SmartGuideHubs | Independent Software Reviews & Expert Guides
-description: Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals.
+description: "Learn about SmartGuideHubs: Our mission, testing methodology, and commitment to providing unbiased software reviews for small businesses and professionals."
 permalink: /about/
 canonical_url: https://smartguidehubs.com/about/
 ---
