@@ -7,6 +7,41 @@
 
   <div class="verdict-cards">
     <div class="verdict-card">
+      {% assign card1_logo = include.card1_logo %}
+      {% if card1_logo == nil or card1_logo == "" %}
+        {% assign card1_name_key = include.card1_name | downcase %}
+        {% case card1_name_key %}
+          {% when "monday.com" %}{% assign card1_logo = "/assets/logos/monday.png" %}
+          {% when "clickup" %}{% assign card1_logo = "/assets/logos/clickup.png" %}
+          {% when "asana" %}{% assign card1_logo = "/assets/logos/asana.png" %}
+          {% when "trello" %}{% assign card1_logo = "/assets/logos/trello.png" %}
+          {% when "smartsuite" %}{% assign card1_logo = "/assets/logos/smartsuite.png" %}
+          {% when "semrush" %}{% assign card1_logo = "/assets/logos/semrush.png" %}
+          {% when "campaigner" %}{% assign card1_logo = "/assets/logos/campaigner.png" %}
+          {% when "jobber" %}{% assign card1_logo = "/assets/logos/jobber.png" %}
+          {% when "quickbooks" %}{% assign card1_logo = "/assets/logos/quickbooks.png" %}
+          {% when "xero" %}{% assign card1_logo = "/assets/logos/xero.png" %}
+          {% when "wave" %}{% assign card1_logo = "/assets/logos/wave.png" %}
+          {% when "adobe acrobat" %}{% assign card1_logo = "/assets/logos/adobe-acrobat.png" %}
+          {% when "pdffiller" %}{% assign card1_logo = "/assets/logos/pdffiller.png" %}
+          {% when "mailgun" %}{% assign card1_logo = "/assets/logos/mailgun.png" %}
+          {% when "sendgrid" %}{% assign card1_logo = "/assets/logos/sendgrid.png" %}
+          {% when "smtp2go" %}{% assign card1_logo = "/assets/logos/smtp2go.png" %}
+          {% when "amazon ses" %}{% assign card1_logo = "/assets/logos/amazonses.png" %}
+          {% when "postmark" %}{% assign card1_logo = "/assets/logos/postmarks.png" %}
+          {% when "service titan" %}{% assign card1_logo = "/assets/logos/ServiceTitan.png" %}
+          {% when "servicetitan" %}{% assign card1_logo = "/assets/logos/ServiceTitan.png" %}
+          {% when "housecall pro" %}{% assign card1_logo = "/assets/logos/housecall-pro.png" %}
+          {% when "fieldroutes" %}{% assign card1_logo = "/assets/logos/fieldroutes.png" %}
+        {% endcase %}
+      {% endif %}
+      <div class="verdict-card-logo-wrap">
+        {% if card1_logo %}
+        <img src="{{ card1_logo }}" alt="{{ include.card1_name }} logo" class="verdict-card-logo" loading="lazy" decoding="async" width="44" height="44">
+        {% else %}
+        <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card1_name | slice: 0 }}</div>
+        {% endif %}
+      </div>
       <h3 class="verdict-card-title">{{ include.card1_name }}</h3>
       <p class="verdict-card-label">{{ include.card1_label }}</p>
       <p class="verdict-card-desc">{{ include.card1_desc }}</p>
@@ -14,6 +49,41 @@
     </div>
 
     <div class="verdict-card">
+      {% assign card2_logo = include.card2_logo %}
+      {% if card2_logo == nil or card2_logo == "" %}
+        {% assign card2_name_key = include.card2_name | downcase %}
+        {% case card2_name_key %}
+          {% when "monday.com" %}{% assign card2_logo = "/assets/logos/monday.png" %}
+          {% when "clickup" %}{% assign card2_logo = "/assets/logos/clickup.png" %}
+          {% when "asana" %}{% assign card2_logo = "/assets/logos/asana.png" %}
+          {% when "trello" %}{% assign card2_logo = "/assets/logos/trello.png" %}
+          {% when "smartsuite" %}{% assign card2_logo = "/assets/logos/smartsuite.png" %}
+          {% when "semrush" %}{% assign card2_logo = "/assets/logos/semrush.png" %}
+          {% when "campaigner" %}{% assign card2_logo = "/assets/logos/campaigner.png" %}
+          {% when "jobber" %}{% assign card2_logo = "/assets/logos/jobber.png" %}
+          {% when "quickbooks" %}{% assign card2_logo = "/assets/logos/quickbooks.png" %}
+          {% when "xero" %}{% assign card2_logo = "/assets/logos/xero.png" %}
+          {% when "wave" %}{% assign card2_logo = "/assets/logos/wave.png" %}
+          {% when "adobe acrobat" %}{% assign card2_logo = "/assets/logos/adobe-acrobat.png" %}
+          {% when "pdffiller" %}{% assign card2_logo = "/assets/logos/pdffiller.png" %}
+          {% when "mailgun" %}{% assign card2_logo = "/assets/logos/mailgun.png" %}
+          {% when "sendgrid" %}{% assign card2_logo = "/assets/logos/sendgrid.png" %}
+          {% when "smtp2go" %}{% assign card2_logo = "/assets/logos/smtp2go.png" %}
+          {% when "amazon ses" %}{% assign card2_logo = "/assets/logos/amazonses.png" %}
+          {% when "postmark" %}{% assign card2_logo = "/assets/logos/postmarks.png" %}
+          {% when "service titan" %}{% assign card2_logo = "/assets/logos/ServiceTitan.png" %}
+          {% when "servicetitan" %}{% assign card2_logo = "/assets/logos/ServiceTitan.png" %}
+          {% when "housecall pro" %}{% assign card2_logo = "/assets/logos/housecall-pro.png" %}
+          {% when "fieldroutes" %}{% assign card2_logo = "/assets/logos/fieldroutes.png" %}
+        {% endcase %}
+      {% endif %}
+      <div class="verdict-card-logo-wrap">
+        {% if card2_logo %}
+        <img src="{{ card2_logo }}" alt="{{ include.card2_name }} logo" class="verdict-card-logo" loading="lazy" decoding="async" width="44" height="44">
+        {% else %}
+        <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card2_name | slice: 0 }}</div>
+        {% endif %}
+      </div>
       <h3 class="verdict-card-title">{{ include.card2_name }}</h3>
       <p class="verdict-card-label">{{ include.card2_label }}</p>
       <p class="verdict-card-desc">{{ include.card2_desc }}</p>
@@ -21,6 +91,41 @@
     </div>
 
     <div class="verdict-card">
+      {% assign card3_logo = include.card3_logo %}
+      {% if card3_logo == nil or card3_logo == "" %}
+        {% assign card3_name_key = include.card3_name | downcase %}
+        {% case card3_name_key %}
+          {% when "monday.com" %}{% assign card3_logo = "/assets/logos/monday.png" %}
+          {% when "clickup" %}{% assign card3_logo = "/assets/logos/clickup.png" %}
+          {% when "asana" %}{% assign card3_logo = "/assets/logos/asana.png" %}
+          {% when "trello" %}{% assign card3_logo = "/assets/logos/trello.png" %}
+          {% when "smartsuite" %}{% assign card3_logo = "/assets/logos/smartsuite.png" %}
+          {% when "semrush" %}{% assign card3_logo = "/assets/logos/semrush.png" %}
+          {% when "campaigner" %}{% assign card3_logo = "/assets/logos/campaigner.png" %}
+          {% when "jobber" %}{% assign card3_logo = "/assets/logos/jobber.png" %}
+          {% when "quickbooks" %}{% assign card3_logo = "/assets/logos/quickbooks.png" %}
+          {% when "xero" %}{% assign card3_logo = "/assets/logos/xero.png" %}
+          {% when "wave" %}{% assign card3_logo = "/assets/logos/wave.png" %}
+          {% when "adobe acrobat" %}{% assign card3_logo = "/assets/logos/adobe-acrobat.png" %}
+          {% when "pdffiller" %}{% assign card3_logo = "/assets/logos/pdffiller.png" %}
+          {% when "mailgun" %}{% assign card3_logo = "/assets/logos/mailgun.png" %}
+          {% when "sendgrid" %}{% assign card3_logo = "/assets/logos/sendgrid.png" %}
+          {% when "smtp2go" %}{% assign card3_logo = "/assets/logos/smtp2go.png" %}
+          {% when "amazon ses" %}{% assign card3_logo = "/assets/logos/amazonses.png" %}
+          {% when "postmark" %}{% assign card3_logo = "/assets/logos/postmarks.png" %}
+          {% when "service titan" %}{% assign card3_logo = "/assets/logos/ServiceTitan.png" %}
+          {% when "servicetitan" %}{% assign card3_logo = "/assets/logos/ServiceTitan.png" %}
+          {% when "housecall pro" %}{% assign card3_logo = "/assets/logos/housecall-pro.png" %}
+          {% when "fieldroutes" %}{% assign card3_logo = "/assets/logos/fieldroutes.png" %}
+        {% endcase %}
+      {% endif %}
+      <div class="verdict-card-logo-wrap">
+        {% if card3_logo %}
+        <img src="{{ card3_logo }}" alt="{{ include.card3_name }} logo" class="verdict-card-logo" loading="lazy" decoding="async" width="44" height="44">
+        {% else %}
+        <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card3_name | slice: 0 }}</div>
+        {% endif %}
+      </div>
       <h3 class="verdict-card-title">{{ include.card3_name }}</h3>
       <p class="verdict-card-label">{{ include.card3_label }}</p>
       <p class="verdict-card-desc">{{ include.card3_desc }}</p>
