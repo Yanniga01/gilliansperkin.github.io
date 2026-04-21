@@ -12,25 +12,18 @@ permalink: /comparisons/
   </header>
 
   <div class="post-grid">
-    <article class="post-card">
-      <a href="/adobe-acrobat-vs-pdffiller/"><img src="/Images/adobe-vs-pdffiller-card.jpg" alt="Adobe Acrobat vs PDFfiller comparison"></a>
-      <h2><a href="/adobe-acrobat-vs-pdffiller/">Adobe Acrobat vs PDFfiller 2026</a></h2>
-      <p>A practical side-by-side review focused on editing depth, e-signature workflow, pricing, and best fit for small businesses.</p>
-      <a class="read-more" href="/adobe-acrobat-vs-pdffiller/">Read comparison →</a>
-    </article>
-
-    <article class="post-card">
-      <a href="/semrush-vs-ahrefs/"><img src="/Images/semrush-ahrefs-comparison.jpg" alt="Semrush vs Ahrefs comparison"></a>
-      <h2><a href="/semrush-vs-ahrefs/">Semrush vs Ahrefs 2026</a></h2>
-      <p>An in-depth SEO tool comparison covering keyword research, backlink analysis, technical SEO, pricing, and team fit.</p>
-      <a class="read-more" href="/semrush-vs-ahrefs/">Read comparison →</a>
-    </article>
-
-    <article class="post-card">
-      <a href="/asana-vs-trello-vs-clickup-2026/"><img src="/Images/asana-trello-clickup-card.jpg" alt="Asana vs Trello vs ClickUp comparison"></a>
-      <h2><a href="/asana-vs-trello-vs-clickup-2026/">Asana vs Trello vs ClickUp</a></h2>
-      <p>Compare usability, collaboration workflows, automation depth, and pricing for three leading project management tools.</p>
-      <a class="read-more" href="/asana-vs-trello-vs-clickup-2026/">Read comparison →</a>
-    </article>
+    {% assign comparison_posts = site.posts | where_exp: "post", "post.title contains 'vs' or post.title contains 'VS'" %}
+    {% for post in comparison_posts %}
+      <article class="post-card">
+        {% if post.image %}
+          <a href="{{ post.url }}"><img src="{{ post.image }}" alt="{{ post.title }}"></a>
+        {% endif %}
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+        <a class="read-more" href="{{ post.url }}">Read comparison →</a>
+      </article>
+    {% else %}
+      <p>No comparison articles found yet. Check back soon.</p>
+    {% endfor %}
   </div>
 </section>
