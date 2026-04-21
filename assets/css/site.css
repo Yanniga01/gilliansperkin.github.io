@@ -2076,33 +2076,3 @@ p {
     align-items: flex-start;
   }
 }
-
-/* ---------- Comparisons Index ---------- */
-.post-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
-}
-
-.post-card {
-  background: #fff;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.post-card h2 {
-  font-size: 1.2rem;
-  border: 0;
-  padding: 0;
-  margin: 0.75rem 0 0.6rem;
-}
-
-.post-card p {
-  margin-bottom: 0.85rem;
-}
-
-.read-more {
-  font-weight: 700;
-}
