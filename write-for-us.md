@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Write for Us | Guest Post Guidelines | SmartGuideHubs
-description: Write for SmartGuideHubs: pitch a guest post idea about software tools for small businesses. Read our editorial guidelines, requirements, and submission process.
+description: "Write for SmartGuideHubs: pitch a guest post idea about software tools for small businesses. Read our editorial guidelines, requirements, and submission process."
 permalink: /write-for-us/
 canonical_url: https://smartguidehubs.com/write-for-us/
 ---
