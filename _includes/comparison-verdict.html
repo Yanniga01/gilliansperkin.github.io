@@ -7,6 +7,13 @@
 
   <div class="verdict-cards">
     <div class="verdict-card">
+      <div class="verdict-card-logo-wrap">
+        {% if include.card1_logo %}
+        <img src="{{ include.card1_logo }}" alt="{{ include.card1_name }} logo" class="verdict-card-logo">
+        {% else %}
+        <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card1_name | slice: 0 }}</div>
+        {% endif %}
+      </div>
       <h3 class="verdict-card-title">{{ include.card1_name }}</h3>
       <p class="verdict-card-label">{{ include.card1_label }}</p>
       <p class="verdict-card-desc">{{ include.card1_desc }}</p>
@@ -14,6 +21,13 @@
     </div>
 
     <div class="verdict-card">
+      <div class="verdict-card-logo-wrap">
+        {% if include.card2_logo %}
+        <img src="{{ include.card2_logo }}" alt="{{ include.card2_name }} logo" class="verdict-card-logo">
+        {% else %}
+        <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card2_name | slice: 0 }}</div>
+        {% endif %}
+      </div>
       <h3 class="verdict-card-title">{{ include.card2_name }}</h3>
       <p class="verdict-card-label">{{ include.card2_label }}</p>
       <p class="verdict-card-desc">{{ include.card2_desc }}</p>
@@ -21,6 +35,13 @@
     </div>
 
     <div class="verdict-card">
+      <div class="verdict-card-logo-wrap">
+        {% if include.card3_logo %}
+        <img src="{{ include.card3_logo }}" alt="{{ include.card3_name }} logo" class="verdict-card-logo">
+        {% else %}
+        <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card3_name | slice: 0 }}</div>
+        {% endif %}
+      </div>
       <h3 class="verdict-card-title">{{ include.card3_name }}</h3>
       <p class="verdict-card-label">{{ include.card3_label }}</p>
       <p class="verdict-card-desc">{{ include.card3_desc }}</p>
