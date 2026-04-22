@@ -1,0 +1,30 @@
+---
+layout: default
+title: Comparisons | SmartGuideHubs
+description: "Side-by-side software comparisons to find the best-fit tool for your business."
+permalink: /insights/comparisons/
+---
+
+<div class="archive-header">
+  <h1>Comparisons</h1>
+  <p>Clear, side-by-side comparisons based on pricing, capabilities, and practical fit.</p>
+</div>
+
+<div class="posts-grid">
+  {% assign comparisons = site.posts | where: "type", "comparison" | sort: "date" | reverse %}
+  {% if comparisons.size == 0 %}
+    <p class="no-posts">No comparisons yet. Check back soon.</p>
+  {% else %}
+    {% for post in comparisons %}
+      <article class="post-card">
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+          <span class="post-category">Comparison</span>
+        </div>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <a href="{{ post.url }}" class="read-more">Read Comparison →</a>
+      </article>
+    {% endfor %}
+  {% endif %}
+</div>

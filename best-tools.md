@@ -323,7 +323,7 @@ permalink: /best-tools/
       <p>Browse SmartGuideHubs reviews and comparisons to see where each tool fits best.</p>
     </div>
     <div class="banner-cta">
-      <a href="/blog/" class="btn-primary">Browse All Reviews →</a>
+      <a href="/insights/" class="btn-primary">Browse All Reviews →</a>
     </div>
   </div>
 
@@ -1003,7 +1003,7 @@ permalink: /best-tools/
       <p>Use this page as a starting point, then explore SmartGuideHubs reviews and comparisons for deeper guidance.</p>
     </div>
     <div class="banner-cta">
-      <a href="/blog/" class="btn-primary">Read All Reviews →</a>
+      <a href="/insights/" class="btn-primary">Read All Reviews →</a>
     </div>
   </div>
 
