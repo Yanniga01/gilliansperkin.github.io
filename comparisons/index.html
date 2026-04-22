@@ -1,30 +1,10 @@
 ---
 layout: default
-title: Tool Comparisons | SmartGuideHubs
-description: "Side‑by‑side comparisons of popular business tools – see which one wins for your use case."
+title: Comparisons Redirect | SmartGuideHubs
 permalink: /comparisons/
+robots: noindex
 ---
 
-<div class="archive-header">
-  <h1>⚖️ Tool Comparisons</h1>
-  <p>Side‑by‑side analysis of popular software – find out which tool fits your workflow.</p>
-</div>
-
-<div class="posts-grid">
-  {% assign comparisons = site.posts | where: "type", "comparison" | sort: "date" | reverse %}
-  {% if comparisons.size == 0 %}
-    <p class="no-posts">No comparisons yet. Check back soon.</p>
-  {% else %}
-    {% for post in comparisons %}
-      <article class="post-card">
-        <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
-          <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-        </div>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        <a href="{{ post.url }}" class="read-more">Read Comparison →</a>
-      </article>
-    {% endfor %}
-  {% endif %}
-</div>
+<meta http-equiv="refresh" content="0; url=/insights/comparisons/">
+<link rel="canonical" href="{{ '/insights/comparisons/' | absolute_url }}">
+<p>This page has moved to <a href="/insights/comparisons/">/insights/comparisons/</a>.</p>

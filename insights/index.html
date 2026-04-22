@@ -1,31 +1,48 @@
 ---
 layout: default
-title: Insights Hub
-description: Explore SmartGuideHubs insights including practical guides, software comparisons, and implementation tutorials for small businesses.
+title: Insights | SmartGuideHubs
+description: Explore all SmartGuideHubs content in one place, including software reviews, practical guides, and side-by-side comparisons.
 permalink: /insights/
 ---
 
-<section class="container" style="padding-top:2rem; padding-bottom:2rem;">
-  <header class="article-header" style="margin-bottom:1.5rem;">
-    <h1>Insights Hub</h1>
-    <p>Choose the format that matches your buying stage: strategy guides, side-by-side comparisons, or hands-on tutorials.</p>
-  </header>
+<div class="archive-header">
+  <h1>Insights</h1>
+  <p>All SmartGuideHubs content in one place: reviews, guides, and comparisons.</p>
+</div>
 
-  <div class="post-grid">
-    <article class="post-card">
-      <h2><a href="/guides/">Guides</a></h2>
-      <p>Frameworks and buying playbooks to shortlist software confidently before trials.</p>
-      <a class="read-more" href="/guides/">Open Guides →</a>
-    </article>
-    <article class="post-card">
-      <h2><a href="/comparisons/">Comparisons</a></h2>
-      <p>Direct product matchups focused on pricing, features, and best-fit use cases.</p>
-      <a class="read-more" href="/comparisons/">Open Comparisons →</a>
-    </article>
-    <article class="post-card">
-      <h2><a href="/tutorials/">Tutorials</a></h2>
-      <p>Step-by-step walkthroughs to implement tools and improve real workflows.</p>
-      <a class="read-more" href="/tutorials/">Open Tutorials →</a>
-    </article>
-  </div>
-</section>
+<div class="post-grid" style="margin-bottom:2rem;">
+  <article class="post-card">
+    <h2><a href="/insights/reviews/">Reviews</a></h2>
+    <p>Hands-on software reviews with pros, cons, pricing context, and verdicts.</p>
+    <a class="read-more" href="/insights/reviews/">Browse Reviews →</a>
+  </article>
+  <article class="post-card">
+    <h2><a href="/insights/guides/">Guides</a></h2>
+    <p>Actionable tutorials and informational guides to help you choose and use tools better.</p>
+    <a class="read-more" href="/insights/guides/">Browse Guides →</a>
+  </article>
+  <article class="post-card">
+    <h2><a href="/insights/comparisons/">Comparisons</a></h2>
+    <p>Direct tool-vs-tool comparisons focused on workflows, fit, and trade-offs.</p>
+    <a class="read-more" href="/insights/comparisons/">Browse Comparisons →</a>
+  </article>
+</div>
+
+<div class="posts-grid">
+  {% assign all_insights = site.posts | sort: "date" | reverse %}
+  {% if all_insights.size == 0 %}
+    <p class="no-posts">No insights published yet. Check back soon.</p>
+  {% else %}
+    {% for post in all_insights %}
+      <article class="post-card">
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+          <span class="post-category">{{ post.type | default: "insight" | replace: "-", " " | capitalize }}</span>
+        </div>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <a href="{{ post.url }}" class="read-more">Read Article →</a>
+      </article>
+    {% endfor %}
+  {% endif %}
+</div>
