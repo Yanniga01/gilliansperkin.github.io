@@ -3,6 +3,7 @@ layout: post
 title: "Semrush vs Ahrefs: Which SEO Tool Is Better in 2026?"
 date: 2026-04-11
 categories: [email-and-marketing-tools]
+type: comparison
 image: /Images/semrush-ahrefs-comparison.jpg
 excerpt: "Semrush vs Ahrefs: unbiased comparison of keyword research, backlinks, pricing, and AI visibility. Find out which SEO tool fits your workflow in 2026."
 permalink: /semrush-vs-ahrefs/

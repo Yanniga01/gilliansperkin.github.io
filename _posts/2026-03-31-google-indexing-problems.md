@@ -3,6 +3,7 @@ layout: post
 title: "Google Indexing Is Broken in 2026: Why Your Content Isn’t Showing (And How to Fix It)"
 date: 2026-03-31
 categories: [email-and-marketing-tools]
+type: guide
 image: /Images/google-indexing-card.jpg
 excerpt: "Google indexing has changed in 2026. Discover why your pages aren't being indexed and how to fix indexing issues with this complete guide."
 permalink: /google-indexing-problems/
