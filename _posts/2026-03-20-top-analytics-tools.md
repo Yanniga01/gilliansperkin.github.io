@@ -3,6 +3,7 @@ layout: post
 title: "Top 5 Analytics Tools Under $50/Month (2026)"
 date: 2026-03-10
 categories: [email-and-marketing-tools]
+type: comparison
 image: /Images/analytics-card.jpg
 excerpt: "We tested 12 analytics platforms to find the best affordable solutions for small businesses in 2026. Complete review and comparison."
 permalink: /top-analytics-tools-2026/

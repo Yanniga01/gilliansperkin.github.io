@@ -3,6 +3,7 @@ layout: post
 title: "SEO in 2026: Why Ranking #1 Doesn’t Guarantee Traffic Anymore"
 date: 2026-04-02
 categories: [email-and-marketing-tools]
+type: guide
 image: /Images/seo-2026-card.jpg
 excerpt: "60% of Google searches now end without a click. Learn why ranking #1 isn't enough in 2026, how AI Overviews are changing SEO, and what actually drives traffic."
 permalink: /seo-2026-ranking-traffic/
