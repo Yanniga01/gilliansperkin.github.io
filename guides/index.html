@@ -1,10 +1,30 @@
 ---
 layout: default
-title: Guides Redirect | SmartGuideHubs
+title: Guides & Tutorials | SmartGuideHubs
+description: "Step‑by‑step guides and tutorials to help you master business software and grow your business."
 permalink: /guides/
-robots: noindex
 ---
 
-<meta http-equiv="refresh" content="0; url=/insights/guides/">
-<link rel="canonical" href="{{ '/insights/guides/' | absolute_url }}">
-<p>This page has moved to <a href="/insights/guides/">/insights/guides/</a>.</p>
+<div class="archive-header">
+  <h1>📘 Guides & Tutorials</h1>
+  <p>Step‑by‑step instructions, best practices, and actionable advice for business tools.</p>
+</div>
+
+<div class="posts-grid">
+  {% assign guides = site.posts | where: "type", "guide" | sort: "date" | reverse %}
+  {% if guides.size == 0 %}
+    <p class="no-posts">No guides yet. Check back soon.</p>
+  {% else %}
+    {% for post in guides %}
+      <article class="post-card">
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+          <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+        </div>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <a href="{{ post.url }}" class="read-more">Read Guide →</a>
+      </article>
+    {% endfor %}
+  {% endif %}
+</div>
