@@ -4,5 +4,5 @@ url: https://smartguidehubs.com
 plugins:
   - jekyll-paginate
 
-paginate: 12          # Number of posts per page
+paginate: 12
 paginate_path: "/blog/page:num/"
