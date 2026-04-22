@@ -6,4 +6,4 @@ plugins:
   - jekyll-responsive-magick
 
 paginate: 12          # Number of posts per page
-paginate_path: "/blog/page:num/"
+paginate_path: "/insights/page:num/"
