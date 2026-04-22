@@ -1,4 +1,4 @@
- <div class="sgh-cta">
+<div class="sgh-cta">
   {% if include.badge %}
   <div class="cta-badge">
     <span>{{ include.badge }}</span>
@@ -6,23 +6,29 @@
   {% endif %}
 
   <h2 class="cta-title">
-    {{ include.title | default: "Ready to get started?" }}
+    {{ include.title | default: "Ready to try the right tool for your workflow?" }}
   </h2>
 
   <p class="cta-text">
-    {{ include.text | default: "Try this tool and see how it can improve your workflow." }}
+    {{ include.text | default: "Explore the platform, review its features, and see whether it fits your business before making a full commitment." }}
   </p>
 
-  <a href="{{ include.button_url }}" 
-     class="cta-button" 
-     target="_blank" 
+  <a href="{{ include.button_url }}"
+     class="cta-button"
+     target="_blank"
      rel="sponsored noopener">
-    {{ include.button_text | default: "Get Started" }} →
+    {{ include.button_text | default: "Try It Now" }} →
   </a>
 
   {% if include.subtext %}
   <p class="cta-subtext">
     {{ include.subtext }}
+  </p>
+  {% endif %}
+
+  {% if include.note %}
+  <p class="cta-note">
+    {{ include.note }}
   </p>
   {% endif %}
 </div>

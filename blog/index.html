@@ -1,6 +1,6 @@
 ---
 layout: default
-title: All Software Reviews & Comparisons
+title: Blog & Comparisons
 description: Browse all our in-depth software reviews, comparisons, and guides. Find the best tools for your business needs in 2026.
 permalink: /blog/
 ---
@@ -103,11 +103,16 @@ permalink: /blog/
         height: auto;
         content-visibility: auto;
         contain-intrinsic-size: 560px;
+        cursor: pointer;
     }
     .article-card:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         border-color: #22d3ee;
+    }
+    .article-card:focus-visible {
+        outline: 3px solid #0c4a6e;
+        outline-offset: 2px;
     }
     .article-image {
         height: 220px;
@@ -401,7 +406,7 @@ permalink: /blog/
 
     <!-- Hero section -->
     <div class="page-hero">
-        <h1>📚 All Software Reviews</h1>
+        <h1>📚 Blog & Comparisons</h1>
         <p>Browse our comprehensive, hands-on reviews of the best software tools for small businesses. Every review includes real-world testing data and actionable insights.</p>
     </div>
 
@@ -456,9 +461,15 @@ permalink: /blog/
         <aside class="blog-sidebar">
             <!-- Search Widget -->
             <div class="sidebar-widget">
-                <h2 class="sidebar-heading">🔍 Search Reviews</h2>
+                <h2 class="sidebar-heading">🔍 Search Blog & Comparisons</h2>
                 <input type="text" id="search-input" class="search-input" placeholder="Type 1+ letter to search articles...">
                 <div id="search-results" class="search-results"></div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h2 class="sidebar-heading">🏆 Best Tools Hub</h2>
+                <p>Need a quick shortlist first? Start with our all-in-one Best Tools page.</p>
+                <a href="/best-tools/" class="article-link">Browse Best Tools →</a>
             </div>
 
             <!-- Categories Widget -->
@@ -503,6 +514,31 @@ permalink: /blog/
         var allCards = Array.prototype.slice.call(document.querySelectorAll('.blog-main .article-card'));
         var filteredCards = allCards.slice();
 
+        function getCardUrl(card) {
+            var linkNode = card.querySelector('.article-link');
+            return linkNode ? linkNode.getAttribute('href') : null;
+        }
+
+        function setupCardNavigation(card) {
+            card.setAttribute('role', 'link');
+            card.setAttribute('tabindex', '0');
+
+            card.addEventListener('click', function(event) {
+                if (event.target.closest('a, button, input, textarea, select')) return;
+                var destination = getCardUrl(card);
+                if (destination) window.location.href = destination;
+            });
+
+            card.addEventListener('keydown', function(event) {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                var destination = getCardUrl(card);
+                if (destination) window.location.href = destination;
+            });
+        }
+
+        allCards.forEach(setupCardNavigation);
+
         function renderPage() {
             var totalPages = Math.max(1, Math.ceil(filteredCards.length / PAGE_SIZE));
             if (currentPage > totalPages) currentPage = totalPages;
@@ -542,7 +578,7 @@ permalink: /blog/
                 searchResults.innerHTML = '<p>No results found.</p>';
             } else {
                 var preview = filteredCards.slice(0, 6).map(function(card) {
-                    var titleNode = card.querySelector('h3');
+                    var titleNode = card.querySelector('.article-title');
                     var title = titleNode ? titleNode.textContent.trim() : 'Article';
                     var urlNode = card.querySelector('.article-link');
                     var url = urlNode ? urlNode.getAttribute('href') : '#';

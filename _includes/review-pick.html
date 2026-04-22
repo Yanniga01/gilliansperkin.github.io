@@ -1,45 +1,32 @@
-<div class="sgh-picks">
-  <div class="picks-header">
-    <span class="picks-badge">SmartGuideHubs Pick</span>
-    <h2 class="picks-heading">{{ include.heading | default: "Recommended Tool" }}</h2>
-    <p class="picks-intro">{{ include.intro | default: "Based on usability, features, pricing, and overall value." }}</p>
+<div class="sgh-cta sgh-cta-review-pick">
+  <div class="cta-badge">
+    <span>{{ include.heading | default: "SmartGuideHubs Top Pick" }}</span>
   </div>
 
-  <div class="picks-card">
-    <div class="picks-logo">
-      <img src="{{ include.logo }}" alt="{{ include.name }} logo">
-    </div>
+  <h2 class="cta-title">
+    {{ include.title | default: "Want to Try Our Top Recommendation?" }}
+  </h2>
 
-    <div>
-      <div class="picks-tags">
-        <span class="picks-main-badge">{{ include.badge | default: "Best Overall" }}</span>
-        {% if include.tag %}
-        <span class="picks-tag">{{ include.tag }}</span>
-        {% endif %}
-      </div>
+  <p class="cta-text">
+    {{ include.text | default: include.intro | default: include.description | default: "Explore the platform and test if it fits your workflow before committing to a paid plan." }}
+  </p>
 
-      <h3 class="picks-title">{{ include.name }}</h3>
-      <p class="picks-subtitle">{{ include.subtitle }}</p>
-      <p class="picks-description">{{ include.description }}</p>
+  <a href="{{ include.button_url | default: include.primary_url }}"
+     class="cta-button"
+     target="_blank"
+     rel="sponsored noopener">
+    {{ include.button_text | default: include.primary_text | default: "Try It Now" }} →
+  </a>
 
-      <ul class="picks-points">
-        {% if include.point1 %}<li>✔ {{ include.point1 }}</li>{% endif %}
-        {% if include.point2 %}<li>✔ {{ include.point2 }}</li>{% endif %}
-        {% if include.point3 %}<li>✔ {{ include.point3 }}</li>{% endif %}
-        {% if include.point4 %}<li>✔ {{ include.point4 }}</li>{% endif %}
-      </ul>
+  {% if include.subtext %}
+  <p class="cta-subtext">
+    {{ include.subtext }}
+  </p>
+  {% endif %}
 
-      <div class="picks-actions">
-        <a href="{{ include.primary_url }}" class="picks-button-primary" rel="sponsored noopener">
-          {{ include.primary_text | default: "Try Now" }}
-        </a>
-
-        {% if include.secondary_url and include.secondary_text %}
-        <a href="{{ include.secondary_url }}" class="picks-button-secondary">
-          {{ include.secondary_text }}
-        </a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+  {% if include.note %}
+  <p class="cta-note">
+    {{ include.note }}
+  </p>
+  {% endif %}
 </div>

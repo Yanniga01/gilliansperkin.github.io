@@ -144,6 +144,32 @@ gtag('config', 'G-3DCX56R2GN');
             background: linear-gradient(90deg, #22d3ee, #06b6d4);
             border-radius: 3px;
         }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > a::after { content: " ▾"; font-size: 0.72rem; }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 190px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+            padding: 0.35rem;
+            list-style: none;
+            z-index: 1200;
+        }
+        .nav-dropdown:hover .dropdown-menu,
+        .nav-dropdown:focus-within .dropdown-menu { display: block; }
+        .nav-dropdown.is-active > .dropdown-toggle { color: #22d3ee; }
+        .dropdown-menu a {
+            display: block;
+            padding: 0.45rem 0.6rem;
+            border-radius: 8px;
+            color: #334155;
+        }
+        .dropdown-menu a:hover { background: #ecfeff; }
         
         .mobile-menu-btn {
             display: none;
@@ -503,6 +529,112 @@ gtag('config', 'G-3DCX56R2GN');
             left: 0;
         }
         
+
+        .homepage-guide {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 1.5rem;
+            margin: 0 0 2rem;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+        }
+        .best-tools-home-spot {
+            background: linear-gradient(135deg, #06122e, #0b2a54);
+            color: #fff;
+            border-radius: 18px;
+            padding: 1.5rem;
+            margin: 0 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 25px rgba(2, 8, 23, 0.2);
+        }
+        .best-tools-home-spot .spot-kicker {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 800;
+            color: #67e8f9;
+        }
+        .best-tools-home-spot h2 {
+            margin: 0.4rem 0 0.5rem;
+            color: #fff;
+            border: 0;
+            padding: 0;
+            font-size: 1.5rem;
+        }
+        .best-tools-home-spot p {
+            margin: 0;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+        }
+        .best-tools-home-spot .spot-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.7rem 1rem;
+            border-radius: 999px;
+            background: #22d3ee;
+            color: #05253b;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .best-tools-home-spot .spot-link:hover { background: #67e8f9; }
+
+        .homepage-guide h2 {
+            margin: 0 0 .6rem;
+            font-size: 1.4rem;
+            color: #0f172a;
+        }
+
+        .homepage-guide p {
+            margin: 0 0 1rem;
+            color: #475569;
+        }
+
+        .category-quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: .85rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-quick-links a {
+            display: block;
+            padding: .85rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            color: #0f172a;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .2s ease;
+        }
+
+        .category-quick-links a:hover {
+            border-color: #0e7490;
+            background: #ecfeff;
+            color: #0e7490;
+            transform: translateY(-2px);
+        }
+
+        .authority-signal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+        }
+
+        .authority-signal span {
+            background: #e2e8f0;
+            color: #0f172a;
+            border-radius: 999px;
+            padding: .42rem .85rem;
+            font-size: .88rem;
+            font-weight: 600;
+        }
+
         /* ===== BLOG HOMEPAGE ===== */
         .blog-grid {
             display: grid;
@@ -904,6 +1036,15 @@ gtag('config', 'G-3DCX56R2GN');
                 flex-direction: column; 
                 gap: 1rem;
             }
+            .dropdown-menu {
+                position: static;
+                display: block;
+                border: 0;
+                box-shadow: none;
+                background: transparent;
+                padding: 0;
+            }
+            .nav-dropdown > a::after { content: ''; }
             .page-header h1 { font-size: 2.2rem; }
             .page-header .subtitle { font-size: 1.1rem; }
             .main-content { padding: 1.8rem; }
@@ -941,9 +1082,18 @@ gtag('config', 'G-3DCX56R2GN');
                 <nav class="main-nav" id="mainNav">
                     <ul>
                         <li><a href="/" class="active">Home</a></li>
-                        <li><a href="blog">All Reviews</a></li>
-                        <li><a href="about">About Us</a></li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="/best-tools/">Best Tools</a></li>
+                        <li class="nav-dropdown">
+                            <a href="/guides/" class="dropdown-toggle">Insights</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/guides/">Guides</a></li>
+                                <li><a href="/comparisons/">Comparisons</a></li>
+                                <li><a href="/tutorials/">Tutorials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                     </ul>
                 </nav>
             </nav>
@@ -958,6 +1108,33 @@ gtag('config', 'G-3DCX56R2GN');
                 <h1>Expert <span class="highlight">Software Reviews</span> for Small Businesses</h1>
                 <p class="subtitle">Unbiased, in-depth analysis of the tools that help you work smarter. We test, compare, and verify so you can make confident decisions.</p>
             </div>
+
+            <section class="best-tools-home-spot" aria-label="Best tools hub">
+                <div>
+                    <div class="spot-kicker">Best Tools 2026</div>
+                    <h2>Start with our complete shortlist before reading individual reviews.</h2>
+                    <p>We organized top picks by category, pricing fit, and use-case so you can narrow options faster.</p>
+                </div>
+                <a class="spot-link" href="/best-tools/">Open Best Tools Hub →</a>
+            </section>
+
+
+            <section class="homepage-guide" aria-label="Software category guide">
+                <h2>Find the Best Tool for Your Business</h2>
+                <p>Start with your category to narrow your choices faster and compare only the tools that match your workflow.</p>
+                <div class="category-quick-links">
+                    <a href="/categories/pdf-and-document-tools/">📄 PDF &amp; Document Tools</a>
+                    <a href="/categories/email-and-marketing-tools/">📧 Email &amp; Marketing Tools</a>
+                    <a href="/categories/project-management/">📊 Project Management</a>
+                    <a href="/categories/finance/">💼 Finance &amp; Accounting</a>
+                </div>
+                <div class="authority-signal" aria-label="Authority signals">
+                    <span>✅ 90+ Days Hands-On Testing</span>
+                    <span>✅ Transparent Editorial Policy</span>
+                    <span>✅ Updated Reviews for 2026</span>
+                    <span>✅ Independent Comparison Method</span>
+                </div>
+            </section>
 
             <h2 class="section-heading">Latest software reviews</h2>
 
@@ -1010,7 +1187,7 @@ gtag('config', 'G-3DCX56R2GN');
             </div>
 
             <div class="text-center mt-3">
-                <a href="./blog" class="brand-button">EXPLORE ALL REVIEWS</a>
+                <a href="/blog/" class="brand-button">Find the Best Tool for Your Business</a>
             </div>
         </section>
 
@@ -1376,8 +1553,6 @@ gtag('config', 'G-3DCX56R2GN');
     <!-- End MailerLite Universal -->
 </body>
 </html>
-
-
 
 
 

@@ -120,7 +120,16 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-                    <li><a href="/blog" {% if page.url contains "/blog" %}class="active"{% endif %}>All Reviews</a></li>
+                    <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>
+                    <li class="nav-dropdown{% if page.url contains '/guides/' or page.url contains '/comparisons/' or page.url contains '/tutorials/' %} is-active{% endif %}">
+                        <a href="/guides/" class="dropdown-toggle{% if page.url contains '/guides/' or page.url contains '/comparisons/' or page.url contains '/tutorials/' %} active{% endif %}">Insights</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/guides/" {% if page.url contains "/guides/" %}class="active"{% endif %}>Guides</a></li>
+                            <li><a href="/comparisons/" {% if page.url contains "/comparisons/" %}class="active"{% endif %}>Comparisons</a></li>
+                            <li><a href="/tutorials/" {% if page.url contains "/tutorials/" %}class="active"{% endif %}>Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/blog/" {% if page.url contains "/blog/" %}class="active"{% endif %}>Blog</a></li>
                     <li><a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
                     <li><a href="/editorial-team" {% if page.url == "/editorial-team/" %}class="active"{% endif %}>Editorial Team</a></li>
                     <li><a href="/contact" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
@@ -128,6 +137,15 @@
             </nav>
         </div>
     </header>
+    {% unless page.url == "/best-tools/" %}
+    <div class="best-tools-banner" role="complementary" aria-label="Best Tools quick link">
+        <div class="best-tools-banner-inner">
+            <span class="best-tools-banner-kicker">New</span>
+            <p>Looking for our full software shortlist? Explore the complete 2026 picks.</p>
+            <a href="/best-tools/" class="best-tools-banner-link">View Best Tools →</a>
+        </div>
+    </div>
+    {% endunless %}
 
     <!-- Main content -->
     <main id="main">
