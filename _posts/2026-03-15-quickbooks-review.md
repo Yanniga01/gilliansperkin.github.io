@@ -3,6 +3,7 @@ layout: post
 title: "QuickBooks Online 2026: Is It Still Worth It for Service Businesses?"
 date: 2026-03-15
 categories: [finance]
+type: review
 image: /Images/quickbooks-card.jpg
 excerpt: "Complete analysis of pricing, features, and alternatives for service businesses. See if the 50% price increase is justified."
 permalink: /quickbooks-review-2026/
