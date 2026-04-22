@@ -8,19 +8,30 @@ permalink: /guides/
 <section class="container" style="padding-top:2rem; padding-bottom:2rem;">
   <header class="article-header" style="margin-bottom:1.5rem;">
     <h1>Guides</h1>
-    <p>Editorial buying guides to help you choose the right software stack with confidence.</p>
+    <p>Informational and tutorial-style content only. Reviews and comparisons are listed separately.</p>
   </header>
 
   <div class="post-grid">
-    <article class="post-card">
-      <h2><a href="/blog/">Explore all guides</a></h2>
-      <p>Browse all review guides and framework-style writeups from the SmartGuideHubs editorial team.</p>
-      <a class="read-more" href="/blog/">Go to Blog →</a>
-    </article>
-    <article class="post-card">
-      <h2><a href="/best-tools/">Best Tools Directory</a></h2>
-      <p>Start with a curated shortlist by category before diving into full product-by-product reviews.</p>
-      <a class="read-more" href="/best-tools/">Open Best Tools →</a>
-    </article>
+    {% assign guide_posts = site.posts | sort: "date" | reverse %}
+    {% assign guide_count = 0 %}
+    {% for post in guide_posts %}
+      {% unless post.title contains "Review" or post.title contains "review" or post.title contains " vs " or post.title contains " VS " or post.title contains "versus" %}
+      {% assign guide_count = guide_count | plus: 1 %}
+      <article class="post-card">
+        {% if post.image %}
+          <a href="{{ post.url }}"><img src="{{ post.image }}" alt="{{ post.title }}"></a>
+        {% endif %}
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+        <a class="read-more" href="{{ post.url }}">Read guide →</a>
+      </article>
+      {% endunless %}
+    {% endfor %}
+
+    {% if guide_count == 0 %}
+      <p>No guide articles found yet.</p>
+    {% endif %}
   </div>
+
+  <p style="margin-top:1.5rem; color:#475569;">Looking for product evaluations? Browse <a href="/reviews/">Reviews</a> or <a href="/comparisons/">Comparisons</a>.</p>
 </section>

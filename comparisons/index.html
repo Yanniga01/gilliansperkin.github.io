@@ -8,11 +8,11 @@ permalink: /comparisons/
 <section class="container" style="padding-top:2rem; padding-bottom:2rem;">
   <header class="article-header" style="margin-bottom:1.5rem;">
     <h1>Software Comparisons</h1>
-    <p>Side-by-side comparisons to help you pick the right tool faster.</p>
+    <p>Side-by-side matchups only. Individual product reviews are listed on <a href="/reviews/">Reviews</a>.</p>
   </header>
 
   <div class="post-grid">
-    {% assign comparison_posts = site.posts | where_exp: "post", "post.title contains 'vs' or post.title contains 'VS'" %}
+    {% assign comparison_posts = site.posts | where_exp: "post", "post.title contains ' vs ' or post.title contains ' VS ' or post.title contains 'versus'" | sort: "date" | reverse %}
     {% for post in comparison_posts %}
       <article class="post-card">
         {% if post.image %}
@@ -26,4 +26,6 @@ permalink: /comparisons/
       <p>No comparison articles found yet. Check back soon.</p>
     {% endfor %}
   </div>
+
+  <p style="margin-top:1.5rem; color:#475569;">Want tutorials and framework-style explainers? Visit <a href="/guides/">Guides</a>.</p>
 </section>
