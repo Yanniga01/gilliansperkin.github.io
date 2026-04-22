@@ -155,6 +155,44 @@
     <!-- Footer -->
     {% include footer.html %}
 
+    <script>
+      (function () {
+        const dropdownItems = document.querySelectorAll('.nav-dropdown');
+        const mobileBreakpoint = 768;
+
+        function closeDropdowns() {
+          dropdownItems.forEach((item) => {
+            item.classList.remove('dropdown-open');
+            const toggle = item.querySelector('.dropdown-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        dropdownItems.forEach((item) => {
+          const toggle = item.querySelector('.dropdown-toggle');
+          if (!toggle) return;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.addEventListener('click', (event) => {
+            if (window.innerWidth > mobileBreakpoint) return;
+            event.preventDefault();
+            const isOpen = item.classList.contains('dropdown-open');
+            closeDropdowns();
+            if (!isOpen) {
+              item.classList.add('dropdown-open');
+              toggle.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!event.target.closest('.nav-dropdown')) closeDropdowns();
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > mobileBreakpoint) closeDropdowns();
+        });
+      })();
+    </script>
     <script src="/cookies.js"></script>
 </body>
 </html>

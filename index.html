@@ -160,8 +160,11 @@ gtag('config', 'G-3DCX56R2GN');
             list-style: none;
             z-index: 1200;
         }
-        .nav-dropdown:hover .dropdown-menu,
-        .nav-dropdown:focus-within .dropdown-menu { display: block; }
+        .nav-dropdown.dropdown-open .dropdown-menu { display: block; }
+        @media (min-width: 769px) {
+            .nav-dropdown:hover .dropdown-menu,
+            .nav-dropdown:focus-within .dropdown-menu { display: block; }
+        }
         .nav-dropdown.is-active > .dropdown-toggle { color: #22d3ee; }
         .dropdown-menu a {
             display: block;
@@ -1038,12 +1041,13 @@ gtag('config', 'G-3DCX56R2GN');
             }
             .dropdown-menu {
                 position: static;
-                display: block;
+                display: none;
                 border: 0;
                 box-shadow: none;
                 background: transparent;
                 padding: 0;
             }
+            .nav-dropdown.dropdown-open .dropdown-menu { display: block; }
             .nav-dropdown > a::after { content: ''; }
             .page-header h1 { font-size: 2.2rem; }
             .page-header .subtitle { font-size: 1.1rem; }
@@ -1502,44 +1506,39 @@ gtag('config', 'G-3DCX56R2GN');
             const nav = document.getElementById('mainNav');
             nav.classList.toggle('active');
         });
-
-        // Simple navigation between sections for demonstration
-        // In a real site, these would be separate pages
-        document.querySelectorAll('.main-nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const target = this.getAttribute('href');
-                
-                if(target === './') {
-                    document.getElementById('homepage-content').style.display = 'block';
-                    document.getElementById('article-content').style.display = 'none';
-                    document.getElementById('about-content').style.display = 'none';
-                } else if(target === './about') {
-                    document.getElementById('homepage-content').style.display = 'none';
-                    document.getElementById('article-content').style.display = 'none';
-                    document.getElementById('about-content').style.display = 'block';
-                }
-                
-                // Update active nav link
-                document.querySelectorAll('.main-nav a').forEach(a => a.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Close mobile menu if open
-                document.getElementById('mainNav').classList.remove('active');
-                
-                // Don't actually navigate in this demo
-                if(target.startsWith('./')) e.preventDefault();
+        
+        // Mobile dropdown toggle (click to open/close)
+        const mobileBreakpoint = 768;
+        const dropdownItems = document.querySelectorAll('.nav-dropdown');
+        function closeDropdowns() {
+            dropdownItems.forEach(item => item.classList.remove('dropdown-open'));
+        }
+        dropdownItems.forEach(item => {
+            const toggle = item.querySelector('.dropdown-toggle');
+            if (!toggle) return;
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth > mobileBreakpoint) return;
+                e.preventDefault();
+                const isOpen = item.classList.contains('dropdown-open');
+                closeDropdowns();
+                if (!isOpen) item.classList.add('dropdown-open');
             });
         });
 
-        // In a real implementation, you would have separate HTML files for:
-        // 1. / (homepage with blog grid)
-        // 2. article page (single article like PDFfiller review)
-        // 3. about (about us page)
-        // 4. blog (all articles listing)
-        // 5. contact (contact form)
-
-        // For now, this demo shows how to structure a complete website
-        console.log('SmartGuideHubs website loaded. This is a professional template for legitimate affiliate marketing.');
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav-dropdown') && !e.target.closest('#mobileMenuBtn')) {
+                closeDropdowns();
+            }
+        });
+        
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= mobileBreakpoint && !this.classList.contains('dropdown-toggle')) {
+                    document.getElementById('mainNav').classList.remove('active');
+                    closeDropdowns();
+                }
+            });
+        });
     </script>
                 <script src="/cookies.js"></script>
 
