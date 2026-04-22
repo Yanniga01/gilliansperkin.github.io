@@ -1,25 +1,321 @@
 ---
 layout: default
-title: Blog | SmartGuideHubs
+title: Insights | SmartGuideHubs
+description: All our software reviews, guides, and comparisons in one place. Find the best tools for your business.
 permalink: /blog/
 ---
 
 <div class="archive-header">
-  <h1>📰 Latest Updates</h1>
-  <p>All our content – reviews, comparisons, and guides – in one place.</p>
+    <h1>📚 Insights</h1>
+    <p>All our content — reviews, guides, and comparisons — in one place.</p>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Search reviews, guides, comparisons...">
+        <button id="search-button" class="search-button">🔍 Search</button>
+    </div>
+    <div id="search-results" class="search-results" style="display: none;"></div>
 </div>
 
-<div class="posts-grid">
-  {% assign all_posts = site.posts | sort: "date" | reverse %}
-  {% for post in all_posts %}
-    <article class="post-card">
-      <div class="post-meta">
-        <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
-        <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-      </div>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-      <a href="{{ post.url }}" class="read-more">Read →</a>
-    </article>
-  {% endfor %}
+<div class="posts-grid" id="posts-container">
+    {% for post in paginator.posts %}
+        <article class="post-card">
+            {% if post.image %}
+                <div class="post-image">
+                    <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                </div>
+            {% endif %}
+            <div class="post-meta">
+                <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+                <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+                <span class="post-type">{{ post.type | capitalize }}</span>
+            </div>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url }}" class="read-more">Read →</a>
+        </article>
+    {% endfor %}
 </div>
+
+{% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="prev">← Previous</a>
+        {% endif %}
+        <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next →</a>
+        {% endif %}
+    </div>
+{% endif %}
+
+<!-- Hidden search data -->
+<script id="search-data" type="application/json">
+    [
+        {% for post in site.posts %}
+            {
+                "title": {{ post.title | jsonify }},
+                "url": {{ post.url | jsonify }},
+                "excerpt": {{ post.excerpt | strip_html | truncatewords: 30 | jsonify }},
+                "date": {{ post.date | date: "%b %Y" | jsonify }},
+                "type": {{ post.type | default: "post" | jsonify }},
+                "category": {{ post.categories[0] | replace: "-", " " | capitalize | jsonify }},
+                "image": {{ post.image | default: "" | jsonify }}
+            }
+        {% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+</script>
+
+<style>
+.archive-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.archive-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.archive-header p {
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Search bar styles */
+.search-container {
+    display: flex;
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    gap: 0;
+}
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+.search-input:focus {
+    outline: none;
+    border-color: #ff6b35;
+}
+.search-button {
+    padding: 0.75rem 1.25rem;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-button:hover {
+    background: #e54b1b;
+}
+.search-results {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-top: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: left;
+}
+.search-result-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: #1e293b;
+    transition: background 0.2s;
+}
+.search-result-item:hover {
+    background: #f8fafc;
+}
+.search-result-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.search-result-content {
+    flex: 1;
+}
+.search-result-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.search-result-excerpt {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+.search-result-meta {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 0.25rem;
+}
+.no-results {
+    padding: 2rem;
+    text-align: center;
+    color: #64748b;
+}
+
+.posts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.post-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.post-image {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.post-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.post-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+}
+.post-date, .post-category, .post-type {
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+}
+.post-date {
+    background: #f1f5f9;
+    color: #475569;
+}
+.post-category {
+    background: #ffe4d6;
+    color: #ff6b35;
+}
+.post-type {
+    background: #dbeafe;
+    color: #3b82f6;
+}
+.post-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.post-card h2 a {
+    color: #1e293b;
+    text-decoration: none;
+}
+.post-card h2 a:hover {
+    color: #ff6b35;
+}
+.post-card p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+.read-more {
+    color: #ff6b35;
+    font-weight: 600;
+    text-decoration: none;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.pagination a, .pagination span {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.pagination a {
+    background: #ff6b35;
+    color: white;
+}
+.pagination span {
+    background: #f1f5f9;
+    color: #475569;
+}
+</style>
+
+<script>
+(function() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const resultsContainer = document.getElementById('search-results');
+    const postsContainer = document.getElementById('posts-container');
+    let searchData = [];
+
+    try {
+        const dataElement = document.getElementById('search-data');
+        if (dataElement) {
+            searchData = JSON.parse(dataElement.textContent);
+        }
+    } catch(e) {
+        console.error('Failed to parse search data');
+    }
+
+    function performSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        
+        if (query.length < 2) {
+            resultsContainer.style.display = 'none';
+            postsContainer.style.display = 'block';
+            return;
+        }
+
+        const results = searchData.filter(item => 
+            item.title.toLowerCase().includes(query) ||
+            item.excerpt.toLowerCase().includes(query) ||
+            item.type.toLowerCase().includes(query) ||
+            item.category.toLowerCase().includes(query)
+        );
+
+        if (results.length === 0) {
+            resultsContainer.innerHTML = '<div class="no-results">No results found. Try a different search term.</div>';
+            resultsContainer.style.display = 'block';
+            postsContainer.style.display = 'none';
+            return;
+        }
+
+        resultsContainer.innerHTML = results.map(result => `
+            <a href="${result.url}" class="search-result-item">
+                ${result.image ? `<img src="${result.image}" class="search-result-image" alt="${result.title}">` : ''}
+                <div class="search-result-content">
+                    <div class="search-result-title">${result.title}</div>
+                    <div class="search-result-excerpt">${result.excerpt.substring(0, 100)}...</div>
+                    <div class="search-result-meta">${result.type} • ${result.category} • ${result.date}</div>
+                </div>
+            </a>
+        `).join('');
+
+        resultsContainer.style.display = 'block';
+        postsContainer.style.display = 'none';
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+})();
+</script>
