@@ -91,7 +91,7 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
 
             {% if all_posts.size > 10 %}
             <div style="text-align: center; margin: 2rem 0 1rem;">
-                <a href="/insights/" class="view-all-link">
+                <a href="/blog/" class="view-all-link">
                     📚 View all {{ all_posts.size }} email & marketing tool reviews on our blog →
                 </a>
             </div>
