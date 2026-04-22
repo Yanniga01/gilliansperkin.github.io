@@ -1,30 +1,26 @@
 ---
 layout: default
 title: Guides
-description: Practical buying guides and implementation explainers for software decisions.
+description: Practical software buying guides and implementation frameworks for small businesses.
 permalink: /guides/
 ---
 
 <section class="container" style="padding-top:2rem; padding-bottom:2rem;">
   <header class="article-header" style="margin-bottom:1.5rem;">
     <h1>Guides</h1>
-    <p>Informational and strategic content to shortlist, evaluate, and implement software with confidence.</p>
+    <p>Editorial buying guides to help you choose the right software stack with confidence.</p>
   </header>
 
   <div class="post-grid">
-    {% assign guide_posts = site.posts | where_exp: "post", "post.title contains ' vs ' == false and post.title contains 'VS' == false and post.title contains 'Review' == false and post.title contains 'review' == false" | sort: "date" | reverse %}
-    {% for post in guide_posts %}
-      <article class="post-card">
-        {% if post.image %}
-          <a href="{{ post.url }}"><img src="{{ post.image }}" alt="{{ post.title }}"></a>
-        {% endif %}
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
-        <p><a href="/comparisons/">See related comparisons</a> · <a href="/reviews/">Read related reviews</a></p>
-        <a class="read-more" href="{{ post.url }}">Read guide →</a>
-      </article>
-    {% else %}
-      <p>No guide articles found yet. Check back soon.</p>
-    {% endfor %}
+    <article class="post-card">
+      <h2><a href="/blog/">Explore all guides</a></h2>
+      <p>Browse all review guides and framework-style writeups from the SmartGuideHubs editorial team.</p>
+      <a class="read-more" href="/blog/">Go to Blog →</a>
+    </article>
+    <article class="post-card">
+      <h2><a href="/best-tools/">Best Tools Directory</a></h2>
+      <p>Start with a curated shortlist by category before diving into full product-by-product reviews.</p>
+      <a class="read-more" href="/best-tools/">Open Best Tools →</a>
+    </article>
   </div>
 </section>
