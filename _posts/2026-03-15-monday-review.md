@@ -3,6 +3,7 @@ layout: post
 title: "Monday.com 2026 Review: Is It Still the Best Project Management Platform?"
 date: 2026-03-15
 categories: [project-management]
+type: review
 image: /Images/monday-card.jpg
 excerpt: "After 90 days of rigorous testing with real teams, we reveal whether Monday.com still dominates the visual project management space in 2026."
 permalink: /monday-review-2026/

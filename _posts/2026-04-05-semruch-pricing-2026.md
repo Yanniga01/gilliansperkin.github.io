@@ -3,6 +3,7 @@ layout: post
 title: "Semrush Pricing Explained (2026): Plans, Costs & Hidden Fees"
 date: 2026-04-05
 categories: [email-and-marketing-tools]
+type: guide
 image: /Images/semrush-pricing-card.jpg
 excerpt: "Semrush pricing in 2026: Pro, Guru, Business, and Semrush One plans broken down with real costs, hidden fees, add-ons, and honest advice on which plan saves you money."
 permalink: /semrush-pricing-2026/

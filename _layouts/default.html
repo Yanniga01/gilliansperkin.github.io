@@ -121,12 +121,12 @@
                 <ul>
                     <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                     <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>
-                    <li class="nav-dropdown{% if page.url contains '/guides/' or page.url contains '/comparisons/' or page.url contains '/tutorials/' %} is-active{% endif %}">
-                        <a href="/guides/" class="dropdown-toggle{% if page.url contains '/guides/' or page.url contains '/comparisons/' or page.url contains '/tutorials/' %} active{% endif %}">Insights</a>
+                    <li class="nav-dropdown{% if page.url contains '/reviews/' or page.url contains '/guides/' or page.url contains '/comparisons/' %} is-active{% endif %}">
+                        <a href="/guides/" class="dropdown-toggle{% if page.url contains '/reviews/' or page.url contains '/guides/' or page.url contains '/comparisons/' %} active{% endif %}">Insights</a>
                         <ul class="dropdown-menu">
+                            <li><a href="/reviews/" {% if page.url contains "/reviews/" %}class="active"{% endif %}>Reviews</a></li>
                             <li><a href="/guides/" {% if page.url contains "/guides/" %}class="active"{% endif %}>Guides</a></li>
                             <li><a href="/comparisons/" {% if page.url contains "/comparisons/" %}class="active"{% endif %}>Comparisons</a></li>
-                            <li><a href="/tutorials/" {% if page.url contains "/tutorials/" %}class="active"{% endif %}>Tutorials</a></li>
                         </ul>
                     </li>
                     <li><a href="/blog/" {% if page.url contains "/blog/" %}class="active"{% endif %}>Blog</a></li>
@@ -155,6 +155,44 @@
     <!-- Footer -->
     {% include footer.html %}
 
+    <script>
+      (function () {
+        const dropdownItems = document.querySelectorAll('.nav-dropdown');
+        const mobileBreakpoint = 768;
+
+        function closeDropdowns() {
+          dropdownItems.forEach((item) => {
+            item.classList.remove('dropdown-open');
+            const toggle = item.querySelector('.dropdown-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        dropdownItems.forEach((item) => {
+          const toggle = item.querySelector('.dropdown-toggle');
+          if (!toggle) return;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.addEventListener('click', (event) => {
+            if (window.innerWidth > mobileBreakpoint) return;
+            event.preventDefault();
+            const isOpen = item.classList.contains('dropdown-open');
+            closeDropdowns();
+            if (!isOpen) {
+              item.classList.add('dropdown-open');
+              toggle.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!event.target.closest('.nav-dropdown')) closeDropdowns();
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > mobileBreakpoint) closeDropdowns();
+        });
+      })();
+    </script>
     <script src="/cookies.js"></script>
 </body>
 </html>
