@@ -100,373 +100,12 @@
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2164742');
     </script>
-
-    <!-- ═══ NAV STYLES — drop into site.css if preferred ═══ -->
-    <style>
-      /* ── Reset & base ── */
-      *, *::before, *::after { box-sizing: border-box; }
-
-      /* ── Header shell ── */
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 200;
-        background: #ffffff;
-        border-bottom: 1px solid #e8edf2;
-        box-shadow: 0 1px 8px rgba(11, 22, 41, 0.07);
-      }
-
-      .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-        height: 68px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 32px;
-      }
-
-      /* ── Logo ── */
-      .logo a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        flex-shrink: 0;
-      }
-
-      .logo img {
-        height: 34px;
-        width: auto;
-        display: block;
-      }
-
-      /* ── Main nav ── */
-      .main-nav > ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 2px;
-      }
-
-      /* All top-level nav items */
-      .main-nav > ul > li {
-        position: relative;
-      }
-
-      /* ── Standard nav links ── */
-      .main-nav > ul > li > a {
-        display: inline-flex;
-        align-items: center;
-        padding: 7px 13px;
-        border-radius: 7px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #374151;
-        text-decoration: none;
-        letter-spacing: -0.1px;
-        transition: background 0.14s, color 0.14s;
-        white-space: nowrap;
-      }
-
-      .main-nav > ul > li > a:hover {
-        background: #f1f5f9;
-        color: #0B1629;
-      }
-
-      .main-nav > ul > li > a.active {
-        color: #1D4ED8;
-        background: #EFF6FF;
-        font-weight: 600;
-      }
-
-      /* ── Dropdown toggle button ── */
-      .dropdown-toggle {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 7px 13px;
-        border-radius: 7px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #374151;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        letter-spacing: -0.1px;
-        transition: background 0.14s, color 0.14s;
-        white-space: nowrap;
-        font-family: inherit;
-        line-height: 1;
-      }
-
-      .dropdown-toggle:hover {
-        background: #f1f5f9;
-        color: #0B1629;
-      }
-
-      /* Replace the ▼ text with a pure CSS chevron so it rotates cleanly */
-      .dropdown-toggle .chevron {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-right: 2px solid currentColor;
-        border-bottom: 2px solid currentColor;
-        transform: rotate(45deg) translateY(-2px);
-        transition: transform 0.2s ease;
-        flex-shrink: 0;
-      }
-
-      .nav-dropdown.dropdown-open .dropdown-toggle {
-        background: #EFF6FF;
-        color: #1D4ED8;
-      }
-
-      .nav-dropdown.dropdown-open .chevron {
-        transform: rotate(-135deg) translateY(-2px);
-      }
-
-      /* ── Dropdown menu card ── */
-      .dropdown-menu {
-        display: none; /* toggled via JS */
-        position: absolute;
-        top: calc(100% + 8px);
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 200px;
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        box-shadow: 0 8px 30px rgba(11, 22, 41, 0.13), 0 2px 8px rgba(11, 22, 41, 0.06);
-        padding: 6px;
-        list-style: none;
-        margin: 0;
-        /* Entry animation */
-        opacity: 0;
-        transform: translateX(-50%) translateY(-6px);
-        transition: opacity 0.18s ease, transform 0.18s ease;
-        pointer-events: none;
-      }
-
-      /* Small arrow pointer */
-      .dropdown-menu::before {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        transform: translateX(-50%) rotate(45deg);
-        width: 10px;
-        height: 10px;
-        background: #ffffff;
-        border-left: 1px solid #e2e8f0;
-        border-top: 1px solid #e2e8f0;
-      }
-
-      .nav-dropdown.dropdown-open .dropdown-menu {
-        display: block;
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-        pointer-events: auto;
-      }
-
-      /* Dropdown items */
-      .dropdown-menu li {
-        margin: 0;
-      }
-
-      .dropdown-menu li a {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        padding: 9px 14px;
-        border-radius: 8px;
-        font-size: 13.5px;
-        font-weight: 500;
-        color: #374151;
-        text-decoration: none;
-        transition: background 0.13s, color 0.13s;
-        white-space: nowrap;
-      }
-
-      .dropdown-menu li a::before {
-        content: '';
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #CBD5E1;
-        flex-shrink: 0;
-        transition: background 0.13s;
-      }
-
-      .dropdown-menu li a:hover {
-        background: #F8FAFC;
-        color: #1D4ED8;
-      }
-
-      .dropdown-menu li a:hover::before {
-        background: #1D4ED8;
-      }
-
-      .dropdown-menu li a.active {
-        color: #1D4ED8;
-        background: #EFF6FF;
-        font-weight: 600;
-      }
-
-      .dropdown-menu li a.active::before {
-        background: #1D4ED8;
-      }
-
-      /* ── Best Tools banner ── */
-      .best-tools-banner {
-        background: linear-gradient(90deg, #EFF6FF 0%, #F8FAFC 100%);
-        border-bottom: 1px solid #BFDBFE;
-      }
-
-      .best-tools-banner-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 9px 24px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .best-tools-banner-kicker {
-        display: inline-flex;
-        align-items: center;
-        background: #1D4ED8;
-        color: #ffffff;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        padding: 2px 8px;
-        border-radius: 4px;
-        flex-shrink: 0;
-      }
-
-      .best-tools-banner p {
-        font-size: 13px;
-        color: #1E3A5F;
-        margin: 0;
-        flex: 1;
-      }
-
-      .best-tools-banner-link {
-        font-size: 13px;
-        font-weight: 600;
-        color: #1D4ED8;
-        text-decoration: none;
-        white-space: nowrap;
-        transition: color 0.13s;
-      }
-
-      .best-tools-banner-link:hover {
-        color: #1E40AF;
-        text-decoration: underline;
-      }
-
-      /* ── Hamburger — mobile ── */
-      .nav-toggle {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
-        background: transparent;
-        cursor: pointer;
-        flex-shrink: 0;
-        gap: 0;
-        flex-direction: column;
-        padding: 8px;
-      }
-
-      .nav-toggle span {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #374151;
-        border-radius: 2px;
-        transition: transform 0.2s, opacity 0.2s;
-      }
-
-      .nav-toggle span + span { margin-top: 4px; }
-
-      .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-      .nav-toggle.open span:nth-child(2) { opacity: 0; }
-      .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-      /* ── Responsive ── */
-      @media (max-width: 900px) {
-        .nav-toggle { display: flex; }
-
-        .main-nav {
-          display: none;
-          position: absolute;
-          top: 68px;
-          left: 0;
-          right: 0;
-          background: #ffffff;
-          border-bottom: 1px solid #e2e8f0;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-          padding: 12px 16px 16px;
-          z-index: 199;
-        }
-
-        .main-nav.nav-open { display: block; }
-
-        .main-nav > ul {
-          flex-direction: column;
-          align-items: stretch;
-          gap: 2px;
-        }
-
-        .main-nav > ul > li > a,
-        .dropdown-toggle {
-          width: 100%;
-          padding: 10px 14px;
-          border-radius: 8px;
-          font-size: 15px;
-        }
-
-        /* Mobile dropdown inline */
-        .dropdown-menu {
-          display: none !important;
-          position: static !important;
-          transform: none !important;
-          box-shadow: none !important;
-          border: none !important;
-          border-radius: 0 !important;
-          padding: 0 0 0 16px !important;
-          background: transparent !important;
-          min-width: 0 !important;
-          opacity: 1 !important;
-          pointer-events: auto !important;
-        }
-
-        .dropdown-menu::before { display: none; }
-
-        .nav-dropdown.dropdown-open .dropdown-menu {
-          display: block !important;
-        }
-
-        .dropdown-menu li a {
-          padding: 9px 12px;
-          font-size: 14px;
-        }
-      }
-    </style>
 </head>
 <body>
+    <!-- Skip link -->
     <a href="#main" class="skip-link">Skip to content</a>
 
+    <!-- Header -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">
@@ -474,26 +113,17 @@
                     <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="1200" height="260">
                 </a>
             </div>
-
-            <!-- Mobile hamburger -->
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="main-nav" id="main-nav">
+            <nav class="main-nav">
                 <ul>
                     <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                     <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>
                     <li class="nav-dropdown">
-                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                            Insights <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li role="none"><a href="/reviews/" role="menuitem" {% if page.url contains "/reviews/" %}class="active"{% endif %}>Reviews</a></li>
-                            <li role="none"><a href="/guides/" role="menuitem" {% if page.url contains "/guides/" %}class="active"{% endif %}>Guides</a></li>
-                            <li role="none"><a href="/comparisons/" role="menuitem" {% if page.url contains "/comparisons/" %}class="active"{% endif %}>Comparisons</a></li>
+                        <button class="dropdown-toggle" aria-expanded="false">Insights ▼</button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/blog/" {% if page.url == "/blog/" %}class="active"{% endif %}>All Insights</a></li>
+                            <li><a href="/reviews/" {% if page.url contains "/reviews/" %}class="active"{% endif %}>Reviews</a></li>
+                            <li><a href="/guides/" {% if page.url contains "/guides/" %}class="active"{% endif %}>Guides</a></li>
+                            <li><a href="/comparisons/" {% if page.url contains "/comparisons/" %}class="active"{% endif %}>Comparisons</a></li>
                         </ul>
                     </li>
                     <li><a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
@@ -505,7 +135,7 @@
     </header>
 
     {% unless page.url == "/best-tools/" %}
-    <div class="best-tools-banner" role="complementary">
+    <div class="best-tools-banner" role="complementary" aria-label="Best Tools quick link">
         <div class="best-tools-banner-inner">
             <span class="best-tools-banner-kicker">New</span>
             <p>Looking for our full software shortlist? Explore the complete 2026 picks.</p>
@@ -514,62 +144,53 @@
     </div>
     {% endunless %}
 
+    <!-- Main content -->
     <main id="main">
         {{ content }}
     </main>
 
+    <!-- Footer -->
     {% include footer.html %}
 
     <script>
-      (function () {
-
-        /* ── Insights dropdown ── */
-        var dropdown = document.querySelector('.nav-dropdown');
-        var toggle   = dropdown ? dropdown.querySelector('.dropdown-toggle') : null;
+      (function() {
+        const dropdown = document.querySelector('.nav-dropdown');
+        const toggle = dropdown ? dropdown.querySelector('.dropdown-toggle') : null;
+        const menu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
 
         function closeDropdown() {
-          if (!dropdown) return;
-          dropdown.classList.remove('dropdown-open');
+          if (dropdown) dropdown.classList.remove('dropdown-open');
           if (toggle) toggle.setAttribute('aria-expanded', 'false');
         }
 
-        function openDropdown() {
-          if (!dropdown) return;
-          dropdown.classList.add('dropdown-open');
-          if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        function toggleDropdown(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = dropdown.classList.contains('dropdown-open');
+          closeDropdown();
+          if (!isOpen) {
+            dropdown.classList.add('dropdown-open');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
         }
 
         if (toggle) {
-          toggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            dropdown.classList.contains('dropdown-open') ? closeDropdown() : openDropdown();
-          });
+          toggle.addEventListener('click', toggleDropdown);
         }
 
-        /* Close on outside click */
-        document.addEventListener('click', function (e) {
-          if (dropdown && !dropdown.contains(e.target)) closeDropdown();
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+          if (dropdown && !dropdown.contains(event.target)) {
+            closeDropdown();
+          }
         });
 
-        /* Close on Escape */
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape') closeDropdown();
+        // Close dropdown on ESC key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            closeDropdown();
+          }
         });
-
-        /* ── Mobile hamburger ── */
-        var navToggle = document.getElementById('nav-toggle');
-        var mainNav   = document.getElementById('main-nav');
-
-        if (navToggle && mainNav) {
-          navToggle.addEventListener('click', function () {
-            var isOpen = mainNav.classList.contains('nav-open');
-            mainNav.classList.toggle('nav-open');
-            navToggle.classList.toggle('open');
-            navToggle.setAttribute('aria-expanded', String(!isOpen));
-          });
-        }
-
       })();
     </script>
     <script src="/cookies.js"></script>
