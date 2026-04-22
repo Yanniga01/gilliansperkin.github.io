@@ -3,6 +3,7 @@ layout: post
 title: "Asana vs. Trello vs. ClickUp 2026: Ultimate Project Management Comparison"
 date: 2026-03-01
 categories: [project-management]
+type: comparison
 image: /Images/asana-trello-clickup-card.jpg
 excerpt: "A practical comparison of Asana, Trello, and ClickUp to help small businesses choose the right project management software in 2026."
 permalink: /asana-vs-trello-vs-clickup-2026/
