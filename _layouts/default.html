@@ -100,13 +100,10 @@
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2164742');
     </script>
-    <!-- End MailerLite Universal -->
 </head>
 <body>
-    <!-- Skip link -->
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Header -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">
@@ -119,7 +116,7 @@
                     <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                     <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>
                     <li class="nav-dropdown">
-                        <a href="/blog/" class="dropdown-toggle">Blog ▼</a>
+                        <button class="dropdown-toggle" aria-expanded="false">Insights ▼</button>
                         <ul class="dropdown-menu">
                             <li><a href="/reviews/" {% if page.url contains "/reviews/" %}class="active"{% endif %}>Reviews</a></li>
                             <li><a href="/guides/" {% if page.url contains "/guides/" %}class="active"{% endif %}>Guides</a></li>
@@ -135,7 +132,7 @@
     </header>
 
     {% unless page.url == "/best-tools/" %}
-    <div class="best-tools-banner" role="complementary" aria-label="Best Tools quick link">
+    <div class="best-tools-banner" role="complementary">
         <div class="best-tools-banner-inner">
             <span class="best-tools-banner-kicker">New</span>
             <p>Looking for our full software shortlist? Explore the complete 2026 picks.</p>
@@ -144,49 +141,48 @@
     </div>
     {% endunless %}
 
-    <!-- Main content -->
     <main id="main">
         {{ content }}
     </main>
 
-    <!-- Footer -->
     {% include footer.html %}
 
     <script>
-      (function () {
-        const dropdownItems = document.querySelectorAll('.nav-dropdown');
-        const mobileBreakpoint = 768;
+      (function() {
+        const dropdown = document.querySelector('.nav-dropdown');
+        const toggle = dropdown ? dropdown.querySelector('.dropdown-toggle') : null;
+        const menu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
 
-        function closeDropdowns() {
-          dropdownItems.forEach((item) => {
-            item.classList.remove('dropdown-open');
-            const toggle = item.querySelector('.dropdown-toggle');
-            if (toggle) toggle.setAttribute('aria-expanded', 'false');
-          });
+        function closeDropdown() {
+          if (dropdown) dropdown.classList.remove('dropdown-open');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
         }
 
-        dropdownItems.forEach((item) => {
-          const toggle = item.querySelector('.dropdown-toggle');
-          if (!toggle) return;
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.addEventListener('click', (event) => {
-            if (window.innerWidth > mobileBreakpoint) return;
-            event.preventDefault();
-            const isOpen = item.classList.contains('dropdown-open');
-            closeDropdowns();
-            if (!isOpen) {
-              item.classList.add('dropdown-open');
-              toggle.setAttribute('aria-expanded', 'true');
-            }
-          });
+        function toggleDropdown(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = dropdown.classList.contains('dropdown-open');
+          closeDropdown();
+          if (!isOpen) {
+            dropdown.classList.add('dropdown-open');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        }
+
+        if (toggle) {
+          toggle.addEventListener('click', toggleDropdown);
+        }
+
+        document.addEventListener('click', function(event) {
+          if (dropdown && !dropdown.contains(event.target)) {
+            closeDropdown();
+          }
         });
 
-        document.addEventListener('click', (event) => {
-          if (!event.target.closest('.nav-dropdown')) closeDropdowns();
-        });
-
-        window.addEventListener('resize', () => {
-          if (window.innerWidth > mobileBreakpoint) closeDropdowns();
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            closeDropdown();
+          }
         });
       })();
     </script>
