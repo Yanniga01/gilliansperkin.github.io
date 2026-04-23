@@ -3,6 +3,20 @@
     <span>{{ include.heading | default: "SmartGuideHubs Top Pick" }}</span>
   </div>
 
+  <div class="review-pick-head">
+    {% if include.logo %}
+    <div class="review-pick-logo-wrap">
+      <img src="{{ include.logo }}" alt="{{ include.name | default: include.title | default: 'Top pick' }} logo" class="review-pick-logo">
+    </div>
+    {% endif %}
+
+    <div class="review-pick-head-copy">
+      {% if include.tag %}<p class="review-pick-tag">{{ include.tag }}</p>{% endif %}
+      {% if include.name %}<h3 class="review-pick-name">{{ include.name }}</h3>{% endif %}
+      {% if include.subtitle %}<p class="review-pick-subtitle">{{ include.subtitle }}</p>{% endif %}
+    </div>
+  </div>
+
   <h2 class="cta-title">
     {{ include.title | default: "Want to Try Our Top Recommendation?" }}
   </h2>
@@ -10,6 +24,15 @@
   <p class="cta-text">
     {{ include.text | default: include.intro | default: include.description | default: "Explore the platform and test if it fits your workflow before committing to a paid plan." }}
   </p>
+
+  {% if include.point1 or include.point2 or include.point3 or include.point4 %}
+  <ul class="review-pick-points">
+    {% if include.point1 %}<li>{{ include.point1 }}</li>{% endif %}
+    {% if include.point2 %}<li>{{ include.point2 }}</li>{% endif %}
+    {% if include.point3 %}<li>{{ include.point3 }}</li>{% endif %}
+    {% if include.point4 %}<li>{{ include.point4 }}</li>{% endif %}
+  </ul>
+  {% endif %}
 
   <a href="{{ include.button_url | default: include.primary_url }}"
      class="cta-button"
