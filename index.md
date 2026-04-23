@@ -386,14 +386,62 @@ permalink: /
 </div>
 
 <!-- ============================================================
-     CATEGORY SECTIONS – simple and safe (no complex Liquid)
-     Shows up to 4 most recent posts per category.
-     If you need exact mix (guide/review/comparison), add 'type' front matter.
+     CATEGORY SECTIONS – exactly 4 posts per category:
+     2 comparisons, 1 review, 1 guide (most recent of each type)
      ============================================================ -->
 {% assign categories = "pdf-and-document-tools,email-and-marketing-tools,project-management,finance" | split: "," %}
 {% for cat_slug in categories %}
-  {% assign category_posts = site.categories[cat_slug] | sort: "date" | reverse | limit: 4 %}
-  {% if category_posts.size > 0 %}
+
+  {% comment %} Collect posts of each type (sorted newest first) {% endcomment %}
+  {% assign comparisons = "" | split: "" %}
+  {% assign reviews = "" | split: "" %}
+  {% assign guides = "" | split: "" %}
+
+  {% for post in site.categories[cat_slug] %}
+    {% if post.type == "comparison" %}
+      {% assign comparisons = comparisons | push: post %}
+    {% elsif post.type == "review" %}
+      {% assign reviews = reviews | push: post %}
+    {% elsif post.type == "guide" %}
+      {% assign guides = guides | push: post %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Sort each array by date descending {% endcomment %}
+  {% assign comparisons = comparisons | sort: "date" | reverse %}
+  {% assign reviews = reviews | sort: "date" | reverse %}
+  {% assign guides = guides | sort: "date" | reverse %}
+
+  {% comment %} Build the selected posts array (max 4) – first 2 comparisons, first review, first guide {% endcomment %}
+  {% assign selected_posts = "" | split: "" %}
+
+  {% for comp in comparisons limit: 2 %}
+    {% assign selected_posts = selected_posts | push: comp %}
+  {% endfor %}
+
+  {% if reviews[0] %}
+    {% assign selected_posts = selected_posts | push: reviews[0] %}
+  {% endif %}
+
+  {% if guides[0] %}
+    {% assign selected_posts = selected_posts | push: guides[0] %}
+  {% endif %}
+
+  {% comment %} If we still have fewer than 4, fill with any recent posts from category (excluding already added) {% endcomment %}
+  {% assign needed = 4 | minus: selected_posts.size %}
+  {% if needed > 0 %}
+    {% assign all_category_posts = site.categories[cat_slug] | sort: "date" | reverse %}
+    {% for post in all_category_posts %}
+      {% if selected_posts contains post %}
+        {% continue %}
+      {% endif %}
+      {% assign selected_posts = selected_posts | push: post %}
+      {% assign needed = needed | minus: 1 %}
+      {% if needed == 0 %}{% break %}{% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if selected_posts.size > 0 %}
   <section class="hp-cat-section">
     <div class="hp-section-header">
       <h2 class="hp-section-title">
@@ -407,7 +455,7 @@ permalink: /
       <a href="/categories/{{ cat_slug }}/" class="hp-section-header__link">View all →</a>
     </div>
     <div class="hp-cat-grid">
-      {% for post in category_posts %}
+      {% for post in selected_posts limit: 4 %}
       <article class="hp-article-card">
         <div class="hp-article-card__img">
           {% if post.image %}
@@ -424,17 +472,23 @@ permalink: /
         <div class="hp-article-card__body">
           <div class="hp-article-card__meta">
             <span class="hp-article-card__cat">
-              {% if post.type %}
-                {{ post.type | capitalize }}
-              {% else %}
-                {{ post.categories[0] | replace: "-", " " | capitalize }}
+              {% if post.type == "comparison" %}Comparison
+              {% elsif post.type == "review" %}Review
+              {% elsif post.type == "guide" %}Guide
+              {% else %}{{ post.categories[0] | replace: "-", " " | capitalize }}
               {% endif %}
             </span>
             <span class="hp-article-card__date">{{ post.date | date: "%b %d, %Y" }}</span>
           </div>
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
           <p>{{ post.excerpt | strip_html | truncatewords: 18 }}</p>
-          <a href="{{ post.url }}" class="hp-read-more">Read Full Review →</a>
+          <a href="{{ post.url }}" class="hp-read-more">
+            {% if post.type == "comparison" %}Read Comparison →
+            {% elsif post.type == "review" %}Read Review →
+            {% elsif post.type == "guide" %}Read Guide →
+            {% else %}Read Full Review →
+            {% endif %}
+          </a>
         </div>
       </article>
       {% endfor %}
