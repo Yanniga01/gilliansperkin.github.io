@@ -7,8 +7,7 @@ permalink: /
 
 <style>
 /* ============================================================
-   SmartGuideHubs Homepage — Professional Layout
-   Extends site.css — no overrides, additions only
+   SmartGuideHubs Homepage — Professional & Clean
    ============================================================ */
 
 /* ── Design tokens (homepage-scoped) ── */
@@ -17,10 +16,8 @@ permalink: /
   --hp-navy2:      #0b2a54;
   --hp-cyan:       #22d3ee;
   --hp-cyan-light: #67e8f9;
-  --hp-cyan-pale:  #ecfeff;
   --hp-orange:     #f97316;
   --hp-orange-dark:#ea580c;
-  --hp-gold:       #f59e0b;
   --hp-green:      #10b981;
   --hp-surface:    #ffffff;
   --hp-bg:         #f8fafc;
@@ -38,19 +35,16 @@ permalink: /
   padding: 0 1.5rem;
 }
 
-/* ============================================================
-   1. HERO
-   ============================================================ */
+/* HERO (simplified, no stats) */
 .hp-hero {
   background: linear-gradient(135deg, var(--hp-navy) 0%, var(--hp-navy2) 65%, #0d3460 100%);
   border-radius: var(--hp-radius-lg);
-  padding: 4.5rem 2rem 3.5rem;
+  padding: 4rem 2rem;
   text-align: center;
   margin-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
 }
-
 .hp-hero::before {
   content: '';
   position: absolute;
@@ -58,7 +52,6 @@ permalink: /
   background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
 }
-
 .hp-hero__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -74,7 +67,6 @@ permalink: /
   border-radius: 999px;
   margin-bottom: 1.25rem;
 }
-
 .hp-hero h1 {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 800;
@@ -83,26 +75,20 @@ permalink: /
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
 }
-
 .hp-hero h1 .highlight { color: var(--hp-cyan); }
-
 .hp-hero__sub {
   font-size: 1.15rem;
   color: rgba(255,255,255,0.72);
   max-width: 640px;
-  margin: 0 auto 2.25rem;
+  margin: 0 auto 2rem;
   line-height: 1.7;
 }
-
 .hp-hero__cta-row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 0.9rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
 }
-
 .hp-btn-primary {
   display: inline-flex;
   align-items: center;
@@ -114,11 +100,10 @@ permalink: /
   font-size: 0.95rem;
   border-radius: 999px;
   text-decoration: none;
-  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  transition: all 0.18s;
   box-shadow: 0 4px 18px rgba(34,211,238,0.35);
 }
-.hp-btn-primary:hover { background: var(--hp-cyan-light); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(34,211,238,0.45); }
-
+.hp-btn-primary:hover { background: var(--hp-cyan-light); transform: translateY(-2px); }
 .hp-btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -131,403 +116,33 @@ permalink: /
   font-size: 0.95rem;
   border-radius: 999px;
   text-decoration: none;
-  transition: background 0.18s;
 }
 .hp-btn-ghost:hover { background: rgba(255,255,255,0.16); color: #fff; }
 
-.hp-hero__stats {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-.hp-hero__stat-num { font-size: 1.9rem; font-weight: 800; color: #fff; line-height: 1; }
-.hp-hero__stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 3px; font-weight: 600; letter-spacing: 0.3px; }
-
-/* ============================================================
-   2. SECTION HEADER (shared)
-   ============================================================ */
-.hp-section { margin-bottom: 3.5rem; }
-
-.hp-section-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.4rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--hp-border);
-}
-.hp-section-header__left { display: flex; align-items: center; gap: 10px; }
-.hp-section-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--hp-text);
-  letter-spacing: -0.02em;
-  margin: 0;
-}
-.hp-section-badge {
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 999px;
-}
-.badge-fire  { background: #fff0e6; color: var(--hp-orange-dark); border: 1px solid #fbd5b4; }
-.badge-pin   { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
-.badge-trend { background: #ecfeff; color: #0e7490; border: 1px solid #a5f3fc; }
-.badge-eye   { background: #fefce8; color: #a16207; border: 1px solid #fde68a; }
-.badge-new   { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
-
-.hp-section-header__link {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--hp-orange);
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color 0.15s;
-}
-.hp-section-header__link:hover { color: var(--hp-orange-dark); text-decoration: underline; }
-
-/* ============================================================
-   3. FEATURED / PINNED — editorial hero card
-   ============================================================ */
-.hp-featured-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 1.25rem;
-}
-
-.hp-featured-main {
-  background: var(--hp-surface);
-  border: 1px solid var(--hp-border);
-  border-radius: var(--hp-radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.2s, transform 0.2s;
-  position: relative;
-}
-.hp-featured-main:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
-
-.hp-featured-main__img {
-  height: 260px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #e2e8f0, #f1f5f9);
-  position: relative;
-}
-.hp-featured-main__img img { width: 100%; height: 100%; object-fit: cover; }
-.hp-featured-main__img-placeholder {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 3.5rem; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-}
-
-.hp-pin-badge {
-  position: absolute;
-  top: 14px; left: 14px;
-  display: inline-flex; align-items: center; gap: 5px;
-  background: #1d4ed8; color: #fff;
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.8px;
-  text-transform: uppercase; padding: 4px 10px; border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(29,78,216,0.4);
-}
-
-.hp-featured-main__body { padding: 1.4rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
-.hp-card-meta { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
-.hp-card-cat {
-  font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
-  padding: 3px 10px; border-radius: 999px;
-  background: #fff0e6; color: var(--hp-orange-dark);
-}
-.hp-card-date { font-size: 0.78rem; color: var(--hp-muted); }
-.hp-card-read-time { font-size: 0.78rem; color: var(--hp-muted); }
-.hp-card-read-time::before { content: '·'; margin-right: 6px; }
-
-.hp-featured-main h2 {
-  font-size: 1.45rem; font-weight: 800; color: var(--hp-text);
-  line-height: 1.3; margin-bottom: 0.7rem; letter-spacing: -0.02em;
-  border-bottom: none; padding-bottom: 0;
-}
-.hp-featured-main h2 a { color: inherit; text-decoration: none; transition: color 0.15s; }
-.hp-featured-main h2 a:hover { color: var(--hp-orange); }
-
-.hp-featured-main p { font-size: 0.925rem; color: var(--hp-muted); line-height: 1.65; flex: 1; margin-bottom: 1rem; }
-.hp-read-more {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 0.875rem; font-weight: 700; color: var(--hp-orange);
-  text-decoration: none; margin-top: auto; transition: gap 0.15s;
-}
-.hp-read-more:hover { gap: 9px; color: var(--hp-orange-dark); }
-
-/* Side pinned stack */
-.hp-featured-side { display: flex; flex-direction: column; gap: 1.25rem; }
-
-.hp-featured-side-card {
-  background: var(--hp-surface);
-  border: 1px solid var(--hp-border);
-  border-radius: var(--hp-radius);
-  display: flex;
-  gap: 0.9rem;
-  padding: 1rem 1.1rem;
-  transition: box-shadow 0.2s, transform 0.2s;
-  text-decoration: none;
-  align-items: flex-start;
-}
-.hp-featured-side-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); border-color: #cbd5e1; }
-
-.hp-featured-side-card__thumb {
-  width: 76px; height: 68px; border-radius: 10px;
-  overflow: hidden; flex-shrink: 0;
-  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
-}
-.hp-featured-side-card__thumb img { width: 100%; height: 100%; object-fit: cover; }
-
-.hp-featured-side-card__body { min-width: 0; }
-.hp-featured-side-card__meta { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
-.hp-featured-side-card__cat {
-  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
-  color: var(--hp-orange-dark);
-}
-.hp-featured-side-card__title {
-  font-size: 0.92rem; font-weight: 700; color: var(--hp-text);
-  line-height: 1.35; margin: 0; display: -webkit-box;
-  -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.hp-featured-side-card:hover .hp-featured-side-card__title { color: var(--hp-orange); }
-.hp-featured-side-card__date { font-size: 0.75rem; color: var(--hp-muted); margin-top: 4px; }
-
-/* ============================================================
-   4. TRENDING — horizontal scroll row
-   ============================================================ */
-.hp-trending-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.1rem;
-}
-
-.hp-trending-card {
-  background: var(--hp-surface);
-  border: 1px solid var(--hp-border);
-  border-radius: var(--hp-radius);
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex; flex-direction: column;
-  position: relative;
-}
-.hp-trending-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.09); border-color: #cbd5e1; }
-
-.hp-trending-card__rank {
-  position: absolute; top: 10px; left: 10px;
-  width: 26px; height: 26px; border-radius: 6px;
-  background: var(--hp-navy2); color: var(--hp-cyan);
-  font-size: 0.72rem; font-weight: 900;
-  display: flex; align-items: center; justify-content: center;
-  z-index: 1;
-}
-
-.hp-trending-card__img {
-  height: 140px; overflow: hidden;
-  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-  display: flex; align-items: center; justify-content: center; font-size: 2.2rem;
-}
-.hp-trending-card__img img { width: 100%; height: 100%; object-fit: cover; }
-
-.hp-trending-card__body { padding: 1rem 1.05rem 1.1rem; flex: 1; display: flex; flex-direction: column; }
-.hp-trending-card__cat {
-  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px;
-  color: var(--hp-orange-dark); margin-bottom: 5px;
-}
-.hp-trending-card__title {
-  font-size: 0.95rem; font-weight: 700; color: var(--hp-text);
-  line-height: 1.35; margin: 0 0 8px;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.hp-trending-card a.hp-trending-card__title-link {
-  color: inherit; text-decoration: none;
-}
-.hp-trending-card a.hp-trending-card__title-link:hover { color: var(--hp-orange); }
-
-.hp-trending-card__footer {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-top: auto; padding-top: 8px; border-top: 1px solid #f1f5f9;
-}
-.hp-trending-card__date { font-size: 0.72rem; color: var(--hp-muted); }
-.hp-trending-pill {
-  display: inline-flex; align-items: center; gap: 3px;
-  font-size: 0.68rem; font-weight: 800;
-  background: #ecfeff; color: #0e7490;
-  padding: 2px 8px; border-radius: 999px;
-}
-
-/* ============================================================
-   5. MOST READ — numbered list layout
-   ============================================================ */
-.hp-most-read-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
-
-.hp-most-read-card {
-  background: var(--hp-surface);
-  border: 1px solid var(--hp-border);
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
-  text-decoration: none;
-  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
-}
-.hp-most-read-card:hover { border-color: #94a3b8; box-shadow: 0 4px 16px rgba(0,0,0,0.07); transform: translateY(-2px); }
-
-.hp-most-read-card__num {
-  font-size: 1.7rem; font-weight: 900; line-height: 1;
-  color: #e2e8f0; flex-shrink: 0; min-width: 36px;
-  font-variant-numeric: tabular-nums;
-}
-.hp-most-read-card:nth-child(1) .hp-most-read-card__num { color: #fbbf24; }
-.hp-most-read-card:nth-child(2) .hp-most-read-card__num { color: #94a3b8; }
-.hp-most-read-card:nth-child(3) .hp-most-read-card__num { color: #d97706; }
-
-.hp-most-read-card__body { min-width: 0; }
-.hp-most-read-card__cat {
-  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
-  color: var(--hp-orange-dark); margin-bottom: 3px;
-}
-.hp-most-read-card__title {
-  font-size: 0.9rem; font-weight: 700; color: var(--hp-text);
-  line-height: 1.35; margin: 0 0 4px;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.hp-most-read-card:hover .hp-most-read-card__title { color: var(--hp-orange); }
-.hp-most-read-card__date { font-size: 0.72rem; color: var(--hp-muted); }
-
-/* ============================================================
-   6. CATEGORY SECTIONS — "Recently Added"
-   ============================================================ */
-.hp-cat-section { margin-bottom: 3rem; }
-
-.hp-cat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.1rem;
-}
-
-.hp-article-card {
-  background: var(--hp-surface);
-  border: 1px solid var(--hp-border);
-  border-radius: var(--hp-radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-}
-.hp-article-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.09); border-color: #cbd5e1; }
-
-.hp-article-card__img {
-  height: 160px; overflow: hidden;
-  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-  display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
-}
-.hp-article-card__img img { width: 100%; height: 100%; object-fit: cover; }
-
-.hp-article-card__new-badge {
-  position: absolute; top: 10px; right: 10px;
-  background: var(--hp-green); color: #fff;
-  font-size: 0.65rem; font-weight: 800; letter-spacing: 0.8px;
-  text-transform: uppercase; padding: 3px 8px; border-radius: 5px;
-}
-
-.hp-article-card__body { padding: 1.1rem 1.2rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
-.hp-article-card__meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 7px; }
-.hp-article-card__cat {
-  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px;
-  padding: 2px 8px; border-radius: 999px;
-  background: #fff0e6; color: var(--hp-orange-dark);
-}
-.hp-article-card__date { font-size: 0.75rem; color: var(--hp-muted); }
-
-.hp-article-card h3 {
-  font-size: 1rem; font-weight: 700; color: var(--hp-text);
-  line-height: 1.35; margin: 0 0 7px;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.hp-article-card h3 a { color: inherit; text-decoration: none; }
-.hp-article-card h3 a:hover { color: var(--hp-orange); }
-.hp-article-card p {
-  font-size: 0.865rem; color: var(--hp-muted);
-  line-height: 1.6; flex: 1; margin-bottom: 0.85rem;
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-}
-.hp-article-card .hp-read-more { font-size: 0.845rem; }
-
-.hp-cat-view-all {
-  display: flex; justify-content: center; margin-top: 1.25rem;
-}
-.hp-cat-view-all a {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 0.875rem; font-weight: 700; color: var(--hp-orange);
-  text-decoration: none; padding: 7px 18px;
-  border: 1.5px solid #fbd5b4; border-radius: 999px;
-  transition: background 0.15s, border-color 0.15s;
-}
-.hp-cat-view-all a:hover { background: #fff0e6; border-color: var(--hp-orange); }
-
-/* ============================================================
-   7. CATEGORY QUICK-LINKS GRID
-   ============================================================ */
-.hp-cat-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.85rem;
-  margin-bottom: 3rem;
-}
-
-.hp-cat-pill {
-  background: var(--hp-surface);
-  border: 1px solid var(--hp-border);
-  border-radius: 14px;
-  padding: 1.1rem 1rem;
-  display: flex; flex-direction: column; align-items: center;
-  gap: 7px; text-decoration: none; text-align: center;
-  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
-}
-.hp-cat-pill:hover { border-color: #0e7490; background: var(--hp-cyan-pale); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(14,116,144,0.1); }
-.hp-cat-pill__icon { font-size: 1.75rem; line-height: 1; }
-.hp-cat-pill__label { font-size: 0.82rem; font-weight: 700; color: var(--hp-text); }
-.hp-cat-pill:hover .hp-cat-pill__label { color: #0e7490; }
-.hp-cat-pill__count { font-size: 0.7rem; color: var(--hp-muted); }
-
-/* ============================================================
-   8. TRUST / AUTHORITY BAR
-   ============================================================ */
+/* TRUST BAR */
 .hp-trust-bar {
   background: var(--hp-surface);
   border: 1px solid var(--hp-border);
   border-radius: 14px;
-  padding: 1.1rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .hp-trust-item {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 0.82rem; font-weight: 600; color: var(--hp-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--hp-muted);
 }
-.hp-trust-item::before { content: '✓'; color: var(--hp-green); font-weight: 900; font-size: 0.85rem; }
+.hp-trust-item::before { content: '✓'; color: var(--hp-green); font-weight: 900; }
 
-/* ============================================================
-   9. BEST TOOLS CTA BAND
-   ============================================================ */
+/* BEST TOOLS BAND */
 .hp-tools-band {
   background: linear-gradient(135deg, var(--hp-navy) 0%, var(--hp-navy2) 60%, #0d3460 100%);
   border-radius: var(--hp-radius-lg);
@@ -537,92 +152,203 @@ permalink: /
   justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
-  margin-bottom: 3.5rem;
-  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.22);
+  margin-bottom: 2.5rem;
 }
 .hp-tools-band__kicker {
-  font-size: 0.7rem; font-weight: 900; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--hp-cyan); margin-bottom: 4px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--hp-cyan);
+  margin-bottom: 4px;
 }
-.hp-tools-band h2 { font-size: 1.3rem; font-weight: 800; color: #fff; margin: 0 0 4px; border: none; padding: 0; }
+.hp-tools-band h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 4px;
+  border: none;
+  padding: 0;
+}
 .hp-tools-band p { margin: 0; color: rgba(255,255,255,0.72); font-size: 0.9rem; }
 
-/* ============================================================
-   10. NEWSLETTER
-   ============================================================ */
+/* CATEGORY QUICK LINKS */
+.hp-cat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.hp-cat-pill {
+  background: var(--hp-surface);
+  border: 1px solid var(--hp-border);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+}
+.hp-cat-pill:hover {
+  border-color: #0e7490;
+  background: #ecfeff;
+  transform: translateY(-2px);
+}
+.hp-cat-pill__icon { font-size: 1.6rem; }
+.hp-cat-pill__label { font-size: 0.85rem; font-weight: 700; color: var(--hp-text); }
+.hp-cat-pill:hover .hp-cat-pill__label { color: #0e7490; }
+
+/* CATEGORY SECTIONS (Recently Added) */
+.hp-cat-section { margin-bottom: 2.5rem; }
+.hp-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--hp-border);
+}
+.hp-section-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--hp-text);
+  margin: 0;
+}
+.hp-section-header__link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--hp-orange);
+  text-decoration: none;
+}
+.hp-section-header__link:hover { text-decoration: underline; }
+.hp-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.hp-article-card {
+  background: var(--hp-surface);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--hp-radius);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.hp-article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+.hp-article-card__img {
+  height: 150px;
+  overflow: hidden;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.hp-article-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hp-article-card__body { padding: 1rem; }
+.hp-article-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.hp-article-card__cat {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #fff0e6;
+  color: var(--hp-orange-dark);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.hp-article-card__date {
+  font-size: 0.7rem;
+  color: var(--hp-muted);
+}
+.hp-article-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 5px;
+  line-height: 1.4;
+}
+.hp-article-card h3 a {
+  color: var(--hp-text);
+  text-decoration: none;
+}
+.hp-article-card h3 a:hover { color: var(--hp-orange); }
+.hp-article-card p {
+  font-size: 0.85rem;
+  color: var(--hp-muted);
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hp-read-more {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--hp-orange);
+  text-decoration: none;
+}
+
+/* SIMPLE NEWSLETTER */
 .hp-newsletter {
   background: linear-gradient(135deg, var(--hp-navy) 0%, var(--hp-navy2) 100%);
   border-radius: var(--hp-radius-lg);
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   text-align: center;
   color: #fff;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
-.hp-newsletter h2 { font-size: 1.8rem; color: #fff; border: none; padding: 0; margin-bottom: 0.5rem; }
-.hp-newsletter p { color: rgba(255,255,255,0.78); margin-bottom: 1.5rem; }
-.ml-embedded { max-width: 480px; margin: 0 auto; }
-.hp-newsletter__note { margin-top: 1rem; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+.hp-newsletter h2 {
+  font-size: 1.6rem;
+  color: #fff;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+.hp-newsletter p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+.ml-embedded { max-width: 450px; margin: 0 auto; }
+.hp-newsletter__note {
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+}
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
-  .hp-trending-row { grid-template-columns: repeat(2, 1fr); }
-  .hp-cat-cards    { grid-template-columns: repeat(2, 1fr); }
+  .hp-cat-cards { grid-template-columns: repeat(2, 1fr); }
+  .hp-cat-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 768px) {
-  .hp-hero { padding: 3rem 1.25rem 2.5rem; }
-  .hp-hero h1 { font-size: 1.9rem; }
-  .hp-hero__sub { font-size: 1rem; }
-  .hp-hero__stats { gap: 1.5rem; }
-
-  .hp-featured-grid { grid-template-columns: 1fr; }
-  .hp-featured-side { display: none; }
-
-  .hp-trending-row { grid-template-columns: 1fr 1fr; gap: 0.85rem; }
-
-  .hp-most-read-grid { grid-template-columns: 1fr; }
-
-  .hp-cat-grid { grid-template-columns: 1fr 1fr; }
-
+  .hp-hero { padding: 2.5rem 1.5rem; }
+  .hp-hero h1 { font-size: 1.8rem; }
   .hp-cat-cards { grid-template-columns: repeat(2, 1fr); }
-
-  .hp-tools-band { flex-direction: column; text-align: center; }
-
-  .hp-trust-bar { gap: 0.9rem; }
-}
-
-@media (max-width: 480px) {
-  .hp-trending-row { grid-template-columns: 1fr; }
   .hp-cat-grid { grid-template-columns: 1fr; }
-  .hp-cat-cards { grid-template-columns: repeat(2, 1fr); }
-  .hp-hero__cta-row { flex-direction: column; align-items: center; }
+  .hp-tools-band { flex-direction: column; text-align: center; }
+  .hp-trust-bar { gap: 1rem; }
+}
+@media (max-width: 480px) {
+  .hp-cat-cards { grid-template-columns: 1fr; }
 }
 </style>
 
-{% comment %}
-  ─── FRONT-MATTER CONVENTIONS ────────────────────────────────
-  pinned:   true   → appears in Featured/Pinned section
-  featured: true   → first card in featured (the big one)
-  trending: true   → appears in Trending section
-  most_read: true  → appears in Most Read section
-  read_time: "6 min read"
-  ─────────────────────────────────────────────────────────────
-{% endcomment %}
-
-{% assign all_posts = site.posts %}
-{% assign pinned_posts  = all_posts | where: "pinned",    true %}
-{% assign featured_post = all_posts | where: "featured",  true | first %}
-{% unless featured_post %}{% assign featured_post = all_posts | first %}{% endunless %}
-{% assign trending_posts  = all_posts | where: "trending",  true | limit: 4 %}
-{% if trending_posts.size == 0 %}{% assign trending_posts = all_posts | limit: 4 %}{% endif %}
-{% assign most_read_posts = all_posts | where: "most_read", true | limit: 6 %}
-{% if most_read_posts.size == 0 %}{% assign most_read_posts = all_posts | limit: 6 %}{% endif %}
-
-<!-- ══════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════ -->
 <div class="hp-hero">
   <div class="hp-hero__eyebrow">✦ Updated for 2026 &nbsp;·&nbsp; Independently Tested</div>
   <h1>Expert <span class="highlight">Software Reviews</span><br>for Small Businesses</h1>
@@ -631,28 +357,15 @@ permalink: /
     <a href="/best-tools/" class="hp-btn-primary">🏆 Browse Best Tools 2026</a>
     <a href="/categories/" class="hp-btn-ghost">Explore by Category →</a>
   </div>
-  <div class="hp-hero__stats">
-    <div><div class="hp-hero__stat-num">80+</div><div class="hp-hero__stat-label">Tools Reviewed</div></div>
-    <div><div class="hp-hero__stat-num">4</div><div class="hp-hero__stat-label">Categories</div></div>
-    <div><div class="hp-hero__stat-num">90+</div><div class="hp-hero__stat-label">Days Hands-On Testing</div></div>
-    <div><div class="hp-hero__stat-num">2026</div><div class="hp-hero__stat-label">Fully Updated</div></div>
-  </div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     TRUST BAR
-══════════════════════════════════════════════ -->
 <div class="hp-trust-bar">
   <div class="hp-trust-item">Transparent Editorial Policy</div>
   <div class="hp-trust-item">90+ Days Hands-On Testing</div>
   <div class="hp-trust-item">No Paid Placements</div>
   <div class="hp-trust-item">Updated Reviews for 2026</div>
-  <div class="hp-trust-item">Independent Comparison Method</div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     BEST TOOLS BAND
-══════════════════════════════════════════════ -->
 <div class="hp-tools-band">
   <div>
     <div class="hp-tools-band__kicker">Best Tools 2026</div>
@@ -662,213 +375,46 @@ permalink: /
   <a href="/best-tools/" class="hp-btn-primary">Open Best Tools Hub →</a>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     CATEGORY QUICK LINKS
-══════════════════════════════════════════════ -->
 <div class="hp-cat-cards">
   <a href="/categories/pdf-and-document-tools/" class="hp-cat-pill">
     <span class="hp-cat-pill__icon">📄</span>
     <span class="hp-cat-pill__label">PDF & Document Tools</span>
-    <span class="hp-cat-pill__count">Reviews & Comparisons</span>
   </a>
   <a href="/categories/email-and-marketing-tools/" class="hp-cat-pill">
     <span class="hp-cat-pill__icon">📧</span>
     <span class="hp-cat-pill__label">Email & Marketing Tools</span>
-    <span class="hp-cat-pill__count">Reviews & Comparisons</span>
   </a>
   <a href="/categories/project-management/" class="hp-cat-pill">
     <span class="hp-cat-pill__icon">📋</span>
     <span class="hp-cat-pill__label">Project Management</span>
-    <span class="hp-cat-pill__count">Reviews & Comparisons</span>
   </a>
   <a href="/categories/finance/" class="hp-cat-pill">
     <span class="hp-cat-pill__icon">💰</span>
     <span class="hp-cat-pill__label">Finance & Accounting</span>
-    <span class="hp-cat-pill__count">Reviews & Comparisons</span>
   </a>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     FEATURED & PINNED
-══════════════════════════════════════════════ -->
-{% if featured_post or pinned_posts.size > 0 %}
-<section class="hp-section">
-  <div class="hp-section-header">
-    <div class="hp-section-header__left">
-      <h2 class="hp-section-title">Featured & Pinned</h2>
-      <span class="hp-section-badge badge-pin">📌 Editor's Picks</span>
-    </div>
-  </div>
-
-  <div class="hp-featured-grid">
-    <!-- Main featured card -->
-    {% if featured_post %}
-    <article class="hp-featured-main">
-      <div class="hp-featured-main__img">
-        {% if featured_post.image %}
-          <img src="{{ featured_post.image }}" alt="{{ featured_post.title }}" loading="lazy">
-        {% else %}
-          <div class="hp-featured-main__img-placeholder">
-            {% case featured_post.categories[0] %}
-              {% when "pdf-and-document-tools" %}📄
-              {% when "email-and-marketing-tools" %}📧
-              {% when "project-management" %}📋
-              {% when "finance" %}💰
-              {% else %}⭐
-            {% endcase %}
-          </div>
-        {% endif %}
-        <span class="hp-pin-badge">📌 Featured</span>
-      </div>
-      <div class="hp-featured-main__body">
-        <div class="hp-card-meta">
-          <span class="hp-card-cat">{{ featured_post.categories[0] | replace: "-", " " | capitalize }}</span>
-          <span class="hp-card-date">{{ featured_post.date | date: "%b %d, %Y" }}</span>
-          {% if featured_post.read_time %}<span class="hp-card-read-time">{{ featured_post.read_time }}</span>{% endif %}
-        </div>
-        <h2><a href="{{ featured_post.url }}">{{ featured_post.title }}</a></h2>
-        <p>{{ featured_post.excerpt | strip_html | truncatewords: 28 }}</p>
-        <a href="{{ featured_post.url }}" class="hp-read-more">Read Full Review →</a>
-      </div>
-    </article>
-    {% endif %}
-
-    <!-- Side pinned stack -->
-    {% if pinned_posts.size > 0 %}
-    <div class="hp-featured-side">
-      {% for post in pinned_posts limit: 3 %}
-      <a href="{{ post.url }}" class="hp-featured-side-card">
-        <div class="hp-featured-side-card__thumb">
-          {% if post.image %}
-            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-          {% else %}
-            {% case post.categories[0] %}
-              {% when "pdf-and-document-tools" %}📄
-              {% when "email-and-marketing-tools" %}📧
-              {% when "project-management" %}📋
-              {% when "finance" %}💰
-              {% else %}⭐
-            {% endcase %}
-          {% endif %}
-        </div>
-        <div class="hp-featured-side-card__body">
-          <div class="hp-featured-side-card__meta">
-            <span class="hp-featured-side-card__cat">📌 {{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-          </div>
-          <div class="hp-featured-side-card__title">{{ post.title }}</div>
-          <div class="hp-featured-side-card__date">{{ post.date | date: "%b %d, %Y" }}</div>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-    {% endif %}
-  </div>
-</section>
-{% endif %}
-
-<!-- ══════════════════════════════════════════════
-     TRENDING
-══════════════════════════════════════════════ -->
-{% if trending_posts.size > 0 %}
-<section class="hp-section">
-  <div class="hp-section-header">
-    <div class="hp-section-header__left">
-      <h2 class="hp-section-title">🔥 Trending Now</h2>
-      <span class="hp-section-badge badge-trend">Hot This Week</span>
-    </div>
-    <a href="/reviews/" class="hp-section-header__link">See all reviews →</a>
-  </div>
-
-  <div class="hp-trending-row">
-    {% for post in trending_posts %}
-    <article class="hp-trending-card">
-      <div class="hp-trending-card__rank">{{ forloop.index }}</div>
-      <div class="hp-trending-card__img">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-        {% else %}
-          {% case post.categories[0] %}
-            {% when "pdf-and-document-tools" %}📄
-            {% when "email-and-marketing-tools" %}📧
-            {% when "project-management" %}📋
-            {% when "finance" %}💰
-            {% else %}⭐
-          {% endcase %}
-        {% endif %}
-      </div>
-      <div class="hp-trending-card__body">
-        <div class="hp-trending-card__cat">{{ post.categories[0] | replace: "-", " " | capitalize }}</div>
-        <div class="hp-trending-card__title">
-          <a href="{{ post.url }}" class="hp-trending-card__title-link">{{ post.title }}</a>
-        </div>
-        <div class="hp-trending-card__footer">
-          <span class="hp-trending-card__date">{{ post.date | date: "%b %Y" }}</span>
-          <span class="hp-trending-pill">🔥 Trending</span>
-        </div>
-      </div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
-<!-- ══════════════════════════════════════════════
-     MOST READ
-══════════════════════════════════════════════ -->
-{% if most_read_posts.size > 0 %}
-<section class="hp-section">
-  <div class="hp-section-header">
-    <div class="hp-section-header__left">
-      <h2 class="hp-section-title">👁️ Most Read</h2>
-      <span class="hp-section-badge badge-eye">Reader Favourites</span>
-    </div>
-    <a href="/guides/" class="hp-section-header__link">Browse all guides →</a>
-  </div>
-
-  <div class="hp-most-read-grid">
-    {% for post in most_read_posts %}
-    <a href="{{ post.url }}" class="hp-most-read-card">
-      <div class="hp-most-read-card__num">0{{ forloop.index }}</div>
-      <div class="hp-most-read-card__body">
-        <div class="hp-most-read-card__cat">{{ post.categories[0] | replace: "-", " " | capitalize }}</div>
-        <div class="hp-most-read-card__title">{{ post.title }}</div>
-        <div class="hp-most-read-card__date">{{ post.date | date: "%b %d, %Y" }}{% if post.read_time %} · {{ post.read_time }}{% endif %}</div>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
-<!-- ══════════════════════════════════════════════
-     RECENTLY ADDED BY CATEGORY
-══════════════════════════════════════════════ -->
+<!-- Recently Added by Category -->
 {% assign categories = "pdf-and-document-tools,email-and-marketing-tools,project-management,finance" | split: "," %}
 {% for cat_slug in categories %}
   {% assign cat_posts = site.categories[cat_slug] | sort: "date" | reverse | limit: 3 %}
   {% if cat_posts.size > 0 %}
   <section class="hp-cat-section">
     <div class="hp-section-header">
-      <div class="hp-section-header__left">
-        <h2 class="hp-section-title">
-          {% case cat_slug %}
-            {% when "pdf-and-document-tools" %}📄 PDF & Document Tools
-            {% when "email-and-marketing-tools" %}📧 Email & Marketing Tools
-            {% when "project-management" %}📋 Project Management
-            {% when "finance" %}💰 Finance & Accounting
-          {% endcase %}
-        </h2>
-        <span class="hp-section-badge badge-new">Recently Added</span>
-      </div>
-      <a href="/categories/{{ cat_slug }}/" class="hp-section-header__link">
-        View all {{ cat_slug | replace: "-", " " }} →
-      </a>
+      <h2 class="hp-section-title">
+        {% case cat_slug %}
+          {% when "pdf-and-document-tools" %}📄 PDF & Document Tools
+          {% when "email-and-marketing-tools" %}📧 Email & Marketing Tools
+          {% when "project-management" %}📋 Project Management
+          {% when "finance" %}💰 Finance & Accounting
+        {% endcase %}
+      </h2>
+      <a href="/categories/{{ cat_slug }}/" class="hp-section-header__link">View all →</a>
     </div>
-
     <div class="hp-cat-grid">
       {% for post in cat_posts %}
       <article class="hp-article-card">
-        <div class="hp-article-card__img" style="position:relative;">
+        <div class="hp-article-card__img">
           {% if post.image %}
             <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
           {% else %}
@@ -879,8 +425,6 @@ permalink: /
               {% when "finance" %}💰
             {% endcase %}
           {% endif %}
-          {% assign days_old = post.date | date: "%s" | minus: 'now' | date: "%s" | abs %}
-          {% if forloop.first %}<span class="hp-article-card__new-badge">New</span>{% endif %}
         </div>
         <div class="hp-article-card__body">
           <div class="hp-article-card__meta">
@@ -888,7 +432,7 @@ permalink: /
             <span class="hp-article-card__date">{{ post.date | date: "%b %d, %Y" }}</span>
           </div>
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
+          <p>{{ post.excerpt | strip_html | truncatewords: 18 }}</p>
           <a href="{{ post.url }}" class="hp-read-more">Read Full Review →</a>
         </div>
       </article>
@@ -898,12 +442,9 @@ permalink: /
   {% endif %}
 {% endfor %}
 
-<!-- ══════════════════════════════════════════════
-     NEWSLETTER
-══════════════════════════════════════════════ -->
 <div class="hp-newsletter">
-  <h2>Get practical software insights in your inbox</h2>
-  <p>Join SmartGuideHubs readers — new reviews, comparisons, and buying guides as they go live.</p>
+  <h2>Get practical software insights</h2>
+  <p>New reviews, comparisons, and buying guides – straight to your inbox.</p>
   <div class="ml-embedded" data-form="0xw1l4"></div>
   <p class="hp-newsletter__note">No spam. Unsubscribe anytime.</p>
 </div>
