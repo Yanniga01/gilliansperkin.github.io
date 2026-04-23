@@ -6,198 +6,594 @@ permalink: /blog/
 ---
 
 <style>
-  /* … (keep your existing CSS exactly as you wrote it – it's excellent) … */
-  /* I'm not repeating the 400+ lines – they are correct */
+  /* ============================================================
+     INSIGHTS PAGE — PREMIUM PROFESSIONAL DESIGN
+     ============================================================ */
+  :root {
+    --insights-primary: #1a56db;
+    --insights-primary-dark: #1140b0;
+    --insights-primary-light: #e8effe;
+    --insights-secondary: #f97316;
+    --insights-text: #111827;
+    --insights-text-light: #6b7280;
+    --insights-border: #e5e7eb;
+    --insights-bg: #ffffff;
+    --insights-bg-alt: #f9fafb;
+    --insights-radius: 20px;
+    --insights-radius-sm: 12px;
+  }
+
+  .insights-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
+  .insights-hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    margin-bottom: 2rem;
+  }
+  .insights-badge {
+    display: inline-block;
+    background: var(--insights-primary-light);
+    color: var(--insights-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+  .insights-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: var(--insights-text);
+  }
+  .insights-hero h1 span {
+    color: var(--insights-primary);
+  }
+  .insights-hero p {
+    font-size: 1rem;
+    color: var(--insights-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Trust Bar */
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--insights-border);
+    border-bottom: 1px solid var(--insights-border);
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--insights-text-light);
+  }
+  .trust-item::before {
+    content: "✓";
+    color: var(--insights-primary);
+    font-weight: 700;
+  }
+
+  /* Search + Filter Row */
+  .search-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+  }
+  .search-wrapper {
+    flex: 1;
+    min-width: 260px;
+    position: relative;
+  }
+  .search-input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 2.8rem;
+    border: 1.5px solid var(--insights-border);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    background: var(--insights-bg);
+    transition: all 0.2s;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: var(--insights-primary);
+    box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+  }
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--insights-text-light);
+    pointer-events: none;
+  }
+  .filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1.5px solid var(--insights-border);
+    background: var(--insights-bg);
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--insights-text-light);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover {
+    border-color: var(--insights-primary);
+    color: var(--insights-primary);
+  }
+  .filter-btn.active {
+    background: var(--insights-primary);
+    border-color: var(--insights-primary);
+    color: white;
+  }
+  .results-count {
+    font-size: 0.8rem;
+    color: var(--insights-text-light);
+    white-space: nowrap;
+  }
+
+  /* Search Results Dropdown */
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--insights-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+  }
+  .search-result-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--insights-border);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .search-result-item:hover {
+    background: var(--insights-bg-alt);
+  }
+  .search-result-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .search-result-content {
+    flex: 1;
+  }
+  .search-result-title {
+    font-weight: 600;
+    color: var(--insights-text);
+    margin-bottom: 0.25rem;
+  }
+  .search-result-excerpt {
+    font-size: 0.75rem;
+    color: var(--insights-text-light);
+  }
+  .search-result-meta {
+    font-size: 0.7rem;
+    color: var(--insights-text-light);
+    margin-top: 0.25rem;
+  }
+
+  /* Posts Grid */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  /* Post Card */
+  .post-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--insights-border);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+    border-color: #cbd5e1;
+  }
+  .post-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f1f5f9;
+  }
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .post-card:hover .post-image img {
+    transform: scale(1.03);
+  }
+  .post-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .post-type {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+  }
+  .post-type.review {
+    background: #e8f5e9;
+    color: #1b6e28;
+  }
+  .post-type.guide {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  .post-type.comparison {
+    background: #ede9fe;
+    color: #5b21b6;
+  }
+  .post-date {
+    font-size: 0.7rem;
+    color: var(--insights-text-light);
+  }
+  .post-category {
+    font-size: 0.7rem;
+    color: var(--insights-primary);
+    background: var(--insights-primary-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+  }
+  .post-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+  .post-title a {
+    color: var(--insights-text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-title a:hover {
+    color: var(--insights-primary);
+  }
+  .post-excerpt {
+    font-size: 0.85rem;
+    color: var(--insights-text-light);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .read-more {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--insights-primary);
+    text-decoration: none;
+  }
+  .read-more:hover {
+    gap: 0.6rem;
+  }
+
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--insights-border);
+  }
+  .pagination a, .pagination span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .pagination a {
+    background: white;
+    border: 1px solid var(--insights-border);
+    color: var(--insights-text);
+  }
+  .pagination a:hover {
+    border-color: var(--insights-primary);
+    color: var(--insights-primary);
+  }
+  .pagination .current {
+    background: var(--insights-primary);
+    color: white;
+    border-color: var(--insights-primary);
+  }
+  .pagination .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--insights-text-light);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .insights-container {
+      padding: 0 1rem;
+    }
+    .search-filter-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .filter-tabs {
+      justify-content: center;
+    }
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+    .post-image {
+      height: 180px;
+    }
+  }
 </style>
 
-<div class="insights-page">
-
+<div class="insights-container">
+  <!-- Hero -->
   <div class="insights-hero">
-    <div class="hero-eyebrow">SmartGuideHubs Insights</div>
-    <h1>Reviews, guides &amp; <em>comparisons</em><br>you can trust</h1>
-    <p class="hero-sub">Independent research on the tools that help small businesses work smarter — tested hands-on, updated for 2026.</p>
-
-    <div class="trust-strip">
-      <span class="trust-item"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6L8 1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>90-day hands-on testing</span>
-      <span class="trust-item"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 8l2 2 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No paid placements</span>
-      <span class="trust-item"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Updated for 2026</span>
-      <span class="trust-item"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M5 8h6M5 5.5h6M5 10.5h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Transparent editorial policy</span>
-    </div>
-
-    <div class="search-wrap">
-      <div class="search-inner">
-        <div class="search-icon-wrap"><svg width="16" height="16" fill="none" viewBox="0 0 20 20"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-        <input type="text" id="search-input" placeholder="Search reviews, guides, comparisons…" autocomplete="off">
-        <button id="search-button"><svg width="13" height="13" fill="none" viewBox="0 0 20 20"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M15 15l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Search</button>
-      </div>
-      <div id="search-results" style="display:none;"></div>
-    </div>
+    <div class="insights-badge">SmartGuideHubs Insights</div>
+    <h1>Reviews, guides & <span>comparisons</span><br>you can trust</h1>
+    <p>Independent research on tools that help small businesses work smarter — tested hands-on, updated for 2026.</p>
   </div>
 
-  <!-- Filter bar -->
-  <div class="filter-bar">
-    <div class="filter-tabs" id="filter-tabs">
-      <button class="filter-tab active" data-type="all">All Insights</button>
-      <button class="filter-tab" data-type="review"><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Reviews</button>
-      <button class="filter-tab" data-type="guide"><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Guides</button>
-      <button class="filter-tab" data-type="comparison"><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Comparisons</button>
-    </div>
-    <span class="results-count" id="results-count"></span>
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <span class="trust-item">90-day hands-on testing</span>
+    <span class="trust-item">No paid placements</span>
+    <span class="trust-item">Updated for 2026</span>
+    <span class="trust-item">Transparent editorial policy</span>
   </div>
 
-  <div id="posts-container">
-    <div class="posts-grid" id="posts-grid">
-      {% assign all_posts = site.posts | sort: "date" | reverse %}
-      {% for post in all_posts %}
-        {% assign post_type = post.type | default: "post" | downcase %}
-        {% assign badge_class = "badge-default" %}
-        {% if post_type == "review" %}{% assign badge_class = "badge-review" %}
-        {% elsif post_type == "guide" %}{% assign badge_class = "badge-guide" %}
-        {% elsif post_type == "comparison" %}{% assign badge_class = "badge-comparison" %}
-        {% endif %}
+  <!-- Search + Filter Row -->
+  <div class="search-filter-row">
+    <div class="search-wrapper">
+      <svg class="search-icon" width="16" height="16" fill="none" viewBox="0 0 20 20">
+        <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M15 15l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search reviews, guides, comparisons...">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-btn active" data-type="all">All</button>
+      <button class="filter-btn" data-type="review">Reviews</button>
+      <button class="filter-btn" data-type="guide">Guides</button>
+      <button class="filter-btn" data-type="comparison">Comparisons</button>
+    </div>
+    <span class="results-count" id="resultsCount"></span>
+  </div>
 
-        <article class="post-card{% if post.featured %} featured{% endif %}" data-type="{{ post_type }}">
-          <div class="post-image">
-            {% if post.image %}
-              <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-            {% else %}
-              <div class="post-image-placeholder">
-                <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" rx="3" stroke="#c8d0e0" stroke-width="1.5"/><circle cx="14" cy="17" r="2.5" stroke="#c8d0e0" stroke-width="1.5"/><path d="M6 24l8-5 6 4 5-3 9 7" stroke="#c8d0e0" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </div>
+  <!-- Posts Grid -->
+  <div class="posts-grid" id="postsGrid">
+    {% for post in paginator.posts %}
+      {% assign post_type = post.type | default: "post" | downcase %}
+      <article class="post-card" data-type="{{ post_type }}">
+        <div class="post-image">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+          {% else %}
+            <img src="/Images/placeholder-card.jpg" alt="{{ post.title }}" loading="lazy">
+          {% endif %}
+        </div>
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="post-type {{ post_type }}">
+              {% if post_type == "review" %}Review
+              {% elsif post_type == "guide" %}Guide
+              {% elsif post_type == "comparison" %}Comparison
+              {% else %}Article
+              {% endif %}
+            </span>
+            <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+            {% if post.categories[0] %}
+              <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
             {% endif %}
           </div>
-          <div class="post-body">
-            <div class="post-meta">
-              {% if post.featured %}
-                <span class="featured-label">
-                  <svg width="9" height="9" viewBox="0 0 10 10" fill="currentColor"><path d="M5 1l1.1 2.2L9 3.6l-2 1.95.47 2.76L5 7l-2.47 1.3.47-2.76L1 3.6l2.9-.4L5 1z"/></svg>
-                  Featured
-                </span>
-              {% endif %}
-              <span class="badge {{ badge_class }}">{{ post_type | capitalize }}</span>
-              {% if post.categories[0] %}
-                <span class="badge badge-default" style="background:var(--surface-2);color:var(--text-3);">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-              {% endif %}
-              <span class="badge-date">{{ post.date | date: "%b %Y" }}</span>
-            </div>
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
-            <a href="{{ post.url }}" class="read-more">Read more <svg width="14" height="14" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-
-    <div id="no-posts" class="empty-state" style="display:none;">
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" stroke="#e1e6ef" stroke-width="1.5"/><path d="M15 20h10M20 15v10" stroke="#c8d0e0" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <p>No posts found in this category yet.</p>
-    </div>
+          <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          <a href="{{ post.url }}" class="read-more">Read →</a>
+        </div>
+      </article>
+    {% endfor %}
   </div>
-</div>
 
-<!-- Search data -->
-<script id="search-data" type="application/json">
-[{% for post in site.posts %}{"title":{{ post.title | jsonify }},"url":{{ post.url | jsonify }},"excerpt":{{ post.excerpt | strip_html | truncatewords: 30 | jsonify }},"date":{{ post.date | date: "%b %Y" | jsonify }},"type":{{ post.type | default: "post" | jsonify }},"category":{{ post.categories[0] | replace: "-", " " | capitalize | jsonify }},"image":{{ post.image | default: "" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
-</script>
+  <!-- Pagination -->
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">← Previous</a>
+      {% else %}
+        <span class="disabled">← Previous</span>
+      {% endif %}
+      <span class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">Next →</a>
+      {% else %}
+        <span class="disabled">Next →</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
 
 <script>
 (function() {
-  const input = document.getElementById('search-input');
-  const btn = document.getElementById('search-button');
-  const resultsDiv = document.getElementById('search-results');
-  const postsGrid = document.getElementById('posts-grid');
-  const filterTabs = document.querySelectorAll('.filter-tab');
-  const countEl = document.getElementById('results-count');
-  const noPostsEl = document.getElementById('no-posts');
-  let searchData = [];
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const postsGrid = document.getElementById('postsGrid');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const resultsCount = document.getElementById('resultsCount');
+
+  let allPosts = [];
   let activeFilter = 'all';
 
-  try {
-    const dataEl = document.getElementById('search-data');
-    if (dataEl) searchData = JSON.parse(dataEl.textContent);
-  } catch(e) { console.warn(e); }
+  // Collect all post data from grid
+  const postCards = Array.from(postsGrid.querySelectorAll('.post-card'));
+  allPosts = postCards.map(card => ({
+    element: card,
+    type: card.dataset.type,
+    title: card.querySelector('.post-title a')?.innerText.toLowerCase() || '',
+    excerpt: card.querySelector('.post-excerpt')?.innerText.toLowerCase() || '',
+    category: card.querySelector('.post-category')?.innerText.toLowerCase() || ''
+  }));
 
   function updateCount() {
-    const cards = postsGrid.querySelectorAll('.post-card');
-    const visible = [...cards].filter(c => c.style.display !== 'none').length;
-    countEl.textContent = visible + (visible === 1 ? ' article' : ' articles');
-    noPostsEl.style.display = visible === 0 ? 'block' : 'none';
+    const visible = postCards.filter(card => card.style.display !== 'none').length;
+    resultsCount.textContent = visible + (visible === 1 ? ' article' : ' articles');
   }
 
-  function applyFilter(type) {
-    activeFilter = type;
-    resultsDiv.style.display = 'none';
-    postsGrid.style.display = 'grid';
-    const cards = postsGrid.querySelectorAll('.post-card');
-    cards.forEach(card => {
-      const t = card.dataset.type || 'post';
-      card.style.display = (type === 'all' || t === type) ? '' : 'none';
+  function applyFilter() {
+    postCards.forEach(card => {
+      const cardType = card.dataset.type;
+      if (activeFilter === 'all' || cardType === activeFilter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
     });
     updateCount();
   }
 
-  filterTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      filterTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      activeFilter = tab.dataset.type;
-      input.value = '';
-      resultsDiv.style.display = 'none';
-      applyFilter(activeFilter);
+  // Filter button clicks
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.type;
+      searchInput.value = '';
+      searchResults.style.display = 'none';
+      applyFilter();
     });
   });
 
-  function performSearch() {
-    const q = input.value.trim().toLowerCase();
-    if (q.length < 2) {
-      resultsDiv.style.display = 'none';
-      postsGrid.style.display = 'grid';
-      applyFilter(activeFilter);
+  // Search functionality
+  searchInput.addEventListener('input', function() {
+    const query = this.value.trim().toLowerCase();
+    
+    if (query.length < 2) {
+      searchResults.style.display = 'none';
+      applyFilter();
       return;
     }
-    const hits = searchData.filter(item =>
-      item.title.toLowerCase().includes(q) ||
-      item.excerpt.toLowerCase().includes(q) ||
-      (item.type || '').toLowerCase().includes(q) ||
-      (item.category || '').toLowerCase().includes(q)
-    );
-    postsGrid.style.display = 'none';
-    noPostsEl.style.display = 'none';
-    if (!hits.length) {
-      resultsDiv.innerHTML = '<div class="no-results">No results found. Try a different term.</div>';
-    } else {
-      resultsDiv.innerHTML = hits.map(h => {
-        let typeClass = 'badge-default';
-        if (h.type === 'review') typeClass = 'badge-review';
-        else if (h.type === 'guide') typeClass = 'badge-guide';
-        else if (h.type === 'comparison') typeClass = 'badge-comparison';
-        const typeLabel = (h.type || 'post').charAt(0).toUpperCase() + (h.type || 'post').slice(1);
-        return `<a href="${h.url}" class="search-result-item">
-          ${h.image ? `<img src="${h.image}" class="search-result-image" alt="${h.title}" loading="lazy">` : ''}
-          <div>
-            <div class="search-result-title">${h.title}</div>
-            <div class="search-result-excerpt">${h.excerpt.substring(0, 90)}…</div>
-            <div class="search-result-meta"><span class="badge ${typeClass}" style="font-size:0.65rem;padding:2px 8px;">${typeLabel}</span> &nbsp;${h.category || ''} · ${h.date}</div>
-          </div>
-        </a>`;
-      }).join('');
-    }
-    resultsDiv.style.display = 'block';
-  }
 
-  btn.addEventListener('click', performSearch);
-  input.addEventListener('input', performSearch);
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') performSearch(); });
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.search-wrap')) {
-      resultsDiv.style.display = 'none';
-      if (input.value.trim().length < 2) {
-        postsGrid.style.display = 'grid';
-        applyFilter(activeFilter);
+    const matches = allPosts.filter(post => 
+      post.title.includes(query) || 
+      post.excerpt.includes(query) || 
+      post.category.includes(query)
+    );
+
+    if (matches.length === 0) {
+      searchResults.innerHTML = '<div style="padding: 1rem; text-align: center;">No results found.</div>';
+      searchResults.style.display = 'block';
+      postCards.forEach(card => card.style.display = 'none');
+      resultsCount.textContent = '0 articles';
+      return;
+    }
+
+    // Show search results
+    searchResults.innerHTML = matches.map(match => `
+      <a href="${match.element.querySelector('.post-title a').href}" class="search-result-item">
+        <div class="search-result-content">
+          <div class="search-result-title">${match.element.querySelector('.post-title a').innerText}</div>
+          <div class="search-result-excerpt">${match.element.querySelector('.post-excerpt').innerText.substring(0, 100)}...</div>
+          <div class="search-result-meta">${match.element.querySelector('.post-type').innerText} · ${match.element.querySelector('.post-date').innerText}</div>
+        </div>
+      </a>
+    `).join('');
+    searchResults.style.display = 'block';
+    
+    // Hide non-matching posts (optional)
+    postCards.forEach(card => {
+      const title = card.querySelector('.post-title a')?.innerText.toLowerCase() || '';
+      const excerpt = card.querySelector('.post-excerpt')?.innerText.toLowerCase() || '';
+      if (title.includes(query) || excerpt.includes(query)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
       }
+    });
+    updateCount();
+  });
+
+  // Hide search results when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+      searchResults.style.display = 'none';
     }
   });
 
-  applyFilter('all');
+  // Initialize
+  applyFilter();
 })();
 </script>
