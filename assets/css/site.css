@@ -1148,7 +1148,6 @@ p {
 .footer-brand-logo {
   width: clamp(170px, 19vw, 240px);
   height: auto;
-  filter: drop-shadow(0 2px 8px rgba(34, 211, 238, 0.25));
 }
 
 .footer-brand p {
@@ -1427,15 +1426,49 @@ p {
   font-weight: 700;
 }
 
-.sgh-cta-review-pick .cta-button {
+.verdict-card.is-top-pick {
+  border-color: #93c5fd;
+}
+
+.verdict-rank {
   display: inline-block;
-  background: linear-gradient(90deg, #1a56db, #0f3e9a);
-  color: #ffffff;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  border-radius: 40px;
-  text-decoration: none;
-  margin-top: 0.5rem;
+  color: #0f3aa6;
+  background: #eaf2ff;
+  border-radius: 999px;
+  padding: 0.24rem 0.55rem;
+  margin-bottom: 0.65rem;
+}
+
+.verdict-card-logo-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.verdict-card-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.verdict-card-logo-placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.verdict-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
 }
 
 .sgh-cta-review-pick .cta-subtext {
@@ -1510,19 +1543,68 @@ p {
   display: none;
 }
 
-.verdict-card:last-child {
-  border-right: none;
+/* ---------- Affiliate CTA Component ---------- */
+.sgh-cta {
+  background: linear-gradient(135deg, #f8fbff, #eef7ff);
+  border: 1px solid rgba(0, 194, 255, 0.18);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  box-shadow: 0 10px 30px rgba(8, 30, 58, 0.08);
 }
 
-.verdict-card:hover {
-  transform: none;
-  box-shadow: none;
+.sgh-cta-review-pick {
+  text-align: left;
 }
 
-.verdict-card.is-top-pick {
-  background: linear-gradient(135deg, #fef9e6, #fff4e0);
-  position: relative;
-  border-color: #e2e8f0;
+.review-pick-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.review-pick-logo-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.review-pick-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.review-pick-tag {
+  margin: 0 0 0.15rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.review-pick-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.review-pick-subtitle {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.cta-badge {
+  margin-bottom: 0.75rem;
 }
 
 .verdict-rank {
@@ -1535,52 +1617,42 @@ p {
   padding: 0.2rem 0.6rem;
   border-radius: 20px;
   display: inline-block;
-}
-
-.is-top-pick .verdict-rank {
-  background: #ea580c;
-}
-
-.verdict-card-logo-wrap {
-  width: 60px;
-  height: 60px;
-  margin: 1rem 0 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  padding: 6px;
-}
-
-.verdict-card-logo {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.verdict-card-title {
-  font-size: 1.1rem;
+  background: #081e3a;
+  color: #fff;
+  font-size: 0.8rem;
   font-weight: 700;
   margin: 0.5rem 0 0.2rem;
 }
 
-.verdict-card-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #1a56db;
-  margin-bottom: 0.5rem;
+.cta-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
+  color: #081e3a;
 }
 
-.verdict-card-desc {
-  font-size: 0.85rem;
-  color: #4b5563;
-  margin-bottom: 1rem;
+.cta-text {
+  max-width: 700px;
+  margin: 0 0 1.25rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-.verdict-card-link {
-  font-size: 0.8rem;
+.review-pick-points {
+  margin: 0 0 1.3rem;
+  padding-left: 1.1rem;
+  color: #334155;
+}
+
+.review-pick-points li {
+  margin: 0.25rem 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #00c2ff;
+  color: #081e3a;
   font-weight: 700;
   color: #1a56db;
   text-decoration: none;
@@ -1604,14 +1676,25 @@ p {
   color: #92400e;
 }
 
+/* Responsive: stack cards on mobile */
 @media (max-width: 768px) {
   .verdict-cards {
     grid-template-columns: 1fr;
+    gap: 0.9rem;
   }
 
-  .verdict-card {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
+  .verdict-heading {
+    font-size: 1.4rem;
+  }
+
+  .review-pick-head {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-title {
+    font-size: 1.5rem;
   }
 
   .verdict-card:last-child {
