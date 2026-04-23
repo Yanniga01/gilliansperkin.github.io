@@ -10,7 +10,6 @@ permalink: /
    SmartGuideHubs Homepage — Professional & Clean
    ============================================================ */
 
-/* ── Design tokens (homepage-scoped) ── */
 :root {
   --hp-navy:       #06122e;
   --hp-navy2:      #0b2a54;
@@ -28,14 +27,12 @@ permalink: /
   --hp-radius-lg:  22px;
 }
 
-/* ── Wrapper ── */
 .hp-wrap {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* HERO (simplified, no stats) */
 .hp-hero {
   background: linear-gradient(135deg, var(--hp-navy) 0%, var(--hp-navy2) 65%, #0d3460 100%);
   border-radius: var(--hp-radius-lg);
@@ -119,7 +116,6 @@ permalink: /
 }
 .hp-btn-ghost:hover { background: rgba(255,255,255,0.16); color: #fff; }
 
-/* TRUST BAR */
 .hp-trust-bar {
   background: var(--hp-surface);
   border: 1px solid var(--hp-border);
@@ -142,7 +138,6 @@ permalink: /
 }
 .hp-trust-item::before { content: '✓'; color: var(--hp-green); font-weight: 900; }
 
-/* BEST TOOLS BAND */
 .hp-tools-band {
   background: linear-gradient(135deg, var(--hp-navy) 0%, var(--hp-navy2) 60%, #0d3460 100%);
   border-radius: var(--hp-radius-lg);
@@ -172,7 +167,6 @@ permalink: /
 }
 .hp-tools-band p { margin: 0; color: rgba(255,255,255,0.72); font-size: 0.9rem; }
 
-/* CATEGORY QUICK LINKS */
 .hp-cat-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -201,7 +195,6 @@ permalink: /
 .hp-cat-pill__label { font-size: 0.85rem; font-weight: 700; color: var(--hp-text); }
 .hp-cat-pill:hover .hp-cat-pill__label { color: #0e7490; }
 
-/* CATEGORY SECTIONS (Recently Added) */
 .hp-cat-section { margin-bottom: 2.5rem; }
 .hp-section-header {
   display: flex;
@@ -225,9 +218,10 @@ permalink: /
   text-decoration: none;
 }
 .hp-section-header__link:hover { text-decoration: underline; }
+
 .hp-cat-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
 }
 .hp-article-card {
@@ -303,8 +297,6 @@ permalink: /
   color: var(--hp-orange);
   text-decoration: none;
 }
-
-/* SIMPLE NEWSLETTER */
 .hp-newsletter {
   background: linear-gradient(135deg, var(--hp-navy) 0%, var(--hp-navy2) 100%);
   border-radius: var(--hp-radius-lg);
@@ -331,7 +323,6 @@ permalink: /
   color: rgba(255,255,255,0.45);
 }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
   .hp-cat-cards { grid-template-columns: repeat(2, 1fr); }
   .hp-cat-grid { grid-template-columns: repeat(2, 1fr); }
@@ -394,11 +385,57 @@ permalink: /
   </a>
 </div>
 
-<!-- Recently Added by Category -->
+<!-- ============================================================
+     CATEGORY SECTIONS with exact mix: 1 guide, 1 review, 2 comparisons
+     ============================================================ -->
 {% assign categories = "pdf-and-document-tools,email-and-marketing-tools,project-management,finance" | split: "," %}
 {% for cat_slug in categories %}
-  {% assign cat_posts = site.categories[cat_slug] | sort: "date" | reverse | limit: 3 %}
-  {% if cat_posts.size > 0 %}
+  {% comment %}
+    Gather posts of each type for this category.
+    'type' front matter values: guide, review, comparison.
+  {% endcomment %}
+  {% assign guides = site.categories[cat_slug] | where: "type", "guide" | sort: "date" | reverse %}
+  {% assign reviews = site.categories[cat_slug] | where: "type", "review" | sort: "date" | reverse %}
+  {% assign comparisons = site.categories[cat_slug] | where: "type", "comparison" | sort: "date" | reverse %}
+
+  {% assign selected_posts = "" | split: "" %}
+
+  {% comment %} Add 1 guide {% endcomment %}
+  {% if guides.size > 0 %}
+    {% assign selected_posts = selected_posts | push: guides[0] %}
+  {% else %}
+    {% comment %} fallback to any post from the category (first) {% endcomment %}
+    {% assign fallback = site.categories[cat_slug] | first %}
+    {% if fallback %}{% assign selected_posts = selected_posts | push: fallback %}{% endif %}
+  {% endif %}
+
+  {% comment %} Add 1 review {% endcomment %}
+  {% if reviews.size > 0 %}
+    {% assign selected_posts = selected_posts | push: reviews[0] %}
+  {% else %}
+    {% assign fallback = site.categories[cat_slug] | first %}
+    {% if fallback and fallback != selected_posts[0] %}
+      {% assign selected_posts = selected_posts | push: fallback %}
+    {% endif %}
+  {% endif %}
+
+  {% comment %} Add 2 comparisons (or fill with remaining) {% endcomment %}
+  {% assign comparisons_needed = 2 %}
+  {% for comp in comparisons limit: 2 %}
+    {% assign selected_posts = selected_posts | push: comp %}
+    {% assign comparisons_needed = comparisons_needed | minus: 1 %}
+  {% endfor %}
+
+  {% comment %} If still missing posts, fill with other recent posts from category (excluding already added) {% endcomment %}
+  {% assign remaining_needed = 4 | minus: selected_posts.size %}
+  {% if remaining_needed > 0 %}
+    {% assign other_posts = site.categories[cat_slug] | where_exp: "post", "selected_posts contains post != true" | sort: "date" | reverse %}
+    {% for other in other_posts limit: remaining_needed %}
+      {% assign selected_posts = selected_posts | push: other %}
+    {% endfor %}
+  {% endif %}
+
+  {% if selected_posts.size > 0 %}
   <section class="hp-cat-section">
     <div class="hp-section-header">
       <h2 class="hp-section-title">
@@ -412,7 +449,7 @@ permalink: /
       <a href="/categories/{{ cat_slug }}/" class="hp-section-header__link">View all →</a>
     </div>
     <div class="hp-cat-grid">
-      {% for post in cat_posts %}
+      {% for post in selected_posts limit: 4 %}
       <article class="hp-article-card">
         <div class="hp-article-card__img">
           {% if post.image %}
@@ -428,7 +465,9 @@ permalink: /
         </div>
         <div class="hp-article-card__body">
           <div class="hp-article-card__meta">
-            <span class="hp-article-card__cat">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+            <span class="hp-article-card__cat">
+              {% if post.type %}{{ post.type | capitalize }}{% else %}{{ post.categories[0] | replace: "-", " " | capitalize }}{% endif %}
+            </span>
             <span class="hp-article-card__date">{{ post.date | date: "%b %d, %Y" }}</span>
           </div>
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
