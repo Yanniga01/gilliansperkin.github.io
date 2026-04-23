@@ -1116,63 +1116,139 @@ p {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: linear-gradient(135deg, var(--gray-800), var(--gray-900));
+  background: linear-gradient(135deg, #06122e 0%, #0b2a54 100%);
   color: #cbd5e1;
-  padding: var(--space-xl) 0 var(--space-lg);
-  margin-top: var(--space-2xl);
+  margin-top: 4rem;
+  border-top: 1px solid rgba(103, 232, 249, 0.12);
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-md);
+  padding: 3rem 1.5rem 2rem;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-xl);
-  margin-bottom: var(--space-xl);
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.footer-logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: var(--space-sm);
-  background: linear-gradient(90deg, #60a5fa, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.footer-brand {
+  flex: 2;
+  min-width: 220px;
 }
 
-.footer-links h4 {
-  color: white;
-  margin-bottom: var(--space-sm);
-  font-size: var(--font-size-base);
+.footer-brand-link {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
 }
 
-.footer-links a {
+.footer-brand-logo {
+  width: clamp(170px, 19vw, 240px);
+  height: auto;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
   color: #94a3b8;
-  display: block;
-  margin-bottom: var(--space-xs);
-  transition: var(--transition-base);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  max-width: 280px;
 }
 
-.footer-links a:hover {
-  color: white;
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+  transition: all 0.2s;
+}
+
+.social-icon:hover {
+  background: #22d3ee;
+  color: #06122e;
+  transform: translateY(-2px);
+}
+
+.footer-links {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-col {
+  min-width: 120px;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s;
+}
+
+.footer-col a:hover {
+  color: #67e8f9;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: var(--space-lg);
-  border-top: 1px solid #334155;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(103, 232, 249, 0.12);
+  font-size: 0.75rem;
   color: #94a3b8;
-  font-size: var(--font-size-sm);
 }
 
 @media (max-width: 768px) {
-  .footer-grid {
-    gap: var(--space-lg);
+  .footer-main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 }
 
@@ -1265,10 +1341,49 @@ p {
   background: linear-gradient(180deg, #14b8a6, #2563eb);
 }
 
+.verdict-card.is-top-pick {
+  border-color: #93c5fd;
+}
+
+.verdict-rank {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0f3aa6;
+  background: #eaf2ff;
+  border-radius: 999px;
+  padding: 0.24rem 0.55rem;
+  margin-bottom: 0.65rem;
+}
+
+.verdict-card-logo-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.verdict-card-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.verdict-card-logo-placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
 .verdict-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
-  border-color: #93c5fd;
 }
 
 .verdict-card-title {
@@ -1302,17 +1417,6 @@ p {
   color: #0f3aa6;
 }
 
-/* Responsive: stack cards on mobile */
-@media (max-width: 768px) {
-  .verdict-cards {
-    grid-template-columns: 1fr;
-    gap: 0.9rem;
-  }
-  .verdict-heading {
-    font-size: 1.4rem;
-  }
-}
-
 /* ---------- Affiliate CTA Component ---------- */
 .sgh-cta {
   background: linear-gradient(135deg, #f8fbff, #eef7ff);
@@ -1324,13 +1428,62 @@ p {
   box-shadow: 0 10px 30px rgba(8, 30, 58, 0.08);
 }
 
+.sgh-cta-review-pick {
+  text-align: left;
+}
+
+.review-pick-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.review-pick-logo-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.review-pick-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.review-pick-tag {
+  margin: 0 0 0.15rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.review-pick-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.review-pick-subtitle {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
 .cta-badge {
   margin-bottom: 0.75rem;
 }
 
 .cta-badge span {
   display: inline-block;
-  background: #081E3A;
+  background: #081e3a;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 700;
@@ -1343,21 +1496,31 @@ p {
   margin: 0 0 0.75rem;
   font-size: 1.8rem;
   line-height: 1.25;
-  color: #081E3A;
+  color: #081e3a;
 }
 
 .cta-text {
   max-width: 700px;
-  margin: 0 auto 1.25rem;
+  margin: 0 0 1.25rem;
   color: #475569;
   font-size: 1rem;
   line-height: 1.7;
 }
 
+.review-pick-points {
+  margin: 0 0 1.3rem;
+  padding-left: 1.1rem;
+  color: #334155;
+}
+
+.review-pick-points li {
+  margin: 0.25rem 0;
+}
+
 .cta-button {
   display: inline-block;
-  background: #00C2FF;
-  color: #081E3A;
+  background: #00c2ff;
+  color: #081e3a;
   font-weight: 700;
   text-decoration: none;
   padding: 0.9rem 1.4rem;
@@ -1383,6 +1546,22 @@ p {
   color: #334155;
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+/* Responsive: stack cards on mobile */
+@media (max-width: 768px) {
+  .verdict-cards {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .verdict-heading {
+    font-size: 1.4rem;
+  }
+
+  .review-pick-head {
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 640px) {
