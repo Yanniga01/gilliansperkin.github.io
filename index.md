@@ -386,56 +386,14 @@ permalink: /
 </div>
 
 <!-- ============================================================
-     CATEGORY SECTIONS with exact mix: 1 guide, 1 review, 2 comparisons
+     CATEGORY SECTIONS – simple and safe (no complex Liquid)
+     Shows up to 4 most recent posts per category.
+     If you need exact mix (guide/review/comparison), add 'type' front matter.
      ============================================================ -->
 {% assign categories = "pdf-and-document-tools,email-and-marketing-tools,project-management,finance" | split: "," %}
 {% for cat_slug in categories %}
-  {% comment %}
-    Gather posts of each type for this category.
-    'type' front matter values: guide, review, comparison.
-  {% endcomment %}
-  {% assign guides = site.categories[cat_slug] | where: "type", "guide" | sort: "date" | reverse %}
-  {% assign reviews = site.categories[cat_slug] | where: "type", "review" | sort: "date" | reverse %}
-  {% assign comparisons = site.categories[cat_slug] | where: "type", "comparison" | sort: "date" | reverse %}
-
-  {% assign selected_posts = "" | split: "" %}
-
-  {% comment %} Add 1 guide {% endcomment %}
-  {% if guides.size > 0 %}
-    {% assign selected_posts = selected_posts | push: guides[0] %}
-  {% else %}
-    {% comment %} fallback to any post from the category (first) {% endcomment %}
-    {% assign fallback = site.categories[cat_slug] | first %}
-    {% if fallback %}{% assign selected_posts = selected_posts | push: fallback %}{% endif %}
-  {% endif %}
-
-  {% comment %} Add 1 review {% endcomment %}
-  {% if reviews.size > 0 %}
-    {% assign selected_posts = selected_posts | push: reviews[0] %}
-  {% else %}
-    {% assign fallback = site.categories[cat_slug] | first %}
-    {% if fallback and fallback != selected_posts[0] %}
-      {% assign selected_posts = selected_posts | push: fallback %}
-    {% endif %}
-  {% endif %}
-
-  {% comment %} Add 2 comparisons (or fill with remaining) {% endcomment %}
-  {% assign comparisons_needed = 2 %}
-  {% for comp in comparisons limit: 2 %}
-    {% assign selected_posts = selected_posts | push: comp %}
-    {% assign comparisons_needed = comparisons_needed | minus: 1 %}
-  {% endfor %}
-
-  {% comment %} If still missing posts, fill with other recent posts from category (excluding already added) {% endcomment %}
-  {% assign remaining_needed = 4 | minus: selected_posts.size %}
-  {% if remaining_needed > 0 %}
-    {% assign other_posts = site.categories[cat_slug] | where_exp: "post", "selected_posts contains post != true" | sort: "date" | reverse %}
-    {% for other in other_posts limit: remaining_needed %}
-      {% assign selected_posts = selected_posts | push: other %}
-    {% endfor %}
-  {% endif %}
-
-  {% if selected_posts.size > 0 %}
+  {% assign category_posts = site.categories[cat_slug] | sort: "date" | reverse | limit: 4 %}
+  {% if category_posts.size > 0 %}
   <section class="hp-cat-section">
     <div class="hp-section-header">
       <h2 class="hp-section-title">
@@ -449,7 +407,7 @@ permalink: /
       <a href="/categories/{{ cat_slug }}/" class="hp-section-header__link">View all →</a>
     </div>
     <div class="hp-cat-grid">
-      {% for post in selected_posts limit: 4 %}
+      {% for post in category_posts %}
       <article class="hp-article-card">
         <div class="hp-article-card__img">
           {% if post.image %}
@@ -466,7 +424,11 @@ permalink: /
         <div class="hp-article-card__body">
           <div class="hp-article-card__meta">
             <span class="hp-article-card__cat">
-              {% if post.type %}{{ post.type | capitalize }}{% else %}{{ post.categories[0] | replace: "-", " " | capitalize }}{% endif %}
+              {% if post.type %}
+                {{ post.type | capitalize }}
+              {% else %}
+                {{ post.categories[0] | replace: "-", " " | capitalize }}
+              {% endif %}
             </span>
             <span class="hp-article-card__date">{{ post.date | date: "%b %d, %Y" }}</span>
           </div>
