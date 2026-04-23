@@ -1,1559 +1,343 @@
 ---
+layout: default
+title: "Expert Software Reviews for Small Businesses | SmartGuideHubs"
+description: "Unbiased, in-depth reviews of the best software tools for small businesses. We test, compare, and verify so you can make confident decisions."
+permalink: /
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Redirect index.html to clean root URL -->
-<script>
-if (window.location.pathname === "/index.html") {
-  window.location.replace("/");
+<style>
+/* Additional homepage‑specific styles (complementing site.css) */
+.home-hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #06122e, #0b2a54);
+  border-radius: 24px;
+  margin-bottom: 2rem;
+  color: white;
 }
-</script>
+.home-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.home-hero h1 .highlight {
+  color: #38e8ff;
+}
+.home-hero .subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.best-tools-spot {
+  background: linear-gradient(135deg, #06122e, #0b2a54);
+  border-radius: 18px;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 10px 25px rgba(2, 8, 23, 0.2);
+}
+.best-tools-spot .spot-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: #67e8f9;
+}
+.best-tools-spot h2 {
+  margin: 0.4rem 0 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+.best-tools-spot p {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  max-width: 700px;
+}
+.spot-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #22d3ee;
+  color: #05253b;
+  font-weight: 700;
+  text-decoration: none;
+}
+.spot-link:hover {
+  background: #67e8f9;
+}
+.category-guide {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+.category-quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+  margin: 1.5rem 0;
+}
+.category-quick-links a {
+  display: block;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.category-quick-links a:hover {
+  border-color: #0e7490;
+  background: #ecfeff;
+  color: #0e7490;
+  transform: translateY(-2px);
+}
+.authority-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.authority-signals span {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-radius: 999px;
+  padding: 0.42rem 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.category-section {
+  margin: 3rem 0;
+}
+.category-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.post-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.post-card .post-image {
+  height: 180px;
+  overflow: hidden;
+}
+.post-card .post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post-card .post-content {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.post-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+.post-date, .post-category {
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+}
+.post-date {
+  background: #f1f5f9;
+  color: #475569;
+}
+.post-category {
+  background: #ffe4d6;
+  color: #ff6b35;
+}
+.post-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.post-card h3 a {
+  color: #1e293b;
+  text-decoration: none;
+}
+.post-card h3 a:hover {
+  color: #ff6b35;
+}
+.post-card p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.read-more {
+  color: #ff6b35;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+.newsletter-band {
+  margin: 4rem 0 3rem;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #06122e, #0b2a54);
+  text-align: center;
+  color: white;
+}
+.newsletter-band h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  border: none;
+}
+.newsletter-band p {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.5rem;
+}
+.ml-embedded {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+  .best-tools-spot {
+    flex-direction: column;
+    text-align: center;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<div class="home-hero">
+  <h1>Expert <span class="highlight">Software Reviews</span> for Small Businesses</h1>
+  <p class="subtitle">Unbiased, in-depth analysis of the tools that help you work smarter. We test, compare, and verify so you can make confident decisions.</p>
+</div>
 
-<!-- Basic Meta -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="best-tools-spot">
+  <div>
+    <div class="spot-kicker">Best Tools 2026</div>
+    <h2>Start with our complete shortlist before reading individual reviews.</h2>
+    <p>We organized top picks by category, pricing fit, and use‑case so you can narrow options faster.</p>
+  </div>
+  <a href="/best-tools/" class="spot-link">Open Best Tools Hub →</a>
+</div>
 
-<!-- Title (Premium + SEO optimized) -->
-<title>SmartGuideHubs — Expert Software Reviews & Comparisons for Small Businesses (2026)</title>
+<div class="category-guide">
+  <h2>Find the Best Tool for Your Business</h2>
+  <p>Start with your category to narrow your choices faster and compare only the tools that match your workflow.</p>
+  <div class="category-quick-links">
+    <a href="/categories/pdf-and-document-tools/">📄 PDF & Document Tools</a>
+    <a href="/categories/email-and-marketing-tools/">📧 Email & Marketing Tools</a>
+    <a href="/categories/project-management/">📊 Project Management</a>
+    <a href="/categories/finance/">💼 Finance & Accounting</a>
+  </div>
+  <div class="authority-signals">
+    <span>✅ 90+ Days Hands‑On Testing</span>
+    <span>✅ Transparent Editorial Policy</span>
+    <span>✅ Updated Reviews for 2026</span>
+    <span>✅ Independent Comparison Method</span>
+  </div>
+</div>
 
-<!-- Description (More compelling + conversion-focused) -->
-<meta name="description" content="Discover the best software tools for small businesses with clear, in-depth reviews and practical comparisons. SmartGuideHubs helps you choose the right tools faster with unbiased insights and real-world guidance.">
+<!-- ===== DYNAMIC CATEGORY SECTIONS ===== -->
+{% assign categories = "pdf-and-document-tools,email-and-marketing-tools,project-management,finance" | split: "," %}
+{% for cat_slug in categories %}
+  {% assign cat_posts = site.categories[cat_slug] | sort: "date" | reverse | limit: 3 %}
+  {% if cat_posts.size > 0 %}
+    <section class="category-section">
+      <h2>
+        {% case cat_slug %}
+          {% when "pdf-and-document-tools" %}📄 Latest PDF & Document Tool Reviews
+          {% when "email-and-marketing-tools" %}📧 Latest Email & Marketing Tool Reviews
+          {% when "project-management" %}📋 Latest Project Management Tool Reviews
+          {% when "finance" %}💰 Latest Finance & Accounting Tool Reviews
+        {% endcase %}
+      </h2>
+      <div class="category-grid">
+        {% for post in cat_posts %}
+          <article class="post-card">
+            {% if post.image %}
+              <div class="post-image">
+                <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+              </div>
+            {% endif %}
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+                <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+              </div>
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+              <a href="{{ post.url }}" class="read-more">Read Full Review →</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+      <div class="text-center" style="margin-top: 1.5rem;">
+        <a href="/categories/{{ cat_slug }}/" class="btn-secondary" style="color: #ff6b35; font-weight: 600;">View all {{ cat_slug | replace: "-", " " }} reviews →</a>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}
 
-<!-- Keywords (optional but clean) -->
-<meta name="keywords" content="small business software reviews, SaaS comparisons 2026, best business tools, software buying guides, email marketing tools, project management software">
+<div class="newsletter-band">
+  <h2>Get practical software insights in your inbox</h2>
+  <p>Join SmartGuideHubs readers and receive new reviews, comparisons, and buying guides as they go live.</p>
+  <div class="ml-embedded" data-form="0xw1l4"></div>
+  <p style="margin-top: 1rem; font-size: 0.85rem;">No spam. Unsubscribe anytime.</p>
+</div>
 
-<!-- AdSense -->
-<meta name="google-adsense-account" content="ca-pub-4168247506914247">
-
-<!-- Google Analytics -->
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-3DCX56R2GN');
+  // Ensure MailerLite embedded form gets proper styling
+  (function() {
+    const style = document.createElement('style');
+    style.textContent = `
+      .ml-embedded .ml-form-embedWrapper {
+        background: rgba(7,22,48,0.86) !important;
+        border: 1px solid rgba(103,232,249,0.24) !important;
+        border-radius: 14px !important;
+      }
+      .ml-embedded .ml-form-embedSubmit button {
+        background: #22d3ee !important;
+        border-radius: 999px !important;
+        font-weight: 700 !important;
+        color: #082f49 !important;
+      }
+      .ml-embedded .ml-form-embedSubmit button:hover {
+        background: #67e8f9 !important;
+      }
+    `;
+    document.head.appendChild(style);
+  })();
 </script>
-
-<!-- Canonical -->
-<link rel="canonical" href="https://smartguidehubs.com/">
-
-<!-- Open Graph (Better for sharing) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="SmartGuideHubs — Expert Software Reviews for Small Businesses">
-<meta property="og:description" content="Find the best tools for your business with clear, unbiased software reviews, comparisons, and practical guides.">
-<meta property="og:url" content="https://smartguidehubs.com/">
-<meta property="og:site_name" content="SmartGuideHubs">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://smartguidehubs.com/editorial-team-smartguidehubs.png">
-<meta property="og:image:alt" content="SmartGuideHubs software review platform and brand overview">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SmartGuideHubs — Software Reviews & Comparisons">
-<meta name="twitter:description" content="Compare the best software tools for small businesses with clear, practical insights and expert-style reviews.">
-<meta name="twitter:image" content="https://smartguidehubs.com/editorial-team-smartguidehubs.png">
-    <style>
-        /* ===== GLOBAL & LAYOUT STYLES ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        
-        body {
-            background-color: #f8fafc;
-            color: #334155;
-            line-height: 1.7;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        .site-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            flex: 1;
-        }
-        
-        /* ===== HEADER & NAVIGATION ===== */
-        .site-header {
-            background: white;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0;
-        }
-        
-        .logo a {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo img {
-            width: clamp(180px, 24vw, 300px);
-            height: auto;
-            display: block;
-        }
-        
-        .main-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .main-nav a {
-            text-decoration: none;
-            color: #64748b;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.2s;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-        
-        .main-nav a:hover,
-        .main-nav a.active {
-            color: #22d3ee;
-        }
-        
-        .main-nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #22d3ee, #06b6d4);
-            border-radius: 3px;
-        }
-        .nav-dropdown { position: relative; }
-        .nav-dropdown > a::after { content: " ▾"; font-size: 0.72rem; }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: calc(100% + 8px);
-            left: 0;
-            min-width: 190px;
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-            padding: 0.35rem;
-            list-style: none;
-            z-index: 1200;
-        }
-        .nav-dropdown.dropdown-open .dropdown-menu { display: block; }
-        @media (min-width: 769px) {
-            .nav-dropdown:hover .dropdown-menu,
-            .nav-dropdown:focus-within .dropdown-menu { display: block; }
-        }
-        .nav-dropdown.is-active > .dropdown-toggle { color: #22d3ee; }
-        .dropdown-menu a {
-            display: block;
-            padding: 0.45rem 0.6rem;
-            border-radius: 8px;
-            color: #334155;
-        }
-        .dropdown-menu a:hover { background: #ecfeff; }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #475569;
-            cursor: pointer;
-        }
-        
-        /* ===== HERO / PAGE HEADER ===== */
-        .page-header {
-            text-align: center;
-            padding: 4rem 1.5rem 3rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #06122e, #0b2a54);
-            border-radius: 24px;
-            box-shadow: 0 18px 36px rgba(2, 8, 23, 0.28);
-        }
-        
-        .page-header h1 {
-            font-size: 2.8rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .page-header h1 .highlight {
-            color: #38e8ff;
-        }
-        
-        .page-header .subtitle {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* ===== MAIN CONTENT & SIDEBAR LAYOUT ===== */
-        .content-with-sidebar {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 3rem;
-            margin: 2.5rem 0;
-        }
-        
-        @media (max-width: 992px) {
-            .content-with-sidebar {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .main-content {
-            background: white;
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-        }
-        
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        /* ===== ARTICLE STYLES ===== */
-        .article-meta {
-            display: flex;
-            align-items: center;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .author-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #22d3ee, #06b6d4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .main-content h2 {
-            color: #1e293b;
-            font-size: 1.8rem;
-            margin: 2.5rem 0 1.2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        
-        .main-content h3 {
-            color: #334155;
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem;
-        }
-        
-        .main-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-        
-        .featured-image {
-            width: 100%;
-            border-radius: 12px;
-            margin: 1.5rem 0 2.5rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* ===== HIGHLIGHT BOXES ===== */
-        .verdict-box {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            border-left: 5px solid #0ea5e9;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2.5rem 0;
-        }
-        
-        .pros-cons-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        @media (max-width: 768px) {
-            .pros-cons-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .pros-box, .cons-box {
-            padding: 1.8rem;
-            border-radius: 10px;
-        }
-        
-        .pros-box {
-            background-color: #f0fdf4;
-            border: 1px solid #bbf7d0;
-        }
-        
-        .cons-box {
-            background-color: #fef2f2;
-            border: 1px solid #fecaca;
-        }
-        
-        .pros-box h4, .cons-box h4 {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1.2rem;
-            font-size: 1.3rem;
-        }
-        
-        .pros-box ul, .cons-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .pros-box li, .cons-box li {
-            padding: 0.5rem 0;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-        
-        .pros-box li:before {
-            content: '✓';
-            color: #10b981;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .cons-box li:before {
-            content: '✗';
-            color: #ef4444;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .feature-list {
-            margin: 2.5rem 0;
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.2rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        }
-        
-        .feature-icon {
-            min-width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #22d3ee, #06b6d4);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-        
-        .disclosure-box {
-            background-color: #fffbeb;
-            border: 1px solid #fde68a;
-            border-left: 5px solid #f59e0b;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2.5rem 0;
-            font-size: 0.95rem;
-        }
-        
-        /* ===== COMPARISON TABLE ===== */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2.5rem 0;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-        }
-        
-        .comparison-table th {
-            background: linear-gradient(135deg, #1e293b, #334155);
-            color: white;
-            padding: 1.2rem 1.5rem;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .comparison-table td {
-            padding: 1.2rem 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .comparison-table tr:hover {
-            background-color: #f8fafc;
-        }
-        
-        .winner-cell {
-            background-color: #d1fae5 !important;
-            color: #065f46;
-            font-weight: 700;
-            position: relative;
-        }
-        
-        .winner-cell:after {
-            content: '★';
-            color: #f59e0b;
-            margin-left: 0.5rem;
-        }
-        
-        /* ===== SIDEBAR WIDGETS ===== */
-        .sidebar-widget {
-            background: white;
-            border-radius: 16px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .rating-widget {
-            text-align: center;
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-            border: 1px solid #e2e8f0;
-        }
-        
-        .rating-stars {
-            color: #fbbf24;
-            font-size: 1.8rem;
-            letter-spacing: 4px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .rating-score {
-            font-size: 3.2rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin: 0.5rem 0;
-        }
-        
-        .progress-bar {
-            height: 10px;
-            background: #e2e8f0;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 0.8rem 0;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #22d3ee, #06b6d4);
-            border-radius: 5px;
-        }
-        
-        .cta-widget {
-            text-align: center;
-            border: 2px solid #22d3ee;
-        }
-        
-        .cta-button {
-            margin: 1.2rem 0;
-            width: 100%;
-            font-size: 1.1rem;
-        }
-        
-        .quick-facts {
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
-        }
-        
-        .quick-facts ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .quick-facts li {
-            padding: 0.6rem 0;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-        
-        .quick-facts li:before {
-            content: '✓';
-            color: #0ea5e9;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-
-        .homepage-guide {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 18px;
-            padding: 1.5rem;
-            margin: 0 0 2rem;
-            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-        }
-        .best-tools-home-spot {
-            background: linear-gradient(135deg, #06122e, #0b2a54);
-            color: #fff;
-            border-radius: 18px;
-            padding: 1.5rem;
-            margin: 0 0 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            box-shadow: 0 10px 25px rgba(2, 8, 23, 0.2);
-        }
-        .best-tools-home-spot .spot-kicker {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 800;
-            color: #67e8f9;
-        }
-        .best-tools-home-spot h2 {
-            margin: 0.4rem 0 0.5rem;
-            color: #fff;
-            border: 0;
-            padding: 0;
-            font-size: 1.5rem;
-        }
-        .best-tools-home-spot p {
-            margin: 0;
-            color: rgba(255,255,255,0.9);
-            max-width: 700px;
-        }
-        .best-tools-home-spot .spot-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.7rem 1rem;
-            border-radius: 999px;
-            background: #22d3ee;
-            color: #05253b;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        .best-tools-home-spot .spot-link:hover { background: #67e8f9; }
-
-        .homepage-guide h2 {
-            margin: 0 0 .6rem;
-            font-size: 1.4rem;
-            color: #0f172a;
-        }
-
-        .homepage-guide p {
-            margin: 0 0 1rem;
-            color: #475569;
-        }
-
-        .category-quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: .85rem;
-            margin-bottom: 1rem;
-        }
-
-        .category-quick-links a {
-            display: block;
-            padding: .85rem 1rem;
-            border-radius: 12px;
-            border: 1px solid #cbd5e1;
-            background: #f8fafc;
-            color: #0f172a;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all .2s ease;
-        }
-
-        .category-quick-links a:hover {
-            border-color: #0e7490;
-            background: #ecfeff;
-            color: #0e7490;
-            transform: translateY(-2px);
-        }
-
-        .authority-signal {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .6rem;
-        }
-
-        .authority-signal span {
-            background: #e2e8f0;
-            color: #0f172a;
-            border-radius: 999px;
-            padding: .42rem .85rem;
-            font-size: .88rem;
-            font-weight: 600;
-        }
-
-        /* ===== BLOG HOMEPAGE ===== */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin: 3rem 0;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        }
-        
-        .blog-card-image {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-        
-        .blog-card-content {
-            padding: 1.8rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .blog-card h3 {
-            font-size: 1.4rem;
-            color: #1e293b;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-        
-        .blog-card p {
-            color: #64748b;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
-        
-        .blog-card-meta {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .brand-button,
-        .cta-button,
-        .read-more {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.45rem;
-            background: #22d3ee;
-            color: #04263b;
-            border: 1px solid #67e8f9;
-            border-radius: 999px;
-            padding: 0.88rem 1.6rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            box-shadow: 0 10px 24px rgba(34, 211, 238, 0.24);
-        }
-
-        .brand-button:hover,
-        .cta-button:hover,
-        .read-more:hover {
-            transform: translateY(-2px);
-            background: #67e8f9;
-            color: #082f49;
-            box-shadow: 0 14px 28px rgba(34, 211, 238, 0.35);
-        }
-
-        .read-more {
-            margin-top: auto;
-            width: fit-content;
-        }
-
-        .newsletter-band {
-            margin: 3rem 0 3.5rem;
-            padding: 2.3rem;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #06122e, #0b2a54);
-            border: 1px solid rgba(103, 232, 249, 0.45);
-            box-shadow: 0 18px 36px rgba(2, 8, 23, 0.28);
-        }
-
-        .newsletter-inner {
-            max-width: 760px;
-            margin: 0 auto;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .newsletter-eyebrow {
-            margin: 0 0 .45rem;
-            font-size: .8rem;
-            letter-spacing: .08em;
-            color: #67e8f9;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .newsletter-band h2 {
-            margin: 0 0 .75rem;
-            font-size: 1.55rem;
-            color: #ffffff;
-        }
-
-        .newsletter-band p {
-            margin: 0 0 1.2rem;
-            color: rgba(255, 255, 255, 0.88);
-        }
-        
-
-        .newsletter-band .ml-form-embedContainer,
-        .newsletter-band .ml-form-embedBody,
-        .newsletter-band .ml-form-embedContent,
-        .newsletter-band .ml-form-embedWrapper,
-        .newsletter-band .ml-form-formContent,
-        .newsletter-band .ml-form-successBody {
-            background: rgba(7, 22, 48, 0.86) !important;
-            color: #e2f7ff !important;
-            border-radius: 14px !important;
-            box-shadow: 0 14px 28px rgba(2, 8, 23, 0.24);
-            border: 1px solid rgba(103, 232, 249, 0.24) !important;
-        }
-
-        .newsletter-band .ml-form-embedSubmit button,
-        .newsletter-band .ml-form-embedSubmit .primary {
-            background: #22d3ee !important;
-            border-color: #67e8f9 !important;
-            color: #082f49 !important;
-            border-radius: 999px !important;
-            box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3) !important;
-            font-weight: 700 !important;
-        }
-
-        .newsletter-band .ml-form-embedSubmit button::after {
-            content: "";
-        }
-
-        .newsletter-band .ml-form-embedSubmit button:hover,
-        .newsletter-band .ml-form-embedSubmit .primary:hover {
-            background: #67e8f9 !important;
-            box-shadow: 0 10px 22px rgba(0, 194, 255, 0.34) !important;
-        }
-
-        .newsletter-band .ml-form-embedWrapper h4,
-        .newsletter-band .ml-form-embedWrapper h3,
-        .newsletter-band .ml-form-embedWrapper .ml-form-embedTitle {
-            font-size: 1rem !important;
-            line-height: 1.35 !important;
-            color: #e2f7ff !important;
-            margin-bottom: 0.55rem !important;
-        }
-
-        .newsletter-trust {
-            margin-top: 1rem !important;
-            font-size: 0.92rem;
-            color: #a5f3fc !important;
-            font-weight: 600;
-        }
-
-        /* ===== ABOUT US PAGE ===== */
-        .about-section {
-            margin: 3rem 0;
-        }
-        
-        .about-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin: 3rem 0;
-        }
-        
-        .team-member {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-        }
-        
-        .team-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #22d3ee, #06b6d4);
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        
-        .mission-statement {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-            border-radius: 16px;
-            padding: 3rem;
-            text-align: center;
-            margin: 4rem 0;
-        }
-        
-        /* ===== FOOTER ===== */
-        .site-footer {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            color: #cbd5e1;
-            margin-top: 5rem;
-            padding: 3rem 0 2rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .footer-about p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links h4,
-        .footer-contact h4 {
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-links h4:after,
-        .footer-contact h4:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-            border-radius: 3px;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .footer-links a:hover {
-            color: #60a5fa;
-        }
-        
-        .footer-contact p {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .footer-social {
-            margin-top: 1.5rem;
-        }
-
-        .footer-social-label {
-            margin: 0 0 0.85rem;
-            font-size: 0.9rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: #94a3b8;
-        }
-
-        .footer-social-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.65rem;
-        }
-
-        .social-link {
-            width: 2.35rem;
-            height: 2.35rem;
-            border-radius: 0.65rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #e2e8f0;
-            background: rgba(148, 163, 184, 0.15);
-            border: 1px solid rgba(148, 163, 184, 0.25);
-            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .social-link svg {
-            width: 1.1rem;
-            height: 1.1rem;
-        }
-
-        .social-link:hover {
-            transform: translateY(-2px);
-            color: #fff;
-        }
-
-        .social-link.facebook:hover { background: #1877f2; }
-        .social-link.instagram:hover { background: #e1306c; }
-        .social-link.youtube:hover { background: #ff0000; }
-        .social-link.medium:hover { background: #111827; }
-        .social-link.x:hover { background: #0f172a; }
-        .social-link.linkedin:hover { background: #0a66c2; }
-
-        .social-link.inactive {
-            opacity: 0.45;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-        
-        .footer-bottom-links {
-            margin-top: 1rem;
-        }
-        
-        .footer-bottom-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            margin: 0 0.8rem;
-        }
-        
-        .footer-bottom-links a:hover {
-            color: #60a5fa;
-        }
-        
-        /* ===== UTILITY & MOBILE STYLES ===== */
-        .text-center { text-align: center; }
-        .mb-1 { margin-bottom: 1rem; }
-        .mb-2 { margin-bottom: 2rem; }
-        .mt-2 { margin-top: 2rem; }
-        .mt-3 { margin-top: 3rem; }
-        
-        @media (max-width: 1024px) {            .footer-content { grid-template-columns: 1fr 1fr; gap: 2rem; }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn { display: block; }
-            .main-nav { display: none; }
-            .main-nav.active { 
-                display: block; 
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                padding: 1.5rem;
-            }
-            .main-nav.active ul { 
-                flex-direction: column; 
-                gap: 1rem;
-            }
-            .dropdown-menu {
-                position: static;
-                display: none;
-                border: 0;
-                box-shadow: none;
-                background: transparent;
-                padding: 0;
-            }
-            .nav-dropdown.dropdown-open .dropdown-menu { display: block; }
-            .nav-dropdown > a::after { content: ''; }
-            .page-header h1 { font-size: 2.2rem; }
-            .page-header .subtitle { font-size: 1.1rem; }
-            .main-content { padding: 1.8rem; }
-            .blog-grid { grid-template-columns: 1fr; }
-            .footer-content { grid-template-columns: 1fr; }
-            .footer-links h4, .footer-contact h4 { font-size: 1.35rem; }
-            .footer-links a, .footer-contact p, .footer-about p { font-size: 1.08rem; line-height: 1.7; }
-            .footer-bottom-links { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 0.5rem; }
-        }
-    </style>
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Smart Guide Hubs - Expert Reviews for Small Business Tools">
-    <meta property="og:description" content="Independent, in-depth reviews and comparisons of the best software tools for small businesses and freelancers. Make informed decisions with our expert guides.">
-    <meta property="og:url" content="https://smartguidehubs.com/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Smart Guide Hubs - Expert Reviews for Small Business Tools">
-    <meta name="twitter:description" content="Independent, in-depth reviews and comparisons of the best software tools for small businesses and freelancers. Make informed decisions with our expert guides.">
-    <meta name="robots" content="index, follow">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Smart Guide Hubs - Expert Reviews for Small Business Tools", "description": "Independent, in-depth reviews and comparisons of the best software tools for small businesses and freelancers. Make informed decisions with our expert guides.", "url": "https://smartguidehubs.com/", "publisher": {"@type": "Organization", "name": "SmartGuideHubs"}, "about": [{"@type": "Thing", "name": "small business software reviews"}, {"@type": "Thing", "name": "software comparisons 2026"}, {"@type": "Thing", "name": "best business tools"}, {"@type": "Thing", "name": "SaaS buying guides"}]}</script>
-</head>
-<body>
-    <!-- ===== SITE HEADER & NAVIGATION ===== -->
-    <header class="site-header">
-        <div class="site-container">
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="/" aria-label="SmartGuideHubs home">
-                        <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="1200" height="260">
-                    </a>
-                </div>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-                
-                <div class="main-nav" id="mainNav">
-                    <ul>
-                        <li><a href="/" class="active">Home</a></li>
-                        <li><a href="/best-tools/">Best Tools</a></li>
-                        <li class="nav-dropdown">
-                            <a href="/guides/" class="dropdown-toggle">Insights</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/reviews/">Reviews</a></li>
-                                <li><a href="/guides/">Guides</a></li>
-                                <li><a href="/comparisons/">Comparisons</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/editorial-team/">Editorial Team</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="site-container">
-        <!-- ===== BLOG HOMEPAGE CONTENT ===== -->
-        <!-- This section shows the blog homepage with multiple articles -->
-        <section id="homepage-content" style="display: block;">
-            <div class="page-header">
-                <h1>Expert <span class="highlight">Software Reviews</span> for Small Businesses</h1>
-                <p class="subtitle">Unbiased, in-depth analysis of the tools that help you work smarter. We test, compare, and verify so you can make confident decisions.</p>
-            </div>
-
-            <section class="best-tools-home-spot" aria-label="Best tools hub">
-                <div>
-                    <div class="spot-kicker">Best Tools 2026</div>
-                    <h2>Start with our complete shortlist before reading individual reviews.</h2>
-                    <p>We organized top picks by category, pricing fit, and use-case so you can narrow options faster.</p>
-                </div>
-                <a class="spot-link" href="/best-tools/">Open Best Tools Hub →</a>
-            </section>
-
-
-            <section class="homepage-guide" aria-label="Software category guide">
-                <h2>Find the Best Tool for Your Business</h2>
-                <p>Start with your category to narrow your choices faster and compare only the tools that match your workflow.</p>
-                <div class="category-quick-links">
-                    <a href="/categories/pdf-and-document-tools/">📄 PDF &amp; Document Tools</a>
-                    <a href="/categories/email-and-marketing-tools/">📧 Email &amp; Marketing Tools</a>
-                    <a href="/categories/project-management/">📊 Project Management</a>
-                    <a href="/categories/finance/">💼 Finance &amp; Accounting</a>
-                </div>
-                <div class="authority-signal" aria-label="Authority signals">
-                    <span>✅ 90+ Days Hands-On Testing</span>
-                    <span>✅ Transparent Editorial Policy</span>
-                    <span>✅ Updated Reviews for 2026</span>
-                    <span>✅ Independent Comparison Method</span>
-                </div>
-            </section>
-
-            <h2 class="section-heading">Latest software reviews</h2>
-
-            <div class="blog-grid">
-                <!-- Featured Article Card 1 -->
-                <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="PDF editing software interface" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">Updated: March 2026 • PDF &amp; Document Tools</div>
-                        <h3>PDFfiller Review 2026: The Complete Guide for Small Teams</h3>
-                        <p>After 90 days of testing, we reveal whether PDFfiller's e-signature and form automation features justify the cost for growing businesses.</p>
-                        <a href="./article-pdffiller" class="read-more">Read Full Review →</a>
-                    </div>
-                </article>
-
-                <!-- Email Marketing Card -->
-                <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="Email marketing campaign dashboard" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">Updated: Mar 2026 • Email &amp; Marketing Tools</div>
-                        <h3>Campaigner Review 2026: Automation, Deliverability &amp; Pricing</h3>
-                        <p>We tested Campaigner for real campaigns to evaluate workflow automation, list segmentation, and the best plan for growing teams.</p>
-                        <a href="campaigner-review-2026" class="read-more">Read Full Review →</a>
-                    </div>
-                </article>
-
-                
-
-                <!-- Article Card 2 -->
-                <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="Team collaboration" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">Mar 2026 • Project Management</div>
-                        <h3>Asana vs. Trello vs. ClickUp: 2026 Face-Off</h3>
-                        <p>Which project management platform actually boosts team productivity? We tested all three with real small business workflows.</p>
-                        <a href="asana-vs-trello-vs-clickup-2026" class="read-more">Read Full Review →</a>
-                    </div>
-                </article>
-
-                <!-- Article Card 3 -->
-                <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="Finance charts" class="blog-card-image">
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">Mar 2026 • Finance Software</div>
-                        <h3>QuickBooks Online: Is It Still Worth It in 2026?</h3>
-                        <p>With new competitors emerging, we analyze if QuickBooks remains the best accounting solution for service-based businesses.</p>
-                        <a href="quickbooks-review-2026" class="read-more">Read Full Review →</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="text-center mt-3">
-                <a href="/blog/" class="brand-button">Find the Best Tool for Your Business</a>
-            </div>
-        </section>
-
-        <!-- ===== SINGLE ARTICLE CONTENT ===== -->
-        <!-- This is the detailed PDFfiller review article -->
-        <section id="article-content" style="display: none;">
-            <div class="page-header">
-                <h2>PDFfiller Review 2026: The Ultimate Tool for Small Business Document Workflows?</h2>
-                <p class="subtitle">After 90 days of hands-on testing against 7 competitors, we deliver our final verdict on whether PDFfiller deserves a spot in your software stack.</p>
-            </div>
-
-            <div class="content-with-sidebar">
-                <!-- Main Article Content -->
-                <article class="main-content">
-                    <div class="article-meta">
-                        <div class="author-badge">
-                            <div class="author-avatar">SG</div>
-                            <div>
-                                <strong>SmartGuideHubs Editorial Team</strong><br>
-                                <span>Last updated: March 2026 • 12 min read</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200" alt="Modern PDF editing interface" class="featured-image">
-
-                    <div class="verdict-box">
-                        <h3 style="margin-top: 0; color: #0ea5e9;">📋 Our Verdict</h3>
-                        <p><strong>PDFfiller earns our top recommendation</strong> for small to medium businesses that regularly handle contracts, forms, and documents requiring signatures. Its strength lies in combining <strong>reliable e-signatures</strong> with <strong>intelligent form automation</strong> in a single, streamlined platform. While not the cheapest option, it delivers exceptional value for teams that need to move documents quickly and professionally.</p>
-                        <p class="mb-1"><strong>Rating: 4.5/5 ★★★★★</strong></p>
-                    </div>
-
-                    <h2>What We Tested (And Why It Matters)</h2>
-                    <p>Over three months, we put PDFfiller through real-world small business scenarios: sending client contracts, processing onboarding forms, managing vendor agreements, and creating templated documents. We evaluated not just features, but <strong>workflow efficiency, team collaboration, and total cost of ownership</strong>.</p>
-                    
-                    <p>Our testing criteria focused on what actually matters for productivity: <strong>time saved per document, reduction in errors, client satisfaction, and overall ease of use</strong> for both senders and recipients.</p>
-
-                    <div class="pros-cons-grid">
-                        <div class="pros-box">
-                            <h3>✅ Strengths</h3>
-                            <ul>
-                                <li>Best-in-class e-signature workflow with tracking</li>
-                                <li>Excellent form recognition (saves manual field setup)</li>
-                                <li>Superior mobile experience (full functionality)</li>
-                                <li>Generous template library for common business forms</li>
-                                <li>Strong security & compliance (GDPR, HIPAA ready)</li>
-                            </ul>
-                        </div>
-                        <div class="cons-box">
-                            <h3>⚠️ Limitations</h3>
-                            <ul>
-                                <li>Premium pricing increased over competitors</li>
-                                <li>Advanced graphic editing requires other tools</li>
-                                <li>Learning curve for complete beginners</li>
-                                <li>No lifetime license option (subscription only)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h2>Core Features That Deliver Real Value</h2>
-                    <p>Beyond basic PDF editing, these features stood out during our testing period:</p>
-
-                    <div class="feature-list">
-                        <div class="feature-item">
-                            <div class="feature-icon">A</div>
-                            <div>
-                                <h3>Smart Form Recognition</h3>
-                                <p>Upload any PDF form and the system automatically detects fillable fields with ~90% accuracy. What used to take 15-20 minutes of manual field creation now takes under 60 seconds.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">B</div>
-                            <div>
-                                <h3>Sequential E-Signature Workflows</h3>
-                                <p>Send a document to multiple signers in a specific order. The system automatically routes it to the next person after each signature, eliminating "who has it now?" confusion.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">C</div>
-                            <div>
-                                <h3>Full-Featured Mobile Operation</h3>
-                                <p>Unlike many competitors with limited mobile apps, PDFfiller's iOS and Android apps offer nearly all desktop functionality. We signed documents from phones during actual client meetings.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2>2026 Pricing & Plans Analysis</h2>
-                    <p>PDFfiller operates on a straightforward subscription model with a 30-day free trial (credit card required). Here's how it compares to two main competitors for small business use:</p>
-
-                    <table class="comparison-table">
-                        <tr>
-                            <th>Feature</th>
-                            <th>PDFfiller</th>
-                            <th>Adobe Acrobat Pro</th>
-                            <th>Smallpdf Pro</th>
-                        </tr>
-                        <tr>
-                            <td>Monthly Price (Billed Annually)</td>
-                            <td class="winner-cell">$20</td>
-                            <td>$23</td>
-                            <td>$12</td>
-                        </tr>
-                        <tr>
-                            <td>E-Signatures Included</td>
-                            <td class="winner-cell">Unlimited</td>
-                            <td>Limited (10/month)</td>
-                            <td>Extra Cost</td>
-                        </tr>
-                        <tr>
-                            <td>Free Trial Length</td>
-                            <td class="winner-cell">30 Days</td>
-                            <td>7 Days</td>
-                            <td>14 Days</td>
-                        </tr>
-                        <tr>
-                            <td>Form Recognition Accuracy</td>
-                            <td class="winner-cell">Excellent</td>
-                            <td>Good</td>
-                            <td>Basic</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile App Capability</td>
-                            <td class="winner-cell">Full Features</td>
-                            <td>Most Features</td>
-                            <td>Limited</td>
-                        </tr>
-                    </table>
-
-                    <div class="disclosure-box">
-                        <strong>Transparency Note:</strong> We use affiliate links in our reviews. If you choose to sign up for PDFfiller through our links, we may earn a commission at no extra cost to you. This doesn't influence our reviews—we maintain strict editorial independence and only recommend tools we genuinely believe provide value.
-                    </div>
-
-                    <h2>Who Is PDFfiller Perfect For?</h2>
-                    <p><strong>Ideal users:</strong> Small businesses (5-50 employees), freelancers, real estate agents, HR departments, consultants, and anyone sending 5+ documents monthly that require signatures or form completion. If you're tired of the "print-sign-scan-email" cycle, this tool will save you hours.</p>
-                    
-                    <p><strong>Consider alternatives if:</strong> You only edit PDFs once or twice a year (free tools suffice), need advanced graphic design features, or require a one-time purchase instead of a subscription.</p>
-                </article>
-
-                <!-- Sidebar Widgets -->
-                <aside class="sidebar">
-                    <div class="sidebar-widget rating-widget">
-                        <div class="rating-stars">★★★★★</div>
-                        <div class="rating-score">4.5</div>
-                        <div>Overall Rating</div>
-                        <div class="mt-2">
-                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-                                <span>Ease of Use</span>
-                                <span>9.0/10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-                                <span>Features</span>
-                                <span>8.5/10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
-                                <span>Value</span>
-                                <span>8.0/10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-widget cta-widget">
-                        <h3 style="margin-top: 0;">Try PDFfiller Risk-Free</h3>
-                        <p style="font-size: 0.95rem;">Start with a full-featured 30-day free trial. No charges until the trial ends.</p>
-                        <a href="https://www.awin1.com/awclick.php?gid=568103&mid=94003&awinaffid=1991765&linkid=4361567&clickref=" class="cta-button">
-                            ✨ Start 30-Day Free Trial
-                        </a>
-                        <p style="font-size: 0.85rem; color: #64748b;">Credit card required. Cancel anytime during trial.</p>
-                    </div>
-
-                    <div class="sidebar-widget quick-facts">
-                        <h3 style="margin-top: 0;">Quick Facts</h3>
-                        <ul>
-                            <li>30-day free trial with all features</li>
-                            <li>Over 25 million users worldwide</li>
-                            <li>GDPR & HIPAA compliant options</li>
-                            <li>24/7 email support included</li>
-                            <li>1GB free document storage</li>
-                            <li>Works on all major platforms</li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-<!-- ===== ABOUT US PAGE CONTENT ===== -->
-<section id="about-content" style="display: none;">
-    <div class="page-header">
-        <h2>About SmartGuideHubs</h2>
-        <p class="subtitle">Our goal is to help small businesses find practical software solutions through clear, honest, and useful reviews.</p>
-    </div>
-
-    <div class="about-section">
-        <div class="about-header">
-            <h2>Why SmartGuideHubs Exists</h2>
-            <p>Choosing the right software can be overwhelming. Many review sites focus more on promotion than practical guidance, making it difficult for small businesses to know which tools are actually worth their time and money.</p>
-            <p>SmartGuideHubs was created to make that process easier. We publish straightforward software reviews, comparisons, and guides designed to help readers understand what a tool offers, where it performs well, and what to consider before making a decision.</p>
-        </div>
-
-        <div class="mission-statement">
-            <h2>Our Mission & Values</h2>
-            <p><strong>Clarity:</strong> We aim to present software information in a simple, structured, and easy-to-understand way.</p>
-            <p><strong>Honesty:</strong> We highlight strengths, limitations, pricing considerations, and practical use cases so readers can make more informed decisions.</p>
-            <p><strong>Usefulness:</strong> Our content is built to help small businesses, freelancers, and growing teams compare tools more confidently.</p>
-            <p><strong>Transparency:</strong> Some pages may include affiliate links. When that happens, it does not change our commitment to publishing clear and fair content.</p>
-        </div>
-
-        <h2 class="text-center mb-2">Who We Are</h2>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="team-avatar">SG</div>
-                <h3>SmartGuideHubs</h3>
-                <p><strong>Independent software review platform</strong></p>
-                <p>SmartGuideHubs focuses on software reviews, comparisons, and buying guides for small businesses. Our content covers categories such as document tools, email and marketing software, project management platforms, and finance tools.</p>
-            </div>
-            <div class="team-member">
-                <div class="team-avatar">RV</div>
-                <h3>Review Approach</h3>
-                <p><strong>Clear, practical evaluation</strong></p>
-                <p>We focus on the areas readers care about most, including features, pricing, ease of use, business fit, and overall value. The goal is to make each review useful, balanced, and easy to scan.</p>
-            </div>
-            <div class="team-member">
-                <div class="team-avatar">TR</div>
-                <h3>Transparency</h3>
-                <p><strong>Reader-first content</strong></p>
-                <p>We aim to keep our content straightforward and trustworthy. That means avoiding exaggerated claims, clearly presenting key details, and helping readers compare tools based on real business needs.</p>
-            </div>
-        </div>
-
-        <div class="text-center mt-3">
-            <p>Have a question, suggestion, or a tool you’d like to see covered?</p>
-            <a href="./contact" class="brand-button">Contact Us</a>
-          </div>
-       </div>
-     </section>
-    
-        <section class="newsletter-band">
-            <div class="newsletter-inner">
-                <p class="newsletter-eyebrow">Newsletter</p>
-                <h2>Get practical software insights in your inbox</h2>
-                <p>Join SmartGuideHubs readers and receive new reviews, comparisons, and buying guides as they go live.</p>
-                <div class="ml-embedded" data-form="0xw1l4"></div>
-                <a href="./contact" class="brand-button">Contact Us</a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ===== SITE FOOTER ===== -->
-    {% include footer.html %}
-
-    <script>
-
-
-        // Replace embedded form heading tags to prevent heading-level skips
-        function normalizeNewsletterEmbedHeadings() {
-            const headingSelectors = [
-                '.newsletter-band .ml-form-embedWrapper h4',
-                '.newsletter-band .ml-form-embedWrapper h3'
-            ];
-
-            headingSelectors.forEach((selector) => {
-                document.querySelectorAll(selector).forEach((heading) => {
-                    const replacement = document.createElement('p');
-                    replacement.className = heading.className || 'ml-form-embedTitle';
-                    replacement.innerHTML = heading.innerHTML;
-                    heading.replaceWith(replacement);
-                });
-            });
-        }
-
-        // Normalize newsletter CTA label so there is only one clear action
-        function syncNewsletterButtonLabel() {
-            const selectors = [
-                '.newsletter-band .ml-form-embedSubmit button',
-                '.newsletter-band button[type="submit"]',
-                '.newsletter-band input[type="submit"]'
-            ];
-            selectors.forEach((selector) => {
-                document.querySelectorAll(selector).forEach((btn) => {
-                    if (btn.tagName.toLowerCase() === 'input') {
-                        btn.value = 'Join the Newsletter';
-                    } else {
-                        btn.textContent = 'Join the Newsletter';
-                    }
-                });
-            });
-        }
-
-        syncNewsletterButtonLabel();
-        normalizeNewsletterEmbedHeadings();
-        setTimeout(() => {
-            syncNewsletterButtonLabel();
-            normalizeNewsletterEmbedHeadings();
-        }, 1200);
-
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const nav = document.getElementById('mainNav');
-            nav.classList.toggle('active');
-        });
-        
-        // Mobile dropdown toggle (click to open/close)
-        const mobileBreakpoint = 768;
-        const dropdownItems = document.querySelectorAll('.nav-dropdown');
-        function closeDropdowns() {
-            dropdownItems.forEach(item => item.classList.remove('dropdown-open'));
-        }
-        dropdownItems.forEach(item => {
-            const toggle = item.querySelector('.dropdown-toggle');
-            if (!toggle) return;
-            toggle.addEventListener('click', function(e) {
-                if (window.innerWidth > mobileBreakpoint) return;
-                e.preventDefault();
-                const isOpen = item.classList.contains('dropdown-open');
-                closeDropdowns();
-                if (!isOpen) item.classList.add('dropdown-open');
-            });
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.nav-dropdown') && !e.target.closest('#mobileMenuBtn')) {
-                closeDropdowns();
-            }
-        });
-        
-        document.querySelectorAll('.main-nav a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= mobileBreakpoint && !this.classList.contains('dropdown-toggle')) {
-                    document.getElementById('mainNav').classList.remove('active');
-                    closeDropdowns();
-                }
-            });
-        });
-    </script>
-                <script src="/cookies.js"></script>
-
-    <!-- MailerLite Universal -->
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2164742');
-    </script>
-    <!-- End MailerLite Universal -->
-</body>
-</html>
-
-
-
-
