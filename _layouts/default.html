@@ -25,7 +25,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Open Graph / Twitter -->
     <meta property="og:site_name" content="SmartGuideHubs">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="{{ seo_image_abs }}">
@@ -102,10 +101,8 @@
     </script>
 </head>
 <body>
-    <!-- Skip link -->
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Header -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">
@@ -113,7 +110,15 @@
                     <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="1200" height="260">
                 </a>
             </div>
-            <nav class="main-nav">
+            
+            <!-- Hamburger Menu Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                     <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>
@@ -144,54 +149,93 @@
     </div>
     {% endunless %}
 
-    <!-- Main content -->
     <main id="main">
         {{ content }}
     </main>
 
-    <!-- Footer -->
     {% include footer.html %}
 
     <script>
-      (function() {
+    (function() {
+        // Hamburger menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function() {
+                this.classList.toggle('open');
+                mainNav.classList.toggle('nav-open');
+                document.body.classList.toggle('menu-open');
+            });
+        }
+        
+        // Dropdown functionality
         const dropdown = document.querySelector('.nav-dropdown');
         const toggle = dropdown ? dropdown.querySelector('.dropdown-toggle') : null;
-        const menu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
-
-        function closeDropdown() {
-          if (dropdown) dropdown.classList.remove('dropdown-open');
-          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        
+        if (dropdown && toggle) {
+            function closeDropdown() {
+                dropdown.classList.remove('dropdown-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            
+            function openDropdown() {
+                dropdown.classList.add('dropdown-open');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+            
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (dropdown.classList.contains('dropdown-open')) {
+                    closeDropdown();
+                } else {
+                    openDropdown();
+                }
+            });
+            
+            // Close dropdown when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                if (dropdown && !dropdown.contains(e.target)) {
+                    closeDropdown();
+                }
+            });
+            
+            // Close dropdown on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeDropdown();
+                }
+            });
+            
+            // Close dropdown when menu item is clicked
+            const menuItems = dropdown.querySelectorAll('.dropdown-menu a');
+            menuItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    closeDropdown();
+                    // Close mobile menu if open
+                    if (mainNav && mainNav.classList.contains('nav-open')) {
+                        navToggle.classList.remove('open');
+                        mainNav.classList.remove('nav-open');
+                        document.body.classList.remove('menu-open');
+                    }
+                });
+            });
         }
-
-        function toggleDropdown(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          const isOpen = dropdown.classList.contains('dropdown-open');
-          closeDropdown();
-          if (!isOpen) {
-            dropdown.classList.add('dropdown-open');
-            toggle.setAttribute('aria-expanded', 'true');
-          }
-        }
-
-        if (toggle) {
-          toggle.addEventListener('click', toggleDropdown);
-        }
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-          if (dropdown && !dropdown.contains(event.target)) {
-            closeDropdown();
-          }
+        
+        // Close mobile menu when a regular nav link is clicked
+        const navLinks = document.querySelectorAll('.main-nav > ul > li > a:not(.dropdown-toggle)');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (mainNav && mainNav.classList.contains('nav-open')) {
+                    navToggle.classList.remove('open');
+                    mainNav.classList.remove('nav-open');
+                    document.body.classList.remove('menu-open');
+                }
+            });
         });
-
-        // Close dropdown on ESC key
-        document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape') {
-            closeDropdown();
-          }
-        });
-      })();
+    })();
     </script>
     <script src="/cookies.js"></script>
 </body>
