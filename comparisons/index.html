@@ -5,26 +5,283 @@ description: "Side‑by‑side comparisons of popular business tools – see whi
 permalink: /comparisons/
 ---
 
-<div class="archive-header">
-  <h1>⚖️ Tool Comparisons</h1>
-  <p>Side‑by‑side analysis of popular software – find out which tool fits your workflow.</p>
-</div>
+<style>
+  /* ============================================================
+     COMPARISONS PAGE — PREMIUM DESIGN
+     ============================================================ */
+  :root {
+    --comp-primary: #7c3aed;
+    --comp-primary-light: #ede9fe;
+    --comp-text: #111827;
+    --comp-text-light: #6b7280;
+    --comp-border: #e5e7eb;
+    --comp-bg: #ffffff;
+    --comp-bg-alt: #f9fafb;
+  }
 
-<div class="posts-grid">
-  {% assign comparisons = site.posts | where: "type", "comparison" | sort: "date" | reverse %}
-  {% if comparisons.size == 0 %}
-    <p class="no-posts">No comparisons yet. Check back soon.</p>
-  {% else %}
-    {% for post in comparisons %}
-      <article class="post-card">
-        <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
-          <span class="post-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
-        </div>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        <a href="{{ post.url }}" class="read-more">Read Comparison →</a>
-      </article>
-    {% endfor %}
+  .comparisons-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero */
+  .comparisons-hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    margin-bottom: 2rem;
+  }
+  .comparisons-badge {
+    display: inline-block;
+    background: var(--comp-primary-light);
+    color: var(--comp-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+  .comparisons-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: var(--comp-text);
+  }
+  .comparisons-hero p {
+    font-size: 1rem;
+    color: var(--comp-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Smart Redirect Banner */
+  .insights-banner {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    border-radius: 16px;
+    padding: 1.2rem 1.8rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .insights-banner p {
+    color: white;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .insights-banner a {
+    background: white;
+    color: #7c3aed;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+  .insights-banner a:hover {
+    background: #f1f5f9;
+    transform: translateY(-1px);
+  }
+
+  /* Posts Grid (3 columns) */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  /* Post Card */
+  .comparison-card {
+    background: var(--comp-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--comp-border);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .comparison-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+    border-color: #cbd5e1;
+  }
+  .card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #f1f5f9;
+  }
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .comparison-card:hover .card-image img {
+    transform: scale(1.03);
+  }
+  .card-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .comparison-type {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    background: var(--comp-primary-light);
+    color: var(--comp-primary);
+  }
+  .comparison-date {
+    font-size: 0.7rem;
+    color: var(--comp-text-light);
+  }
+  .comparison-category {
+    font-size: 0.7rem;
+    color: var(--comp-primary);
+    background: var(--comp-primary-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+  }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+  .card-title a {
+    color: var(--comp-text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .card-title a:hover {
+    color: var(--comp-primary);
+  }
+  .card-excerpt {
+    font-size: 0.85rem;
+    color: var(--comp-text-light);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .read-more {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--comp-primary);
+    text-decoration: none;
+  }
+  .read-more:hover {
+    gap: 0.6rem;
+  }
+
+  /* Empty state */
+  .no-posts {
+    text-align: center;
+    padding: 3rem;
+    color: var(--comp-text-light);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .comparisons-container {
+      padding: 0 1rem;
+    }
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+    .insights-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="comparisons-container">
+  <!-- Hero -->
+  <div class="comparisons-hero">
+    <div class="comparisons-badge">SmartGuideHubs Comparisons</div>
+    <h1>Side‑by‑side tool comparisons</h1>
+    <p>Which software wins? We put them head‑to‑head so you can choose with confidence.</p>
+  </div>
+
+  <!-- Smart redirect banner -->
+  <div class="insights-banner">
+    <p>🔍 Looking for reviews or guides? Explore all our content in one place.</p>
+    <a href="/blog/">Browse all insights →</a>
+  </div>
+
+  <!-- Comparisons Grid (limit 20 most recent) -->
+  <div class="posts-grid">
+    {% assign all_comparisons = site.posts | where: "type", "comparison" | sort: "date" | reverse %}
+    {% assign comparisons = all_comparisons | limit: 20 %}
+
+    {% if comparisons.size == 0 %}
+      <p class="no-posts">No comparisons yet. Check back soon.</p>
+    {% else %}
+      {% for post in comparisons %}
+        <article class="comparison-card">
+          <div class="card-image">
+            {% if post.image %}
+              <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+            {% else %}
+              <img src="/Images/placeholder-comparison.jpg" alt="{{ post.title }}" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="comparison-type">Comparison</span>
+              <span class="comparison-date">{{ post.date | date: "%b %Y" }}</span>
+              {% if post.categories[0] %}
+                <span class="comparison-category">{{ post.categories[0] | replace: "-", " " | capitalize }}</span>
+              {% endif %}
+            </div>
+            <h3 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url }}" class="read-more">Read Comparison →</a>
+          </div>
+        </article>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <!-- If there are more than 20 comparisons total, show a subtle note -->
+  {% if all_comparisons.size > 20 %}
+    <div style="text-align: center; margin-top: 2rem; padding: 1rem; border-top: 1px solid var(--comp-border);">
+      <p style="font-size: 0.8rem; color: var(--comp-text-light);">
+        Showing the 20 most recent comparisons. <a href="/blog/" style="color: var(--comp-primary);">Browse all insights →</a>
+      </p>
+    </div>
   {% endif %}
 </div>
