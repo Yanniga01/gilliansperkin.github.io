@@ -30,6 +30,17 @@ permalink: /best-tools/
 }
 </script>
 
+<!-- KEEP THIS – Original Semrush Search Block (Domain, keyword or link) -->
+<div class="semrush-search-block fade-in">
+  <h2>🔍 Domain, keyword or organic research</h2>
+  <p>Start your free trial now and get insights into any website or keyword.</p>
+  <div class="semrush-search-form">
+    <input type="text" class="semrush-search-input" id="kw-input" placeholder="Enter domain or keyword, e.g., best crm for small business">
+    <button class="semrush-search-btn" onclick="searchSemrush()">Start now →</button>
+  </div>
+  <div class="semrush-search-sub">Powered by Semrush. <a href="https://semrush.sjv.io/c/6824202/1667754/13053" rel="sponsored noopener" target="_blank">Start your free trial</a> to unlock full results.</div>
+</div>
+
 <section id="page-hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">✦ Updated for 2026 &nbsp;·&nbsp; SmartGuideHubs Editorial Picks</div>
@@ -99,6 +110,7 @@ permalink: /best-tools/
   </div>
 </section>
 
+<!-- KEEP the email marketing, CRM, SEO, PDF, PM, finance, payments, web, AI, automation, communication sections – unchanged -->
 <!-- ================= EMAIL MARKETING ================= -->
 <section class="cat-section cat-email fade-in" id="section-email">
   <div class="cat-header">
@@ -1000,9 +1012,16 @@ function scrollToSection(id, btn) {
 }
 
 function searchSemrush() {
-  const kw = document.getElementById('kw-input') ? document.getElementById('kw-input').value.trim() : '';
+  const kw = document.getElementById('kw-input').value.trim();
   const base = 'https://semrush.sjv.io/c/6824202/1667754/13053';
   window.open(base, '_blank');
+}
+
+const kwInput = document.getElementById('kw-input');
+if (kwInput) {
+  kwInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSemrush();
+  });
 }
 
 const observer = new IntersectionObserver((entries) => {
@@ -1015,9 +1034,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08 });
 
-document.querySelectorAll('.tool-card, .cat-section, .conversion-banner, .trust-bar, .featured-hero').forEach(el => {
-  el.style.opacity = '0';
-  observer.observe(el);
+document.querySelectorAll('.tool-card, .cat-section, .conversion-banner, .trust-bar, .featured-hero, .semrush-search-block').forEach(el => {
+  if (el) {
+    el.style.opacity = '0';
+    observer.observe(el);
+  }
 });
 
 window.addEventListener('scroll', () => {
