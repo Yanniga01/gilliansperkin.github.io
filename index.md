@@ -3,6 +3,7 @@ layout: default
 title: "Expert Software Reviews for Small Businesses | SmartGuideHubs"
 description: "Unbiased, in-depth reviews of the best software tools for small businesses. We test, compare, and verify so you can make confident decisions."
 permalink: /
+image: /Images/homepage-og.jpg
 ---
 
 <style>
@@ -396,6 +397,43 @@ permalink: /
 }
 </style>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SmartGuideHubs",
+  "url": "https://smartguidehubs.com/",
+  "logo": "https://smartguidehubs.com/editorial-team-smartguidehubs.png",
+  "image": "https://smartguidehubs.com/Images/homepage-og.jpg",
+  "sameAs": [
+    "https://facebook.com/smartguidehubs",
+    "https://instagram.com/smartguidehubs",
+    "https://twitter.com/smartguidehubs"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@smartguidehubs.com",
+    "contactType": "customer service"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Expert Software Reviews for Small Businesses | SmartGuideHubs",
+  "description": "Unbiased, in-depth reviews of the best software tools for small businesses. We test, compare, and verify so you can make confident decisions.",
+  "url": "https://smartguidehubs.com/",
+  "image": "https://smartguidehubs.com/Images/homepage-og.jpg",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "SmartGuideHubs",
+    "url": "https://smartguidehubs.com/"
+  }
+}
+</script>
+
 <div class="hp-hero">
   <div class="hp-hero__eyebrow">✦ Updated for 2026 &nbsp;·&nbsp; Independently Tested</div>
   <h1>Expert <span class="highlight">Software Reviews</span><br>for Small Businesses</h1>
@@ -453,7 +491,7 @@ permalink: /
 <section class="hp-cat-section">
   <div class="hp-section-header">
     <h2 class="hp-section-title">Featured & Pinned</h2>
-    <a href="/insights/" class="hp-section-header__link">Browse all insights →</a>
+    <a href="/blog/" class="hp-section-header__link">Browse all insights →</a>
   </div>
   <div class="hp-cat-grid">
     {% for post in featured_posts limit: 2 %}
