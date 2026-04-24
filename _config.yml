@@ -3,6 +3,7 @@ description: Independent software reviews
 url: https://smartguidehubs.com
 plugins:
   - jekyll-paginate
+  - Jekyll-sitemap
 
 paginate: 12
 paginate_path: "/blog/page:num/"
