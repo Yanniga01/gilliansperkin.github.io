@@ -287,7 +287,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-review-2026/
 
 <div class="transparency-note">
     <h3>💎 Transparency Note</h3>
-    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links, we may earn a commission at no extra cost to you. This doesn't influence our recommendations – we maintain strict editorial independence. This review is based on <strong>90 days of hands-on testing</strong>, product documentation, and current pricing/feature data as of April 2026.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
 </div>
 
 <script>

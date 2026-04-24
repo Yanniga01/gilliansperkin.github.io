@@ -1321,7 +1321,20 @@ r}
   margin-top: 1rem;
   margin-bottom: 0;
   color: #64748b;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
+}
+
+
+.affiliate-micro {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.affiliate-micro small {
+  font-size: inherit;
 }
 
 .cta-note {
