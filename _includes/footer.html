@@ -1,8 +1,9 @@
 <footer class="site-footer">
   <div class="footer-container">
-    <!-- Main Footer Content -->
-    <div class="footer-content">
-      <!-- Column 1: Brand -->
+    <!-- Main Footer Content - 4 Columns -->
+    <div class="footer-grid">
+      
+      <!-- Column 1: Brand / About -->
       <div class="footer-col footer-col-brand">
         <div class="footer-logo">
           <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" class="footer-logo-img">
@@ -10,16 +11,30 @@
         <p class="footer-description">Independent software reviews for small businesses. Clear, practical, and unbiased insights to help you make better software decisions.</p>
         <div class="footer-social">
           <a href="https://facebook.com/smartguidehubs" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
           </a>
           <a href="https://instagram.com/smartguidehubs" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
           </a>
           <a href="https://pinterest.com/smartguidehubs" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12a4 4 0 1 1 6.5 3.6M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 12v6"/><path d="M12 8l-2 3h4l-2-3z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 12a4 4 0 1 1 6.5 3.6M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+              <path d="M12 12v6"/>
+              <path d="M12 8l-2 3h4l-2-3z"/>
+            </svg>
           </a>
           <a href="https://twitter.com/smartguidehubs" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 11.733M20 4L8.267 15.733M4 20l5.267-5.267M20 20l-5.267-5.267"/><line x1="3" y1="3" x2="21" y2="21"/><line x1="3" y1="21" x2="21" y2="3"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4l11.733 11.733M20 4L8.267 15.733M4 20l5.267-5.267M20 20l-5.267-5.267"/>
+              <line x1="3" y1="3" x2="21" y2="21"/>
+              <line x1="3" y1="21" x2="21" y2="3"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -28,9 +43,9 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="/reviews/">Reviews</a></li>
-          <li><a href="/comparisons/">Comparisons</a></li>
-          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/reviews/">Software Reviews</a></li>
+          <li><a href="/comparisons/">Tool Comparisons</a></li>
+          <li><a href="/guides/">Guides & Tutorials</a></li>
           <li><a href="/best-tools/">Best Tools 2026</a></li>
           <li><a href="/categories/">All Categories</a></li>
         </ul>
@@ -70,7 +85,7 @@
 
 <style>
 /* ============================================================
-   Site Footer – Complete Professional Design
+   Site Footer – Fully Optimized for All Devices
    ============================================================ */
 
 .site-footer {
@@ -79,6 +94,8 @@
   padding: 3rem 0 2rem;
   border-top: 1px solid rgba(34, 211, 238, 0.12);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  width: 100%;
+  position: relative;
 }
 
 .footer-container {
@@ -88,7 +105,7 @@
 }
 
 /* 4-Column Grid */
-.footer-content {
+.footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
@@ -104,7 +121,7 @@
   padding-right: 1rem;
 }
 
-/* Logo */
+/* Logo with White Filter (only for the logo) */
 .footer-logo {
   margin-bottom: 1rem;
 }
@@ -113,9 +130,10 @@
   max-width: 180px;
   height: auto;
   display: block;
+  filter: brightness(0) invert(1); /* Makes logo white on dark background */
 }
 
-/* Description */
+/* Description Text */
 .footer-description {
   font-size: 0.85rem;
   line-height: 1.6;
@@ -163,7 +181,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #ffffff;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.2rem 0;
 }
 
 /* Link Lists */
@@ -175,6 +193,7 @@
 
 .footer-col li {
   margin-bottom: 0.6rem;
+  line-height: 1.4;
 }
 
 .footer-col a {
@@ -182,6 +201,7 @@
   text-decoration: none;
   font-size: 0.85rem;
   transition: color 0.15s ease;
+  display: inline-block;
 }
 
 .footer-col a:hover {
@@ -202,11 +222,12 @@
 }
 
 /* ============================================================
-   Responsive Breakpoints
+   RESPONSIVE DESIGN – Optimized for All Devices
    ============================================================ */
 
+/* Tablet Landscape (1024px - 1200px) */
 @media (max-width: 1024px) {
-  .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
@@ -214,23 +235,7 @@
   .footer-col-brand {
     grid-column: span 2;
     padding-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    padding: 0 1rem;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .footer-col-brand {
-    grid-column: span 1;
     text-align: center;
-    align-items: center;
   }
   
   .footer-logo-img {
@@ -238,11 +243,65 @@
   }
   
   .footer-description {
-    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-social {
     justify-content: center;
+  }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 1.25rem;
+  }
+  
+  .footer-grid {
+    gap: 1.5rem;
+  }
+  
+  .footer-col-brand {
+    text-align: center;
+  }
+  
+  .footer-logo-img {
+    max-width: 160px;
+  }
+  
+  .footer-description {
+    font-size: 0.8rem;
+  }
+  
+  .footer-col h4 {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Landscape (480px - 767px) */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 2rem 0 1.5rem;
+  }
+  
+  .footer-container {
+    padding: 0 1rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-col-brand {
+    grid-column: span 1;
   }
   
   .footer-col {
@@ -253,8 +312,84 @@
     margin-bottom: 0.75rem;
   }
   
+  .footer-logo-img {
+    max-width: 140px;
+    margin: 0 auto;
+  }
+  
+  .footer-description {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-col li {
+    margin-bottom: 0.5rem;
+  }
+  
   .footer-bottom {
-    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile Portrait (below 480px) */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 0.875rem;
+  }
+  
+  .footer-logo-img {
+    max-width: 120px;
+  }
+  
+  .footer-description {
+    font-size: 0.75rem;
+  }
+  
+  .footer-col h4 {
+    font-size: 0.8rem;
+  }
+  
+  .footer-col a {
+    font-size: 0.75rem;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.65rem;
+  }
+}
+
+/* Large Desktop (1200px+) – no changes needed, already optimized */
+@media (min-width: 1200px) {
+  .footer-container {
+    padding: 0 1.5rem;
+  }
+  
+  .footer-logo-img {
+    max-width: 200px;
   }
 }
 </style>
