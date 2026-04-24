@@ -43,7 +43,7 @@ permalink: /semrush-vs-ahrefs/
     <div class="verdict-card">
       <span class="verdict-rank">Alternative</span>
       <div class="verdict-card-logo-wrap">
-        <img src="/assets/branding/sgh-icon.svg" alt="Ahrefs comparison card icon" class="verdict-card-logo">
+        <img src="/assets/Images/ahrefs.png" alt="Ahrefs comparison card icon" class="verdict-card-logo">
       </div>
       <h3 class="verdict-card-title">Ahrefs</h3>
       <p class="verdict-card-label">Best for Backlink & Technical SEO</p>
