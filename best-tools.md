@@ -104,7 +104,6 @@ permalink: /best-tools/
     </div>
     <div class="featured-side">
       <div class="semrush-iframe-wrap">
-        <iframe id="iframe_918" src="//a.impactradius-go.com/gen-ad-code/6824202/1667754/13053/" width="300" height="160" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>
       </div>
     </div>
   </div>
