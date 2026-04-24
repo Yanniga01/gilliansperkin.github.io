@@ -30,19 +30,31 @@ permalink: /semrush-vs-ahrefs/
     <p class="verdict-intro">Both tools are excellent, but the right choice depends on your SEO workflow.</p>
   </div>
   <div class="verdict-cards">
-    <div class="verdict-card">
+    <div class="verdict-card is-top-pick">
+      <span class="verdict-rank">Top pick</span>
+      <div class="verdict-card-logo-wrap">
+        <img src="/assets/logos/semrush.png" alt="Semrush logo" class="verdict-card-logo">
+      </div>
       <h3 class="verdict-card-title">Semrush</h3>
       <p class="verdict-card-label">Best for All‑in‑One Marketing</p>
       <p class="verdict-card-desc">Ideal for agencies, content teams, and multi‑channel marketers. Includes PPC, social media, content toolkit, and AI visibility tracking.</p>
       <a href="https://semrush.sjv.io/9VLZdE" class="verdict-card-link" rel="sponsored noopener">Try Semrush Free →</a>
     </div>
     <div class="verdict-card">
+      <span class="verdict-rank">Alternative</span>
+      <div class="verdict-card-logo-wrap">
+        <img src="/assets/branding/sgh-icon.svg" alt="Ahrefs comparison card icon" class="verdict-card-logo">
+      </div>
       <h3 class="verdict-card-title">Ahrefs</h3>
       <p class="verdict-card-label">Best for Backlink & Technical SEO</p>
       <p class="verdict-card-desc">Unmatched backlink index, click‑accurate keyword metrics, and Content Explorer. Perfect for link builders and pure SEO specialists.</p>
       <a href="https://ahrefs.com/" class="verdict-card-link" rel="noopener">Visit Ahrefs →</a>
     </div>
     <div class="verdict-card">
+      <span class="verdict-rank">Alternative</span>
+      <div class="verdict-card-logo-wrap">
+        <img src="/assets/branding/sgh-icon.svg" alt="Combined workflow icon" class="verdict-card-logo">
+      </div>
       <h3 class="verdict-card-title">Both?</h3>
       <p class="verdict-card-label">Use Together</p>
       <p class="verdict-card-desc">Many professionals use <a href="/semrush-review/">Semrush</a> for reporting and PPC, and Ahrefs for backlink analysis and keyword verification. Complementary strengths.</p>
