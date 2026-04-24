@@ -117,7 +117,7 @@ permalink: /best-tools/
           <div class="tool-logo">📧</div>
           <div><div class="tool-name">Campaigner</div><div class="tool-tagline">Email marketing and automation platform</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-best">Best Pick</span></div>
+        <div class="card-badges"><span class="badge badge-best">Best Pick</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.8</span><span class="rating-count">Automation-focused</span></div>
       <div class="card-use-case">
@@ -145,7 +145,7 @@ permalink: /best-tools/
           <div class="tool-logo">⚡</div>
           <div><div class="tool-name">SMTP.com</div><div class="tool-tagline">Transactional email delivery platform</div></div>
         </div>
-        <div class="card-badges"></div>
+        <div class="card-badges"><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★☆</span><span class="rating-num">4.5</span><span class="rating-count">Reliable delivery focus</span></div>
       <div class="card-use-case">
@@ -169,7 +169,7 @@ permalink: /best-tools/
           <div class="tool-logo">🚀</div>
           <div><div class="tool-name">Leadpages</div><div class="tool-tagline">Landing pages and lead generation</div></div>
         </div>
-        <div class="card-badges"></div>
+        <div class="card-badges"><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.7</span><span class="rating-count">Strong lead capture fit</span></div>
       <div class="card-use-case">
@@ -192,7 +192,7 @@ permalink: /best-tools/
           <div class="tool-logo">⚙️</div>
           <div><div class="tool-name">Systeme.io</div><div class="tool-tagline">All-in-one funnel and email platform</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-free">Free Plan</span></div>
+        <div class="card-badges"><span class="badge badge-free">Free Plan</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.8</span><span class="rating-count">Beginner-friendly</span></div>
       <div class="card-use-case">
@@ -229,7 +229,7 @@ permalink: /best-tools/
           <div class="tool-logo">🔧</div>
           <div><div class="tool-name">Jobber</div><div class="tool-tagline">Client and workflow management for service businesses</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-best">Best Pick</span></div>
+        <div class="card-badges"><span class="badge badge-best">Best Pick</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.9</span><span class="rating-count">Service-business focused</span></div>
       <div class="card-use-case">
@@ -324,7 +324,7 @@ permalink: /best-tools/
           <div class="tool-logo">🔍</div>
           <div><div class="tool-name">Semrush</div><div class="tool-tagline">SEO and competitive research platform</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-best">Editor's Choice</span></div>
+        <div class="card-badges"><span class="badge badge-best">Editor's Choice</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.9</span><span class="rating-count">Widely used platform</span></div>
       <div class="card-use-case">
@@ -408,7 +408,7 @@ permalink: /best-tools/
           <div class="tool-logo">📝</div>
           <div><div class="tool-name">pdfFiller</div><div class="tool-tagline">Online PDF editing and e-signatures</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-best">Best Pick</span></div>
+        <div class="card-badges"><span class="badge badge-best">Best Pick</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.7</span><span class="rating-count">Document workflow fit</span></div>
       <div class="pdf-awin-block">
@@ -474,7 +474,7 @@ permalink: /best-tools/
           <div class="tool-logo">📅</div>
           <div><div class="tool-name">Monday.com</div><div class="tool-tagline">Visual work management platform</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-best">Best Pick</span></div>
+        <div class="card-badges"><span class="badge badge-best">Best Pick</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.8</span><span class="rating-count">Widely adopted</span></div>
       <div class="card-use-case">
@@ -750,7 +750,7 @@ permalink: /best-tools/
           <div class="tool-logo">⚙️</div>
           <div><div class="tool-name">Systeme.io</div><div class="tool-tagline">Funnels, pages, and email in one</div></div>
         </div>
-        <div class="card-badges"><span class="badge badge-free">Free Plan</span></div>
+        <div class="card-badges"><span class="badge badge-free">Free Plan</span><span class="badge badge-affiliate">Affiliate</span></div>
       </div>
       <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-num">4.8</span><span class="rating-count">All-in-one fit</span></div>
       <div class="card-use-case">
@@ -982,8 +982,8 @@ permalink: /best-tools/
   </div>
 </div>
 
-<!-- Affiliate Disclosure moved to bottom -->
-<div class="disclosure-bar-bottom" style="margin-top: 2rem; padding: 1rem; text-align: center; font-size: 0.85rem; color: #666;">
+<!-- Affiliate Disclosure (moved to bottom) -->
+<div class="disclosure-bar" style="margin-top: 2rem;">
   <p><strong>Affiliate Disclosure:</strong> SmartGuideHubs may earn a commission when you sign up through links on this page — at no extra cost to you. Recommendations are based on independent research and feature comparisons. <a href="/how-we-test-software/">See how we evaluate tools →</a></p>
 </div>
 
@@ -1000,16 +1000,9 @@ function scrollToSection(id, btn) {
 }
 
 function searchSemrush() {
-  const kw = document.getElementById('kw-input').value.trim();
+  const kw = document.getElementById('kw-input') ? document.getElementById('kw-input').value.trim() : '';
   const base = 'https://semrush.sjv.io/c/6824202/1667754/13053';
   window.open(base, '_blank');
-}
-
-const kwInput = document.getElementById('kw-input');
-if (kwInput) {
-  kwInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchSemrush();
-  });
 }
 
 const observer = new IntersectionObserver((entries) => {
@@ -1022,7 +1015,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08 });
 
-document.querySelectorAll('.tool-card, .cat-section, .conversion-banner, .trust-bar, .semrush-search-block, .featured-hero').forEach(el => {
+document.querySelectorAll('.tool-card, .cat-section, .conversion-banner, .trust-bar, .featured-hero').forEach(el => {
   el.style.opacity = '0';
   observer.observe(el);
 });
