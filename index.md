@@ -9,7 +9,6 @@ image: /Images/homepage-og.jpg
 <style>
 /* ============================================================
    SmartGuideHubs Homepage — Premium Professional Edition
-   Version: 3.0 — Featured wider layout + refined category styling
    ============================================================ */
 
 :root {
@@ -596,6 +595,8 @@ image: /Images/homepage-og.jpg
 }
 </script>
 
+<div class="hp-wrap">
+
 <div class="hp-hero">
   <div class="hp-hero__eyebrow">✦ Updated for 2026 &nbsp;·&nbsp; Independently Tested</div>
   <h1>Expert <span class="highlight">Software Reviews</span><br>for Small Businesses</h1>
@@ -666,7 +667,7 @@ image: /Images/homepage-og.jpg
       </div>
       <div class="hp-featured-main__body">
         <div class="hp-article-card__meta">
-          <span class="hp-type-badge hp-type-badge--featured" style="background:#fffbeb; color:#d97706;">Featured</span>
+          <span class="hp-type-badge hp-type-badge--default" style="background:#fffbeb; color:#d97706;">Featured</span>
           <span class="hp-article-card__date">{{ main_featured.date | date: "%b %d, %Y" }}</span>
         </div>
         <h3 class="featured-title"><a href="{{ main_featured.url }}">{{ main_featured.title }}</a></h3>
@@ -801,6 +802,8 @@ image: /Images/homepage-og.jpg
   <p>New reviews, comparisons, and buying guides – straight to your inbox.</p>
   <div class="ml-embedded" data-form="0xw1l4"></div>
   <p class="hp-newsletter__note">No spam. Unsubscribe anytime.</p>
+</div>
+
 </div>
 
 <script>
