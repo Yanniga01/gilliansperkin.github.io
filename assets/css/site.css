@@ -1148,7 +1148,7 @@ p {
 .footer-brand-logo {
   width: clamp(170px, 19vw, 240px);
   height: auto;
-}
+r}
 
 .footer-brand p {
   font-size: 0.85rem;
@@ -1543,15 +1543,9 @@ p {
   display: none;
 }
 
-/* ---------- Affiliate CTA Component ---------- */
-.sgh-cta {
-  background: linear-gradient(135deg, #f8fbff, #eef7ff);
-  border: 1px solid rgba(0, 194, 255, 0.18);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  margin: 3rem 0;
-  box-shadow: 0 10px 30px rgba(8, 30, 58, 0.08);
+.verdict-card:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .sgh-cta-review-pick {
@@ -1692,9 +1686,14 @@ p {
   }
 }
 
-@media (max-width: 640px) {
-  .cta-title {
-    font-size: 1.5rem;
+@media (max-width: 768px) {
+  .verdict-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .verdict-card {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .verdict-card:last-child {
