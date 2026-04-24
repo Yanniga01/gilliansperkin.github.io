@@ -78,7 +78,7 @@ permalink: /monday-review-2026/
   text="Start with Monday.com and explore visual project tracking, automations, and flexible workflows built for modern teams."
   button_text="Start Monday.com Free Trial"
   button_url="https://try.monday.com/bl2ifaxlwatr"
-  subtext="This affiliate link may earn us a commission at no extra cost to you."
+  subtext="Affiliate links may earn us a commission at no extra cost to you."
 %}
 
 <!-- Quick Comparison Scorecards -->
@@ -374,7 +374,7 @@ permalink: /monday-review-2026/
   text="Join teams using Monday.com to manage projects, automate repetitive work, and keep collaboration organized in one place."
   button_text="Start Monday.com Free Trial"
   button_url="https://try.monday.com/bl2ifaxlwatr"
-  subtext="Cancel anytime • This affiliate link may earn us a commission at no extra cost to you"
+  subtext="Affiliate links may earn us a commission at no extra cost to you."
 %}
 
 <!-- MailerLite Embedded Form -->
@@ -385,7 +385,7 @@ permalink: /monday-review-2026/
 <!-- Disclosure -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
     <h3 style="color: #92400e;">💎 Transparency & Methodology</h3>
-    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links, we may earn a commission at no extra cost to you. This doesn't influence our reviews — we maintain strict editorial independence.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
     <p><strong>Testing Methodology:</strong> Extensive hands‑on evaluation across 8 team types (marketing, dev, consulting, operations, etc.) over a 90‑day period. We measured productivity gains, ease of adoption, automation effectiveness, and overall ROI.</p>
 </div>
 

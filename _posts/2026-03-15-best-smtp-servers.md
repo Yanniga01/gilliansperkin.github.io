@@ -263,7 +263,7 @@ permalink: /best-smtp-servers-bulk-email-2026/
   text="Start with a free trial from our top-rated providers and see which one works best for your email volume."
   button_text="Compare SMTP Providers"
   button_url="https://pstk.smtp.com/yfowa7u0iezr"
-  subtext="Affiliate disclosure: We may earn a commission at no extra cost to you."
+  subtext="Affiliate links may earn us a commission at no extra cost to you."
 %}
 
 <!-- FAQ Section -->
@@ -317,7 +317,7 @@ permalink: /best-smtp-servers-bulk-email-2026/
 <!-- Disclosure -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
     <h3 style="color: #92400e;">💎 Transparency Note</h3>
-    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links (like <a href="https://pstk.smtp.com/yfowa7u0iezr" target="_blank" rel="sponsored noopener" style="color: var(--primary);">this SMTP provider link</a>), we may earn a commission at no extra cost to you. This doesn't influence our reviews — we maintain strict editorial independence. All platforms were tested using paid accounts.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
 </div>
 
 <!-- FAQ Toggle Script -->

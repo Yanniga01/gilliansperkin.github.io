@@ -165,7 +165,7 @@ permalink: /semrush-review/
   text="Get a free trial and see if Semrush fits your workflow. Explore AI visibility, keyword research, and competitor insights."
   button_text="Start Free Trial"
   button_url="https://semrush.sjv.io/9VLZdE"
-  subtext="Affiliate disclosure: We may earn a commission at no extra cost to you."
+  subtext="Affiliate links may earn us a commission at no extra cost to you."
 %}
 
 <!-- FAQ -->
@@ -219,7 +219,7 @@ permalink: /semrush-review/
 <!-- Disclosure -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
     <h3 style="color: #92400e;">💎 Transparency Note</h3>
-    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links (like <a href="https://semrush.sjv.io/9VLZdE" target="_blank" rel="sponsored noopener" style="color: var(--primary);">this Semrush free trial link</a>), we may earn a commission at no extra cost to you. This doesn't influence our reviews — we maintain strict editorial independence.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
 </div>
 
 <!-- FAQ Toggle Script -->

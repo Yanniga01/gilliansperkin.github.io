@@ -433,7 +433,7 @@ permalink: /asana-vs-trello-vs-clickup-2026/
 <!-- Disclosure -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
     <h3 style="color: #92400e;">💎 Transparency Note</h3>
-    <p><strong>Affiliate Disclosure:</strong> Some links on this page may be affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. That does not determine our rankings or conclusions. Our goal is to present clear, practical comparisons that help readers choose the right tool for their needs.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
 </div>
 
 <!-- FAQ Toggle Script -->
