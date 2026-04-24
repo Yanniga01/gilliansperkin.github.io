@@ -539,11 +539,30 @@ image: /Images/homepage-og.jpg
   margin-bottom: 1.2rem;
   font-size: 0.95rem;
 }
-.ml-embedded { max-width: 450px; margin: 0 auto; }
+.ml-embedded {
+  max-width: 450px;
+  margin: 0 auto;
+}
 .hp-newsletter__note {
   margin-top: 0.8rem;
   font-size: 0.75rem;
   color: rgba(255,255,255,0.45);
+}
+
+/* MailerLite form styling */
+.ml-embedded .ml-form-embedWrapper {
+  background: rgba(7,22,48,0.86) !important;
+  border: 1px solid rgba(103,232,249,0.24) !important;
+  border-radius: 14px !important;
+}
+.ml-embedded .ml-form-embedSubmit button {
+  background: #22d3ee !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  color: #082f49 !important;
+}
+.ml-embedded .ml-form-embedSubmit button:hover {
+  background: #67e8f9 !important;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -797,34 +816,24 @@ image: /Images/homepage-og.jpg
   {% endif %}
 {% endfor %}
 
+<!-- ========== NEWSLETTER SECTION ========== -->
 <div class="hp-newsletter">
   <h2>Get practical software insights</h2>
   <p>New reviews, comparisons, and buying guides – straight to your inbox.</p>
+  
+  <!-- MailerLite Embed Form -->
   <div class="ml-embedded" data-form="0xw1l4"></div>
+  
   <p class="hp-newsletter__note">No spam. Unsubscribe anytime.</p>
 </div>
 
 </div>
 
+<!-- MailerLite Universal Script -->
 <script>
-  (function() {
-    const style = document.createElement('style');
-    style.textContent = `
-      .ml-embedded .ml-form-embedWrapper {
-        background: rgba(7,22,48,0.86) !important;
-        border: 1px solid rgba(103,232,249,0.24) !important;
-        border-radius: 14px !important;
-      }
-      .ml-embedded .ml-form-embedSubmit button {
-        background: #22d3ee !important;
-        border-radius: 999px !important;
-        font-weight: 700 !important;
-        color: #082f49 !important;
-      }
-      .ml-embedded .ml-form-embedSubmit button:hover {
-        background: #67e8f9 !important;
-      }
-    `;
-    document.head.appendChild(style);
-  })();
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2164742');
 </script>
