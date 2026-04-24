@@ -313,7 +313,7 @@ permalink: /best-tools/
     <p>Browse SmartGuideHubs reviews and comparisons to see where each tool fits best.</p>
   </div>
   <div class="banner-cta">
-    <a href="/blog/" class="btn-primary">Browse All Reviews →</a>
+    <a href="/blog/" class="btn-primary">Browse All Insights→</a>
   </div>
 </div>
 
