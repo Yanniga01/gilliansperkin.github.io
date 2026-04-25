@@ -311,19 +311,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script src="/cookies.js"></script>
 
+<!-- CORRECTED SCHEMA (SoftwareApplication, no offers) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "SoftwareApplication",
   "name": "PDFfiller",
   "description": "PDF editing and e-signature platform for small businesses",
-  "brand": { "@type": "Brand", "name": "PDFfiller" },
-  "offers": {
-    "@type": "Offer",
-    "price": "20.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/OnlineOnly"
-  },
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "image": "https://smartguidehubs.com/Images/pdffiller-card.jpg",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.7",
