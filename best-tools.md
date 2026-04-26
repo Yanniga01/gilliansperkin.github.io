@@ -1098,15 +1098,31 @@ window.addEventListener('scroll', () => {
   const logoMap = {
     'Campaigner': '/assets/logos/campaigner.png',
     'SMTP.com': '/assets/logos/smtp.png',
+    'SMTP2GO': '/assets/logos/smtp2go.png',
+    'SendGrid': '/assets/logos/sendgrid.png',
+    'Mailgun': '/assets/logos/mailgun.png',
+    'Mailtrap': '/assets/logos/mailtrap.png',
+    'Amazon SES': '/assets/logos/amazonses.png',
+    'Postmark': '/assets/logos/postmarks.png',
     'Jobber': '/assets/logos/jobber.png',
+    'ServiceTitan': '/assets/logos/ServiceTitan.png',
+    'FieldRoutes': '/assets/logos/fieldroutes.png',
+    'Housecall Pro': '/assets/logos/housecall-pro.png',
     'Semrush': '/assets/logos/semrush.png',
+    'Ahrefs': '/assets/logos/ahrefs.png',
+    'Matomo': '/assets/logos/matomo.png',
     'pdfFiller': '/assets/logos/pdffiller.png',
+    'Adobe Acrobat': '/assets/logos/adobe-acrobat.png',
+    'DocuSign': '/assets/logos/docusign.svg',
     'Monday.com': '/assets/logos/monday.png',
     'ClickUp': '/assets/logos/clickup.png',
     'Asana': '/assets/logos/asana.png',
+    'Trello': '/assets/logos/trello.png',
+    'SmartSuite': '/assets/logos/smartsuite.png',
     'Wave': '/assets/logos/wave.png',
     'FreshBooks': '/assets/logos/freshbooks.png',
-    'QuickBooks': '/assets/logos/quickbooks.png'
+    'QuickBooks': '/assets/logos/quickbooks.png',
+    'Xero': '/assets/logos/xero.png'
   };
   const fallbackLogo = 'https://placehold.co/64x64?text=Logo';
   document.querySelectorAll('.tool-card').forEach((card) => {

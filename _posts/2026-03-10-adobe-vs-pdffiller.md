@@ -228,7 +228,7 @@ canonical_url: https://smartguidehubs.com/adobe-acrobat-vs-pdffiller/
 <!-- Affiliate Disclosure -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
     <h3 style="color: #92400e;">💎 Transparency Note</h3>
-    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links, we may earn a commission at no extra cost to you. This doesn't influence our recommendations—we maintain strict editorial independence. This comparison is based on hands-on checks where possible, product documentation, and current pricing/feature data.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
 </div>
 
 <!-- FAQ Toggle Script -->

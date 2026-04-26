@@ -256,19 +256,6 @@ canonical_url: https://smartguidehubs.com/contact/
     border-radius: 50%;
     display: inline-block;
   }
-  .card.affiliate {
-    background: linear-gradient(135deg, #eef2ff, #ede9fe);
-    border-color: var(--primary-lighter);
-  }
-  .card.affiliate h3 {
-    color: var(--primary-dark);
-    margin-bottom: var(--space-xs);
-  }
-  .card.affiliate p {
-    color: var(--gray-700);
-    font-size: 0.9rem;
-    margin: 0;
-  }
   .success-state {
     text-align: center;
     padding: var(--space-lg) 0;
@@ -402,11 +389,6 @@ canonical_url: https://smartguidehubs.com/contact/
           <div class="topic-item"><span class="topic-bullet" aria-hidden="true"></span>Business Analytics</div>
           <div class="topic-item"><span class="topic-bullet" aria-hidden="true"></span>CRM Software</div>
         </div>
-      </section>
-
-      <section class="card affiliate" aria-labelledby="disclosure-heading">
-        <h3 id="disclosure-heading">📢 Affiliate Disclosure</h3>
-        <p>Some links on SmartGuideHubs are affiliate links. We may earn a commission — at no extra cost to you. Our reviews remain independent, unbiased, and thoroughly researched.</p>
       </section>
     </aside>
   </div>
