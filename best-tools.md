@@ -1124,14 +1124,12 @@ window.addEventListener('scroll', () => {
     'QuickBooks': '/assets/logos/quickbooks.png',
     'Xero': '/assets/logos/xero.png'
   };
-  const fallbackLogo = 'https://placehold.co/64x64?text=Logo';
   document.querySelectorAll('.tool-card').forEach((card) => {
     const name = card.getAttribute('data-tool-name');
     const logoEl = card.querySelector('.tool-logo');
-    if (!logoEl) return;
-    const src = logoMap[name] || fallbackLogo;
+    if (!logoEl || !logoMap[name]) return;
+    const src = logoMap[name];
     logoEl.innerHTML = `<img src="${src}" alt="${name} logo" loading="lazy">`;
-    if (!logoMap[name]) logoEl.setAttribute('data-replaceable-logo', 'true');
   });
 })();
 </script>
