@@ -189,7 +189,7 @@ permalink: /seo-2026-ranking-traffic/
   text="Semrush's AI Visibility Toolkit helps you monitor where your brand appears in ChatGPT, Google AI Overviews, and other LLMs. Start tracking what you can't see in Google Analytics."
   button_text="Try Semrush Free"
   button_url="https://semrush.sjv.io/9VLZdE"
-  subtext="Affiliate disclosure: We may earn a commission at no extra cost to you."
+  subtext="Affiliate links may earn us a commission at no extra cost to you."
 %}
 
 <!-- FAQ Section -->
@@ -254,7 +254,7 @@ permalink: /seo-2026-ranking-traffic/
 <!-- Affiliate Disclosure -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
     <h3 style="color: #92400e;">💎 Transparency Note</h3>
-    <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links (like <a href="https://semrush.sjv.io/9VLZdE" target="_blank" rel="sponsored noopener" style="color: var(--primary);">this Semrush free trial link</a>), we may earn a commission at no extra cost to you. This doesn't influence our reviews — we maintain strict editorial independence.</p>
+    <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
 </div>
 
 <!-- FAQ Toggle Script -->
