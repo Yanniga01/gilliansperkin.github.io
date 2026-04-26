@@ -30,7 +30,7 @@ permalink: /best-tools/
 }
 </script>
 
-<!-- KEEP THIS – Original Semrush Search Block (Domain, keyword or link) -->
+<!-- Semrush Search Block -->
 <div class="semrush-search-block fade-in">
   <h2>🔍 Domain, keyword or organic research</h2>
   <p>Start your free trial now and get insights into any website or keyword.</p>
@@ -109,7 +109,6 @@ permalink: /best-tools/
   </div>
 </section>
 
-<!-- KEEP the email marketing, CRM, SEO, PDF, PM, finance, payments, web, AI, automation, communication sections – unchanged -->
 <!-- ================= EMAIL MARKETING ================= -->
 <section class="cat-section cat-email fade-in" id="section-email">
   <div class="cat-header">
@@ -993,7 +992,7 @@ permalink: /best-tools/
   </div>
 </div>
 
-<!-- Affiliate Disclosure (moved to bottom) -->
+<!-- Affiliate Disclosure (bottom) -->
 <div class="disclosure-bar" style="margin-top: 2rem;">
   <p><strong>Affiliate Disclosure:</strong> SmartGuideHubs may earn a commission when you sign up through links on this page — at no extra cost to you. Recommendations are based on independent research and feature comparisons. <a href="/how-we-test-software/">See how we evaluate tools →</a></p>
 </div>
@@ -1094,42 +1093,55 @@ window.addEventListener('scroll', () => {
   document.head.appendChild(script);
 })();
 
+// Logo mapping – now covers all tools
 (function() {
   const logoMap = {
     'Campaigner': '/assets/logos/campaigner.png',
     'SMTP.com': '/assets/logos/smtp.png',
-    'SMTP2GO': '/assets/logos/smtp2go.png',
-    'SendGrid': '/assets/logos/sendgrid.png',
-    'Mailgun': '/assets/logos/mailgun.png',
-    'Mailtrap': '/assets/logos/mailtrap.png',
-    'Amazon SES': '/assets/logos/amazonses.png',
-    'Postmark': '/assets/logos/postmarks.png',
+    'Leadpages': '/assets/logos/leadpages.png',
+    'Systeme.io': '/assets/logos/systeme.io.png',
     'Jobber': '/assets/logos/jobber.png',
-    'ServiceTitan': '/assets/logos/ServiceTitan.png',
-    'FieldRoutes': '/assets/logos/fieldroutes.png',
-    'Housecall Pro': '/assets/logos/housecall-pro.png',
+    'HubSpot CRM': '/assets/logos/hubspot.png',
+    'Pipedrive': '/assets/logos/pipedrive.png',
     'Semrush': '/assets/logos/semrush.png',
-    'Ahrefs': '/assets/logos/ahrefs.png',
-    'Matomo': '/assets/logos/matomo.png',
+    'Google Analytics 4': '/assets/logos/google-analytics.png',
+    'Hotjar': '/assets/logos/hotjar.png',
     'pdfFiller': '/assets/logos/pdffiller.png',
-    'Adobe Acrobat': '/assets/logos/adobe-acrobat.png',
-    'DocuSign': '/assets/logos/docusign.svg',
+    'Smallpdf': '/assets/logos/smallpdf.png',
     'Monday.com': '/assets/logos/monday.png',
     'ClickUp': '/assets/logos/clickup.png',
     'Asana': '/assets/logos/asana.png',
-    'Trello': '/assets/logos/trello.png',
-    'SmartSuite': '/assets/logos/smartsuite.png',
     'Wave': '/assets/logos/wave.png',
     'FreshBooks': '/assets/logos/freshbooks.png',
     'QuickBooks': '/assets/logos/quickbooks.png',
-    'Xero': '/assets/logos/xero.png'
+    'Stripe': '/assets/logos/stripe.png',
+    'Wise Business': '/assets/logos/wise-business.png',
+    'Shopify': '/assets/logos/shopify.png',
+    'Wix': '/assets/logos/wix.png',
+    'ChatGPT': '/assets/logos/chatgpt.png',
+    'Jasper': '/assets/logos/jasper.png',
+    'Copy.ai': '/assets/logos/copy.ai.png',
+    'Zapier': '/assets/logos/zapier.png',
+    'Make': '/assets/logos/make.png',
+    'Slack': '/assets/logos/slack.png',
+    'Microsoft Teams': '/assets/logos/microsoft-teams.png'
   };
   document.querySelectorAll('.tool-card').forEach((card) => {
     const name = card.getAttribute('data-tool-name');
     const logoEl = card.querySelector('.tool-logo');
-    if (!logoEl || !logoMap[name]) return;
+    if (!logoEl || !name) return;
     const src = logoMap[name];
-    logoEl.innerHTML = `<img src="${src}" alt="${name} logo" loading="lazy">`;
+    if (src) {
+      logoEl.innerHTML = `<img src="${src}" alt="${name} logo" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">`;
+    } else {
+      // Fallback for any missing logo (e.g. Wise Business, Shopify)
+      const initial = name.charAt(0).toUpperCase();
+      logoEl.innerHTML = `<span style="font-size: 1.5rem; font-weight: 700; color: #64748b;">${initial}</span>`;
+      logoEl.style.background = '#f1f5f9';
+      logoEl.style.display = 'flex';
+      logoEl.style.alignItems = 'center';
+      logoEl.style.justifyContent = 'center';
+    }
   });
 })();
 </script>
