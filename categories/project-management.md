@@ -278,10 +278,6 @@ canonical_url: https://smartguidehubs.com/categories/project-management/
     font-size: 0.7rem;
     margin-top: 0.5rem;
   }
-  .disclosure-widget p {
-    font-size: 0.8rem;
-    margin: 0;
-  }
 
   /* How We Review */
   .how-we-review {
@@ -478,11 +474,6 @@ canonical_url: https://smartguidehubs.com/categories/project-management/
         <p>Subscribe to get the latest project management reviews and comparisons delivered straight to your inbox.</p>
         <div class="ml-embedded" data-form="0xw1l4"></div>
         <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
-      </div>
-
-      <div class="sidebar-widget disclosure-widget">
-        <h4>📢 Affiliate Disclosure</h4>
-        <p>Some links on SmartGuideHubs are affiliate links. We may earn a commission – at no extra cost to you. This does not affect our recommendations.</p>
       </div>
     </aside>
   </div>
