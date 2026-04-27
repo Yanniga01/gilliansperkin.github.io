@@ -278,11 +278,6 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
     font-size: 0.7rem;
     margin-top: 0.5rem;
   }
-  .disclosure-widget p {
-    font-size: 0.8rem;
-    margin: 0;
-  }
-
   /* How We Review */
   .how-we-review {
     margin-top: 2.5rem;
@@ -480,10 +475,6 @@ canonical_url: https://smartguidehubs.com/categories/email-and-marketing-tools/
         <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
       </div>
 
-      <div class="sidebar-widget disclosure-widget">
-        <h4>📢 Affiliate Disclosure</h4>
-        <p>Some links on SmartGuideHubs are affiliate links. We may earn a commission – at no extra cost to you. This does not affect our recommendations.</p>
-      </div>
     </aside>
   </div>
 
