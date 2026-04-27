@@ -256,6 +256,6 @@ canonical_url: https://smartguidehubs.com/how-we-test-software/
     <a href="/about/">About Us</a>
     <a href="/editorial-team/">Editorial Team</a>
     <a href="/contact/">Contact</a>
-    <a href="/blog/">All Reviews</a>
+    <a href="/blog/">All Insights</a>
   </div>
 </div>
