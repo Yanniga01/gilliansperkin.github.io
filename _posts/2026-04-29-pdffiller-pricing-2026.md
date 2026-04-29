@@ -108,20 +108,49 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
   </div>
 </div>
 
-<!-- 2026 Plan Breakdown -->
+<!-- 2026 Plan Breakdown with self-contained premium table styles -->
 <section id="plans-breakdown" class="content-section">
   <h2>💰 2026 Plan Breakdown: What You Actually Pay</h2>
   <p>PDFfiller offers three main tiers for individuals and two enterprise plans. All prices reflect <strong>annual billing</strong> – the only way to get the real value.</p>
-  <table class="comparison-table">
-    <thead>
-      <tr><th>Plan</th><th>Best For</th><th>Annual Price (per month)</th><th>Key Features</th> </thead>
-    <tbody>
-      <tr><td>Basic</td><td>Freelancers</td><td class="best-feature">$8/mo</td><td>Core editing, e‑signatures, cloud storage</td> </tr>
-      <tr><td>Plus</td><td>Small Teams</td><td>$12/mo</td><td>Reusable templates & team collaboration</td> </tr>
-      <tr><td>Premium</td><td>Legal/HR</td><td>$15/mo</td><td>Advanced workflows, HIPAA compliance, US Legal forms</td> </tr>
-      <tr><td>Enterprise</td><td>Large Companies</td><td>Custom</td><td>SSO, admin controls, custom branding</td> </tr>
-    </tbody>
-  </table>
+
+  <div style="overflow-x: auto; margin: 1.5rem 0;">
+    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+      <thead>
+        <tr style="background: linear-gradient(135deg, #1e293b, #334155); color: white;">
+          <th style="padding: 1rem; text-align: left; font-weight: 600;">Plan</th>
+          <th style="padding: 1rem; text-align: left; font-weight: 600;">Best For</th>
+          <th style="padding: 1rem; text-align: left; font-weight: 600;">Annual Price (per month)</th>
+          <th style="padding: 1rem; text-align: left; font-weight: 600;">Key Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 1rem; font-weight: 700;">Basic</td>
+          <td style="padding: 1rem;">Freelancers</td>
+          <td style="padding: 1rem; background: #d1fae5; font-weight: 700; color: #065f46;">$8/mo</td>
+          <td style="padding: 1rem;">Core editing, e‑signatures, cloud storage</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 1rem; font-weight: 700;">Plus</td>
+          <td style="padding: 1rem;">Small Teams</td>
+          <td style="padding: 1rem;">$12/mo</td>
+          <td style="padding: 1rem;">Reusable templates & team collaboration</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 1rem; font-weight: 700;">Premium</td>
+          <td style="padding: 1rem;">Legal/HR</td>
+          <td style="padding: 1rem;">$15/mo</td>
+          <td style="padding: 1rem;">Advanced workflows, HIPAA compliance, US Legal forms</td>
+        </tr>
+        <tr>
+          <td style="padding: 1rem; font-weight: 700;">Enterprise</td>
+          <td style="padding: 1rem;">Large Companies</td>
+          <td style="padding: 1rem;">Custom</td>
+          <td style="padding: 1rem;">SSO, admin controls, custom branding</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <p><strong>Our take:</strong> The Basic plan covers 90% of small business needs. Only upgrade to Plus if you need templates, or to Premium for HIPAA compliance.</p>
 </section>
 
@@ -129,7 +158,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
 <section id="hidden-math" class="content-section">
   <h2>🧮 The "Hidden" Math: Monthly vs. Annual Billing</h2>
   <p>Neil Patel often highlights that “most marketing metrics are misleading”. The same applies to SaaS pricing. PDFfiller advertises their low annual rates, but if you choose the monthly “no‑commitment” route, your costs skyrocket.</p>
-  <p><strong>Real example:</strong> The Basic plan is <strong>$20/month</strong> on monthly billing – that’s <strong>$240/year</strong>. The annual plan is <strong>$96/year</strong> ( $8/month). You save <strong>$144 – a 60% reduction</strong>.</p>
+  <p><strong>Real example:</strong> The Basic plan is <strong>$20/month</strong> on monthly billing – that’s <strong>$240/year</strong>. The annual plan is <strong>$96/year</strong> ($8/month). You save <strong>$144 – a 60% reduction</strong>.</p>
   <p><strong>Pro Tip:</strong> If you plan to use the tool for more than 4 months, choose the annual plan. The monthly premium is essentially a convenience tax that will cost you double over a year.</p>
 </section>
 
@@ -231,7 +260,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
 </div>
 
 <!-- Before you decide callout (properly styled) -->
-<div class="best-tools-inline-cta" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
   <div>
     <strong style="color: #0f172a;">Before you decide:</strong>
     <span style="color: #475569;"> Compare your options in one place with our </span>
@@ -311,8 +340,8 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
 </script>
 
 <!-- Affiliate Disclosure (shortened to one line) -->
-<div style="background: #fffbeb; border: 1px solid #fde68a; padding: 0.75rem 1rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
-  <p style="margin: 0; font-size: 0.8rem;"><strong>Affiliate Disclosure:</strong> We may earn a commission at no extra cost to you.</p>
+<div style="background: #fffbeb; border: 1px solid #fde68a; padding: 0.5rem 1rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+  <p style="margin: 0; font-size: 0.75rem;"><strong>Affiliate Disclosure:</strong> We may earn a commission at no extra cost to you.</p>
 </div>
 
 <!-- FAQ Toggle Script -->
