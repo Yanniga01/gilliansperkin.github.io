@@ -230,13 +230,21 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
   </div>
 </div>
 
+<!-- Before you decide callout (properly styled) -->
+<div class="best-tools-inline-cta" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <strong style="color: #0f172a;">Before you decide:</strong>
+    <span style="color: #475569;"> Compare your options in one place with our </span>
+    <a href="/best-tools/" style="color: #f97316; font-weight: 700;">Best Tools directory for 2026 →</a>
+  </div>
+</div>
+
 <!-- Mid‑Article Affiliate CTA -->
 <div class="sgh-cta">
   <div class="cta-badge"><span>SmartGuideHubs Recommended</span></div>
   <h2 class="cta-title">Try PDFfiller Risk‑Free</h2>
   <p class="cta-text">Start your 30‑day free trial. Remember to cancel by day 27 if it’s not for you – or lock in the annual savings.</p>
   <a href="https://www.awin1.com/awclick.php?gid=568103&mid=94003&awinaffid=1991765&linkid=4361567&clickref=" class="cta-button" target="_blank" rel="sponsored noopener">Start Free Trial →</a>
-  <p class="cta-subtext">Affiliate disclosure: We may earn a commission at no extra cost to you.</p>
 </div>
 
 <!-- FAQ -->
@@ -302,10 +310,9 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
 (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
 </script>
 
-<!-- Affiliate Disclosure (only because affiliate links are used) -->
-<div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
-  <h3 style="color: #92400e;">💎 Transparency Note</h3>
-  <p><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links, we may earn a commission at no extra cost to you. This doesn't influence our recommendations — we maintain strict editorial independence.</p>
+<!-- Affiliate Disclosure (shortened to one line) -->
+<div style="background: #fffbeb; border: 1px solid #fde68a; padding: 0.75rem 1rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+  <p style="margin: 0; font-size: 0.8rem;"><strong>Affiliate Disclosure:</strong> We may earn a commission at no extra cost to you.</p>
 </div>
 
 <!-- FAQ Toggle Script -->
@@ -357,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 </script>
 
-<!-- FAQ Schema (auto‑generated from the five FAQ items) -->
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
