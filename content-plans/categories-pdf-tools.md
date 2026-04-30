@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 # PDF Tools Category Content Pack
 
 ## Existing category URL
