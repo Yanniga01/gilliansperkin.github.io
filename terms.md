@@ -4,6 +4,7 @@ title: Terms of Service | SmartGuideHubs
 description: Terms of Service for SmartGuideHubs. Learn about our terms, conditions, and user agreements for using our software review platform.
 permalink: /terms/
 canonical_url: https://smartguidehubs.com/terms/
+sitemap: false
 ---
 
 <style>
