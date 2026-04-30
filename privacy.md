@@ -4,6 +4,7 @@ title: Privacy Policy | SmartGuideHubs - Data Protection & Privacy
 description: Privacy Policy for SmartGuideHubs. Learn how we collect, use, and protect your personal information in compliance with GDPR, CCPA, and other privacy regulations.
 permalink: /privacy/
 canonical_url: https://smartguidehubs.com/privacy/
+sitemap: false
 ---
 
 <style>
