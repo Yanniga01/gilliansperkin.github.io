@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 # Image Upload & Optimization Guide
 
 This project uses `jekyll-responsive-magick` to generate responsive variants for post images.
