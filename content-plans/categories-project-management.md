@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 # Project Management Category Content Pack
 
 ## Existing category URL
