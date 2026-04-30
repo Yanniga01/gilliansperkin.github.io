@@ -4,6 +4,7 @@ title: Media Kit | SmartGuideHubs
 description: SmartGuideHubs media kit for potential brand and affiliate partners. Learn about our audience, editorial approach, and partnership opportunities.
 permalink: /media-kit/
 canonical_url: https://smartguidehubs.com/media-kit/
+sitemap: false
 ---
 
 <style>
