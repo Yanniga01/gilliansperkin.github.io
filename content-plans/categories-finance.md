@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 # Finance Category Content Pack
 
 ## Existing category URL
