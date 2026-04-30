@@ -1,4 +1,8 @@
-# Repository Analysis (Updated April 2, 2026)
+---
+sitemap: false 
+---
+
+7# Repository Analysis (Updated April 2, 2026)
 
 This audit focused on indexing quality, table HTML validity, and discoverability issues that can affect Google performance (including Monday review visibility).
 
