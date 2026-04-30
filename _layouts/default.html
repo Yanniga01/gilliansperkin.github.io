@@ -1,259 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% assign seo_title = page.title | default: site.title | default: "SmartGuideHubs" %}
-    {% assign seo_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}
-    {% assign seo_image = page.image | default: "/editorial-team-smartguidehubs.png" %}
-    {% if seo_image contains "http" %}
-      {% assign seo_image_abs = seo_image %}
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    {% assign seo_title = page.title | default: site.title | default: "SmartGuideHubs" %}  
+    {% assign seo_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}  
+    {% assign seo_image = page.image | default: "/editorial-team-smartguidehubs.png" %}  
+
+    {% if seo_image contains "http" %}  
+      {% assign seo_image_abs = seo_image %}  
+    {% else %}  
+      {% assign seo_image_abs = seo_image | absolute_url %}  
+    {% endif %}  
+
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>{{ seo_title }} | SmartGuideHubs</title>  
+    <meta name="description" content="{{ seo_description }}">  
+
+    {% if page.keywords or site.keywords %}  
+    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">  
+    {% endif %}  
+
+    <!-- ✅ FIXED ROBOTS FOR PAGINATION -->
+    {% if paginator.page > 1 %}
+    <meta name="robots" content="noindex, follow">
     {% else %}
-      {% assign seo_image_abs = seo_image | absolute_url %}
-    {% endif %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ seo_title }} | SmartGuideHubs</title>
-    <meta name="description" content="{{ seo_description }}">
-    {% if page.keywords or site.keywords %}
-    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
-    {% endif %}
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="/assets/css/site.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-    <meta property="og:site_name" content="SmartGuideHubs">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="{{ seo_image_abs }}">
-    <meta property="og:image:alt" content="SmartGuideHubs editorial team and software review brand image">
-    <meta property="og:title" content="{{ seo_title }}">
-    <meta property="og:description" content="{{ seo_description }}">
-    <meta property="og:type" content="{% if page.layout == "post" %}article{% else %}website{% endif %}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    {% if page.layout == "post" and page.date %}
-    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    {% endif %}
-    {% if page.last_modified_at %}
-    <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
     {% endif %}
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ seo_title }}">
-    <meta name="twitter:description" content="{{ seo_description }}">
-    <meta name="twitter:image" content="{{ seo_image_abs }}">
-
-    {% if page.layout == "post" %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": {{ seo_title | jsonify }},
-      "description": {{ seo_description | jsonify }},
-      "image": [{{ seo_image_abs | jsonify }}],
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": {{ page.url | absolute_url | jsonify }}
-      },
-      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-      {% if page.last_modified_at %}
-      "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
-      {% else %}
-      "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
-      {% endif %}
-      "publisher": {
-        "@type": "Organization",
-        "name": "SmartGuideHubs",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://smartguidehubs.com/editorial-team-smartguidehubs.png"
-        }
-      }
-    }
-    </script>
+    <!-- ✅ FIXED CANONICAL -->
+    {% if paginator.page > 1 %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     {% else %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": {{ seo_title | jsonify }},
-      "description": {{ seo_description | jsonify }},
-      "url": {{ page.url | absolute_url | jsonify }},
-      "image": {{ seo_image_abs | jsonify }},
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "SmartGuideHubs",
-        "url": {{ "/" | absolute_url | jsonify }}
-      }
-    }
-    </script>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
     {% endif %}
 
-    <!-- MailerLite Universal (loaded only when an embedded form exists) -->
-    <script>
-    (function() {
-      var hasEmbeddedForm = document.querySelector('.ml-embedded, [data-form]');
-      if (!hasEmbeddedForm) return;
+    <link rel="stylesheet" href="/assets/css/site.css">  
 
-      window.ml = window.ml || function(){ (window.ml.q = window.ml.q || []).push(arguments); };
+    <!-- FAVICONS -->
+    <link rel="icon" href="/favicon.ico">  
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">  
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">  
 
-      function loadMailerLite() {
-        if (document.querySelector('script[data-ml-universal="1"]')) return;
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://assets.mailerlite.com/js/universal.js';
-        script.setAttribute('data-ml-universal', '1');
-        document.head.appendChild(script);
-        window.ml('account', '2164742');
-      }
+    <!-- OPEN GRAPH -->
+    <meta property="og:site_name" content="SmartGuideHubs">  
+    <meta property="og:locale" content="en_US">  
+    <meta property="og:image" content="{{ seo_image_abs }}">  
+    <meta property="og:image:alt" content="SmartGuideHubs editorial team and software review brand image">  
+    <meta property="og:title" content="{{ seo_title }}">  
+    <meta property="og:description" content="{{ seo_description }}">  
+    <meta property="og:type" content="{% if page.layout == "post" %}article{% else %}website{% endif %}">  
+    <meta property="og:url" content="{{ page.url | absolute_url }}">  
 
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadMailerLite, { timeout: 2000 });
-      } else {
-        window.addEventListener('load', loadMailerLite, { once: true });
-      }
-    })();
-    </script>
-</head>
-<body>
-    <a href="#main" class="skip-link">Skip to content</a>
+    {% if page.layout == "post" and page.date %}  
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">  
+    {% endif %}  
 
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="/" aria-label="SmartGuideHubs home">
-                    <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="1200" height="260">
-                </a>
-            </div>
-            
-            <!-- Hamburger Menu Button -->
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <nav class="main-nav" id="mainNav">
-                <ul>
-                    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-                    <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>
-                    <li class="nav-dropdown">
-                        <button class="dropdown-toggle" aria-expanded="false">Insights ▼</button>
-                        <ul class="dropdown-menu">
-                            <li><a href="/blog/" {% if page.url == "/blog/" %}class="active"{% endif %}>All Insights</a></li>
-                            <li><a href="/reviews/" {% if page.url contains "/reviews/" %}class="active"{% endif %}>Reviews</a></li>
-                            <li><a href="/guides/" {% if page.url contains "/guides/" %}class="active"{% endif %}>Guides</a></li>
-                            <li><a href="/comparisons/" {% if page.url contains "/comparisons/" %}class="active"{% endif %}>Comparisons</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
-                    <li><a href="/editorial-team" {% if page.url == "/editorial-team/" %}class="active"{% endif %}>Editorial Team</a></li>
-                    <li><a href="/contact" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    {% if page.last_modified_at %}  
+    <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">  
+    {% endif %}  
 
-    {% unless page.url == "/best-tools/" %}
-    <div class="best-tools-banner" role="complementary" aria-label="Best Tools quick link">
-        <div class="best-tools-banner-inner">
-            <span class="best-tools-banner-kicker">New</span>
-            <p>Looking for our full software shortlist? Explore the complete 2026 picks.</p>
-            <a href="/best-tools/" class="best-tools-banner-link">View Best Tools →</a>
-        </div>
-    </div>
-    {% endunless %}
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">  
+    <meta name="twitter:title" content="{{ seo_title }}">  
+    <meta name="twitter:description" content="{{ seo_description }}">  
+    <meta name="twitter:image" content="{{ seo_image_abs }}">  
 
-    <main id="main">
-        {{ content }}
-    </main>
+    <!-- SCHEMA -->
+    {% if page.layout == "post" %}  
+    <script type="application/ld+json">  
+    {  
+      "@context": "https://schema.org",  
+      "@type": "BlogPosting",  
+      "headline": {{ seo_title | jsonify }},  
+      "description": {{ seo_description | jsonify }},  
+      "image": [{{ seo_image_abs | jsonify }}],  
+      "mainEntityOfPage": {  
+        "@type": "WebPage",  
+        "@id": {{ page.url | absolute_url | jsonify }}  
+      },  
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},  
+      {% if page.last_modified_at %}  
+      "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},  
+      {% else %}  
+      "dateModified": {{ page.date | date_to_xmlschema | jsonify }},  
+      {% endif %}  
+      "publisher": {  
+        "@type": "Organization",  
+        "name": "SmartGuideHubs",  
+        "logo": {  
+          "@type": "ImageObject",  
+          "url": "https://smartguidehubs.com/editorial-team-smartguidehubs.png"  
+        }  
+      }  
+    }  
+    </script>  
+    {% else %}  
+    <script type="application/ld+json">  
+    {  
+      "@context": "https://schema.org",  
+      "@type": "WebPage",  
+      "name": {{ seo_title | jsonify }},  
+      "description": {{ seo_description | jsonify }},  
+      "url": {{ page.url | absolute_url | jsonify }},  
+      "image": {{ seo_image_abs | jsonify }},  
+      "isPartOf": {  
+        "@type": "WebSite",  
+        "name": "SmartGuideHubs",  
+        "url": {{ "/" | absolute_url | jsonify }}  
+      }  
+    }  
+    </script>  
+    {% endif %}  
 
-    {% include footer.html %}
+    <!-- MAILERLITE SMART LOAD -->
+    <script>  
+    (function() {  
+      var hasEmbeddedForm = document.querySelector('.ml-embedded, [data-form]');  
+      if (!hasEmbeddedForm) return;  
 
-    <script>
-    (function() {
-        // Hamburger menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const mainNav = document.getElementById('mainNav');
-        
-        if (navToggle && mainNav) {
-            navToggle.addEventListener('click', function() {
-                this.classList.toggle('open');
-                mainNav.classList.toggle('nav-open');
-                document.body.classList.toggle('menu-open');
-            });
-        }
-        
-        // Dropdown functionality
-        const dropdown = document.querySelector('.nav-dropdown');
-        const toggle = dropdown ? dropdown.querySelector('.dropdown-toggle') : null;
-        
-        if (dropdown && toggle) {
-            function closeDropdown() {
-                dropdown.classList.remove('dropdown-open');
-                toggle.setAttribute('aria-expanded', 'false');
-            }
-            
-            function openDropdown() {
-                dropdown.classList.add('dropdown-open');
-                toggle.setAttribute('aria-expanded', 'true');
-            }
-            
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                if (dropdown.classList.contains('dropdown-open')) {
-                    closeDropdown();
-                } else {
-                    openDropdown();
-                }
-            });
-            
-            // Close dropdown when clicking elsewhere
-            document.addEventListener('click', function(e) {
-                if (dropdown && !dropdown.contains(e.target)) {
-                    closeDropdown();
-                }
-            });
-            
-            // Close dropdown on ESC key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeDropdown();
-                }
-            });
-            
-            // Close dropdown when menu item is clicked
-            const menuItems = dropdown.querySelectorAll('.dropdown-menu a');
-            menuItems.forEach(function(item) {
-                item.addEventListener('click', function() {
-                    closeDropdown();
-                    // Close mobile menu if open
-                    if (mainNav && mainNav.classList.contains('nav-open')) {
-                        navToggle.classList.remove('open');
-                        mainNav.classList.remove('nav-open');
-                        document.body.classList.remove('menu-open');
-                    }
-                });
-            });
-        }
-        
-        // Close mobile menu when a regular nav link is clicked
-        const navLinks = document.querySelectorAll('.main-nav > ul > li > a:not(.dropdown-toggle)');
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                if (mainNav && mainNav.classList.contains('nav-open')) {
-                    navToggle.classList.remove('open');
-                    mainNav.classList.remove('nav-open');
-                    document.body.classList.remove('menu-open');
-                }
-            });
-        });
-    })();
-    </script>
-    <script src="/cookies.js"></script>
-</body>
+      window.ml = window.ml || function(){ (window.ml.q = window.ml.q || []).push(arguments); };  
+
+      function loadMailerLite() {  
+        if (document.querySelector('script[data-ml-universal="1"]')) return;  
+        var script = document.createElement('script');  
+        script.async = true;  
+        script.src = 'https://assets.mailerlite.com/js/universal.js';  
+        script.setAttribute('data-ml-universal', '1');  
+        document.head.appendChild(script);  
+        window.ml('account', '2164742');  
+      }  
+
+      if ('requestIdleCallback' in window) {  
+        requestIdleCallback(loadMailerLite, { timeout: 2000 });  
+      } else {  
+        window.addEventListener('load', loadMailerLite, { once: true });  
+      }  
+    })();  
+    </script>  
+</head>  
+
+<body>  
+    <a href="#main" class="skip-link">Skip to content</a>  
+
+    <header class="site-header">  
+        <div class="header-container">  
+            <div class="logo">  
+                <a href="/" aria-label="SmartGuideHubs home">  
+                    <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="1200" height="260">  
+                </a>  
+            </div>  
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">  
+                <span></span>  
+                <span></span>  
+                <span></span>  
+            </button>  
+
+            <nav class="main-nav" id="mainNav">  
+                <ul>  
+                    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>  
+                    <li><a href="/best-tools/" {% if page.url == "/best-tools/" %}class="active"{% endif %}>Best Tools</a></li>  
+                    <li class="nav-dropdown">  
+                        <button class="dropdown-toggle" aria-expanded="false">Insights ▼</button>  
+                        <ul class="dropdown-menu">  
+                            <li><a href="/blog/">All Insights</a></li>  
+                            <li><a href="/reviews/">Reviews</a></li>  
+                            <li><a href="/guides/">Guides</a></li>  
+                            <li><a href="/comparisons/">Comparisons</a></li>  
+                        </ul>  
+                    </li>  
+                    <li><a href="/about">About</a></li>  
+                    <li><a href="/editorial-team">Editorial Team</a></li>  
+                    <li><a href="/contact">Contact</a></li>  
+                </ul>  
+            </nav>  
+        </div>  
+    </header>  
+
+    <main id="main">  
+        {{ content }}  
+    </main>  
+
+    {% include footer.html %}  
+
+    <script src="/cookies.js"></script>  
+</body>  
 </html>
