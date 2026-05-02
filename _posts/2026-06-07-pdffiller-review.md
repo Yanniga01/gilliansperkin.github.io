@@ -281,10 +281,6 @@ canonical_url: https://smartguidehubs.com/pdffiller-review-2026/
 <div class="embed-center">
     <div class="ml-embedded" data-form="0xw1l4"></div>
 </div>
-<script>
-(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
-</script>
-
 <div class="transparency-note">
     <h3>💎 Transparency Note</h3>
     <p class="affiliate-micro"><small>Affiliate links may earn us a commission at no extra cost to you.</small></p>
