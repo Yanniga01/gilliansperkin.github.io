@@ -335,10 +335,6 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
 <div style="margin: 2rem 0; text-align: center;">
   <div class="ml-embedded" data-form="0xw1l4"></div>
 </div>
-<script>
-(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
-</script>
-
 <!-- Affiliate Disclosure (shortened to one line) -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 0.5rem 1rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
   <p style="margin: 0; font-size: 0.75rem;"><strong>Affiliate Disclosure:</strong> We may earn a commission at no extra cost to you.</p>

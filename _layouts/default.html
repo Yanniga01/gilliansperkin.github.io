@@ -124,12 +124,14 @@
     {% endif %}  
 
     <!-- MAILERLITE SMART LOAD -->
-    <script>  
+    <script>
     (function() {
       window.ml = window.ml || function(){ (window.ml.q = window.ml.q || []).push(arguments); };
 
+      var loaded = false;
       function loadMailerLite() {
-        if (document.querySelector('script[data-ml-universal="1"]')) return;
+        if (loaded || document.querySelector('script[data-ml-universal="1"]')) return;
+        loaded = true;
         var script = document.createElement('script');
         script.async = true;
         script.src = 'https://assets.mailerlite.com/js/universal.js';
@@ -138,20 +140,30 @@
         window.ml('account', '2164742');
       }
 
-      function initMailerLiteIfNeeded() {
-        var hasEmbeddedForm = document.querySelector('.ml-embedded, [data-form], [data-form-id]');
-        if (!hasEmbeddedForm) return;
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(loadMailerLite, { timeout: 2000 });
+      function setupMailerLiteLazyLoad() {
+        var form = document.querySelector('.ml-embedded, [data-form]');
+        if (!form) return;
+
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            if (entries.some(function(entry) { return entry.isIntersecting; })) {
+              loadMailerLite();
+              observer.disconnect();
+            }
+          }, { rootMargin: '300px 0px' });
+          observer.observe(form);
         } else {
-          setTimeout(loadMailerLite, 1);
+          window.addEventListener('load', loadMailerLite, { once: true });
         }
+
+        window.addEventListener('pointerdown', loadMailerLite, { once: true, passive: true });
+        window.addEventListener('keydown', loadMailerLite, { once: true });
       }
 
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMailerLiteIfNeeded, { once: true });
+        document.addEventListener('DOMContentLoaded', setupMailerLiteLazyLoad, { once: true });
       } else {
-        initMailerLiteIfNeeded();
+        setupMailerLiteLazyLoad();
       }
     })();
     </script>  
