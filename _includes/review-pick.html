@@ -6,7 +6,7 @@
   <div class="review-pick-head">
     {% if include.logo %}
     <div class="review-pick-logo-wrap">
-      <img src="{{ include.logo }}" alt="{{ include.name | default: include.title | default: 'Top pick' }} logo" class="review-pick-logo">
+      <img src="{{ include.logo }}" alt="{{ include.name | default: include.title | default: 'Top pick' }} logo" class="review-pick-logo" loading="lazy" decoding="async" width="160" height="160">
     </div>
     {% endif %}
 

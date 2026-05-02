@@ -678,7 +678,7 @@ image: /Images/homepage-og.jpg
     <article class="hp-featured-main">
       <div class="hp-featured-main__img">
         {% if main_featured.image %}
-          <img src="{{ main_featured.image }}" alt="{{ main_featured.title }}" loading="lazy">
+          <img src="{{ main_featured.image }}" alt="{{ main_featured.title }}" loading="lazy" decoding="async" width="{{ main_featured.image_width | default: 1536 }}" height="{{ main_featured.image_height | default: 650 }}">
         {% else %}
           📌
         {% endif %}
@@ -702,7 +702,7 @@ image: /Images/homepage-og.jpg
       <a href="{{ post.url }}" class="hp-side-card">
         <div class="hp-side-card__thumb">
           {% if post.image %}
-            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" decoding="async" width="{{ post.image_width | default: 1536 }}" height="{{ post.image_height | default: 650 }}">
           {% else %}
             📖
           {% endif %}
@@ -776,7 +776,7 @@ image: /Images/homepage-og.jpg
           <article class="hp-article-card">
             <div class="hp-article-card__img">
               {% if post.image %}
-                <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" decoding="async" width="{{ post.image_width | default: 1536 }}" height="{{ post.image_height | default: 650 }}">
               {% else %}
                 {% case cat_slug %}
                   {% when "pdf-and-document-tools" %}📄
