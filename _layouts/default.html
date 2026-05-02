@@ -14,7 +14,8 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 
-    <title>{{ seo_title }} | SmartGuideHubs</title>  
+    {% assign seo_title_has_brand = seo_title | downcase | contains: "smartguidehubs" %}
+    <title>{% if seo_title_has_brand %}{{ seo_title }}{% else %}{{ seo_title }} | SmartGuideHubs{% endif %}</title>  
     <meta name="description" content="{{ seo_description }}">  
 
     {% if page.keywords or site.keywords %}  
@@ -35,11 +36,18 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     {% endif %}
 
+    <link rel="preconnect" href="https://fonts.mailerlite.com" crossorigin>
+    <link rel="preconnect" href="https://assets.mlcdn.com" crossorigin>
+    <link rel="preconnect" href="https://static.mailerlite.com" crossorigin>
+    <link rel="preconnect" href="https://groot.mailerlite.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.mailerlite.com">
+    <link rel="dns-prefetch" href="//assets.mlcdn.com">
+    <link rel="dns-prefetch" href="//static.mailerlite.com">
+    <link rel="dns-prefetch" href="//groot.mailerlite.com">
     <link rel="stylesheet" href="/assets/css/site.css">  
 
     <!-- FAVICONS -->
     <link rel="icon" href="/favicon.ico">  
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">  
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">  
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">  
@@ -117,28 +125,35 @@
 
     <!-- MAILERLITE SMART LOAD -->
     <script>  
-    (function() {  
-      var hasEmbeddedForm = document.querySelector('.ml-embedded, [data-form]');  
-      if (!hasEmbeddedForm) return;  
+    (function() {
+      window.ml = window.ml || function(){ (window.ml.q = window.ml.q || []).push(arguments); };
 
-      window.ml = window.ml || function(){ (window.ml.q = window.ml.q || []).push(arguments); };  
+      function loadMailerLite() {
+        if (document.querySelector('script[data-ml-universal="1"]')) return;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://assets.mailerlite.com/js/universal.js';
+        script.setAttribute('data-ml-universal', '1');
+        document.head.appendChild(script);
+        window.ml('account', '2164742');
+      }
 
-      function loadMailerLite() {  
-        if (document.querySelector('script[data-ml-universal="1"]')) return;  
-        var script = document.createElement('script');  
-        script.async = true;  
-        script.src = 'https://assets.mailerlite.com/js/universal.js';  
-        script.setAttribute('data-ml-universal', '1');  
-        document.head.appendChild(script);  
-        window.ml('account', '2164742');  
-      }  
+      function initMailerLiteIfNeeded() {
+        var hasEmbeddedForm = document.querySelector('.ml-embedded, [data-form], [data-form-id]');
+        if (!hasEmbeddedForm) return;
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadMailerLite, { timeout: 2000 });
+        } else {
+          setTimeout(loadMailerLite, 1);
+        }
+      }
 
-      if ('requestIdleCallback' in window) {  
-        requestIdleCallback(loadMailerLite, { timeout: 2000 });  
-      } else {  
-        window.addEventListener('load', loadMailerLite, { once: true });  
-      }  
-    })();  
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMailerLiteIfNeeded, { once: true });
+      } else {
+        initMailerLiteIfNeeded();
+      }
+    })();
     </script>  
 </head>  
 

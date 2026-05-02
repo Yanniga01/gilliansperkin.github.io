@@ -10,7 +10,7 @@
       <span class="verdict-rank">Top pick</span>
       <div class="verdict-card-logo-wrap">
         {% if include.card1_logo %}
-        <img src="{{ include.card1_logo }}" alt="{{ include.card1_name }} logo" class="verdict-card-logo">
+        <img src="{{ include.card1_logo }}" alt="{{ include.card1_name }} logo" class="verdict-card-logo" loading="lazy" decoding="async" width="96" height="96">
         {% else %}
         <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card1_name | slice: 0 }}</div>
         {% endif %}
@@ -25,7 +25,7 @@
       <span class="verdict-rank">Alternative</span>
       <div class="verdict-card-logo-wrap">
         {% if include.card2_logo %}
-        <img src="{{ include.card2_logo }}" alt="{{ include.card2_name }} logo" class="verdict-card-logo">
+        <img src="{{ include.card2_logo }}" alt="{{ include.card2_name }} logo" class="verdict-card-logo" loading="lazy" decoding="async" width="96" height="96">
         {% else %}
         <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card2_name | slice: 0 }}</div>
         {% endif %}
@@ -40,7 +40,7 @@
       <span class="verdict-rank">Alternative</span>
       <div class="verdict-card-logo-wrap">
         {% if include.card3_logo %}
-        <img src="{{ include.card3_logo }}" alt="{{ include.card3_name }} logo" class="verdict-card-logo">
+        <img src="{{ include.card3_logo }}" alt="{{ include.card3_name }} logo" class="verdict-card-logo" loading="lazy" decoding="async" width="96" height="96">
         {% else %}
         <div class="verdict-card-logo-placeholder" aria-hidden="true">{{ include.card3_name | slice: 0 }}</div>
         {% endif %}
