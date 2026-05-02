@@ -407,9 +407,9 @@ sitemap: true
             <article class="review-card">
               <div class="card-image">
                 {% if post.image %}
-                  <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                  <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" decoding="async" width="{{ post.image_width | default: 1536 }}" height="{{ post.image_height | default: 650 }}">
                 {% else %}
-                  <img src="/Images/placeholder-category.jpg" alt="{{ post.title }}" loading="lazy">
+                  <img src="/Images/placeholder-category.jpg" alt="{{ post.title }}" loading="lazy" decoding="async" width="1536" height="650">
                 {% endif %}
               </div>
               <div class="card-content">
