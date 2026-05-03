@@ -22,8 +22,6 @@ canonical_url: https://smartguidehubs.com/pdffiller-pricing-2026/
   link8="#faq" label8="❓ FAQ"
 %}
 
-{% include author-box.html %}
-
 <!-- Review Pick (modern style) -->
 <div class="sgh-cta">
   <div class="cta-badge">
