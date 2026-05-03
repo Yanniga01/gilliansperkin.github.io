@@ -180,7 +180,7 @@
                 </a>  
             </div>  
 
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">  
+            <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">  
                 <span></span>  
                 <span></span>  
                 <span></span>  
@@ -213,6 +213,67 @@
 
     {% include footer.html %}  
 
+    <script>
+    (function() {
+      var navToggle = document.getElementById('navToggle');
+      var mainNav = document.getElementById('mainNav');
+      var dropdowns = document.querySelectorAll('.nav-dropdown');
+
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function() {
+          var isOpen = mainNav.classList.toggle('nav-open');
+          navToggle.classList.toggle('open', isOpen);
+          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+
+      dropdowns.forEach(function(dropdown) {
+        var toggle = dropdown.querySelector('.dropdown-toggle');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          var willOpen = !dropdown.classList.contains('dropdown-open');
+
+          dropdowns.forEach(function(other) {
+            if (other !== dropdown) {
+              other.classList.remove('dropdown-open');
+              var otherToggle = other.querySelector('.dropdown-toggle');
+              if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          dropdown.classList.toggle('dropdown-open', willOpen);
+          toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+          dropdowns.forEach(function(dropdown) {
+            dropdown.classList.remove('dropdown-open');
+            var toggle = dropdown.querySelector('.dropdown-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          dropdowns.forEach(function(dropdown) {
+            dropdown.classList.remove('dropdown-open');
+            var toggle = dropdown.querySelector('.dropdown-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          });
+          if (mainNav) mainNav.classList.remove('nav-open');
+          if (navToggle) {
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    })();
+    </script>
     <script src="/cookies.js"></script>  
 </body>  
 </html>
