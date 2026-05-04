@@ -171,7 +171,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-alternatives/
     <div class="verdict-card is-top-pick">
       <span class="verdict-rank">Top pick</span>
       <div class="verdict-card-logo-wrap">
-        <img src="/assets/logos/docupen.png" alt="DocHub logo" class="verdict-card-logo" onerror="this.style.display='none'">
+        <img src="/assets/logos/dochub.png" alt="DocHub logo" class="verdict-card-logo" onerror="this.style.display='none'">
       </div>
       <h3 class="verdict-card-title">DocHub</h3>
       <p class="verdict-card-label">Best All‑Around</p>
