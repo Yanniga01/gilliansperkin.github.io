@@ -251,7 +251,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   </ul>
   <h3>❌ Skip PDFfiller if:</h3>
   <ul>
-    <li>You edit or sign PDFs less than once a month – free tools (<a href="/pdffiller-alternatives-2026/">DocHub, Smallpdf</a>) are enough</li>
+    <li>You edit or sign PDFs less than once a month – free tools (<a href="/pdffiller-alternatives/">DocHub, Smallpdf</a>) are enough</li>
     <li>You need offline editing – <a href="/adobe-acrobat-vs-pdffiller/">Adobe Acrobat</a> is better</li>
     <li>You only convert files or compress PDFs – use <a href="https://smallpdf.com" target="_blank" rel="noopener">Smallpdf</a> free tier</li>
     <li>You can’t stomach the annual upfront payment – monthly billing is 60% more expensive</li>
