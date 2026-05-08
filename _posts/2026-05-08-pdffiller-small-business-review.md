@@ -25,7 +25,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   link11="#faq" label11="❓ FAQ"
 %}
 
-<!-- Top Pick CTA (fixed link and text) -->
+<!-- Top Pick CTA -->
 <div class="sgh-cta">
   <div class="cta-badge">
     <span>🏆 SmartGuideHubs Top Pick</span>
@@ -37,14 +37,14 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   <p class="cta-note">Best for teams sending 5+ documents per week</p>
 </div>
 
-<!-- Quick Verdict (with Editor's Choice badge) -->
+<!-- Quick Verdict -->
 <div class="quick-verdict" id="quick-verdict" style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 5px solid #0ea5e9;">
   <span class="winner-badge" style="background: #0ea5e9;">📝 EDITORS' CHOICE</span>
   <h2 style="color: #0c4a6e;">Our Verdict: 4.2/5 Stars – Worth It for Document‑Heavy Businesses</h2>
   <div class="rating-stars">★★★★☆</div>
   <p><strong>PDFfiller is a genuine productivity platform for small businesses that handle contracts, forms, and approvals daily.</strong> Its AI document generator, workflow automation, and eSignature features save measurable time – but occasional users can find cheaper alternatives.</p>
   <p><strong>Best for:</strong> Agencies, consultants, HR teams, real estate professionals, and any business that sends 5+ documents per week.</p>
-  <p><strong>Consider alternatives if:</strong> You only edit PDFs occasionally, need offline editing (use <a href="/adobe-acrobat-vs-pdffiller/">Adobe Acrobat</a>), or require completely free tools (<a href="/pdffiller-alternatives-2026/">DocHub</a>).</p>
+  <p><strong>Consider alternatives if:</strong> You only edit PDFs occasionally, need offline editing (use <a href="/adobe-acrobat-vs-pdffiller/">Adobe Acrobat</a>), or require completely free tools (<a href="/pdffiller-alternatives/">DocHub</a>).</p>
 </div>
 
 <!-- How We Tested -->
@@ -123,16 +123,18 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   </div>
 </div>
 
-<!-- Pricing Section with best-feature highlight -->
+<!-- Pricing Section with proper comparison-table class -->
 <section id="pricing" class="content-section">
   <h2>💰 Which PDFfiller Plan Makes Sense for Small Business</h2>
+  <p>PDFfiller offers three main tiers for individuals and two enterprise plans. All prices reflect <strong>annual billing</strong> – the only way to get the real value.</p>
+
   <div style="overflow-x: auto; margin: 1.5rem 0;">
-    <table class="comparison-table" style="width:100%; border-collapse:collapse;">
+    <table class="comparison-table">
       <thead>
         <tr><th>Plan</th><th>Best For</th><th>Annual Price (per month)</th><th>Key Features</th> </thead>
       <tbody>
         <tr><td>Basic</td><td>Solo freelancers, occasional users</td><td>$8/mo</td><td>Core editing, e‑signatures, cloud storage</td> </tr>
-        <tr style="background:#d1fae5;"> <!-- highlight best value -->
+        <tr class="best-feature-row">
           <td><strong>Plus (Sweet Spot)</strong></td>
           <td>Small businesses, regular document workflows</td>
           <td class="best-feature">$12/mo</td>
@@ -280,7 +282,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
 <!-- Social Sharing -->
 {% include article-social.html %}
 
-<!-- Interlinking Section (mandatory + related posts) -->
+<!-- Interlinking Section -->
 <div class="interlinking-section">
   <h2>📚 More Resources</h2>
   <div class="interlinking-grid">
@@ -323,7 +325,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
 (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
 </script>
 
-<!-- Affiliate Disclosure (short, compliant) -->
+<!-- Affiliate Disclosure (short) -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; margin: 2rem 0;">
   <h3 style="color: #92400e; font-size: 0.9rem; margin:0 0 0.3rem;">💎 Transparency Note</h3>
   <p style="margin:0; font-size:0.85rem;"><strong>Affiliate Disclosure:</strong> We use affiliate links in our reviews. If you sign up through our links, we may earn a commission at no extra cost to you. This doesn't influence our recommendations — we maintain strict editorial independence.</p>
