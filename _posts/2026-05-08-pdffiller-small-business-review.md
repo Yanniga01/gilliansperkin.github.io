@@ -25,6 +25,8 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   link11="#faq" label11="❓ FAQ"
 %}
 
+{% include author-box.html %}
+
 <!-- Top Pick CTA -->
 <div class="sgh-cta">
   <div class="cta-badge">
@@ -44,7 +46,7 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   <div class="rating-stars">★★★★☆</div>
   <p><strong>PDFfiller is a genuine productivity platform for small businesses that handle contracts, forms, and approvals daily.</strong> Its AI document generator, workflow automation, and eSignature features save measurable time – but occasional users can find cheaper alternatives.</p>
   <p><strong>Best for:</strong> Agencies, consultants, HR teams, real estate professionals, and any business that sends 5+ documents per week.</p>
-  <p><strong>Consider alternatives if:</strong> You only edit PDFs occasionally, need offline editing (use <a href="/adobe-acrobat-vs-pdffiller/">Adobe Acrobat</a>), or require completely free tools (<a href="/pdffiller-alternatives/">DocHub</a>).</p>
+  <p><strong>Consider alternatives if:</strong> You only edit PDFs occasionally, need offline editing (use <a href="/adobe-acrobat-vs-pdffiller/">Adobe Acrobat</a>), or require completely free tools (<a href="/pdffiller-alternatives-2026/">DocHub</a>).</p>
 </div>
 
 <!-- How We Tested -->
@@ -123,28 +125,50 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   </div>
 </div>
 
-<!-- Pricing Section with proper comparison-table class -->
+<!-- Pricing Section (inline-styled, guaranteed to work) -->
 <section id="pricing" class="content-section">
   <h2>💰 Which PDFfiller Plan Makes Sense for Small Business</h2>
   <p>PDFfiller offers three main tiers for individuals and two enterprise plans. All prices reflect <strong>annual billing</strong> – the only way to get the real value.</p>
 
   <div style="overflow-x: auto; margin: 1.5rem 0;">
-    <table class="comparison-table">
+    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
       <thead>
-        <tr><th>Plan</th><th>Best For</th><th>Annual Price (per month)</th><th>Key Features</th> </thead>
+        <tr style="background: linear-gradient(135deg, #1e293b, #334155); color: white;">
+          <th style="padding: 1rem; text-align: left;">Plan</th>
+          <th style="padding: 1rem; text-align: left;">Best For</th>
+          <th style="padding: 1rem; text-align: left;">Annual Price (per month)</th>
+          <th style="padding: 1rem; text-align: left;">Key Features</th>
+         </tr>
+      </thead>
       <tbody>
-        <tr><td>Basic</td><td>Solo freelancers, occasional users</td><td>$8/mo</td><td>Core editing, e‑signatures, cloud storage</td> </tr>
-        <tr class="best-feature-row">
-          <td><strong>Plus (Sweet Spot)</strong></td>
-          <td>Small businesses, regular document workflows</td>
-          <td class="best-feature">$12/mo</td>
-          <td>Templates, reusable workflows, team collaboration</td>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 1rem; font-weight: 700;">Basic</td>
+          <td style="padding: 1rem;">Solo freelancers, occasional users</td>
+          <td style="padding: 1rem;">$8/mo</td>
+          <td style="padding: 1rem;">Core editing, e‑signatures, cloud storage</td>
         </tr>
-        <tr><td>Premium</td><td>Teams, compliance‑heavy industries</td><td>$15/mo</td><td>Advanced workflows, HIPAA, US Legal forms</td> </tr>
-        <tr><td>Enterprise</td><td>Large companies</td><td>Custom</td><td>SSO, admin controls, custom branding</td> </tr>
+        <tr style="background: #d1fae5; border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 1rem; font-weight: 700;">Plus <span style="background: #10b981; color: white; font-size: 0.65rem; padding: 2px 8px; border-radius: 20px; margin-left: 6px;">Best Value</span></td>
+          <td style="padding: 1rem;">Small businesses, regular document workflows</td>
+          <td style="padding: 1rem; font-weight: 700; color: #065f46;">$12/mo</td>
+          <td style="padding: 1rem;">Templates, reusable workflows, team collaboration</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 1rem; font-weight: 700;">Premium</td>
+          <td style="padding: 1rem;">Teams, compliance‑heavy industries</td>
+          <td style="padding: 1rem;">$15/mo</td>
+          <td style="padding: 1rem;">Advanced workflows, HIPAA, US Legal forms</td>
+        </tr>
+        <tr>
+          <td style="padding: 1rem; font-weight: 700;">Enterprise</td>
+          <td style="padding: 1rem;">Large companies</td>
+          <td style="padding: 1rem;">Custom</td>
+          <td style="padding: 1rem;">SSO, admin controls, custom branding</td>
+        </tr>
       </tbody>
     </table>
   </div>
+
   <p><strong>Our take:</strong> The <strong>Plus plan ($12/mo annual)</strong> is the best value for most small businesses – you get templates, workflow automation, and team collaboration without overpaying. Basic is fine for solo freelancers; Premium only if you need HIPAA or US Legal forms.</p>
   <p><strong>Hidden costs:</strong> The free trial auto‑renews at the full annual rate. Set a calendar reminder for day 27. Also, storage above 100GB costs extra ($9/month per 50GB).</p>
   <p>For a complete pricing breakdown (including monthly vs annual savings), see our <a href="/pdffiller-pricing-2026/">PDFfiller Pricing 2026 guide</a>.</p>
@@ -321,9 +345,6 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
 <div style="margin: 2rem 0; text-align: center;">
   <div class="ml-embedded" data-form="0xw1l4"></div>
 </div>
-<script>
-(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
-</script>
 
 <!-- Affiliate Disclosure (short) -->
 <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; margin: 2rem 0;">
