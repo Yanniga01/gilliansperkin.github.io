@@ -25,8 +25,6 @@ canonical_url: https://smartguidehubs.com/pdffiller-small-business-review/
   link11="#faq" label11="❓ FAQ"
 %}
 
-{% include author-box.html %}
-
 <!-- Top Pick CTA -->
 <div class="sgh-cta">
   <div class="cta-badge">
