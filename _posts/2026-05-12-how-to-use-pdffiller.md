@@ -27,9 +27,6 @@ canonical_url: https://smartguidehubs.com/how-to-use-pdffiller/
   link13="#final-verdict" label13="🏆 Final Verdict"
   link14="#faq" label14="❓ FAQ"
 %}
-
-{% include author-box.html %}
-
 <!-- Top Pick CTA -->
 <div class="sgh-cta">
   <div class="cta-badge">
@@ -296,7 +293,7 @@ canonical_url: https://smartguidehubs.com/how-to-use-pdffiller/
       <p>Complete breakdown of plans, hidden costs, and how to avoid the trial trap.</p>
     </div>
     <div class="interlink-card">
-      <a href="/pdffiller-alternatives-2026/"><strong>Free PDFfiller Alternatives</strong></a>
+      <a href="/pdffiller-alternatives/"><strong>Free PDFfiller Alternatives</strong></a>
       <p>Best free tools for editing and signing PDFs.</p>
     </div>
     <div class="interlink-card">
