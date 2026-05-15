@@ -6,7 +6,12 @@
 
       <!-- Brand Column -->
       <div class="footer-col footer-col-brand">
-        <div class="footer-brand-name">SmartGuideHubs</div>
+        <a href="/" class="footer-brand" aria-label="SmartGuideHubs home">
+          <span class="footer-logo-mark" aria-hidden="true">
+            <img src="/assets/branding/logo-icon.png" alt="" loading="lazy" decoding="async">
+          </span>
+          <span class="footer-brand-name">SmartGuideHubs</span>
+        </a>
         <p class="footer-description">
           Independent software reviews for small businesses. Clear, practical, and unbiased insights to help you make better software decisions.
         </p>
@@ -115,7 +120,7 @@
 
 <style>
 /* ============================================================
-   Premium SaaS Review Footer – No Logo, Modern & Clean
+   Premium SaaS Review Footer – Modern & Clean
    ============================================================ */
 
 .site-footer {
@@ -150,15 +155,52 @@
   padding-right: 1rem;
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+}
+
+.footer-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  padding: 0.32rem;
+  border: 1px solid rgba(103, 232, 249, 0.24);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(226, 246, 255, 0.9));
+  box-shadow: 0 14px 34px rgba(6, 18, 46, 0.32), 0 0 0 6px rgba(34, 211, 238, 0.06);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.footer-logo-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 13px;
+}
+
 .footer-brand-name {
   font-size: 1.6rem;
   font-weight: 800;
-  margin-bottom: 0.8rem;
   background: linear-gradient(135deg, #ffffff, #67e8f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
+}
+
+.footer-brand:hover .footer-logo-mark {
+  border-color: rgba(103, 232, 249, 0.45);
+  box-shadow: 0 16px 38px rgba(6, 18, 46, 0.36), 0 0 0 6px rgba(34, 211, 238, 0.1);
+  transform: translateY(-1px);
 }
 
 .footer-description {
@@ -224,7 +266,7 @@
   line-height: 1.45;
 }
 
-.footer-col a {
+.footer-col a:not(.footer-brand):not(.social-icon) {
   color: #cbd5e1;
   text-decoration: none;
   font-size: 0.85rem;
@@ -233,7 +275,7 @@
   display: inline-block;
 }
 
-.footer-col a:hover {
+.footer-col a:not(.footer-brand):not(.social-icon):hover {
   color: #67e8f9;
 }
 
@@ -298,8 +340,8 @@
     justify-content: center;
   }
 
-  .footer-brand-name {
-    text-align: center;
+  .footer-brand {
+    justify-content: center;
   }
 }
 
@@ -312,6 +354,12 @@
 
   .footer-col-brand {
     grid-column: span 2;
+  }
+
+  .footer-logo-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
   }
 
   .footer-brand-name {
@@ -328,7 +376,7 @@
     margin-bottom: 1rem;
   }
 
-  .footer-col a {
+  .footer-col a:not(.footer-brand):not(.social-icon) {
     font-size: 0.8rem;
   }
 }
@@ -353,6 +401,16 @@
     grid-column: span 1;
   }
 
+  .footer-brand {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-logo-mark {
+    width: 58px;
+    height: 58px;
+  }
+
   .footer-brand-name {
     font-size: 1.4rem;
   }
@@ -372,7 +430,7 @@
     margin-bottom: 0.8rem;
   }
 
-  .footer-col a {
+  .footer-col a:not(.footer-brand):not(.social-icon) {
     font-size: 0.85rem;
   }
 
