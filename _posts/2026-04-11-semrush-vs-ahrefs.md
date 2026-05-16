@@ -7,6 +7,7 @@ type: comparison
 image: /Images/semrush-ahrefs-comparison.jpg
 excerpt: "Semrush vs Ahrefs: unbiased comparison of keyword research, backlinks, pricing, and AI visibility. Find out which SEO tool fits your workflow in 2026."
 permalink: /semrush-vs-ahrefs/
+featured: true
 ---
 
 <!-- Table of Contents -->
