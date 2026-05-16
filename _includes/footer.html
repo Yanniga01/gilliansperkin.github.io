@@ -1,23 +1,14 @@
 <footer class="site-footer">
   <div class="footer-container">
 
+    <!-- Main Footer Grid -->
     <div class="footer-grid">
 
-      <!-- Brand Column with SVG Icon -->
+      <!-- Brand Column with Your Logo -->
       <div class="footer-col footer-col-brand">
         <a href="/" class="footer-brand" aria-label="SmartGuideHubs home" {% if page.url == "/" %}aria-current="page"{% endif %}>
           <span class="footer-logo-mark" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" rx="10" fill="url(#grad)" />
-              <path d="M12 20L18 26L28 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="28" cy="14" r="2" fill="white"/>
-              <defs>
-                <linearGradient id="grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#0891b2"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="/assets/branding/sgh-logo.svg" alt="SmartGuideHubs" width="48" height="48" loading="lazy">
           </span>
           <span class="footer-brand-name">SmartGuideHubs</span>
         </a>
@@ -117,6 +108,7 @@
       <span>✔ Independently Tested</span>
       <span>✔ No Paid Placements</span>
       <span>✔ 90+ Days Hands-On Testing</span>
+      <span>✔ Updated Reviews for 2026</span>
     </div>
 
     <!-- Copyright -->
@@ -127,9 +119,33 @@
   </div>
 </footer>
 
+<!-- JSON-LD Schema for Organization (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SmartGuideHubs",
+  "url": "https://smartguidehubs.com",
+  "logo": "https://smartguidehubs.com/assets/branding/sgh-logo.svg",
+  "sameAs": [
+    "https://facebook.com/smartguidehubs",
+    "https://instagram.com/smartguidehubs",
+    "https://pinterest.com/smartguidehubs",
+    "https://twitter.com/smartguidehubs"
+  ],
+  "description": "Independent software reviews for small businesses. Clear, practical, and unbiased insights to help you make better software decisions.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@smartguidehubs.com",
+    "contactType": "customer service",
+    "availableLanguage": "English"
+  }
+}
+</script>
+
 <style>
 /* ============================================================
-   Professional Footer with SVG Icon
+   Professional Footer – AI Optimized, Responsive, Clean
    ============================================================ */
 
 .site-footer {
@@ -167,7 +183,7 @@
 .footer-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.75rem;
   margin-bottom: 0.8rem;
   text-decoration: none;
 }
@@ -176,14 +192,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
 }
 
-.footer-logo-mark svg {
+.footer-logo-mark img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-brand-name {
@@ -194,6 +212,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.footer-brand:hover .footer-brand-name {
+  opacity: 0.85;
 }
 
 .footer-description {
@@ -346,6 +369,12 @@
   .footer-description {
     font-size: 0.85rem;
   }
+  .footer-col h4 {
+    font-size: 0.8rem;
+  }
+  .footer-col a:not(.footer-brand):not(.social-icon) {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -367,11 +396,12 @@
     justify-content: center;
   }
   .footer-brand-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .footer-description {
     font-size: 0.8rem;
     text-align: center;
+    max-width: 100%;
   }
   .footer-social {
     justify-content: center;
@@ -379,12 +409,31 @@
   .footer-col {
     text-align: center;
   }
+  .footer-col h4 {
+    font-size: 0.85rem;
+  }
   .footer-trust {
     gap: 0.8rem;
     font-size: 0.7rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
   }
   .footer-bottom p {
     font-size: 0.65rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .site-footer {
+    background: white;
+    color: black;
+    margin-top: 0;
+    padding: 1rem 0;
+  }
+  .footer-social,
+  .footer-trust {
+    display: none;
   }
 }
 </style>
