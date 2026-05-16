@@ -7,19 +7,6 @@
       <!-- Brand Column -->
       <div class="footer-col footer-col-brand">
         <a href="/" class="footer-brand" aria-label="SmartGuideHubs home" {% if page.url == "/" %}aria-current="page"{% endif %}>
-          <span class="footer-logo-mark" aria-hidden="true">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" rx="10" fill="url(#grad)" />
-              <path d="M12 20L18 26L28 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="28" cy="14" r="2" fill="white"/>
-              <defs>
-                <linearGradient id="grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#0891b2"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
           <span class="footer-brand-name">SmartGuideHubs</span>
         </a>
         <p class="footer-description">
@@ -100,7 +87,7 @@
         </ul>
       </div>
 
-      <!-- Legal & Newsletter Combined (saves space on mobile) -->
+      <!-- Legal -->
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
@@ -110,13 +97,6 @@
           <li><a href="/disclosure/">Affiliate Disclosure</a></li>
           <li><a href="/sitemap.xml">Sitemap</a></li>
         </ul>
-
-        <!-- Newsletter Signup (compact) -->
-        <div class="footer-newsletter">
-          <h4>Stay Updated</h4>
-          <p class="newsletter-teaser">Get new reviews and guides straight to your inbox.</p>
-          <div class="ml-embedded" data-form="0xw1l4"></div>
-        </div>
       </div>
     </div>
 
@@ -137,7 +117,7 @@
 
 <style>
 /* ============================================================
-   Premium SaaS Review Footer – Optimised for All Devices
+   Professional Footer – Clean, Modern, Responsive
    ============================================================ */
 
 .site-footer {
@@ -173,35 +153,9 @@
 }
 
 .footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
+  display: inline-block;
   margin-bottom: 0.8rem;
   text-decoration: none;
-}
-
-.footer-logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  padding: 6px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(226, 246, 255, 0.9));
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(6, 18, 46, 0.2);
-  transition: all 0.2s ease;
-}
-
-.footer-logo-mark svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.footer-brand:hover .footer-logo-mark {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(34, 211, 238, 0.2);
 }
 
 .footer-brand-name {
@@ -212,6 +166,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.footer-brand:hover .footer-brand-name {
+  opacity: 0.9;
 }
 
 .footer-description {
@@ -290,40 +249,6 @@
   color: #67e8f9;
 }
 
-/* Newsletter in Footer (compact) */
-.footer-newsletter {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(103, 232, 249, 0.15);
-}
-
-.footer-newsletter h4 {
-  margin-bottom: 0.5rem;
-}
-
-.newsletter-teaser {
-  font-size: 0.75rem;
-  color: #94a3b8;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-}
-
-/* MailerLite form styling in footer */
-.footer-newsletter .ml-embedded .ml-form-embedWrapper {
-  background: rgba(7, 22, 48, 0.86) !important;
-  border: 1px solid rgba(103, 232, 249, 0.24) !important;
-  border-radius: 10px !important;
-}
-
-.footer-newsletter .ml-embedded .ml-form-embedSubmit button {
-  background: #22d3ee !important;
-  border-radius: 40px !important;
-  font-weight: 700 !important;
-  color: #082f49 !important;
-  font-size: 0.75rem !important;
-  padding: 0.5rem 1rem !important;
-}
-
 /* Trust Bar */
 .footer-trust {
   display: flex;
@@ -358,7 +283,7 @@
 }
 
 /* ============================================================
-   Responsive Design – Optimised for Mobile Height
+   Responsive Design
    ============================================================ */
 
 /* Tablet Landscape (≤1024px) */
@@ -386,11 +311,11 @@
   }
 
   .footer-brand {
-    justify-content: center;
+    display: block;
   }
 }
 
-/* Tablet Portrait (≤768px) – Reduce to 2 columns */
+/* Tablet Portrait (≤768px) */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -399,11 +324,6 @@
 
   .footer-col-brand {
     grid-column: span 2;
-  }
-
-  .footer-logo-mark {
-    width: 48px;
-    height: 48px;
   }
 
   .footer-brand-name {
@@ -423,17 +343,12 @@
   .footer-col a:not(.footer-brand):not(.social-icon) {
     font-size: 0.8rem;
   }
-
-  .footer-trust {
-    gap: 1rem;
-    font-size: 0.7rem;
-  }
 }
 
-/* Mobile (≤640px) – Single column, compact */
+/* Mobile (≤640px) */
 @media (max-width: 640px) {
   .site-footer {
-    padding: 1.8rem 0 1.2rem;
+    padding: 2rem 0 1.5rem;
   }
 
   .footer-container {
@@ -443,7 +358,6 @@
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    margin-bottom: 1rem;
   }
 
   .footer-col-brand {
@@ -451,18 +365,8 @@
     text-align: center;
   }
 
-  .footer-brand {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .footer-logo-mark {
-    width: 54px;
-    height: 54px;
-  }
-
   .footer-brand-name {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .footer-description {
@@ -481,40 +385,16 @@
 
   .footer-col h4 {
     font-size: 0.85rem;
-    margin-bottom: 0.6rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  /* Collapsible sections on mobile to save height */
-  .footer-col ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .footer-col ul.open {
-    max-height: 300px;
+    margin-bottom: 0.8rem;
   }
 
   .footer-col a:not(.footer-brand):not(.social-icon) {
     font-size: 0.85rem;
-    padding: 0.3rem 0;
-    display: inline-block;
-  }
-
-  .footer-newsletter {
-    margin-top: 1rem;
-    padding-top: 0.8rem;
   }
 
   .footer-trust {
     gap: 0.8rem;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     padding-top: 1rem;
     margin-top: 1rem;
   }
@@ -524,45 +404,7 @@
   }
 
   .footer-bottom p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 }
-
-/* Mobile collapsible sections script */
-<script>
-(function() {
-  if (window.innerWidth <= 640) {
-    const footerCols = document.querySelectorAll('.footer-col:not(.footer-col-brand)');
-    footerCols.forEach(col => {
-      const heading = col.querySelector('h4');
-      const list = col.querySelector('ul');
-      if (heading && list) {
-        heading.style.cursor = 'pointer';
-        heading.style.display = 'flex';
-        heading.style.alignItems = 'center';
-        heading.style.justifyContent = 'space-between';
-        heading.style.gap = '0.5rem';
-        heading.style.flexWrap = 'wrap';
-        const arrow = document.createElement('span');
-        arrow.textContent = '▼';
-        arrow.style.fontSize = '0.7rem';
-        arrow.style.opacity = '0.7';
-        heading.appendChild(arrow);
-        heading.addEventListener('click', function(e) {
-          e.preventDefault();
-          list.classList.toggle('open');
-          arrow.style.transform = list.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-          arrow.style.transition = 'transform 0.2s';
-        });
-        // Initially closed except first column
-        if (col !== footerCols[0]) {
-          list.classList.remove('open');
-        } else {
-          list.classList.add('open');
-          arrow.style.transform = 'rotate(180deg)';
-        }
-      }
-    });
-  }
-})();
-</script>
+</style>
