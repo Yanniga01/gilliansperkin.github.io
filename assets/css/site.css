@@ -1070,6 +1070,12 @@ p {
   border: 1px solid var(--border-light);
 }
 
+.interlinking-intro {
+  color: var(--gray-700);
+  max-width: 760px;
+  margin: var(--space-xs) 0 var(--space-md);
+}
+
 .interlinking-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
