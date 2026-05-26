@@ -664,7 +664,6 @@ image: /Images/homepage-og.jpg
     <span class="hp-cat-pill__sub">Reviews & comparisons</span>
   </a>
 </div>
-<meta name="mylead-verification" content="fec20341e6f2188a68ddc2ddf9de3688">
 
 <!-- ========== FEATURED SECTION (WIDER LAYOUT) ========== -->
 {% assign featured_posts = site.posts | where: "featured", true | sort: "date" | reverse %}
