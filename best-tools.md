@@ -1062,10 +1062,24 @@ window.addEventListener('scroll', () => {
     const nameEl = card.querySelector('.tool-name');
     const linkEl = card.querySelector('.card-cta a:first-child');
     const reviewLinkEl = card.querySelector('.review-link');
+    const ratingEl = card.querySelector('.rating-num');
+    const priceEl = card.querySelector('.price-val');
     if (nameEl && linkEl) {
       const name = nameEl.innerText.trim();
       const url = linkEl.href;
       const reviewUrl = reviewLinkEl ? reviewLinkEl.href : null;
+      const ratingValue = ratingEl ? parseFloat(ratingEl.innerText.trim()) : null;
+      const priceText = priceEl ? priceEl.innerText.trim() : null;
+      const offerData = priceText ? {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD",
+          "description": priceText
+        },
+        "availability": "https://schema.org/InStock",
+        "url": url
+      } : undefined;
       items.push({
         "@type": "ListItem",
         "position": position,
@@ -1073,7 +1087,26 @@ window.addEventListener('scroll', () => {
           "@type": "Product",
           "name": name,
           "url": url,
-          "review": reviewUrl ? { "@type": "Review", "url": reviewUrl } : undefined
+          "offers": offerData,
+          "aggregateRating": ratingValue ? {
+            "@type": "AggregateRating",
+            "ratingValue": ratingValue,
+            "reviewCount": 1,
+            "bestRating": 5,
+            "worstRating": 1
+          } : undefined,
+          "review": reviewUrl ? {
+            "@type": "Review",
+            "url": reviewUrl,
+            "author": {
+              "@type": "Organization",
+              "name": "SmartGuideHubs Editorial Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SmartGuideHubs"
+            }
+          } : undefined
         }
       });
       position++;
