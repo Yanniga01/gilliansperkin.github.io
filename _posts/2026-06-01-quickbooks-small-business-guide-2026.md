@@ -7,8 +7,8 @@ categories: [finance]
 type: guide
 image: /Images/quickbooks-guide-card.jpg
 excerpt: "QuickBooks for small business 2026: plans, setup, costs, mistakes to avoid, and whether it's still worth it. Complete beginner-to-pro guide."
-permalink: /quickbooks-small-business-guide/
-canonical_url: https://smartguidehubs.com/quickbooks-small-business-guide/
+permalink: /quickbooks-small-business-guide-2026/
+canonical_url: https://smartguidehubs.com/quickbooks-small-business-guide-2026/
 ---
 
 {% include article-toc.html
