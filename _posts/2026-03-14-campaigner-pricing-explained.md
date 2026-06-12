@@ -23,7 +23,6 @@ canonical_url: https://smartguidehubs.com/campaigner-pricing-explained-2026/
   link8="#verdict" label8="🎯 Final Verdict"
 %}
 
-{% include author-box.html %}
 
 <!-- How Pricing Works -->
 <div class="content-section" id="pricing-model">
