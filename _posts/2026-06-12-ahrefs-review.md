@@ -249,11 +249,6 @@ canonical_url: https://smartguidehubs.com/ahrefs-review/
 (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2164742');
 </script>
 
-<div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.5rem; border-radius: 10px; margin: 3rem 0;">
-  <h3 style="color: #92400e;">💎 Transparency Note</h3>
-  <p><strong>Affiliate Disclosure:</strong> This article contains affiliate links. If you sign up through our links (like <a href="https://ahrefs.com/" target="_blank" rel="sponsored noopener" style="color: var(--primary);">this trial link</a>), we may earn a commission at no extra cost to you. This does not influence our recommendations — we maintain strict editorial independence and test every tool independently.</p>
-</div>
-
 <script src="/cookies.js"></script>
 
 <script>
