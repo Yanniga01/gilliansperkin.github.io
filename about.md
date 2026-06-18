@@ -223,7 +223,7 @@ canonical_url: https://smartguidehubs.com/about/
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-number">90+</div><div class="stat-label">Days of Testing Per Tool</div></div>
       <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">Independent Research</div></div>
-      <div class="stat-card"><div class="stat-number">12+</div><div class="stat-label">Tools Tested Annually</div></div>
+      <div class="stat-card"><div class="stat-number">50+</div><div class="stat-label">Tools Tested Annually</div></div>
       <div class="stat-card"><div class="stat-number">2026</div><div class="stat-label">Updated Reviews</div></div>
     </div>
   </div>
