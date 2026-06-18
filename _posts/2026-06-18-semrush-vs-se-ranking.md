@@ -40,7 +40,7 @@ canonical_url: https://smartguidehubs.com/semrush-vs-se-ranking/
     <div class="verdict-card">
       <span class="verdict-rank">Best Overall</span>
       <div class="verdict-card-logo-wrap">
-        <img src="/assets/logos/semrush-logo.png" alt="Semrush logo" class="verdict-card-logo">
+        <img src="/assets/logos/semrush.png" alt="Semrush logo" class="verdict-card-logo">
       </div>
       <h3 class="verdict-card-title">Semrush</h3>
       <p class="verdict-card-label">For agencies & content‑driven teams</p>
