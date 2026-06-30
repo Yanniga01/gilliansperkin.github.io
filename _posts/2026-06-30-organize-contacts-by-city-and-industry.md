@@ -16,36 +16,24 @@ canonical_url: https://smartguidehubs.com/organize-contacts-by-city-and-industry
   link1="#quick-verdict" label1="Quick Verdict"
   link2="#why-lists-fail" label2="Why Large Lists Fail"
   link3="#step-1-clean" label3="Step 1: Clean Your List"
-  link4="#step-2-capture" label4="Step 2: Capture the Right Info"
-  link5="#step-3-city" label5="Step 3: Organize by City"
-  link6="#step-4-industry" label6="Step 4: Organize by Industry"
-  link7="#step-5-context" label7="Step 5: Record Relationship Context"
-  link8="#step-6-tags" label8="Step 6: Use Tags for Faster Search"
-  link9="#step-7-review" label9="Step 7: Review Before Travel"
-  link10="#step-8-upgrade" label10="Step 8: Upgrade When Needed"
-  link11="#framework" label11="📋 Simple Framework"
-  link12="#common-mistakes" label12="Common Mistakes"
-  link13="#final-thoughts" label13="Final Thoughts"
-  link14="#faq" label14="❓ FAQ"
+  link4="#step-2-capture" label3="Step 2: Capture the Right Info"
+  link5="#step-3-city" label3="Step 3: Organize by City"
+  link6="#step-4-industry" label3="Step 4: Organize by Industry"
+  link7="#step-5-context" label3="Step 5: Record Relationship Context"
+  link8="#step-6-tags" label3="Step 6: Use Tags for Faster Search"
+  link9="#step-7-review" label3="Step 7: Review Before Travel"
+  link10="#step-8-upgrade" label3="Step 8: Upgrade When Needed"
+  link11="#framework" label3="📋 Simple Framework"
+  link12="#common-mistakes" label3="Common Mistakes"
+  link13="#final-thoughts" label3="Final Thoughts"
+  link14="#faq" label3="❓ FAQ"
 %}
 
-<!-- ===== GUEST DISCLOSURE (Premium Design) ===== -->
-<div style="background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%); border-left: 5px solid #2563eb; padding: 1.25rem 1.75rem; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);">
-  <p style="margin: 0; font-weight: 700; color: #1e3a8a; font-size: 0.95rem; letter-spacing: 0.5px;">👤 Guest Contribution</p>
-  <p style="margin: 0.25rem 0 0 0; color: #1e293b; font-size: 0.95rem;">This article was contributed by an external author and reviewed by the SmartGuideHubs Editorial Team for quality, accuracy, and relevance.</p>
-</div>
-
-<!-- ===== GUEST AUTHOR BOX (Premium) ===== -->
-<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.75rem 2rem; margin: 1.75rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 200px;">
-    <h3 style="margin: 0 0 0.25rem 0; color: #0f172a; font-size: 1.2rem; font-weight: 700;">About the Author</h3>
-    <p style="margin: 0 0 0.5rem 0; color: #334155; line-height: 1.6;">
-      <strong>Dhruv</strong> is a Content Manager at <a href="https://connecti5.com" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: none; font-weight: 600;">Connecti5</a>, a private contact management platform that helps professionals organize business contacts, manage networking relationships, and find important connections more efficiently.
-    </p>
-    <p style="margin: 0; font-size: 0.9rem; color: #64748b;">
-      📄 <a href="https://connecti5.com/blog" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: none;">Read more insights from the Connecti5 Blog →</a>
-    </p>
-  </div>
+<!-- ===== REVIEWED BY BADGE ===== -->
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.6rem 1.2rem; margin: 1rem 0; display: inline-block;">
+  <p style="margin: 0; font-size: 0.8rem; color: #475569;">
+    <span style="font-weight: 600; color: #0f172a;">✓ Reviewed by</span> the SmartGuideHubs Editorial Team
+  </p>
 </div>
 
 <!-- ===== QUICK VERDICT ===== -->
@@ -196,12 +184,25 @@ canonical_url: https://smartguidehubs.com/organize-contacts-by-city-and-industry
 <p>By cleaning your contacts, adding meaningful context, organising by city and industry, and maintaining a simple review process, you can transform an unstructured contact list into a valuable business asset.</p>
 <p><strong>A large network is not the problem. An unorganised network is.</strong></p>
 
-<!-- ===== GUEST AUTHOR BOX (BOTTOM) ===== -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.5rem 2rem; margin: 2.5rem 0;">
-  <p style="margin: 0; font-size: 0.95rem; color: #1e293b;">
-    <strong>👤 About the Author</strong><br>
-    Dhruv is a Content Manager at <a href="https://connecti5.com" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: none;">Connecti5</a>, a platform designed for professionals who want to take control of their networking relationships without the complexity of traditional CRMs.
-  </p>
+<!-- ===== GUEST ARTICLE DISCLOSURE (MOVED TO BOTTOM) ===== -->
+<div style="background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%); border-left: 5px solid #2563eb; padding: 1.25rem 1.75rem; border-radius: 12px; margin: 2rem 0 1.5rem 0; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);">
+  <p style="margin: 0; font-weight: 700; color: #1e3a8a; font-size: 0.95rem; letter-spacing: 0.5px;">📝 Guest Article</p>
+  <p style="margin: 0.25rem 0 0 0; color: #1e293b; font-size: 0.95rem;">This article was contributed by an external author and reviewed by the SmartGuideHubs Editorial Team for quality, accuracy, and relevance.</p>
+</div>
+
+<!-- ===== GUEST AUTHOR BOX (MOVED TO BOTTOM) ===== -->
+<div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.75rem 2rem; margin: 1.5rem 0 2.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+  <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px;">
+      <h3 style="margin: 0 0 0.25rem 0; color: #0f172a; font-size: 1.15rem; font-weight: 700;">About the Author</h3>
+      <p style="margin: 0 0 0.5rem 0; color: #334155; line-height: 1.7;">
+        <strong>Dhruv</strong> is a Content Manager at <a href="https://connecti5.com" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: none; font-weight: 600;">Connecti5</a>, a private contact management platform that helps professionals organize business contacts, manage networking relationships, and find important connections more efficiently. He writes about contact management, professional networking, and business productivity.
+      </p>
+      <p style="margin: 0; font-size: 0.9rem; color: #64748b;">
+        📄 <a href="https://connecti5.com/blog" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: none;">Read more insights from the Connecti5 Blog →</a>
+      </p>
+    </div>
+  </div>
 </div>
 
 <!-- ===== FAQ SECTION ===== -->
