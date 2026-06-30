@@ -48,18 +48,6 @@ canonical_url: https://smartguidehubs.com/organize-contacts-by-city-and-industry
   <p><strong>Consider alternatives if:</strong> You have fewer than 50 contacts – a simple spreadsheet may be enough.</p>
 </div>
 
-<section id="how-we-tested" class="content-section">
-  <h2>🔍 How We Tested</h2>
-  <p>Over four weeks, our team applied this contact organization system to real‑world scenarios: a sales professional with 800+ contacts, a consultant with 200, and an agency owner with 600. We measured:</p>
-  <ul>
-    <li><strong>Time to find a specific contact</strong> – before and after organisation</li>
-    <li><strong>Quality of follow‑up</strong> – whether context improved conversation outcomes</li>
-    <li><strong>Ease of travel planning</strong> – filtering by city for business trips</li>
-    <li><strong>Scalability</strong> – how well the system held up as lists grew</li>
-  </ul>
-  <p>The result: a structure that works for any list size and is simple enough to maintain in 15 minutes per week.</p>
-</section>
-
 <h2 id="why-lists-fail">📉 Why Large Contact Lists Become Difficult to Manage</h2>
 <p>A contact list that works well with 50 names often becomes frustrating at 300 or more. Common problems include:</p>
 <ul>
@@ -238,10 +226,6 @@ canonical_url: https://smartguidehubs.com/organize-contacts-by-city-and-industry
     <div class="interlink-card">
       <a href="/best-crm-small-business/"><strong>Best CRM Software for Small Business</strong></a>
       <p>Compare top CRM platforms that can help you manage contacts and relationships.</p>
-    </div>
-    <div class="interlink-card">
-      <a href="/productivity-tools-2026/"><strong>Top Productivity Tools for Professionals</strong></a>
-      <p>Tools that help you stay organised and efficient in 2026.</p>
     </div>
     <div class="interlink-card">
       <a href="/categories/"><strong>All Categories</strong></a>
