@@ -68,6 +68,10 @@ def find_case_sensitive_asset_issues(pages: list[str]) -> list[tuple[str, str, s
 
 
 def find_sitemap_gaps(pages: list[str]) -> list[tuple[str, str]]:
+    if not os.path.exists("sitemap.xml"):
+        print("  sitemap.xml is generated at build time and is not present in this source checkout.")
+        return []
+
     text = read_text("sitemap.xml")
     in_sitemap = set(re.findall(r"<loc>(.*?)</loc>", text))
     gaps: list[tuple[str, str]] = []
