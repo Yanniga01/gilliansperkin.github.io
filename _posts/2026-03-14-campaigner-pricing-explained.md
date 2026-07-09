@@ -40,7 +40,7 @@ canonical_url: https://smartguidehubs.com/campaigner-pricing-explained-2026/
     <table class="comparison-table">
         <thead><tr><th>Plan</th><th>Monthly Price</th><th>Contacts</th><th>Notable Additions</th></tr></thead>
         <tbody>
-            <tr><td><strong>Starter</strong></td><td>$59/mo</td><td>5,000</td><td>All base features</td> </tr>
+            <tr><td><strong>Starter</strong></strong></td><td>$59/mo</td><td>5,000</td><td>All base features</td> </tr>
             <tr class="best-feature"> <td><strong>Essential</strong></td><td>$179/mo</td><td>25,000</td><td>Dynamic content, multivariate testing, SMS included</td> </tr>
             <tr><td><strong>Advanced</strong></td><td>$649/mo</td><td>100,000</td><td>Higher SMS limits, full feature set</td> </tr>
             <tr><td><strong>eCommerce</strong></td><td>$79.95–$149.95/mo</td><td>Unlimited</td><td>Shopify/Magento sync, cart abandonment, unlimited contacts</td> </tr>
@@ -79,7 +79,7 @@ canonical_url: https://smartguidehubs.com/campaigner-pricing-explained-2026/
     <p>Campaigner offers a free 30-day trial, but requires a credit card upfront. Your card is only charged if you choose a plan after the trial — however, most email marketing solutions do not require a credit card for a free trial at all. This is a common complaint across review platforms. The trial auto-converts to a paid plan if you don't actively cancel — which means the responsibility is on you to opt out, not opt in. Set a calendar reminder for day 27.</p>
 
     <h3>No Free Plan — Ever</h3>
-    <p>Unlike many competitors, Campaigner does not offer a free version of the software. If your list is under 500 contacts and you're budget-conscious, Campaigner is genuinely not the right starting point. Tools like <a href="https://www.mailerlite.com/" target="_blank" rel="noopener">MailerLite</a>, <a href="https://www.brevo.com/" target="_blank" rel="noopener">Brevo</a>, or Mailchimp all have functional free tiers for early‑stage senders.</p>
+    <p>Unlike many competitors, Campaigner does not offer a free version of the software. If your list is under 500 contacts and you're budget-conscious, Campaigner is genuinely not the right starting point. Tools like <a href="/mailerlite-review/">MailerLite</a>, <a href="/brevo-review/">Brevo</a>, or Mailchimp all have functional free tiers for early‑stage senders.</p>
 
     <h3>The Annual Billing Risk</h3>
     <p>One concern that surfaces consistently in user reviews across Capterra and G2 is the billing behavior around annual plans. Some users have reported difficulty canceling and being billed beyond the period they intended to use. <strong>Campaigner's cancellation process requires a phone call</strong> — not just clicking a button in a dashboard — as the company verifies account ownership and the identity of the card holder before processing any cancellation.</p>

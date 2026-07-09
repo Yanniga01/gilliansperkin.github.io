@@ -107,7 +107,7 @@ canonical_url: https://smartguidehubs.com/is-semrush-worth-it/
     <tr><th>Plan</th><th>Monthly (Annual Billing)</th><th>Included</th><th>Hidden Costs</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Pro</strong> (annual)</td><td><strong>$117.33/month</strong> (annual)</td> <td>5 projects, 500 keywords, 1 user</td> <td>$45/month per extra user</td> </tr>
+    <tr><td>Pro</strong> (annual)</strong></td><td>$117.33/month</strong> (annual)</strong></td> <td>5 projects, 500 keywords, 1 user</td> <td>$45/month per extra user</td> </tr>
     <tr class="best-feature"> <td><strong>Guru</strong> (annual)</td> <td>$208.33/month</td> <td>15 projects, 1500 keywords, 3 users, historical data, Content Toolkit</td> <td>$80/month per extra user, Trends add‑on ($289/mo)</td> </tr>
     <tr> <td><strong>Business</strong> (annual)</td> <td>$416.66/month</td> <td>40 projects, 5000 keywords, 5 users, API, white‑label</td> <td>$100/month per extra user</td> </tr>
     <tr> <td><strong>Semrush One Starter</strong></td> <td>$199/month</td> <td>Pro + AI Visibility Toolkit (1 domain, 25 prompts/day)</td> <td>$99/month per AI seat</td> </tr>
