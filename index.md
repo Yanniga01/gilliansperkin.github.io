@@ -3,7 +3,7 @@ layout: default
 title: "Expert Software Reviews for Small Businesses | SmartGuideHubs"
 description: "Unbiased, in-depth reviews of the best software tools for small businesses. We test, compare, and verify so you can make confident decisions."
 permalink: /
-image: /Images/editorial-team-smartguidehubs.png
+image: /Images/homepage-og.jpg
 ---
 
 <style>
