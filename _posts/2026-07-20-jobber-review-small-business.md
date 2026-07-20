@@ -5,7 +5,7 @@ date: 2026-07-20
 last_modified_at: 2026-07-20
 categories: [project-management]
 type: review
-image: /Images/jobber-review-card.jpg
+image: /Images/jobber-review-small-businesses-card.jpg
 excerpt: "Jobber review for small business: In-depth 2026 analysis of features, pricing, pros & cons. Find out if this field service software fits your landscaping, HVAC, or cleaning company."
 permalink: /jobber-review-small-business/
 canonical_url: https://smartguidehubs.com/jobber-review-small-business/
