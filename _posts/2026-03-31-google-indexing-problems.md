@@ -7,6 +7,7 @@ type: guide
 image: /Images/google-indexing-card.jpg
 excerpt: "Google indexing has changed in 2026. Discover why your pages aren't being indexed and how to fix indexing issues with this complete guide."
 permalink: /google-indexing-problems/
+canonical_url: https://smartguidehubs.com/google-indexing-problems/
 ---
 
 <!-- Table of Contents -->

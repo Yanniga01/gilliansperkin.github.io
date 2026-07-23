@@ -7,6 +7,7 @@ type: guide
 image: /Images/campaigner-ecommerce-card.jpg
 excerpt: "Honest analysis of Campaigner for ecommerce stores, including Shopify fit, automation features, pricing, and whether it’s a smart choice for online businesses."
 permalink: /campaigner-for-ecommerce-stores/
+canonical_url: https://smartguidehubs.com/campaigner-for-ecommerce-stores/
 ---
 
 <!-- TOC Include -->
