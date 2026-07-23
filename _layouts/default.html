@@ -266,47 +266,51 @@
       });
     })();
     </script>
-      <!-- Global Search Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Replace 'search-input' and 'search-results' with YOUR actual IDs!
-      const input = document.getElementById('search-input');
-      const results = document.getElementById('search-results');
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Try to find ANY search input on the page
+    const input = document.querySelector('input[type="search"], input[name="search"], input[id*="search"]');
+    if (!input) return;
 
-      // If the search elements don't exist on this page, stop here (saves resources)
-      if (!input || !results) return;
+    // Find the container where results usually go (look for divs near the input)
+    const results = document.getElementById('search-results') || 
+                    document.getElementById('results') || 
+                    document.querySelector('.search-results');
 
-      // Fetch all posts from the global JSON file
-      fetch('{{ "/search.json" | relative_url }}')
-        .then(response => response.json())
-        .then(posts => {
-          input.addEventListener('keyup', function() {
-            const query = this.value.toLowerCase().trim();
-            results.innerHTML = '';
+    if (!results) {
+      console.warn('No results container found.');
+      return;
+    }
 
-            if (query.length < 2) return;
+    fetch('{{ "/search.json" | relative_url }}')
+      .then(res => res.json())
+      .then(posts => {
+        input.addEventListener('keyup', function() {
+          const query = this.value.toLowerCase().trim();
+          results.innerHTML = '';
+          if (query.length < 2) return;
 
-            const matches = posts.filter(post => 
-              post.title.toLowerCase().includes(query) || 
-              post.excerpt.toLowerCase().includes(query)
-            );
+          const matches = posts.filter(p => 
+            p.title.toLowerCase().includes(query) || 
+            p.excerpt.toLowerCase().includes(query)
+          );
 
-            if (matches.length === 0) {
-              results.innerHTML = '<p style="padding: 10px;">No articles found.</p>';
-              return;
-            }
+          if (matches.length === 0) {
+            results.innerHTML = '<p>No articles found.</p>';
+            return;
+          }
 
-            let html = '<ul style="list-style:none; padding:0;">';
-            matches.slice(0, 10).forEach(post => { // Limit to 10 results for speed
-              html += `<li style="margin-bottom:10px;"><a href="${post.url}"><strong>${post.title}</strong></a><br><small>${post.excerpt}</small></li>`;
-            });
-            html += '</ul>';
-            results.innerHTML = html;
+          let html = '<ul style="list-style:none; padding:0;">';
+          matches.slice(0, 10).forEach(p => {
+            html += `<li><a href="${p.url}"><strong>${p.title}</strong></a> — ${p.excerpt}</li>`;
           });
-        })
-        .catch(err => console.error('Search failed:', err));
-    });
-  </script>
+          html += '</ul>';
+          results.innerHTML = html;
+        });
+      })
+      .catch(err => console.error('Search fetch error:', err));
+  });
+</script>
 </body>
     <script src="/cookies.js"></script>  
 </body>  
