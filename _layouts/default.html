@@ -22,19 +22,10 @@
     <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">  
     {% endif %}  
 
-    <!-- ✅ FIXED ROBOTS FOR PAGINATION -->
-    {% if paginator.page > 1 %}
-    <meta name="robots" content="noindex, follow">
-    {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large">
-    {% endif %}
 
-    <!-- ✅ FIXED CANONICAL -->
-    {% if paginator.page > 1 %}
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    {% else %}
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    {% endif %}
+    {% assign canonical_path = page.url | replace: 'index.html', '' %}
+    <link rel="canonical" href="{{ canonical_path | absolute_url }}">
 
     <link rel="preconnect" href="https://fonts.mailerlite.com" crossorigin>
     <link rel="preconnect" href="https://assets.mlcdn.com" crossorigin>
@@ -45,6 +36,7 @@
     <link rel="dns-prefetch" href="//static.mailerlite.com">
     <link rel="dns-prefetch" href="//groot.mailerlite.com">
     <link rel="stylesheet" href="/assets/css/site.css">  
+    <link rel="alternate" type="application/rss+xml" title="SmartGuideHubs RSS Feed" href="{{ "/feed.xml" | absolute_url }}">
 
     <!-- FAVICONS -->
     <link rel="icon" href="/favicon.ico">  
@@ -199,9 +191,9 @@
                             <li><a href="/comparisons/">Comparisons</a></li>  
                         </ul>  
                     </li>  
-                    <li><a href="/about">About</a></li>  
-                    <li><a href="/editorial-team">Editorial Team</a></li>  
-                    <li><a href="/contact">Contact</a></li>  
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/editorial-team/">Editorial Team</a></li>
+                    <li><a href="/contact/">Contact</a></li>
                 </ul>  
             </nav>  
         </div>  

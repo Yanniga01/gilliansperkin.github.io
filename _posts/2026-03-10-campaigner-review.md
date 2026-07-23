@@ -7,6 +7,7 @@ type: review
 image: /Images/campaigner-card.jpg
 excerpt: "In-depth analysis of Campaigner’s automation tools, pricing plans, deliverability, and whether it’s worth it for growing businesses."
 permalink: /campaigner-review-2026/
+canonical_url: https://smartguidehubs.com/campaigner-review-2026/
 ---
 
 <!-- TOC Include -->

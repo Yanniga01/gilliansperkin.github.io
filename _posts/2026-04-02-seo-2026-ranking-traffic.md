@@ -7,6 +7,7 @@ type: guide
 image: /Images/seo-2026-card.jpg
 excerpt: "60% of Google searches now end without a click. Learn why ranking #1 isn't enough in 2026, how AI Overviews are changing SEO, and what actually drives traffic."
 permalink: /seo-2026-ranking-traffic/
+canonical_url: https://smartguidehubs.com/seo-2026-ranking-traffic/
 ---
 
 <!-- Table of Contents -->

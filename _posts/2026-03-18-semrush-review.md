@@ -7,6 +7,7 @@ type: review
 image: /Images/semrush-card.jpg
 excerpt: "Complete Semrush review covering keyword research, competitor analysis, pricing plans, and whether it’s worth it for SEO and digital marketing."
 permalink: /semrush-review/
+canonical_url: https://smartguidehubs.com/semrush-review/
 ---
 
 <!-- TOC Include -->
