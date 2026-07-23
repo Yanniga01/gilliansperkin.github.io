@@ -1,8 +1,8 @@
 /**
- * Cookie Consent Manager - Professional Edition
- * Lightweight, GDPR-compliant, dependency-free
+ * Cookie Consent Manager - Full-Width Pro Edition
+ * Unmissable, GDPR-compliant, dependency-free
  * 
- * @version 2.0.0
+ * @version 2.1.0
  * @license MIT
  */
 (function() {
@@ -20,7 +20,7 @@
     };
 
     // ============================
-    // Storage Handler (unchanged)
+    // Storage Handler
     // ============================
     const Storage = {
         isAvailable: true,
@@ -46,7 +46,7 @@
     Storage.init();
 
     // ============================
-    // Analytics (unchanged)
+    // Analytics
     // ============================
     const Analytics = {
         loaded: false,
@@ -79,12 +79,11 @@
     };
 
     // ============================
-    // Professional Banner UI (UPGRADED)
+    // FULL-WIDTH BANNER UI (ENLARGED)
     // ============================
     const Banner = {
         existingConsent: Storage.get(CONFIG.storageKey),
         
-        // Inject base animation styles once
         injectStyles() {
             if (document.getElementById('cookieBannerStyles')) return;
             const style = document.createElement('style');
@@ -95,20 +94,42 @@
                     to { transform: translateY(0); opacity: 1; }
                 }
                 #${CONFIG.bannerId} {
-                    animation: slideUpBanner 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+                    animation: slideUpBanner 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
                 }
-                @media (max-width: 640px) {
+                /* Mobile: Keep it full-width and stack vertically */
+                @media (max-width: 768px) {
+                    #${CONFIG.bannerId} {
+                        padding: 24px 20px !important;
+                    }
                     #${CONFIG.bannerId} > div {
                         flex-direction: column !important;
                         align-items: stretch !important;
-                        gap: 16px !important;
+                        gap: 20px !important;
                     }
                     #${CONFIG.bannerId} .cookie-actions {
-                        justify-content: center !important;
+                        justify-content: stretch !important;
+                        gap: 12px !important;
                     }
                     #${CONFIG.bannerId} .cookie-actions button {
                         flex: 1 !important;
                         justify-content: center !important;
+                        padding: 16px 20px !important;
+                        font-size: 17px !important;
+                        width: 100% !important;
+                    }
+                    #${CONFIG.bannerId} .cookie-text {
+                        font-size: 16px !important;
+                    }
+                    #${CONFIG.bannerId} .cookie-headline {
+                        font-size: 20px !important;
+                    }
+                }
+                /* Extra small phones */
+                @media (max-width: 480px) {
+                    #${CONFIG.bannerId} {
+                        padding: 20px 16px !important;
+                    }
+                    #${CONFIG.bannerId} .cookie-actions button {
                         padding: 14px 16px !important;
                         font-size: 16px !important;
                     }
@@ -129,28 +150,23 @@
             banner.setAttribute('role', 'dialog');
             banner.setAttribute('aria-label', 'Cookie consent');
 
-            // --- PROFESSIONAL STYLES (Larger, Bolder, Modern) ---
+            // --- MASSIVE, FULL-WIDTH, EDGE-TO-EDGE STYLES ---
             banner.style.cssText = `
                 position: fixed;
-                bottom: 24px;
-                left: 24px;
-                right: 24px;
-                background: #1e1e2a;
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
-                background: rgba(30, 30, 42, 0.96);
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: #16161d;
                 color: #f0f0f5;
-                padding: 24px 32px;
-                border-radius: 16px;
+                padding: 32px 48px;
                 z-index: 2147483647;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 1.6;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05) inset;
-                border-left: 6px solid #4CAF50;
+                box-shadow: 0 -8px 40px rgba(0,0,0,0.6);
+                border-top: 4px solid #4CAF50;
                 box-sizing: border-box;
-                max-width: 1200px;
-                margin: 0 auto;
                 transition: all 0.3s ease;
             `;
 
@@ -160,60 +176,65 @@
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 20px;
+                    gap: 28px;
+                    max-width: 1400px;
+                    margin: 0 auto;
                     width: 100%;
                 ">
-                    <div style="flex: 2 1 280px;">
-                        <p style="
-                            margin: 0 0 6px 0;
-                            font-weight: 600;
-                            font-size: 18px;
+                    <div style="flex: 3 1 320px;">
+                        <p class="cookie-headline" style="
+                            margin: 0 0 8px 0;
+                            font-weight: 700;
+                            font-size: 24px;
                             color: #ffffff;
-                            letter-spacing: -0.3px;
+                            letter-spacing: -0.4px;
                         ">
                             🍪 We value your privacy
                         </p>
-                        <p style="
+                        <p class="cookie-text" style="
                             margin: 0;
                             color: #c8c8d4;
-                            font-size: 15px;
-                            max-width: 600px;
+                            font-size: 18px;
+                            max-width: 750px;
+                            line-height: 1.7;
                         ">
-                            We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                            We use essential and analytics cookies to improve your experience. 
                             By clicking "Accept", you consent to our use of cookies. 
                             <a href="${CONFIG.privacyUrl}" style="
                                 color: #8ab4f8;
-                                font-weight: 500;
+                                font-weight: 600;
                                 text-decoration: none;
-                                border-bottom: 1px solid rgba(138, 180, 248, 0.3);
+                                border-bottom: 2px solid rgba(138, 180, 248, 0.25);
                                 transition: border-color 0.2s;
+                                font-size: 18px;
                             " onmouseover="this.style.borderColor='#8ab4f8'" 
-                               onmouseout="this.style.borderColor='rgba(138,180,248,0.3)'">
-                                Learn More
+                               onmouseout="this.style.borderColor='rgba(138,180,248,0.25)'">
+                                Learn more
                             </a>
                         </p>
                     </div>
                     <div class="cookie-actions" style="
                         display: flex;
-                        gap: 12px;
+                        gap: 16px;
                         flex-wrap: wrap;
                         flex-shrink: 0;
+                        align-items: center;
                     ">
                         <button id="rejectCookiesBtn" style="
                             background: transparent;
-                            color: #c8c8d4;
-                            border: 1.5px solid #4a4a5a;
-                            padding: 10px 28px;
-                            border-radius: 40px;
+                            color: #d0d0dc;
+                            border: 2px solid #4a4a5e;
+                            padding: 14px 40px;
+                            border-radius: 60px;
                             cursor: pointer;
-                            font-weight: 500;
-                            font-size: 15px;
+                            font-weight: 600;
+                            font-size: 18px;
                             transition: all 0.25s ease;
-                            backdrop-filter: blur(4px);
-                            letter-spacing: 0.3px;
-                        " onmouseover="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='#8888aa'"
-                           onmouseout="this.style.background='transparent';this.style.borderColor='#4a4a5a'"
-                           onfocus="this.style.outline='2px solid #8ab4f8';this.style.outlineOffset='3px'"
+                            letter-spacing: 0.5px;
+                            min-width: 140px;
+                        " onmouseover="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='#8888aa';this.style.transform='scale(1.02)'"
+                           onmouseout="this.style.background='transparent';this.style.borderColor='#4a4a5e';this.style.transform='scale(1)'"
+                           onfocus="this.style.outline='3px solid #8ab4f8';this.style.outlineOffset='4px'"
                            onblur="this.style.outline='none'">
                             ✕ Reject
                         </button>
@@ -221,17 +242,18 @@
                             background: #2d7a3a;
                             color: white;
                             border: none;
-                            padding: 10px 36px;
-                            border-radius: 40px;
+                            padding: 14px 56px;
+                            border-radius: 60px;
                             cursor: pointer;
-                            font-weight: 600;
-                            font-size: 15px;
+                            font-weight: 700;
+                            font-size: 18px;
                             transition: all 0.25s ease;
-                            box-shadow: 0 4px 16px rgba(45, 122, 58, 0.35);
-                            letter-spacing: 0.3px;
-                        " onmouseover="this.style.background='#369649';this.style.boxShadow='0 6px 24px rgba(45,122,58,0.5)';this.style.transform='translateY(-2px)'"
-                           onmouseout="this.style.background='#2d7a3a';this.style.boxShadow='0 4px 16px rgba(45,122,58,0.35)';this.style.transform='translateY(0)'"
-                           onfocus="this.style.outline='2px solid #8ab4f8';this.style.outlineOffset='3px'"
+                            box-shadow: 0 6px 24px rgba(45, 122, 58, 0.5);
+                            letter-spacing: 0.5px;
+                            min-width: 160px;
+                        " onmouseover="this.style.background='#3aa84c';this.style.boxShadow='0 8px 32px rgba(45,122,58,0.7)';this.style.transform='scale(1.04)'"
+                           onmouseout="this.style.background='#2d7a3a';this.style.boxShadow='0 6px 24px rgba(45,122,58,0.5)';this.style.transform='scale(1)'"
+                           onfocus="this.style.outline='3px solid #8ab4f8';this.style.outlineOffset='4px'"
                            onblur="this.style.outline='none'">
                             ✓ Accept
                         </button>
@@ -241,7 +263,7 @@
             
             document.body.appendChild(banner);
             this.attachEvents();
-            if (CONFIG.debug) console.log('Professional cookie banner displayed');
+            if (CONFIG.debug) console.log('Full-width cookie banner displayed');
         },
         
         attachEvents() {
@@ -284,7 +306,7 @@
     Banner.init();
 
     // ============================
-    // Public API (unchanged)
+    // Public API
     // ============================
     window.CookieConsent = {
         getConsent: () => Storage.get(CONFIG.storageKey),
