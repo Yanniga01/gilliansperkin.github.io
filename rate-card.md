@@ -4,7 +4,7 @@ title: Advertising & Collaboration Rate Card 2026 | SmartGuideHubs
 description: SmartGuideHubs advertising and collaboration rate card for software companies, SaaS brands, and agencies. Independent software reviews for small businesses.
 permalink: /rate-card/
 canonical_url: https://smartguidehubs.com/rate-card/
-sitemap: false
+sitemap: true
 ---
 
 <style>
@@ -41,6 +41,24 @@ sitemap: false
     .rate-hero .logo-wrapper svg {
         width: 100%;
         height: auto;
+    }
+
+    .download-btn {
+        display: inline-block;
+        background: var(--primary, #ff6b35);
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        transition: background 0.2s;
+    }
+    .download-btn:hover {
+        background: var(--primary-dark, #e54b1b);
     }
 
     .rate-grid {
@@ -252,6 +270,11 @@ sitemap: false
     .rate-button:hover {
         background: var(--primary-dark, #e54b1b);
     }
+    .small-note {
+        font-size: 0.92rem;
+        color: var(--gray-600, #4b5563);
+        margin-top: 0.85rem;
+    }
 
     @media (max-width: 768px) {
         .rate-hero {
@@ -264,6 +287,186 @@ sitemap: false
             grid-template-columns: 1fr;
         }
     }
+
+    /* Print Styles for PDF download */
+    @media print {
+        body {
+            background: white;
+            padding: 0.5in;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #111827;
+        }
+        .container {
+            max-width: 100%;
+            padding: 0;
+        }
+        .download-btn {
+            display: none !important;
+        }
+        .breadcrumbs {
+            display: none !important;
+        }
+        .rate-hero {
+            background: white !important;
+            border: none !important;
+            padding: 1rem 0 !important;
+            margin: 0 0 1rem 0 !important;
+            box-shadow: none !important;
+        }
+        .rate-hero .logo-wrapper {
+            max-width: 400px;
+            margin: 0 auto 0.5rem;
+        }
+        .rate-hero h1 {
+            font-size: 1.8rem;
+            color: #e54b1b;
+        }
+        .rate-hero .sub-headline {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+        .rate-hero p {
+            font-size: 0.95rem;
+            color: #374151;
+            max-width: 100%;
+            margin: 0.5rem auto;
+        }
+        .rate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .rate-card {
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: none !important;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .rate-card:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        .rate-card .price {
+            font-size: 2rem;
+        }
+        .rate-card ul {
+            font-size: 0.85rem;
+            padding-left: 1rem;
+        }
+        .rate-card ul li {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        .rate-card .note {
+            font-size: 0.8rem;
+        }
+        .rate-card .badge-custom {
+            background: #ff6b35;
+            color: white;
+            font-size: 0.7rem;
+        }
+        .rate-section {
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0 0 0.75rem;
+            box-shadow: none !important;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .rate-section h2 {
+            font-size: 1.3rem;
+            color: #e54b1b;
+        }
+        .rate-section p, .rate-section li {
+            font-size: 0.9rem;
+            color: #374151;
+        }
+        .feature-grid {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.5rem;
+        }
+        .feature-item {
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.6rem;
+        }
+        .topic-strip {
+            gap: 0.4rem;
+        }
+        .topic-pill {
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            font-size: 0.8rem;
+            padding: 0.3rem 0.7rem;
+        }
+        .contact-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+        }
+        .contact-card .name {
+            font-size: 1rem;
+        }
+        .rate-cta {
+            background: white !important;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0 0;
+            box-shadow: none !important;
+            text-align: center;
+        }
+        .rate-cta h2 {
+            font-size: 1.3rem;
+            color: #e54b1b;
+        }
+        .rate-cta p {
+            font-size: 0.9rem;
+            color: #374151;
+            max-width: 100%;
+        }
+        .rate-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .small-note {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        /* Hide any hover effects */
+        .rate-card, .rate-section {
+            transition: none !important;
+        }
+        /* Ensure links are visible */
+        a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        /* Ensure no background gradients in print */
+        .rate-hero {
+            background: white !important;
+        }
+        .rate-cta {
+            background: white !important;
+        }
+        /* Page breaks */
+        .rate-card, .rate-section {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+    }
 </style>
 
 <main class="container">
@@ -271,6 +474,9 @@ sitemap: false
         <a href="/">Home</a> <span>/</span>
         <span>Rate Card</span>
     </nav>
+
+    <!-- Download Button -->
+    <button class="download-btn" onclick="window.print();">📄 Download as PDF</button>
 
     <!-- Hero -->
     <section class="rate-hero">
@@ -477,8 +683,6 @@ sitemap: false
             audience of decision-stage readers.
         </p>
         <a class="rate-button" href="mailto:contact@smartguidehubs.com">Get in Touch</a>
-        <div class="small-note" style="font-size:0.92rem; color:var(--gray-600, #4b5563); margin-top:0.85rem;">
-            We aim to respond within 2–5 business days.
-        </div>
+        <div class="small-note">We aim to respond within 2–5 business days.</div>
     </div>
 </main>
