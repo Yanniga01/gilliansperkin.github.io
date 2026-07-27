@@ -313,6 +313,6 @@ sitemap: false
     <h2>Let’s Discuss a Partnership</h2>
     <p>If your product is a strong fit for professionals, marketers, freelancers, or growing businesses, we would be glad to discuss a partnership opportunity that matches our content style and audience.</p>
     <a class="media-kit-button" href="/contact/">Contact SmartGuideHubs</a>
-    <div class="small-note">Use our contact form – we’ll reply within 2 business days.</div>
+    <div class="small-note">Use our contact form – we’ll reply within 2 -5 business days.</div>
   </div>
 </main>
