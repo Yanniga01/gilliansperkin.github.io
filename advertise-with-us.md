@@ -280,6 +280,41 @@ sitemap: true
         margin-bottom: 0.4rem;
     }
 
+    /* New Rate Card promo styles */
+    .rate-card-promo {
+        background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+        border: 2px solid #86efac;
+        border-radius: 16px;
+        padding: 1.75rem;
+        margin-top: 1.25rem;
+        text-align: center;
+    }
+    .rate-card-promo h3 {
+        color: var(--primary-dark, #e54b1b);
+        font-size: 1.3rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    .rate-card-promo p {
+        color: var(--gray-700, #374151);
+        max-width: 600px;
+        margin: 0 auto 1rem;
+        line-height: 1.7;
+    }
+    .rate-card-promo .rate-button {
+        display: inline-block;
+        background: var(--primary, #ff6b35);
+        color: white;
+        text-decoration: none;
+        padding: 0.7rem 1.8rem;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: background 0.2s;
+    }
+    .rate-card-promo .rate-button:hover {
+        background: var(--primary-dark, #e54b1b);
+    }
+
     @media (max-width: 768px) {
         .advertise-hero {
             padding: 2rem 1rem;
@@ -482,6 +517,26 @@ sitemap: true
         <p>
             For information about our audience, collaboration opportunities, and publication
             details, please visit our <a href="/media-kit/" style="color:var(--primary, #ff6b35); text-decoration:underline;">Media Kit page</a>.
+        </p>
+    </section>
+
+    <!-- NEW: Pricing & Rate Card -->
+    <section class="advertise-section">
+        <h2>Pricing &amp; Rate Card</h2>
+        <p>
+            For complete transparency, we provide a detailed rate card outlining all our
+            collaboration options with clear starting prices.
+        </p>
+        <div class="rate-card-promo">
+            <h3>📄 View Our 2026 Rate Card</h3>
+            <p>
+                Explore our full pricing structure for contextual links, sponsored articles,
+                dedicated reviews, comparison features, and brand partnerships.
+            </p>
+            <a href="/rate-card/" class="rate-button">View Rate Card →</a>
+        </div>
+        <p style="margin-top:1rem; font-size:0.95rem; color:var(--gray-600, #4b5563);">
+            All collaborations are subject to editorial review and approval.
         </p>
     </section>
 
