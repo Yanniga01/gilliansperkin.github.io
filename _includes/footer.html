@@ -1,10 +1,10 @@
 <footer class="site-footer">
   <div class="footer-container">
 
-    <!-- Main Footer Grid -->
+    <!-- Main Footer Grid – now 7 columns (Brand + 6 others) -->
     <div class="footer-grid">
 
-      <!-- Brand Column with Your Logo -->
+      <!-- Brand Column with Logo -->
       <div class="footer-col footer-col-brand">
         <a href="/" class="footer-brand" aria-label="SmartGuideHubs home" {% if page.url == "/" %}aria-current="page"{% endif %}>
           <span class="footer-logo-mark" aria-hidden="true">
@@ -51,7 +51,7 @@
         <ul>
           <li><a href="/reviews/">Software Reviews</a></li>
           <li><a href="/comparisons/">Tool Comparisons</a></li>
-          <li><a href="/guides/">Guides & Tutorials</a></li>
+          <li><a href="/guides/">Guides &amp; Tutorials</a></li>
           <li><a href="/best-tools/">Best Tools 2026</a></li>
           <li><a href="/categories/">All Categories</a></li>
         </ul>
@@ -86,6 +86,16 @@
           <li><a href="/editorial-team/">Editorial Team</a></li>
           <li><a href="/how-we-test-software/">How We Test</a></li>
           <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Work With Us (NEW) -->
+      <div class="footer-col">
+        <h4>Work With Us</h4>
+        <ul>
+          <li><a href="/advertise-with-us/">Advertise With Us</a></li>
+          <li><a href="/media-kit/">Media Kit</a></li>
+          <li><a href="/submit-a-tool/">Submit a Tool</a></li>
           <li><a href="/write-for-us/">Write for Us</a></li>
         </ul>
       </div>
@@ -98,16 +108,21 @@
           <li><a href="/terms/">Terms of Service</a></li>
           <li><a href="/cookies/">Cookie Policy</a></li>
           <li><a href="/disclosure/">Affiliate Disclosure</a></li>
+          <li><a href="/editorial-policy/">Editorial Policy</a></li>
+          <li><a href="/corrections-policy/">Corrections Policy</a></li>
+          <li><a href="/sponsored-content-policy/">Sponsored Content Policy</a></li>
+          <li><a href="/review-policy/">Review Policy</a></li>
           <li><a href="/sitemap.xml">Sitemap</a></li>
         </ul>
       </div>
-    </div>
+
+    </div><!-- /footer-grid -->
 
     <!-- Trust Bar -->
     <div class="footer-trust">
       <span>✔ Independently Tested</span>
       <span>✔ No Paid Placements</span>
-      <span>✔ 90+ Days Hands-On Testing</span>
+      <span>✔ 90+ Days Hands‑On Testing</span>
       <span>✔ Updated Reviews for 2026</span>
     </div>
 
@@ -163,10 +178,10 @@
   padding: 0 1.5rem;
 }
 
-/* 6-Column Grid */
+/* 7‑Column Grid: Brand (2fr) + 6 columns (1fr each) */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr repeat(5, 1fr);
+  grid-template-columns: 2fr repeat(6, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -332,6 +347,7 @@
    Responsive Design
    ============================================================ */
 
+/* Tablets & smaller laptops – switch to 3 columns */
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -355,6 +371,7 @@
   }
 }
 
+/* Mobile landscape – 2 columns */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -377,6 +394,7 @@
   }
 }
 
+/* Mobile portrait – 1 column */
 @media (max-width: 640px) {
   .site-footer {
     padding: 2rem 0 1.5rem;
