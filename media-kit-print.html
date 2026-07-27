@@ -51,7 +51,17 @@ sitemap: false
     .media-kit-hero h1 {
       font-size: 2.5rem;
       color: #e54b1b;
+      margin-bottom: 0.25rem;
+    }
+    .media-kit-hero .sub-headline {
+      font-size: 1.1rem;
+      color: #4b5563;
       margin-bottom: 0.5rem;
+    }
+    .media-kit-hero p {
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      color: #374151;
     }
     .media-kit-badges {
       display: flex;
@@ -78,6 +88,8 @@ sitemap: false
       border-radius: 16px;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
     .kit-card h3, .kit-section h2 {
       color: #e54b1b;
@@ -85,6 +97,12 @@ sitemap: false
     }
     .kit-section h2 {
       font-size: 1.5rem;
+      margin-top: 0;
+    }
+    .kit-section h3 {
+      color: #e54b1b;
+      margin: 1.25rem 0 0.5rem 0;
+      font-size: 1.1rem;
     }
     ul {
       padding-left: 1.2rem;
@@ -105,6 +123,17 @@ sitemap: false
       border-radius: 12px;
       border: 1px solid #e5e7eb;
     }
+    .partner-option strong {
+      display: block;
+      color: #e54b1b;
+      margin-bottom: 0.25rem;
+    }
+    .partner-option .suitable {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
     .brand-strip {
       display: flex;
       flex-wrap: wrap;
@@ -117,6 +146,18 @@ sitemap: false
       border-radius: 30px;
       font-size: 0.8rem;
     }
+    .audience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+    .audience-tag {
+      background: #f3f4f6;
+      padding: 0.3rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+    }
     .quote-box {
       background: #f3f4f6;
       border-left: 4px solid #ff6b35;
@@ -124,12 +165,38 @@ sitemap: false
       margin-top: 1rem;
       border-radius: 8px;
     }
+    .do-not-accept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .do-not-accept-item {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      color: #991b1b;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .submission-box {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
+    .submission-box ul {
+      margin: 0.25rem 0 0;
+    }
     .media-kit-cta {
       text-align: center;
       margin-top: 2rem;
       padding: 2rem;
       background: #f9fafb;
       border-radius: 16px;
+      break-inside: avoid;
     }
     .media-kit-button {
       display: inline-block;
@@ -142,7 +209,7 @@ sitemap: false
       font-weight: 600;
     }
     .small-note {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: #6b7280;
       margin-top: 0.5rem;
     }
@@ -151,7 +218,7 @@ sitemap: false
         display: none;
       }
       body {
-        padding: 0;
+        padding: 0.5in;
         margin: 0;
       }
       .kit-card, .kit-section {
@@ -169,74 +236,174 @@ sitemap: false
 <div class="container">
   <button class="download-btn" onclick="window.print();">📄 Download as PDF</button>
 
+  <!-- Hero -->
   <div class="media-kit-hero">
     <h1>SmartGuideHubs Media Kit</h1>
-    <p>SmartGuideHubs is a content-focused platform covering software reviews, comparisons, and practical buying guides for professionals, freelancers, and growing businesses. We help readers understand tools clearly before they sign up, subscribe, or buy.</p>
+    <p class="sub-headline">Partner with us to reach decision‑stage readers actively researching software solutions.</p>
+    <p>SmartGuideHubs is a content‑focused platform covering independent software reviews, comparisons, pricing guides, and educational content. We help readers understand tools clearly before they sign up, subscribe, or buy.</p>
     <div class="media-kit-badges">
-      <span class="media-kit-badge">Software Reviews</span>
-      <span class="media-kit-badge">Comparison Guides</span>
-      <span class="media-kit-badge">Affiliate Partnerships</span>
-      <span class="media-kit-badge">Transparent Editorial Approach</span>
+      <span class="media-kit-badge">✅ Software Reviews</span>
+      <span class="media-kit-badge">⚖️ Comparison Guides</span>
+      <span class="media-kit-badge">🤝 Affiliate Partnerships</span>
+      <span class="media-kit-badge">🔍 Transparent Editorial Approach</span>
     </div>
   </div>
 
+  <!-- 3 Cards -->
   <div class="kit-grid">
-    <div class="kit-card"><h3>🎯 Audience Focus</h3><p>Our content is built for people actively researching business tools, including founders, small business owners, marketers, and freelancers comparing software before making a decision.</p></div>
-    <div class="kit-card"><h3>✍️ Content Style</h3><p>We focus on clear, useful, conversion-friendly content that explains features, pricing, pros and cons, and who each tool is best for.</p></div>
-    <div class="kit-card"><h3>🤝 Partnership Fit</h3><p>We are open to affiliate partnerships, product review opportunities, sponsored educational content, and long-term collaborations with relevant software brands.</p></div>
+    <div class="kit-card">
+      <h3>🎯 Audience Focus</h3>
+      <p>Our content is built for people actively researching business tools, including founders, small business owners, marketers, and freelancers comparing software before making a decision.</p>
+    </div>
+    <div class="kit-card">
+      <h3>✍️ Content Style</h3>
+      <p>We focus on clear, useful, conversion‑friendly content that explains features, pricing, pros and cons, and who each tool is best for.</p>
+    </div>
+    <div class="kit-card">
+      <h3>🤝 Partnership Fit</h3>
+      <p>We are open to product reviews, sponsored educational content, comparison placements, contextual links, and long‑term brand collaborations with relevant software companies.</p>
+    </div>
   </div>
 
+  <!-- About -->
   <div class="kit-section">
     <h2>About SmartGuideHubs</h2>
     <p>SmartGuideHubs publishes educational content designed to help readers make informed software decisions. Our focus is on business and productivity tools such as email marketing platforms, SEO tools, project management software, document tools, and related SaaS products.</p>
     <p>We aim to simplify buying decisions by presenting tools in a way that is practical, readable, and honest. Instead of publishing generic summaries, we structure content around what real users usually want to know: pricing, usability, features, limitations, and whether a tool is a strong fit for a specific use case.</p>
   </div>
 
+  <!-- Who We Reach -->
   <div class="kit-section">
     <h2>Who We Reach</h2>
-    <ul><li>Small business owners looking for software to improve operations and marketing</li><li>Freelancers and consultants comparing tools before subscribing</li><li>Digital marketers researching platforms for SEO, email, and growth</li><li>Decision-stage readers who prefer practical comparisons over hype</li></ul>
-    <div class="quote-box"><p>Our content is built for readers with purchase intent: people who are actively evaluating tools, comparing options, or looking for a trusted recommendation before they sign up.</p></div>
-  </div>
-
-  <div class="kit-section">
-    <h2>Editorial Approach</h2>
-    <p>We take a straightforward approach to content. Our goal is not to overwhelm readers with buzzwords, but to help them understand what a product does, who it suits, and what to expect before starting a trial or subscription.</p>
-    <ul><li>Clear explanations of features and pricing</li><li>Pros and cons readers can actually use</li><li>Practical comparison content for decision-making</li><li>Honest disclosure when affiliate links are present</li></ul>
-  </div>
-
-  <div class="kit-section">
-    <h2>Content Categories</h2>
-    <div class="brand-strip"><span class="brand-pill">Email Marketing Tools</span><span class="brand-pill">SEO Software</span><span class="brand-pill">Project Management Tools</span><span class="brand-pill">PDF & Document Tools</span><span class="brand-pill">Business Software</span><span class="brand-pill">Productivity Platforms</span></div>
-  </div>
-
-  <div class="kit-section">
-    <h2>Partnership Opportunities</h2>
-    <div class="partner-options">
-      <div class="partner-option"><strong>Product Reviews</strong><br>In-depth, content-led reviews focused on positioning, features, pricing, and user fit.</div>
-      <div class="partner-option"><strong>Comparison Placements</strong><br>Inclusion in comparison-style content where your product is relevant to the reader’s decision.</div>
-      <div class="partner-option"><strong>Affiliate Partnerships</strong><br>Ongoing performance-based promotion through educational content and buyer-intent articles.</div>
-      <div class="partner-option"><strong>Sponsored Educational Content</strong><br>Brand-aligned content that remains useful, transparent, and reader-focused.</div>
+    <p>Our readers visit SmartGuideHubs because they are actively searching for software solutions and purchasing advice. They include:</p>
+    <div class="audience-tags">
+      <span class="audience-tag">Small business owners</span>
+      <span class="audience-tag">Entrepreneurs</span>
+      <span class="audience-tag">Freelancers</span>
+      <span class="audience-tag">Marketing professionals</span>
+      <span class="audience-tag">Agencies</span>
+      <span class="audience-tag">Consultants</span>
+      <span class="audience-tag">Accountants</span>
+      <span class="audience-tag">Project managers</span>
+      <span class="audience-tag">Business decision‑makers</span>
+    </div>
+    <div class="quote-box">
+      <p>Our content is built for readers with purchase intent: people who are actively evaluating tools, comparing options, or looking for a trusted recommendation before they sign up.</p>
     </div>
   </div>
 
+  <!-- Why Partner -->
   <div class="kit-section">
-    <h2>Why Brands Work With Us</h2>
-    <ul><li>We focus on software categories with strong commercial intent</li><li>Our content is designed to support decision-stage readers</li><li>We prioritize clarity, trust, and long-term content value</li><li>We aim for partnerships that feel natural within the content, not forced</li></ul>
+    <h2>Why Partner With SmartGuideHubs?</h2>
+    <ul>
+      <li>We focus on software categories with strong commercial intent</li>
+      <li>Our content is designed to support decision‑stage readers</li>
+      <li>We prioritize clarity, trust, and long‑term content value</li>
+      <li>We aim for partnerships that feel natural within the content, not forced</li>
+      <li>Our readers trust our independent, research‑backed recommendations</li>
+    </ul>
   </div>
 
+  <!-- Collaboration Opportunities -->
   <div class="kit-section">
-    <h2>Transparency & Trust</h2>
-    <p>SmartGuideHubs values trust. We do not publish fake traffic claims, fake testimonials, or “featured in” statements that cannot be verified.</p>
+    <h2>Collaboration Opportunities</h2>
+    <p>We offer several partnership options tailored to your marketing goals.</p>
+    <div class="partner-options">
+      <div class="partner-option">
+        <strong>📝 Sponsored Articles</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.95rem;">Publish educational, high‑quality content that provides genuine value to our readers while introducing your product naturally.</p>
+        <span class="suitable"><strong>Suitable for:</strong> SaaS companies, Business software, AI tools, Marketing platforms, Productivity software</span>
+      </div>
+      <div class="partner-option">
+        <strong>⭐ Product Reviews</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.95rem;">We review your software after evaluating features, pricing, usability, and overall value.</p>
+        <span class="suitable"><strong>Note:</strong> Submitting your product does not guarantee a positive review. All reviews reflect our independent editorial assessment.</span>
+      </div>
+      <div class="partner-option">
+        <strong>⚖️ Software Comparisons</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.95rem;">Showcase your product alongside competing solutions in professionally researched comparison articles.</p>
+        <span class="suitable"><strong>Examples:</strong> Product A vs Product B, Best Alternatives, Best Software Lists</span>
+      </div>
+      <div class="partner-option">
+        <strong>🔗 Contextual Link Placements</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.95rem;">Where appropriate and editorially relevant, we include a contextual reference to your product within an existing article.</p>
+        <span class="suitable">All placements are reviewed to ensure they improve the reader's experience.</span>
+      </div>
+      <div class="partner-option">
+        <strong>🤝 Brand Partnerships</strong>
+        <p style="margin:0.25rem 0 0; font-size:0.95rem;">We're open to long‑term collaborations including educational campaigns, product launches, resource guides, industry research, and expert interviews.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Standards -->
+  <div class="kit-section">
+    <h2>Our Editorial Standards</h2>
+    <p>Every collaboration is reviewed by the SmartGuideHubs Editorial Team. We only publish content that:</p>
+    <ul>
+      <li>Provides genuine value to readers</li>
+      <li>Is original and well researched</li>
+      <li>Matches our editorial quality standards</li>
+      <li>Is relevant to our audience</li>
+      <li>Maintains factual accuracy</li>
+    </ul>
+    <p>We reserve the right to edit submissions for clarity, formatting, readability, SEO, and consistency.</p>
+  </div>
+
+  <!-- What We Do Not Accept -->
+  <div class="kit-section">
+    <h2>What We Do Not Accept</h2>
+    <p>To protect the trust of our readers, we do not accept:</p>
+    <div class="do-not-accept-grid">
+      <span class="do-not-accept-item">🎰 Gambling or betting content</span>
+      <span class="do-not-accept-item">🔞 Adult content</span>
+      <span class="do-not-accept-item">🚫 Illegal products or services</span>
+      <span class="do-not-accept-item">❌ Misleading claims</span>
+      <span class="do-not-accept-item">🤖 AI‑generated spam</span>
+      <span class="do-not-accept-item">🔑 Keyword stuffing</span>
+      <span class="do-not-accept-item">🔗 Low‑quality backlinks</span>
+      <span class="do-not-accept-item">📢 Irrelevant promotions</span>
+    </div>
+    <p style="margin-top:0.75rem;">We also do not guarantee editorial rankings or product positions in our reviews or comparison articles.</p>
+  </div>
+
+  <!-- Submission Guidelines -->
+  <div class="kit-section">
+    <h2>Submission Guidelines</h2>
+    <p>If you're interested in working with us, please include:</p>
+    <div class="submission-box">
+      <ul>
+        <li><strong>Company name</strong></li>
+        <li><strong>Website URL</strong></li>
+        <li><strong>Product or service overview</strong></li>
+        <li><strong>Preferred collaboration type</strong> (sponsored article, review, comparison, contextual link, brand partnership)</li>
+        <li><strong>Target page(s)</strong> – where you'd like your content to appear</li>
+        <li><strong>Desired anchor text</strong> (if applicable)</li>
+        <li><strong>Any supporting materials or product access</strong> (trial accounts, demos, media kit)</li>
+      </ul>
+    </div>
+    <h3>Response Time</h3>
+    <p>We typically respond to partnership enquiries within <strong>2–5 business days</strong>.</p>
+  </div>
+
+  <!-- Transparency & Trust -->
+  <div class="kit-section">
+    <h2>Transparency &amp; Trust</h2>
+    <p>SmartGuideHubs values trust. We do not publish fake traffic claims, fake testimonials, or "featured in" statements that cannot be verified.</p>
     <p>When affiliate links are used, we disclose them clearly. We believe trust is built through consistent, useful content and honest presentation, not exaggerated claims.</p>
+    <p>Our reputation is built on independence, transparency, and reader trust. Every collaboration is carefully reviewed to ensure it aligns with our editorial mission of helping businesses make informed software decisions.</p>
   </div>
 
+  <!-- Contact -->
   <div class="kit-section">
-    <h2>Selected Topics We Cover</h2>
-    <ul><li>Email marketing software reviews and comparisons</li><li>SEO tool reviews and educational buying guides</li><li>Project management platform reviews</li><li>Business software recommendations for small teams and solo professionals</li></ul>
+    <h2>Contact</h2>
+    <p>For all advertising, sponsorship, and partnership enquiries, please contact:</p>
+    <p style="font-size:1.1rem; font-weight:600; color:#e54b1b; margin-top:0.25rem;">📧 contact@smartguidehubs.com</p>
   </div>
 
+  <!-- CTA -->
   <div class="media-kit-cta">
-    <h2>Let’s Discuss a Partnership</h2>
+    <h2 style="color:#e54b1b;">Let's Discuss a Partnership</h2>
     <p>If your product is a strong fit for professionals, marketers, freelancers, or growing businesses, we would be glad to discuss a partnership opportunity that matches our content style and audience.</p>
     <a class="media-kit-button" href="mailto:contact@smartguidehubs.com">Contact SmartGuideHubs</a>
     <div class="small-note">Email: contact@smartguidehubs.com</div>
