@@ -4,7 +4,7 @@ title: Advertising & Collaboration Rate Card 2026 | SmartGuideHubs
 description: SmartGuideHubs advertising and collaboration rate card for software companies, SaaS brands, and agencies. Independent software reviews for small businesses.
 permalink: /rate-card/
 canonical_url: https://smartguidehubs.com/rate-card/
-sitemap: true
+sitemap: false
 ---
 
 <style>
