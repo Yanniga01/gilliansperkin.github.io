@@ -118,7 +118,7 @@ sitemap: false
     <h2><span class="section-number">2</span> Affiliate Disclaimer</h2>
     <p>This site contains affiliate links to products and services. When you click on an affiliate link and make a purchase, we may earn a commission at no extra cost to you. This helps support the operation of this website.</p>
     <p>We only recommend products and services that we genuinely believe provide value to our readers. However, you should always perform your own due diligence before purchasing any product or service.</p>
-    <p>For full details, please see our <a href="/disclosure" style="color: #3b82f6; font-weight: 600;">Affiliate Disclosure</a>.</p>
+    <p>For full details, please see our <a href="/disclosure/" style="color: #3b82f6; font-weight: 600;">Affiliate Disclosure</a>.</p>
   </div>
 
   <!-- 3. User Responsibility -->
@@ -160,7 +160,7 @@ sitemap: false
       <h3 style="color: #3b82f6; margin-top: 0;">📧 Get in Touch</h3>
       <p>If you have any questions about these Terms and Conditions, please contact us:</p>
       <p><strong>Email:</strong> <a href="mailto:contact@smartguidehubs.com" style="color: #3b82f6;">contact@smartguidehubs.com</a></p>
-      <p><strong>Contact Form:</strong> <a href="/contact" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
+      <p><strong>Contact Form:</strong> <a href="/contact/" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
     </div>
   </div>
 
