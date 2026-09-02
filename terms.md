@@ -207,7 +207,7 @@ sitemap: false
       </table>
     </div>
     <p><strong>Important:</strong> Affiliate commissions do not influence our reviews. We maintain strict editorial independence and often recommend tools with no affiliate program.</p>
-    <p><a href="/disclosure" style="color: #3b82f6; font-weight: 600;">View our full Affiliate Disclosure →</a></p>
+    <p><a href="/disclosure/" style="color: #3b82f6; font-weight: 600;">View our full Affiliate Disclosure →</a></p>
   </div>
 
   <!-- 6. Disclaimers & Limitations -->
@@ -233,7 +233,7 @@ sitemap: false
   <div class="legal-section">
     <h2><span class="section-number">7</span> Privacy & Data Protection</h2>
     <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information.</p>
-    <p><a href="/privacy" style="color: #3b82f6; font-weight: 600;">Read our Privacy Policy →</a></p>
+    <p><a href="/privacy/" style="color: #3b82f6; font-weight: 600;">Read our Privacy Policy →</a></p>
     <h3>Cookies & Tracking</h3>
     <p>We use cookies and similar technologies to improve user experience. By using the Website, you consent to our use of cookies as described in our Privacy Policy.</p>
   </div>
@@ -262,7 +262,7 @@ sitemap: false
     <div class="contact-box">
       <h3 style="border-left: none; padding-left: 0; margin-top: 0;">📧 Contact SmartGuideHubs</h3>
       <p>Email: <a href="mailto:contact@smartguidehubs.com" style="color: #3b82f6;">contact@smartguidehubs.com</a></p>
-      <p>Contact Form: <a href="/contact" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
+      <p>Contact Form: <a href="/contact/" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
       <p style="margin-top: 1rem; font-size: 0.9rem;">We typically respond to legal inquiries within 5 business days.</p>
     </div>
   </div>

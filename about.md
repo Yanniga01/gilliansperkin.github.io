@@ -402,7 +402,7 @@ canonical_url: https://smartguidehubs.com/about/
   <div class="cta-box">
     <h2 style="color: white; margin-bottom: 1rem;">Ready to Make Smarter Software Decisions?</h2>
     <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">Explore our independent reviews and find the perfect tools for your business needs.</p>
-    <a href="/blog" class="cta-button">Browse All Reviews</a>
+    <a href="/blog/" class="cta-button">Browse All Reviews</a>
   </div>
 </div>
 

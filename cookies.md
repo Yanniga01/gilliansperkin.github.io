@@ -278,7 +278,7 @@ sitemap: false
     <p>For questions about our Cookie Policy:</p>
     <ul>
       <li>Email: <a href="mailto:privacy@smartguidehubs.com" style="color: #3b82f6;">privacy@smartguidehubs.com</a></li>
-      <li>Contact Form: <a href="/contact" style="color: #3b82f6;">smartguidehubs.com/contact</a></li>
+      <li>Contact Form: <a href="/contact/" style="color: #3b82f6;">smartguidehubs.com/contact</a></li>
     </ul>
   </div>
 </div>

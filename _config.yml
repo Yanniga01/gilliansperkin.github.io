@@ -1,6 +1,8 @@
 title: SmartGuideHubs
 description: Independent software reviews
 url: https://smartguidehubs.com
+baseurl: ""
+enforce_ssl: smartguidehubs.com
 plugins:
   - jekyll-paginate
   - jekyll-sitemap

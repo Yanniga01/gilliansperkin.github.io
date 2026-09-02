@@ -193,7 +193,7 @@ sitemap: false
       <li><strong>Device Information:</strong> IP address, browser type, operating system</li>
       <li><strong>Usage Data:</strong> Pages visited, time spent, click patterns</li>
       <li><strong>Location Data:</strong> General location (country/region level)</li>
-      <li><strong>Cookies & Tracking:</strong> See our <a href="/cookies" style="color: #3b82f6;">Cookie Policy</a></li>
+      <li><strong>Cookies & Tracking:</strong> See our <a href="/cookies/" style="color: #3b82f6;">Cookie Policy</a></li>
     </ul>
     <h3>Information from Third Parties</h3>
     <p>We may receive information about you from:</p>
@@ -254,7 +254,7 @@ sitemap: false
   <!-- 5. Cookies & Tracking -->
   <div class="legal-section">
     <h2><span class="section-number">5</span> Cookies & Tracking Technologies</h2>
-    <p>We use cookies and similar tracking technologies to collect and use personal information about you. For detailed information about the cookies we use and your choices regarding cookies, please visit our <a href="/cookies" style="color: #3b82f6; font-weight: 600;">Cookie Policy</a>.</p>
+    <p>We use cookies and similar tracking technologies to collect and use personal information about you. For detailed information about the cookies we use and your choices regarding cookies, please visit our <a href="/cookies/" style="color: #3b82f6; font-weight: 600;">Cookie Policy</a>.</p>
     <h3>Types of Cookies We Use</h3>
     <ul>
       <li><strong>Essential Cookies:</strong> Necessary for website functionality</li>
@@ -338,7 +338,7 @@ sitemap: false
     <p>Our website contains links to third-party websites, including affiliate links to software vendors. When you click on these links, you will leave our site and be subject to the privacy policies of those third-party sites.</p>
     <h3>Affiliate Relationships</h3>
     <p>We participate in affiliate marketing programs. When you click on affiliate links, those vendors may place cookies on your device and collect information in accordance with their own privacy policies. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites.</p>
-    <p>For more information about our affiliate relationships, please see our <a href="/disclosure" style="color: #3b82f6; font-weight: 600;">Affiliate Disclosure</a>.</p>
+    <p>For more information about our affiliate relationships, please see our <a href="/disclosure/" style="color: #3b82f6; font-weight: 600;">Affiliate Disclosure</a>.</p>
   </div>
 
   <!-- 11. Contact Information -->
@@ -349,7 +349,7 @@ sitemap: false
       <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
       <div style="margin: 1.5rem 0;">
         <p><strong>Email:</strong> <a href="mailto:contact@smartguidehubs.com" style="color: #3b82f6;">contact@smartguidehubs.com</a></p>
-        <p><strong>Contact Form:</strong> <a href="/contact" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
+        <p><strong>Contact Form:</strong> <a href="/contact/" style="color: #3b82f6;">smartguidehubs.com/contact</a></p>
         <p><strong>Response Time:</strong> We typically respond to privacy inquiries within 5-7 business days.</p>
       </div>
       <p style="font-size: 0.95rem;">For data deletion requests, please include "Data Deletion Request" in your subject line.</p>

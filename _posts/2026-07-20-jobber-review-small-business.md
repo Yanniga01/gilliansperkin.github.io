@@ -392,7 +392,7 @@ The Plus tier adds call recording, a dedicated account manager, and priority sup
             <p>Curated shortlist of top software picks by category.</p>
         </div>
         <div class="interlink-card">
-            <a href="/jobber-review/"><strong>📋 Full Jobber Review</strong></a>
+            <a href="/jobber-review-2026/"><strong>📋 Full Jobber Review</strong></a>
             <p>Complete analysis with deeper feature breakdowns and testing methodology.</p>
         </div>
         <div class="interlink-card">
