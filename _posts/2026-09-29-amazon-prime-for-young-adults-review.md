@@ -567,4 +567,82 @@ canonical_url: https://smartguidehubs.com/amazon-prime-for-young-adults-review/
     },
     {
       "@type": "Question",
-      "name": "Do you
+      "name": "Do you have to be a student?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Amazon currently promotes Prime for Young Adults to people aged 18–24. Eligible higher-education students can also qualify. Age verification can be completed with an identity document — no student email required for the age-based route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you need a .edu email?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily for the age-based route. Amazon's current information says eligible young adults can verify their age using documents like a passport or driving license. Students have student-status verification options including .edu email, student ID, or acceptance letter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can 25-year-olds get Prime for Young Adults?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The current age-based offer is for ages 18–24. Once you are outside that age range, you should check whether another Prime membership option applies to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Prime for Young Adults include Prime Video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Prime membership includes access to Prime Video content that is included with the membership. The catalog and individual title availability can change, and some titles require additional payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Prime for Young Adults include Audible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Audible is a separate service and membership with its own plans and terms. Having Prime does not automatically give you an Audible Premium Plus membership."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I share Prime for Young Adults with someone else?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Amazon's household-sharing rules specifically state that Student and Young Adult Prime members cannot share Prime benefits through Amazon Family. If you're considering sharing, check Amazon's current rules rather than assuming."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel Prime for Young Adults?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Amazon allows customers to manage and cancel Prime memberships. Check your membership settings and the current cancellation terms before your next billing date."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Toggle Script -->
+<script>
+function toggleAnswer(element) {
+    var answer = element.nextElementSibling;
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        element.classList.remove("open");
+    } else {
+        answer.style.display = "block";
+        element.classList.add("open");
+    }
+}
+document.addEventListener("DOMContentLoaded", function() {
+    var answers = document.querySelectorAll(".faq-answer");
+    answers.forEach(function(answer) {
+        answer.style.display = "none";
+    });
+});
+</script>
+
+<script src="/cookies.js"></script>
