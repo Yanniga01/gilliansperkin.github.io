@@ -329,7 +329,7 @@ canonical_url: https://smartguidehubs.com/freshbooks-pricing-2026/
 <p><strong>Add those four numbers together. That's your real FreshBooks monthly cost — not the number on the pricing page.</strong></p>
 <p>For solo freelancers and small service businesses billing straightforward time-based work to a manageable client roster: <strong>FreshBooks is excellent value, cleanly designed, and worth the subscription.</strong> For growing teams and high-payment-volume businesses: run the full math before committing.</p>
 
-<p>For a complete guide to FreshBooks features and pros/cons, see our <a href="/freshbooks-review-2026/">full FreshBooks review</a>.</p>
+<p>For a complete guide to FreshBooks features and pros/cons, see our <a href="/freshbooks-review/">full FreshBooks review</a>.</p>
 
 <!-- Interlinking -->
 <div class="interlinking-section">
